@@ -21,12 +21,13 @@ const Contact = () => {
 
             <p className="dark:font-light sm:text-[16px] text-[15px]">
               I appreciate designing tools that allow us to spend our time doing
-              what we love most, whether it's a Slack bot that automates your
-              morning ritual or a tailored backend service to manage your
-              workflow by utilizing the required strategies. I'm exploring new
-              areas of technology eg. Artificial Intelligence and pursuing my
-              creative interest in design eg. Motion Design as well as seeking
-              new opportunities to help create fluid and humane technologies.
+              what we love most, whether it&apos;s a Slack bot that automates
+              your morning ritual or a tailored backend service to manage your
+              workflow by utilizing the required strategies. I&apos;m exploring
+              new areas of technology eg. Artificial Intelligence and pursuing
+              my creative interest in design eg. Motion Design as well as
+              seeking new opportunities to help create fluid and humane
+              technologies.
             </p>
 
             <br />
