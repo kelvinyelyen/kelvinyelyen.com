@@ -7,7 +7,7 @@ const Project = ({ number, title, imageUrl, altText, year, type, url}) => {
       <Link href="">
         <div className="grid grid-cols-3 gap-20 text-end dark:text-secondary-white">
           <div className="flex">
-            <span className="text-stone-500 text-[13px] sm:text-[15px] mr-5">
+            <span className="text-stone-500 text-[13px] sm:text-[15px] mr-0 lg:mr-5">
               <sup>{number}</sup>
             </span>
             <h2 className="font-monument uppercase tracking-tighter text-[30px] lg:text-[40px] ">
@@ -22,7 +22,7 @@ const Project = ({ number, title, imageUrl, altText, year, type, url}) => {
         </div>
       </Link>
 
-      <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-600 border-0" />
+      <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-300 border-0" />
     </>
   )
 }
@@ -73,7 +73,7 @@ const Selected = () => {
         <p className="text-[15px] text-secondary-white dark:text-neutral-600">
           SELECTED WORK
         </p>
-        <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-600 border-0" />
+        <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-300 border-0" />
 
         {projects.map((project) => (
           <Project key={project.number} {...project} />
