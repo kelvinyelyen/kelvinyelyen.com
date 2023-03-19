@@ -19,7 +19,7 @@ const Contact = () => {
               (Work with me)
             </p>
 
-            <p className="dark:font-light sm:text-[15px] text-[15px]">
+            <p className="dark:font-light sm:text-[10px] text-[15px]">
               I appreciate designing tools that allow us to spend our time doing
               what we love most, whether it&apos;s a Slack bot that automates
               your morning ritual or a tailored backend service to manage your
