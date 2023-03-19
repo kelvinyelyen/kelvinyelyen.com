@@ -10,9 +10,9 @@ const Header = () => {
         {/* Show this div on large screens only */}
         <div className="flex-col hidden lg:block">
           <Link href="/">
-            <p className="font-monument tracking-tighter text-[40px] lg:text-[90px] -mb-7 -mt-4">
+            <h1 className="font-monument tracking-tighter text-[40px] lg:text-[90px] -mb-7 -mt-4">
               Kelvin Yelyen
-            </p>
+            </h1>
             <span className="text-[20px] dark:font-light">
               SOFTWARE ENGINEER & DESIGNER
             </span>
@@ -35,7 +35,9 @@ const Header = () => {
         <h1 className="font-monument text-[40px] tracking-tighter -mb-3">
           Kelvin Yelyen
         </h1>
-        <span className="text-[20px] uppercase">Software Engineer & <br /> Designer</span>
+        <span className="text-[20px] uppercase">
+          Software Engineer & <br /> Designer
+        </span>
       </div>
     </nav>
   )

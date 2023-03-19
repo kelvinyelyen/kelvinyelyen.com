@@ -6,7 +6,7 @@ const About = () => {
     <section className={`${styles.paddings} relative z-10`}>
       <div className={`${styles.aboutWidth} mx-auto mt-[150px] lg:mt-[60px]`}>
         <p className="text-[10px] text-stone-500 ">(ABOUT)</p>
-        <p className="uppercase dark:font-light text-[12px] lg:text-[15px] dark:text-stone-400 ">
+        <p className="uppercase dark:font-light text-[12px] lg:text-[15px] dark:text-zinc-400">
           I&apos;m a software engineer and designer who&apos;s passion lies in
           utilizing science and technology to create innovative solutions that
           have a positive impact on the world. I believe that the human
