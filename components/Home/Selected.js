@@ -18,7 +18,7 @@ const Project = ({ number, title, imageUrl, altText, year, type, url}) => {
             <p>({year})</p>
             <p>{type}</p>
           </div>
-          <div className="">&#x1F866;</div>
+          <div className="sm:block hidden">&#x1F866;</div>
         </div>
       </Link>
 
