@@ -8,7 +8,7 @@ const Header = () => {
         className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}
       >
         {/* Show this div on large screens only */}
-        <div className="flex-col hidden lg:block">
+        <div className="flex-col hidden lg:block dark:text-secondary-white">
           <Link href="/">
             <h1 className="font-monument tracking-tighter text-[40px] lg:text-[90px] -mb-7 -mt-4">
               Kelvin Yelyen
@@ -20,7 +20,7 @@ const Header = () => {
         </div>
         <div className="flex"></div>
 
-        <ul className="flex gap-5 sm:text-[13px] text-[10px]">
+        <ul className="flex gap-5 sm:text-[13px] text-[10px] dark:text-secondary-white">
           <li>
             <Link href="/projects">PROJECTS</Link>
           </li>
@@ -31,7 +31,7 @@ const Header = () => {
       </div>
 
       {/* Show this div on mobile screens only */}
-      <div className="flex flex-col lg:hidden mt-[200px]">
+      <div className="flex flex-col lg:hidden mt-[200px] dark:text-secondary-white">
         <h1 className="font-monument text-[40px] tracking-tighter -mb-3">
           Kelvin Yelyen
         </h1>

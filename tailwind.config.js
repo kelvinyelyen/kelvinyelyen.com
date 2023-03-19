@@ -13,7 +13,7 @@ module.exports = {
         nhaas: ["Neue Haas Grotesk Display Pro", "sans-serif"],
       },
       colors: {
-        "secondary-white": "#c7c7c7",
+        "secondary-white": "#b0b0b0",
       },
       transitionTimingFunction: {
         "out-flex": "cubic-bezier(0.05, 0.6, 0.4, 0.9)",

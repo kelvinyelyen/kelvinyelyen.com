@@ -14,12 +14,12 @@ const Contact = () => {
         className={`${styles.textWidth} mx-auto`}
       >
         <div className="mt-[150px] flex justify-between">
-          <article className="dark:text-secondary-white uppercase lg:mx-[200px]">
+          <article className="uppercase lg:mx-[200px]">
             <p className="text-[10px] lg:text-[10px] text-stone-500">
               (Work with me)
             </p>
 
-            <p className="dark:font-light sm:text-[15px] text-[12px] dark:text-zinc-400">
+            <p className="dark:font-light sm:text-[15px] text-[12px] dark:text-secondary-white">
               I appreciate designing tools that allow us to spend our time doing
               what we love most, whether it&apos;s a Slack bot that automates
               your morning ritual or a tailored backend service to manage your

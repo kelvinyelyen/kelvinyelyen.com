@@ -14,7 +14,7 @@ const Footer = () => {
         className={`${styles.innerWidth} mx-auto`}
       >
         <div className="flex justify-between">
-          <div className="dark:font-light sm:text-[15px] text-[13px] uppercase dark:text-zinc-400">
+          <div className="dark:font-light sm:text-[15px] text-[13px] uppercase dark:text-secondary-white">
             <p>
               Full-stack Engineering<sup className="text-stone-500"> 01 </sup>
             </p>
@@ -27,7 +27,9 @@ const Footer = () => {
             </p>
           </div>
           <div className="text-end">
-            <p className="text-[15px]">START A PROJECT</p>
+            <p className="text-[15px] dark:text-secondary-white">
+              START A PROJECT
+            </p>
             <Link href="#" className="text-[13px] text-stone-500 uppercase">
               kelvinyelyen@gmail.com
             </Link>
