@@ -30,7 +30,7 @@ const Footer = () => {
             <p className="text-[15px] dark:text-secondary-white">
               START A PROJECT
             </p>
-            <Link href="#" className="text-[13px] text-stone-500 uppercase">
+            <Link href="#" className="text-[13px] sm:text[10px] text-stone-500 uppercase">
               kelvinyelyen@gmail.com
             </Link>
           </div>
