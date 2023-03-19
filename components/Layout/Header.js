@@ -20,7 +20,7 @@ const Header = () => {
         </div>
         <div className="flex"></div>
 
-        <ul className="flex gap-5 sm:text-[13px] text-[13px]">
+        <ul className="flex gap-5 sm:text-[13px] text-[10px]">
           <li>
             <Link href="/projects">PROJECTS</Link>
           </li>

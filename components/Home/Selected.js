@@ -7,14 +7,14 @@ const Project = ({ number, title, imageUrl, altText, year, type, url}) => {
       <Link href="">
         <div className="grid grid-cols-3 gap-20 text-end dark:text-secondary-white">
           <div className="flex">
-            <span className="text-stone-500 text-[15px] mr-5">
+            <span className="text-stone-500 text-[13px] sm:text-[15px] mr-5">
               <sup>{number}</sup>
             </span>
             <h2 className="font-monument uppercase tracking-tighter text-[20px] lg:text-[40px] ">
               {title}
             </h2>
           </div>
-          <div className="text-[13px]">
+          <div className="text-[10px] sm:text-[13px]">
             <p>({year})</p>
             <p>{type}</p>
           </div>
