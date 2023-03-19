@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Eudoxus Sans", sans-serif;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -24,8 +24,15 @@
   font-style: normal;
 }
 
+/* Define a custom font face for NeueHaasDisplay. */
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('/fonts/NeueHaasDisplay-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-/* Apply styles to the body */
+/* Apply styles to the body (Dark & Light Mode) */
 @layer base {
   body {
     @apply dark:bg-neutral-900 bg-white;
@@ -45,8 +52,8 @@
 }
 
 
- /* Active button or link styling */
+ /* Active button styling */
 .active {
-  color: rgb(103, 103, 103);
+  color: rgb(207, 207, 207);
 }
 

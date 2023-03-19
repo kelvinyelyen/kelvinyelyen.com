@@ -8,7 +8,7 @@ const Inversion = () => {
 
   return (
     <div
-      className={`${styles.ipaddings} flex justify-between sm:text-[16px] text-[15px] text-right mt-[150px]`}
+      className={`${styles.ipaddings} flex justify-between sm:text-[13px] text-[13px] text-right mt-[110px] text-stone-500`}
     >
       <p className={`hidden lg:block`}> &#169; {new Date().getFullYear()}</p>
 

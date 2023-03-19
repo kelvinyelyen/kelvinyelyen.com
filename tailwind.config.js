@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         monument: ["PPMonumentExtended-Regular", "sans-serif"],
+        nhaas: ["Neue Haas Grotesk Display Pro", "sans-serif"],
       },
       colors: {
         "secondary-white": "#c7c7c7",

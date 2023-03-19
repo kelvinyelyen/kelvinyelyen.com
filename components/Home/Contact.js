@@ -14,30 +14,24 @@ const Contact = () => {
         className={`${styles.textWidth} mx-auto`}
       >
         <div className="mt-[150px] flex justify-between">
-          <article>
-            <p className="text-right text-[20px] lg:text-[40px]">
-              WORK WITH ME
+          <article className="dark:text-secondary-white uppercase lg:mx-[200px]">
+            <p className="text-[10px] lg:text-[10px] text-stone-500">
+              (Work with me)
             </p>
 
-            <p className="dark:font-light sm:text-[16px] text-[15px]">
+            <p className="dark:font-light sm:text-[15px] text-[15px]">
               I appreciate designing tools that allow us to spend our time doing
               what we love most, whether it&apos;s a Slack bot that automates
               your morning ritual or a tailored backend service to manage your
-              workflow by utilizing the required strategies. I&apos;m exploring
+              workflow by utilizing the required strategies.
+               {/* I&apos;m exploring
               new areas of technology eg. Artificial Intelligence and pursuing
               my creative interest in design eg. Motion Design as well as
               seeking new opportunities to help create fluid and humane
-              technologies.
+              technologies. */}
             </p>
 
             <br />
-            <p className="dark:font-light sm:text-[16px] text-[15px]">
-              <span className="font-bold">Full-stack Engineering</span>{" "}
-              <sup> 01 </sup>/ <br className="lg:hidden" />
-              <span className="font-bold">Product Design</span> (UI/UX Design)
-              <sup> 02 </sup>/ <br className="lg:hidden" />
-              <span className="font-bold">Graphic Design</span> <sup> 03 </sup>
-            </p>
           </article>
         </div>
       </motion.div>

@@ -10,22 +10,22 @@ const Header = () => {
         {/* Show this div on large screens only */}
         <div className="flex-col hidden lg:block">
           <Link href="/">
-            <h1 className="font-monument tracking-tighter text-[40px] lg:text-[90px] -mb-7 -mt-4">
+            <p className="font-monument tracking-tighter text-[40px] lg:text-[90px] -mb-7 -mt-4">
               Kelvin Yelyen
-            </h1>
+            </p>
             <span className="text-[20px] dark:font-light">
-              Software Engineer and Designer
+              SOFTWARE ENGINEER & DESIGNER
             </span>
           </Link>
         </div>
         <div className="flex"></div>
 
-        <ul className="flex gap-5 sm:text-[16px] text-[15px]">
+        <ul className="flex gap-5 sm:text-[13px] text-[13px]">
           <li>
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects">PROJECTS</Link>
           </li>
           <li>
-            <Link href="/blog">Blog</Link>
+            <Link href="/blog">BLOG</Link>
           </li>
         </ul>
       </div>

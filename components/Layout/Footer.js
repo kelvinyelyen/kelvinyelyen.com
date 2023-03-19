@@ -13,61 +13,60 @@ const Footer = () => {
         viewport={{ once: true, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto`}
       >
-        <div className="dark:font-light sm:text-[16px] text-[15px]">
-          <div className="flex justify-between">
+        <div className="flex justify-between">
+          <div className="dark:font-light sm:text-[15px] text-[15px] uppercase dark:text-secondary-white">
+            <p>
+              Full-stack Engineering<sup className="text-stone-500"> 01 </sup>
+            </p>
+            <p>
+              Product Design (UI/UX Design)
+              <sup className="text-stone-500"> 02 </sup>
+            </p>
+            <p>
+              Graphic Design<sup className="text-stone-500"> 03 </sup>
+            </p>
+          </div>
+          <div className="text-end">
+            <p className="text-[15px]">START A PROJECT</p>
+            <Link href="#" className="text-[13px] text-stone-500 uppercase">
+              kelvinyelyen@gmail.com
+            </Link>
+          </div>
+        </div>
+        <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-600 border-0" />
+        <div className="dark:font-light sm:text-[13px] text-[13px] text-stone-500">
+          <div className="flex justify-between uppercase">
             <div>
               <p>
                 &#169; {new Date().getFullYear()} Designed and Developed by
                 Kelvin Yelyen
               </p>
             </div>
-            <div className="text-right">
-              {/* <Link
-                href="https://kelvinyelyen.github.io/portfolio/"
-                target="_blank"
-              >
-                v1 &nbsp; &nbsp; &nbsp;
+            <div className="lg:block hidden">
+              <Link href="https://kelvinyelyen.netlify.app/">
+                v1 &nbsp; &nbsp;
               </Link>
-              <Link href="#">credits &nbsp; &nbsp; &nbsp;</Link>
-              <Link
-                href="#"
-                className="text-secondary-white dark:text-neutral-600"
-              >
-                experiments &nbsp; &nbsp; &nbsp;
-              </Link> */}
+              <Link href="#">credits &nbsp; &nbsp;</Link>
+              <Link href="#">experiments</Link>
+            </div>
+            <div className="text-right">
               <ul className="flex gap-5">
-                <li className="my-2">
+                <li>
                   <Link href="https://github.com/kelvinyelyen" target="_blank">
-                    GitHub
+                    GitHub &#x1F865;
                   </Link>
                 </li>
-                <li className="my-2">
-                  <Link
-                    href="https://www.behance.net/kelvinyelyen"
-                    target="_blank"
-                  >
-                    Behance
-                  </Link>
-                </li>
-                <li className="my-2">
+                <li>
                   <Link href="https://twitter.com/kelvinyelyen" target="_blank">
-                    Twitter
+                    Twitter &#x1F865;
                   </Link>
                 </li>
-                <li className="my-2">
+                <li>
                   <Link
                     href="https://www.linkedin.com/in/kelvinyelyen/"
                     target="_blank"
                   >
-                    Linkedin
-                  </Link>
-                </li>
-                <li className="my-2">
-                  <Link
-                    href="https://www.instagram.com/kelvinyelyen/"
-                    target="_blank"
-                  >
-                    Instagram
+                    Linkedin &#x1F865;
                   </Link>
                 </li>
               </ul>
