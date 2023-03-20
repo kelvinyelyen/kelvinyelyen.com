@@ -31,7 +31,7 @@ const Selected = () => {
   const projects = [
     {
       number: "/01",
-      title: "Augur",
+      title: "Augur.Ehrs",
       year: "2023",
       type: "CASE STUDY",
       url: "https://atlasweatherfocus.vercel.app/",

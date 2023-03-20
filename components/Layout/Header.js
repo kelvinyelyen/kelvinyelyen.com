@@ -13,8 +13,8 @@ const Header = () => {
             <h1 className="font-monument tracking-tighter text-[40px] lg:text-[90px] -mb-7 -mt-4">
               Kelvin Yelyen
             </h1>
-            <span className="text-[20px] dark:font-light">
-              SOFTWARE ENGINEER & DESIGNER
+            <span className="text-[20px] dark:font-light uppercase">
+              Software Engineer & Designer
             </span>
           </Link>
         </div>

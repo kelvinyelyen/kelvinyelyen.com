@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react"
-import gsap, { Power3 } from "gsap"
-import ScrollTrigger from "gsap/ScrollTrigger"
-import Splitting from "splitting"
+import React, { useEffect, useRef } from "react";
+import gsap, { Power3 } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Splitting from "splitting";
 
 const SplitTextAnimation = ({ children, delay }) => {
   const textRef = useRef(null)
@@ -57,9 +57,7 @@ const SplitTextAnimation = ({ children, delay }) => {
     revealLines()
   }, [])
 
-  return (
-    <div ref={textRef}>{children}</div>
-    )
+  return <div ref={textRef}>{children}</div>
 }
 
-export default SplitTextAnimation
+export { SplitTextAnimation }
