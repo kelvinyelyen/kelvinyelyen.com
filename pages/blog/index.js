@@ -20,11 +20,13 @@ export default function BlogPost({ posts }) {
           <div key={post.id}>
             <div className="flex justify-between text-start">
               <Link href={`/${post.slug}`}>
-                <p>{post.published_at}</p>
-                <h2 className="text-[20px] lg:text-[20px] ">{post.title}</h2>
-                <p>{post.custom_excerpt}</p>
+                <p className="text-[13px]">
+                  {new Date(post.published_at).toDateString()}
+                </p>
+                <h2 className="text-[20px] lg:text-[25px] ">{post.title}</h2>
+                <p className="text-[13px]">{post.excerpt}</p>
               </Link>
-              <div className="sm:block hidden">&#x1F866;</div>
+              <div> &#x1F866;</div>
             </div>
             <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-300 border-0" />
           </div>
@@ -38,3 +40,4 @@ export async function getStaticProps() {
   const posts = await getPosts()
   return { props: { posts } }
 }
+

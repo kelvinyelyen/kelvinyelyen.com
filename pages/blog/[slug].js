@@ -12,6 +12,7 @@ export default function Post({ post }) {
 export async function getStaticPaths() {
   const posts = await getPosts()
   const paths = posts.map((post) => ({ params: { slug: post.slug } }))
+  console.log(paths)
   return { paths, fallback: false }
 }
 
