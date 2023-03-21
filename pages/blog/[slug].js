@@ -1,4 +1,4 @@
-import { getPostBySlug } from "@/utils/ghost"
+import { getPostBySlug, getPosts } from "@/lib/ghost"
 
 export default function Post({ post }) {
   return (
