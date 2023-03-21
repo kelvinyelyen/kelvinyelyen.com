@@ -5,7 +5,7 @@ import { staggerContainer } from "../../utils/motion"
 
 const Footer = () => {
   return (
-    <footer className={`${styles.paddings} relative z-10 mt-[150px]`}>
+    <footer className={`${styles.paddings} relative z-10`}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -13,28 +13,6 @@ const Footer = () => {
         viewport={{ once: true, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto`}
       >
-        <div className="flex justify-between">
-          <div className="dark:font-light sm:text-[15px] text-[13px] uppercase dark:text-secondary-white">
-            <p>
-              Full-stack Engineering<sup className="text-stone-500"> 01 </sup>
-            </p>
-            <p>
-              Product Design (UI/UX Design)
-              <sup className="text-stone-500"> 02 </sup>
-            </p>
-            <p>
-              Graphic Design<sup className="text-stone-500"> 03 </sup>
-            </p>
-          </div>
-          <div className="text-end">
-            <p className="text-[15px] dark:text-secondary-white">
-              START A PROJECT
-            </p>
-            <Link href="#" className="text-[13px] sm:text[10px] text-stone-500 uppercase">
-              kelvinyelyen@gmail.com
-            </Link>
-          </div>
-        </div>
         <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-600 border-0" />
         <div className="dark:font-light sm:text-[13px] text-[10px] text-stone-500">
           <div className="flex justify-between uppercase">

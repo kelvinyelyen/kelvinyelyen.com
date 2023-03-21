@@ -2,15 +2,20 @@ import Link from "next/link"
 import { getPosts } from "@/lib/ghost"
 import styles from "@/styles"
 
-export default function Home({ posts }) {
+export default function BlogPost({ posts }) {
   return (
     <section className={`${styles.paddings} relative z-10`}>
       <div className={`${styles.projectWidth} mx-auto`}>
-        <h1 className="uppercase text-[10px] text-stone-500">
-          (Welcome to my blog)
-        </h1>
+        <p className="uppercase text-[10px] text-stone-500">
+          (Musings, Shower-thoughts, Notes ...)
+        </p>
+        <p className="">
+          At certain times, articulating a concise portrayal of my identity or
+          occupation can prove to be challenging, <br /> as it encompasses a
+          complexity that cannot be adequately conveyed through a mere handful
+          of words.
+        </p>
         <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-300 border-0" />
-
         {posts.map((post) => (
           <div key={post.id}>
             <div className="flex justify-between text-start">
