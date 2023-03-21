@@ -60,4 +60,4 @@ const SplitTextAnimation = ({ children, delay }) => {
   return <div ref={textRef}>{children}</div>
 }
 
-export { SplitTextAnimation }
+export default SplitTextAnimation 
