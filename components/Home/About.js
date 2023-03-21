@@ -13,7 +13,7 @@ const About = () => {
           experience, like the nautilus shell, is an ever-growing spiral that
           allows us to build on our past experiences in order to meet and learn
           from the demands of the present moment.
-          <Link href="/booklist"> Currently reading &#10042;</Link>
+          <Link href="/blog/2023-booklist"> Currently reading &#10042;</Link>
         </p>
       </div>
     </section>

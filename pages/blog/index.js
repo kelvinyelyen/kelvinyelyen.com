@@ -11,7 +11,7 @@ export default function BlogPost({ posts }) {
         </p>
         <p className="">
           At certain times, articulating a concise portrayal of my identity or
-          occupation can prove to be challenging, <br /> as it encompasses a
+          occupation can prove to be challenging, as it encompasses a
           complexity that cannot be adequately conveyed through a mere handful
           of words.
         </p>
