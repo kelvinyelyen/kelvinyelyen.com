@@ -19,9 +19,9 @@ export default function BlogPost({ posts }) {
         {posts.map((post) => (
           <div key={post.id}>
             <div className="flex justify-between text-start">
-              <Link href={`/${post.slug}`}>
+              <Link href={`/blog/${post.slug}`}>
                 <p className="text-[13px]">
-                  {new Date(post.published_at).toDateString()}
+                  ({new Date(post.published_at).toDateString()})
                 </p>
                 <h2 className="text-[20px] lg:text-[25px] ">{post.title}</h2>
                 <p className="text-[13px]">{post.excerpt}</p>
@@ -40,4 +40,3 @@ export async function getStaticProps() {
   const posts = await getPosts()
   return { props: { posts } }
 }
-
