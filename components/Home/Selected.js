@@ -6,12 +6,12 @@ const Project = ({ number, title, imageUrl, altText, year, type, url }) => {
   return (
     <>
       <Link href={url}>
-        <div className="grid grid-cols-3 sm:grid-cols-3  text-end dark:text-secondary-white">
+        <div className="grid grid-cols-3 sm:grid-cols-3 my-10 text-end dark:text-secondary-white">
           <div className="flex">
             <span className="text-stone-500 text-xs sm:text-base mr-1 sm:mr-5">
               <sup>{number}</sup>
             </span>
-            <h2 className="font-monument uppercase tracking-tighter text-base sm:text-4xl">
+            <h2 className="font-monument uppercase tracking-tighter text-2xl sm:text-4xl">
               {title}
             </h2>
           </div>
@@ -19,7 +19,7 @@ const Project = ({ number, title, imageUrl, altText, year, type, url }) => {
             <p>{type}</p>
             <p>/{year}</p>
           </div>
-          <div className="flex justify-end">&#x1F866;</div>
+          <div className="text-[13px]">&#x1F866;</div>
         </div>
       </Link>
 
@@ -32,7 +32,7 @@ const Selected = () => {
   const projects = [
     {
       number: "/01",
-      title: "Augur.Ehrs",
+      title: "Agr.Ehrs",
       year: "2023",
       type: "CASE STUDY",
       url: "https://atlasweatherfocus.vercel.app/",
