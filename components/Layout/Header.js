@@ -13,12 +13,11 @@ const Header = () => {
               kelvinyelyen
             </h1>
             <p className="text-sm lg:block hidden dark:font-light uppercase">
-              Software Engineer &amp; Designer
+              Software Engineer <br /> &amp; Designer
             </p>
           </Link>
-
         </div>
-        <ul className="flex gap-5 sm:text-xs text-xs dark:text-secondary-white uppercase">
+        <ul className="flex gap-5 text-xs dark:text-secondary-white uppercase">
           <li>
             <Link href="/projects">Projects</Link>
           </li>
@@ -27,7 +26,6 @@ const Header = () => {
           </li>
         </ul>
       </div>
-
     </nav>
   )
 }
