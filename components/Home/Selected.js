@@ -23,7 +23,7 @@ const Project = ({ number, title, imageUrl, altText, year, type, url }) => {
         </div>
       </Link>
 
-      <hr className="h-px my-4 sm:my-8 bg-gray-300 dark:bg-neutral-300 border-0" />
+      <hr className="h-px my-4 sm:my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
     </>
   )
 }
@@ -74,7 +74,7 @@ const Selected = () => {
         <p className="text-[15px] text-secondary-white dark:text-neutral-600">
           SELECTED WORK
         </p>
-        <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-300 border-0" />
+        <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
 
         {projects.map((project) => (
           <Project key={project.number} {...project} />
