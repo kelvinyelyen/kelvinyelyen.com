@@ -3,7 +3,9 @@ import styles from "@/styles"
 
 const Skills = () => {
   return (
-    <div className={`${styles.paddings} text-[12px] lg:text-[15px] `}>
+    <div
+      className={`${styles.paddings} text-[12px] lg:text-[15px] -my-10 mb-6 lg:my-0`}
+    >
       <div className="flex flex-col sm:flex-row justify-between">
         <div className="dark:font-light uppercase dark:text-secondary-white mb-6 sm:mb-0">
           <p>
@@ -18,9 +20,7 @@ const Skills = () => {
           </p>
         </div>
         <div className="text-end">
-          <p className=" dark:text-secondary-white">
-            START A PROJECT
-          </p>
+          <p className="dark:text-secondary-white">START A PROJECT</p>
           <Link href="#" className="text-stone-500 uppercase">
             kelvinyelyen@gmail.com
           </Link>
