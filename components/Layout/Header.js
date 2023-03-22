@@ -13,7 +13,7 @@ const Header = () => {
               kelvinyelyen
             </h1>
             <p className="text-[15px] lg:block hidden dark:font-light uppercase">
-              Software Engineer & Designer
+              Software Engineer &amp; Designer
             </p>
           </Link>
         </div>

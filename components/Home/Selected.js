@@ -19,7 +19,7 @@ const Project = ({ number, title, imageUrl, altText, year, type, url }) => {
             <p>{type}</p>
             <p>/{year}</p>
           </div>
-          <div className="text-[10px]">&#x1F866;</div>
+          <div className="text-[10px]">&#129126;</div>
         </div>
       </Link>
 
@@ -82,7 +82,7 @@ const Selected = () => {
 
         <Link href="/projects">
           <p className="text-right dark:font-light text-[13px] text-stone-500">
-            MORE WORK (5) &#x1F866;
+            MORE WORK (5) &#129126;
           </p>
         </Link>
       </div>

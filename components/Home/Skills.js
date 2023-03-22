@@ -24,16 +24,16 @@ const Skills = () => {
           <div className="text-stone-500 text-[12px]">
             <ul>
               <li>
-                <Link href="#">Email &#x1F865;</Link>
+                <Link href="#">Email &#129125;</Link>
               </li>
               <li>
                 <Link href="https://github.com/kelvinyelyen" target="_blank">
-                  GitHub &#x1F865;
+                  GitHub &#129125;
                 </Link>
               </li>
               <li>
                 <Link href="https://twitter.com/kelvinyelyen" target="_blank">
-                  Twitter &#x1F865;
+                  Twitter &#129125;
                 </Link>
               </li>
               <li>
@@ -41,7 +41,7 @@ const Skills = () => {
                   href="https://www.linkedin.com/in/kelvinyelyen/"
                   target="_blank"
                 >
-                  Linkedin &#x1F865;
+                  Linkedin &#129125;
                 </Link>
               </li>
             </ul>
