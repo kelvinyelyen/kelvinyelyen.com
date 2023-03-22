@@ -5,15 +5,16 @@ import styles from "@/styles"
 export default function BlogPost({ posts }) {
   return (
     <section className={`${styles.paddings} relative z-10`}>
-      <div className={`${styles.projectWidth} mx-auto dark:text-secondary-white`}>
+      <div
+        className={`${styles.projectWidth} mx-auto dark:text-secondary-white`}
+      >
         <p className="uppercase text-[10px] text-stone-500">
           (Musings, Shower-thoughts, Notes ...)
         </p>
-        <p className="">
+        <p className="text-neutral-700 dark:text-secondary-white">
           At certain times, articulating a concise portrayal of my identity or
-          occupation can prove to be challenging, as it encompasses a
-          complexity that cannot be adequately conveyed through a mere handful
-          of words.
+          occupation can prove to be challenging, as it encompasses a complexity
+          that cannot be adequately conveyed through a mere handful of words.
         </p>
         <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
         {posts.map((post) => (
@@ -24,7 +25,9 @@ export default function BlogPost({ posts }) {
                   ({new Date(post.published_at).toDateString()})
                 </p>
                 <h2 className="text-[20px] lg:text-[25px] ">{post.title}</h2>
-                <p className="text-[13px]">{post.excerpt}</p>
+                <p className="text-[13px] text-neutral-700 dark:text-secondary-white">
+                  {post.excerpt}
+                </p>
               </Link>
               <div> &#x1F866;</div>
             </div>

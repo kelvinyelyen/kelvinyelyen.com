@@ -14,7 +14,7 @@ export default function Post({ post }) {
             {post.title}
           </h1>
           <div
-            className="leading-7 text-[16px] text-neutral-700"
+            className="leading-7 text-[16px] text-neutral-700 dark:text-secondary-white"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>
