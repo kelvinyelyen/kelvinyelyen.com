@@ -9,23 +9,25 @@ const Header = () => {
       >
         <div className="flex-col dark:text-secondary-white">
           <Link href="/">
-            <h1 className="font-monument tracking-tighter text-[15px] lg:text-[50px] -mb-2 lg:-mt-4">
+            <h1 className="font-monument tracking-tighter text-sm lg:text-5xl">
               kelvinyelyen
             </h1>
-            <p className="text-[15px] lg:block hidden dark:font-light uppercase">
+            <p className="text-sm lg:block hidden dark:font-light uppercase">
               Software Engineer &amp; Designer
             </p>
           </Link>
+
         </div>
-        <ul className="flex gap-5 sm:text-[13px] text-[10px] dark:text-secondary-white">
+        <ul className="flex gap-5 sm:text-xs text-xs dark:text-secondary-white uppercase">
           <li>
-            <Link href="/projects">PROJECTS</Link>
+            <Link href="/projects">Projects</Link>
           </li>
           <li>
-            <Link href="/blog">BLOG</Link>
+            <Link href="/blog">Blog</Link>
           </li>
         </ul>
       </div>
+      
     </nav>
   )
 }
