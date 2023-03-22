@@ -1,28 +1,29 @@
 import Link from "next/link"
+import Image from "next/image"
 import styles from "@/styles"
 
 const Project = ({ number, title, imageUrl, altText, year, type, url }) => {
   return (
     <>
-      <Link href="">
-        <div className="grid grid-cols-3 gap-20 text-end dark:text-secondary-white">
+      <Link href={url}>
+        <div className="grid grid-cols-3 sm:grid-cols-3  text-end dark:text-secondary-white">
           <div className="flex">
-            <span className="text-stone-500 text-[13px] sm:text-[15px] mr-0 lg:mr-5">
+            <span className="text-stone-500 text-xs sm:text-base mr-1 sm:mr-5">
               <sup>{number}</sup>
             </span>
-            <h2 className="font-monument uppercase tracking-tighter text-[20px] lg:text-[40px]">
+            <h2 className="font-monument uppercase tracking-tighter text-base sm:text-4xl">
               {title}
             </h2>
           </div>
-          <div className="text-[10px] sm:text-[13px]">
+          <div className="text-[10px]">
             <p>{type}</p>
             <p>/{year}</p>
           </div>
-          <div className="">&#x1F866;</div>
+          <div className="flex justify-end">&#x1F866;</div>
         </div>
       </Link>
 
-      <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-300 border-0" />
+      <hr className="h-px my-4 sm:my-8 bg-gray-300 dark:bg-neutral-300 border-0" />
     </>
   )
 }
@@ -35,7 +36,7 @@ const Selected = () => {
       year: "2023",
       type: "CASE STUDY",
       url: "https://atlasweatherfocus.vercel.app/",
-      imageUrl: "/images/project1 .jpg",
+      imageUrl: "/pro.jpg",
       altText: "Project 1",
     },
     {

@@ -17,7 +17,7 @@ const Header = () => {
             </p>
           </Link>
         </div>
-        <ul className="flex gap-5 sm:text-[13px] text-[13px] dark:text-secondary-white">
+        <ul className="flex gap-5 sm:text-[13px] text-[10px] dark:text-secondary-white">
           <li>
             <Link href="/projects">PROJECTS</Link>
           </li>
