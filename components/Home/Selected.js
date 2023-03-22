@@ -6,7 +6,7 @@ const Project = ({ number, title, imageUrl, altText, year, type, url }) => {
   return (
     <>
       <Link href={url}>
-        <div className="grid grid-cols-2 sm:grid-cols-3 my-10 text-end dark:text-secondary-white">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:my-10 my-0 text-end dark:text-secondary-white">
           <div className="flex">
             <span className="text-stone-500 text-xs sm:text-base mr-1 sm:mr-5">
               <sup>{number}</sup>
