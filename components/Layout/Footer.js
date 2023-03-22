@@ -1,18 +1,10 @@
 import Link from "next/link"
 import styles from "@/styles"
-import { motion } from "framer-motion"
-import { staggerContainer } from "../../utils/motion"
 
 const Footer = () => {
   return (
-    <footer className={`${styles.paddings} relative z-10`}>
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto text-[10px]`}
-      >
+    <footer className={`${styles.xPaddings} py-8 relative`}>
+      <div className={`${styles.innerWidth} mx-auto text-[10px]`}>
         <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-600 border-0" />
         <div className="dark:font-light text-stone-500">
           <div className="flex justify-between uppercase">
@@ -31,7 +23,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </footer>
   )
 }
