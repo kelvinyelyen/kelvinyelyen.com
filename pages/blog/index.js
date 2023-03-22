@@ -5,7 +5,7 @@ import styles from "@/styles"
 export default function BlogPost({ posts }) {
   return (
     <section className={`${styles.paddings} relative z-10`}>
-      <div className={`${styles.projectWidth} mx-auto text-secondary-white`}>
+      <div className={`${styles.projectWidth} mx-auto dark:text-secondary-white`}>
         <p className="uppercase text-[10px] text-stone-500">
           (Musings, Shower-thoughts, Notes ...)
         </p>
