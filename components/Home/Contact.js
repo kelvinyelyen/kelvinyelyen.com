@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <section className={`${styles.paddings} relative z-10`}>
       <div className={`${styles.textWidth} mx-auto`}>
-        <div className="mt-24 lg:mt-40 flex justify-between">
+        <div className="mt-10 lg:mt-10 flex justify-between">
           <article className="uppercase lg:mx-[200px] prose sm:prose-lg">
             <p className="text-[10px] text-stone-500">(Work with me)</p>
             <p className="sm:text-[15px] text-[12px] dark:font-light dark:text-secondary-white">
