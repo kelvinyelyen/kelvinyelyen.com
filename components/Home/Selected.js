@@ -14,11 +14,11 @@ const Project = ({ number, title, imageUrl, altText, year, type, url}) => {
               {title}
             </h2>
           </div>
-          <div className="text-[8px] sm:text-[10px]">
+          <div className="text-[10px] sm:text-[13px]">
             <p>({year})</p>
             <p>{type}</p>
           </div>
-          <div className="text-end">&#x1F866;</div>
+          <div className="">&#x1F866;</div>
         </div>
       </Link>
 
