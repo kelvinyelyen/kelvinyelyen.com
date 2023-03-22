@@ -1,7 +1,7 @@
 import Link from "next/link"
 import styles from "@/styles"
 
-const Project = ({ number, title, imageUrl, altText, year, type, url}) => {
+const Project = ({ number, title, imageUrl, altText, year, type, url }) => {
   return (
     <>
       <Link href="">
