@@ -11,7 +11,7 @@ const Footer = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto text-[10px] lg:text-[13px]`}
+        className={`${styles.innerWidth} mx-auto text-[10px]`}
       >
         <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-600 border-0" />
         <div className="dark:font-light text-stone-500">

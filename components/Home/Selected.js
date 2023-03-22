@@ -6,20 +6,20 @@ const Project = ({ number, title, imageUrl, altText, year, type, url }) => {
   return (
     <>
       <Link href={url}>
-        <div className="grid grid-cols-3 sm:grid-cols-3 my-10 text-end dark:text-secondary-white">
+        <div className="grid grid-cols-3 sm:grid-cols-3 lg:my-10 my-0 text-end dark:text-secondary-white">
           <div className="flex">
             <span className="text-stone-500 text-xs sm:text-base mr-1 sm:mr-5">
               <sup>{number}</sup>
             </span>
-            <h2 className="font-monument uppercase tracking-tighter text-2xl sm:text-4xl">
+            <h2 className="font-monument uppercase tracking-tighter text-[25px] sm:text-4xl">
               {title}
             </h2>
           </div>
-          <div className="text-[10px]">
+          <div className="text-[10px] lg:ml-0 ml-20 w-20 text-end">
             <p>{type}</p>
             <p>/{year}</p>
           </div>
-          <div className="text-[13px]">&#x1F866;</div>
+          <div className="text-[10px]">&#x1F866;</div>
         </div>
       </Link>
 
@@ -70,7 +70,7 @@ const Selected = () => {
 
   return (
     <section className={`${styles.paddings} relative z-10`}>
-      <div className={`${styles.projectWidth} mx-auto mt-[50px]`}>
+      <div className={`${styles.projectWidth} mx-auto`}>
         <p className="text-[15px] text-secondary-white dark:text-neutral-600">
           SELECTED WORK
         </p>
