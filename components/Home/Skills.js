@@ -27,8 +27,8 @@ const Skills = () => {
                 <Link href="#">Email &#129125;</Link>
               </li>
               <li>
-                <Link href="https://github.com/kelvinyelyen" target="_blank">
-                  GitHub &#129125;
+                <Link href="https://github.com/kelvinyelyen" target="_blank" className="font-light">
+                  GitHub &#129142;
                 </Link>
               </li>
               <li>
