@@ -15,7 +15,7 @@ export default function BlogPost({ posts }) {
           complexity that cannot be adequately conveyed through a mere handful
           of words.
         </p>
-        <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-300 border-0" />
+        <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
         {posts.map((post) => (
           <div key={post.id}>
             <div className="flex justify-between text-start">
@@ -28,7 +28,7 @@ export default function BlogPost({ posts }) {
               </Link>
               <div> &#x1F866;</div>
             </div>
-            <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-300 border-0" />
+            <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
           </div>
         ))}
       </div>
