@@ -15,8 +15,8 @@ const Project = ({ number, title, imageUrl, altText, year, type, url }) => {
             </h2>
           </div>
           <div className="text-[10px] sm:text-[13px]">
-            <p>({year})</p>
             <p>{type}</p>
+            <p>/{year}</p>
           </div>
           <div className="">&#x1F866;</div>
         </div>
@@ -42,7 +42,7 @@ const Selected = () => {
       number: "/02",
       title: "Atlas",
       year: "2023",
-      type: "DESIGN & DEVELOPMENT",
+      type: "DESIGN/DEV",
       url: "https://atlasweatherfocus.vercel.app/",
       imageUrl: "/images/project2.jpg",
       altText: "Project 2",
@@ -51,7 +51,7 @@ const Selected = () => {
       number: "/03",
       title: "Muzeyi",
       year: "2023",
-      type: "DESIGN & DEVELOPMENT",
+      type: "DESIGN/DEV",
       url: "https://atlasweatherfocus.vercel.app/",
       imageUrl: "/images/project3.jpg",
       altText: "Project 3",
@@ -60,7 +60,7 @@ const Selected = () => {
       number: "/04",
       title: "Typecast",
       year: "2023",
-      type: "DEVELOPMENT",
+      type: "DEV",
       url: "https://atlasweatherfocus.vercel.app/",
       imageUrl: "/images/project4.jpg",
       altText: "Project 4",
