@@ -10,7 +10,7 @@ const Project = ({ number, title, imageUrl, altText, year, type, url}) => {
             <span className="text-stone-500 text-[13px] sm:text-[15px] mr-0 lg:mr-5">
               <sup>{number}</sup>
             </span>
-            <h2 className="font-monument uppercase tracking-tighter text-[30px] lg:text-[40px] ">
+            <h2 className="font-monument uppercase tracking-tighter text-[20px] lg:text-[40px]">
               {title}
             </h2>
           </div>
@@ -18,7 +18,7 @@ const Project = ({ number, title, imageUrl, altText, year, type, url}) => {
             <p>({year})</p>
             <p>{type}</p>
           </div>
-          <div className="sm:block hidden">&#x1F866;</div>
+          <div className="text-end">&#x1F866;</div>
         </div>
       </Link>
 

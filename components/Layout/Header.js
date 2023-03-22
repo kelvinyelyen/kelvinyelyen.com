@@ -10,7 +10,7 @@ const Header = () => {
         {/* Show this div on large screens only */}
         <div className="flex-col dark:text-secondary-white">
           <Link href="/">
-            <h1 className="font-monument tracking-tighter text-[15px] lg:text-[50px] lg:-mb-2 mb-0 lg:-mt-4">
+            <h1 className="font-monument tracking-tighter text-[15px] lg:text-[50px] -mb-2 lg:-mt-4">
               kelvinyelyen
             </h1>
             <p className="text-[15px] lg:block hidden dark:font-light uppercase">
