@@ -32,7 +32,7 @@ const Header = () => {
       {/* Show this div on mobile screens only */}
       {/* <div className="flex flex-col lg:hidden mt-[200px] dark:text-secondary-white">
         <h1 className="font-monument text-[40px] tracking-tighter -mb-1">
-          Kelvin Yelyen
+          kelvinyelyen
         </h1>
         <p className="text-[10px] uppercase">
           Software Engineer & Designer

@@ -14,7 +14,7 @@ const Footer = () => {
         className={`${styles.innerWidth} mx-auto`}
       >
         <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-600 border-0" />
-        <div className="dark:font-light sm:text-[10px] text-[8px] text-stone-500">
+        <div className="dark:font-light sm:text-[13px] text-[10px] text-stone-500">
           <div className="flex justify-between uppercase">
             <div>
               <p>
