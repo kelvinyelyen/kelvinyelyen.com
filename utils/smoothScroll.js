@@ -15,7 +15,7 @@ export default function Layout({ children, ...rest }) {
 
     scrollbar.current = SmoothScrollbar.init(el, {
       // renderByPixels: false,
-      damping: 0.040,
+      damping: 0.04,
       delegateTo: document,
     })
 

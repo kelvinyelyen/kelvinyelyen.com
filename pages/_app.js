@@ -7,6 +7,7 @@ import Preloader from "@/components/Preloader"
 export default function App({ Component, pageProps }) {
   return (
     <div>
+      <div className="bg"></div>
       <Preloader />
       <Scroller>
         <ThemeProvider attribute="class">
