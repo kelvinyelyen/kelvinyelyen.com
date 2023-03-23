@@ -5,16 +5,16 @@ export default function Post({ post }) {
   return (
     <section className={`${styles.paddings} relative z-10`}>
       <div className={`${styles.blogWidth} mx-auto`}>
-        <p className="text-[13px] text-stone-500 my-5">
+        <p className="text-sm text-stone-500 my-5">
           ({new Date(post.published_at).toDateString()})
         </p>
         <div className="dark:text-secondary-white">
-          <img src={post.feature_image} alt="" />
+          <img src={post.feature_image} alt="" style={{ maxWidth: "100%" }} />
           <h1 className="lg:text-[40px] text-[30px] leading-tight my-5">
             {post.title}
           </h1>
           <div
-            className="leading-7 text-[16px] text-neutral-700 dark:text-secondary-white"
+            className="leading-7 text-sm lg:text-lg text-neutral-700 dark:text-secondary-white"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>

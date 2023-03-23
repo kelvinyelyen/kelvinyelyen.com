@@ -9,7 +9,9 @@ export default function BlogPost({ posts }) {
       <div
         className={`${styles.projectWidth} mx-auto dark:text-secondary-white`}
       >
-        <p className="text-[20px] uppercase">Notes</p>
+        <p className="text-[20px] uppercase text-secondary-white dark:text-neutral-600">
+          Blog
+        </p>
         <hr className="h-px w-[50%] mb-8 bg-gray-300 dark:bg-neutral-500 border-0" />
         <div className="lg:mr-[50%] mr-0">
           <p className="uppercase text-[10px] text-stone-500">
