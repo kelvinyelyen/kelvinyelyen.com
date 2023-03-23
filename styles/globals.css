@@ -61,13 +61,6 @@ p {
   word-spacing: 2px;
 }
 
-/* Smooth scroll styling */
-[data-scrollbar] {
-  min-width: 100vw;
-  height: 100vh;
-  overflow: "hidden";
-}
-
 .preloader {
   position: fixed;
   top: 0;
@@ -141,4 +134,11 @@ p {
 
 .preloader__inner {
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  [data-scrollbar] {
+    min-width: 100vw;
+    height: 100vh;
+  }
 }

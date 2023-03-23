@@ -4,8 +4,8 @@ import gsap from "gsap"
 import ScrollTrigger from "gsap/dist/ScrollTrigger"
 
 export default function Layout({ children, ...rest }) {
-  let $content = useRef()
-  let scrollbar = useRef()
+  const $content = useRef()
+  const scrollbar = useRef()
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
@@ -40,10 +40,25 @@ export default function Layout({ children, ...rest }) {
     }
   }, [])
 
+  const isDesktop = window.matchMedia("(min-width: 768px)").matches
+
+  if (!isDesktop) {
+    return (
+      <div {...rest}>
+        <div className="container">{children}</div>
+      </div>
+    )
+  }
+
   return (
     <div
       data-scrollbar
       ref={$content}
+      style={{
+        overflow: "auto", // enable scrollbar
+        "-webkit-overflow-scrolling": "touch", // enable momentum scrolling
+        height: "100vh", // set height to full viewport height
+      }}
       {...rest}
     >
       <div className="container">{children}</div>
