@@ -12,13 +12,9 @@ export default function Layout({ children, ...rest }) {
 
     const el = $content.current
 
-    const userAgent = window.navigator.userAgent.toLowerCase()
-    const isMobile = /mobile|android|ios|iphone|ipad|ipod|windows phone/i.test(
-      userAgent
-    )
-
     scrollbar.current = SmoothScrollbar.init(el, {
-      damping: isMobile ? 1 : 0.04, // increase damping on mobile devices
+      // renderByPixels: false,
+      damping: 0.04,
       delegateTo: document,
     })
 
@@ -49,7 +45,7 @@ export default function Layout({ children, ...rest }) {
       data-scrollbar
       ref={$content}
       style={{
-        overflow: "auto", // enable scrollbar
+        overflow: "hidden", // hide scrollbar
         "-webkit-overflow-scrolling": "touch", // enable momentum scrolling
         height: "100vh", // set height to full viewport height
       }}
