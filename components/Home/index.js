@@ -3,6 +3,6 @@ import Inversion from "./Inversion"
 import Selected from "./Selected"
 import Contact from "./Contact"
 import Skills from "./Skills"
-import Mobile from "./Mobile"
+import Intro from "./Intro"
 
-export { About, Inversion, Selected, Skills, Contact, Mobile }
+export { Intro, About, Inversion, Selected, Skills, Contact }

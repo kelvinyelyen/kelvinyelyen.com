@@ -8,7 +8,6 @@ export default function Layout({ children, ...rest }) {
   let scrollbar = useRef()
 
   useEffect(() => {
-    console.log("coso")
     gsap.registerPlugin(ScrollTrigger)
 
     const el = $content.current
@@ -42,7 +41,16 @@ export default function Layout({ children, ...rest }) {
   }, [])
 
   return (
-    <div data-scrollbar ref={$content} {...rest}>
+    <div
+      data-scrollbar
+      ref={$content}
+      style={{
+        overflow: "auto", // enable scrollbar
+        "-webkit-overflow-scrolling": "touch", // enable momentum scrolling
+        height: "100vh", // set height to full viewport height
+      }}
+      {...rest}
+    >
       <div className="container">{children}</div>
     </div>
   )

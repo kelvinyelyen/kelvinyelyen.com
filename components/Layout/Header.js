@@ -7,9 +7,9 @@ const Header = () => {
       <div
         className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}
       >
-        <div className="dark:text-secondary-white">
+        <div className="dark:text-secondary-white text-neutral-800">
           <Link href="/">
-            <h1 className="font-monument tracking-tighter lg:block hidden lg:text-5xl lg:mb-1">
+            <h1 className="font-monument tracking-tighter lg:block hidden lg:text-6xl lg:mb-1">
               kelvinyelyen
             </h1>
             <p className="text-sm lg:block hidden dark:font-light uppercase">
