@@ -5,7 +5,7 @@ import styles from '@/styles';
 const Mobile = () => {
     return (
       <div className={`${styles.innerWidth} ${styles.xPaddings}`}>
-        <div className=" md:hidden block my-[50px] dark:text-secondary-white text-neutral-800 text-4xl">
+        <div className=" md:hidden block my-[40px] dark:text-secondary-white text-neutral-800 text-4xl">
           <Link href="/">
             <h1 className="font-monument tracking-tighter mb-1">
               kelvinyelyen
