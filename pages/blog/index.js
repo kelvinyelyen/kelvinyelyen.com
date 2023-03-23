@@ -9,15 +9,12 @@ export default function BlogPost({ posts }) {
       <div
         className={`${styles.projectWidth} mx-auto dark:text-secondary-white`}
       >
-        <p className="text-[20px] uppercase text-secondary-white dark:text-neutral-600">
-          Blog
-        </p>
         <hr className="h-px w-[50%] mb-8 bg-gray-300 dark:bg-neutral-500 border-0" />
         <div className="lg:mr-[50%] mr-0">
           <p className="uppercase text-[10px] text-stone-500">
             (Musings, Shower-thoughts, Essays ...)
           </p>
-          <p className="text-neutral-700 dark:text-secondary-white">
+          <p className="text-neutral-700 dark:text-secondary-white text-base">
             At certain times, articulating a concise portrayal of my identity or
             occupation can prove to be challenging, as it encompasses a
             complexity that cannot be adequately conveyed through a mere handful
@@ -41,7 +38,7 @@ export default function BlogPost({ posts }) {
                   {post.excerpt}
                 </p>
               </Link>
-              <div className="text-[13px]">&#x1F866;</div>
+              <div className="text-xs md:text-sm">&#x1F866;</div>
             </div>
             <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
           </div>
