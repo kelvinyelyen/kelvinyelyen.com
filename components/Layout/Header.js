@@ -9,9 +9,10 @@ const Header = () => {
       >
         <div className="flex-col dark:text-secondary-white">
           <Link href="/">
-            <h1 className="font-monument tracking-tighter text-sm lg:text-5xl mb-1">
+            <h1 className="font-monument tracking-tighter lg:block hidden lg:text-5xl lg:mb-1">
               kelvinyelyen
             </h1>
+            <h1 className="block lg:hidden">&#10042;</h1>
             <p className="text-sm lg:block hidden dark:font-light uppercase">
               Software Engineer &amp; Designer
             </p>
