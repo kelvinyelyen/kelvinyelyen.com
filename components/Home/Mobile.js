@@ -7,7 +7,7 @@ const Mobile = () => {
       <div className={`${styles.innerWidth} ${styles.xPaddings}`}>
         <div className=" md:hidden block my-[50px]">
           <Link href="/">
-            <h1 className="font-monument tracking-tighter text-5xl mb-1">
+            <h1 className="font-monument tracking-tighter text-4xl mb-1">
               kelvinyelyen
             </h1>
             <p className="text-sm dark:font-light uppercase">
