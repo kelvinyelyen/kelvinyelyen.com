@@ -136,9 +136,21 @@ p {
   text-align: center;
 }
 
-@media (min-width: 768px) {
-  [data-scrollbar] {
+[data-scrollbar] {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100vh;
+}
+
+.desktop-only {
+  display: none; /* hide by default */
+}
+
+@media screen and (min-width: 768px) {
+  .desktop-only {
+    display: block; /* show on desktop devices */
     min-width: 100vw;
     height: 100vh;
   }
 }
+
