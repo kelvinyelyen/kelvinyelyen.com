@@ -10,7 +10,7 @@ const Mobile = () => {
             <h1 className="font-monument tracking-tighter text-4xl mb-1">
               kelvinyelyen
             </h1>
-            <p className="text-sm dark:font-light uppercase">
+            <p className="text-4xl dark:font-light font-monument">
               Software Engineer &amp; Designer
             </p>
           </Link>
