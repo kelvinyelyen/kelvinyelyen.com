@@ -65,7 +65,7 @@ p {
 [data-scrollbar] {
   min-width: 100vw;
   height: 100vh;
-  
+  overflow: "hidden";
 }
 
 .preloader {
@@ -141,18 +141,4 @@ p {
 
 .preloader__inner {
   text-align: center;
-}
-
-/* Hide scrollbar for all devices except touchscreen */
-@media (hover: hover) {
-  ::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-/* Hide scrollbar for touchscreen devices */
-@media (hover: none) {
-  ::-webkit-scrollbar {
-    display: none;
-  }
 }

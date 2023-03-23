@@ -9,13 +9,13 @@ export default function App({ Component, pageProps }) {
     <div>
       <div className="bg"></div>
       <Preloader />
-      <Scroller>
+
         <ThemeProvider attribute="class">
           <Layout>
             <Component {...pageProps} />
           </Layout>
         </ThemeProvider>
-      </Scroller>
+
     </div>
   )
 }

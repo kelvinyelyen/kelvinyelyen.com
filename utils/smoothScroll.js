@@ -44,11 +44,6 @@ export default function Layout({ children, ...rest }) {
     <div
       data-scrollbar
       ref={$content}
-      style={{
-        overflow: "hidden", // hide scrollbar
-        "-webkit-overflow-scrolling": "touch", // enable momentum scrolling
-        height: "100vh", // set height to full viewport height
-      }}
       {...rest}
     >
       <div className="container">{children}</div>
