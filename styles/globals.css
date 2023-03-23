@@ -136,6 +136,7 @@ p {
   text-align: center;
 }
 
+/* Smooth Scroll */
 [data-scrollbar] {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
