@@ -15,7 +15,7 @@ const Header = () => {
             <p className="text-sm lg:block hidden dark:font-light uppercase">
               Software Engineer &amp; Designer
             </p>
-            <h1 className="block lg:hidden text-xs">&#10042;</h1>
+            <h1 className="block lg:hidden text-20 -mt-1">&#10042;</h1>
           </Link>
         </div>
         <ul className="flex gap-5 text-xs dark:text-secondary-white uppercase">
