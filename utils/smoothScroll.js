@@ -4,8 +4,8 @@ import gsap from "gsap"
 import ScrollTrigger from "gsap/dist/ScrollTrigger"
 
 export default function Layout({ children, ...rest }) {
-  const $content = useRef()
-  const scrollbar = useRef()
+  let $content = useRef()
+  let scrollbar = useRef()
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
@@ -16,6 +16,7 @@ export default function Layout({ children, ...rest }) {
       // renderByPixels: false,
       damping: 0.04,
       delegateTo: document,
+      thumbMinSize: 100,
     })
 
     scrollbar.current.setPosition(0, 0)
@@ -39,16 +40,6 @@ export default function Layout({ children, ...rest }) {
       }
     }
   }, [])
-
-  const isDesktop = window.matchMedia("(min-width: 768px)").matches
-
-  if (!isDesktop) {
-    return (
-      <div {...rest}>
-        <div className="container">{children}</div>
-      </div>
-    )
-  }
 
   return (
     <div
