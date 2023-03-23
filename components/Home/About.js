@@ -4,7 +4,7 @@ import styles from "@/styles"
 const About = () => {
   return (
     <section className={`${styles.paddings} relative z-10`}>
-      <div className={`${styles.aboutWidth} mx-auto mt-[150px] lg:mt-[80px]`}>
+      <div className={`${styles.aboutWidth} mx-auto mt-[100px] lg:mt-[80px]`}>
         <p className="text-[10px] text-stone-500 lg:mx-[90px]">(ABOUT)</p>
         <p
           data-scroll
