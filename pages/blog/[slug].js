@@ -10,7 +10,7 @@ export default function Post({ post }) {
         </p>
         <div className="dark:text-secondary-white">
           <img src={post.feature_image} alt="" style={{ maxWidth: "100%" }} />
-          <h1 className="lg:text-[30px] text-[20px] leading-tight my-5">
+          <h1 className="lg:text-[30px] text-[25px] leading-tight my-5">
             {post.title}
           </h1>
           <div
