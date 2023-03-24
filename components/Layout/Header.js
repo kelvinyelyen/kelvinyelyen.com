@@ -9,12 +9,6 @@ const Header = () => {
       >
         <div className="dark:text-secondary-white text-neutral-800">
           <Link href="/">
-            <h1 className="font-monument tracking-tighter lg:block hidden lg:text-6xl lg:mb-1">
-              kelvinyelyen
-            </h1>
-            <p className="text-sm lg:block hidden dark:font-light uppercase">
-              Software Engineer &amp; Designer
-            </p>
             <h1 className="block lg:hidden text-20 -mt-1">&#10042;</h1>
           </Link>
         </div>
