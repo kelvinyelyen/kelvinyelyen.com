@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import Link from "next/link"
 import gsap from "gsap"
 
@@ -15,36 +15,50 @@ const SelectedProject = ({
   const imageRef = useRef(null)
 
   const handleMouseEnter = () => {
-    setShowImage(true)
+    if (!isMobileDevice()) {
+      setShowImage(true)
+    }
   }
 
-const handleMouseMove = (event) => {
-  if (showImage) {
-    const image = imageRef.current
+  const handleMouseMove = (event) => {
+    if (!isMobileDevice() && showImage) {
+      const image = imageRef.current
 
-    // Calculate the position of the mouse relative to the component
-    const rect = event.currentTarget.getBoundingClientRect()
-    const mouseX = event.clientX - rect.left
-    const mouseY = event.clientY - rect.top
+      // Calculate the position of the mouse relative to the component
+      const rect = event.currentTarget.getBoundingClientRect()
+      const mouseX = event.clientX - rect.left
+      const mouseY = event.clientY - rect.top
 
-    // Update the position of the image with a parallax effect
-    gsap.to(image, {
-      x: mouseX - 80,
-      y: mouseY - 80,
-      duration: 1,
-      ease: "power2.out",
-    })
+      // Update the position of the image with a parallax effect
+      gsap.to(image, {
+        x: mouseX - 80,
+        y: mouseY - 100,
+        duration: 0.4,
+        ease: "power2.out",
+      })
 
-    // Disable scrolling
-    document.body.style.overflow = "auto"
+      // Disable scrolling
+      document.body.style.overflow = "auto"
+    }
   }
-}
 
-
+  const isMobileDevice = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  }
 
   const handleMouseLeave = () => {
-    setShowImage(false)
+    if (!isMobileDevice()) {
+      setShowImage(false)
+    }
   }
+
+  useEffect(() => {
+    if (isMobileDevice()) {
+      setShowImage(false)
+    }
+  }, [])
 
   return (
     <>
