@@ -1,9 +1,9 @@
-import { Projects } from '@/components/Projects';
+import { AllProjects } from '@/components/Projects';
 
 export default function Project() {
     return (
         <div>
-            <Projects />
+            <AllProjects />
         </div>
     );
 }

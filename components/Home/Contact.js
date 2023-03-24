@@ -1,22 +1,54 @@
+import Link from "next/link"
 import styles from "@/styles"
 
 const Contact = () => {
   return (
-    <section className={`${styles.paddings} relative z-10`}>
-      <div className={`${styles.textWidth} mx-auto`}>
-        <div className="lg:mt-5 flex justify-between">
-          <article className="uppercase lg:mx-[200px] prose sm:prose-lg">
-            <p className="text-[10px] text-stone-500">(Work with me)</p>
-            <p className="sm:text-[15px] text-[12px] dark:font-light dark:text-secondary-white">
-              I appreciate designing tools that allow us to spend our time doing
-              what we love most, whether it&apos;s a Slack bot that automates
-              your morning ritual or a tailored backend service to manage your
-              workflow by utilizing the required strategies.
-            </p>
-          </article>
+    <div
+      className={`${styles.paddings} text-[12px] lg:text-[15px] -mb-20 relative`}
+    >
+      <div className="flex flex-col sm:flex-row justify-between uppercase">
+        <div className="dark:font-light uppercase dark:text-secondary-white mb-6 sm:mb-0">
+          <p>
+            Full-stack Engineering<sup className="text-stone-500"> 01 </sup>
+          </p>
+          <p>
+            Product Design (UI/UX Design)
+            <sup className="text-stone-500"> 02 </sup>
+          </p>
+          <p>
+            Graphic Design<sup className="text-stone-500"> 03 </sup>
+          </p>
+        </div>
+        <div className="text-end">
+          <p className="dark:text-secondary-white">START A PROJECT</p>
+          <div className="text-stone-500 text-[12px]">
+            <ul>
+              <li>
+                <Link href="#">Email &#129125;</Link>
+              </li>
+              <li>
+                <Link href="https://github.com/kelvinyelyen" target="_blank">
+                  GitHub &#129125;
+                </Link>
+              </li>
+              <li>
+                <Link href="https://twitter.com/kelvinyelyen" target="_blank">
+                  Twitter &#129125;
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.linkedin.com/in/kelvinyelyen/"
+                  target="_blank"
+                >
+                  Linkedin &#129125;
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

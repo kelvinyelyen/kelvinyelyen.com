@@ -1,4 +1,4 @@
-import {  Intro, About, Inversion, Selected, Contact, Skills } from "@/components/Home"
+import {  Intro, About, Inversion, Selected, Work, Contact } from "@/components/Home"
 
 export default function Home() {
   return (
@@ -7,8 +7,8 @@ export default function Home() {
       <About />
       <Inversion />
       <Selected />
+      <Work />
       <Contact />
-      <Skills />
     </div>
   )
 }

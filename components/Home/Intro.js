@@ -12,8 +12,7 @@ const Mobile = () => {
           </h1>
           <p className=" dark:font-light font-monument dark:text-neutral-500 text-neutral-300">
             Software <br />
-            Engineer <br />
-            &amp; Designer
+            Engineer <br /> &amp; Designer
           </p>
         </Link>
       </div>
