@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { getPostBySlug, getPosts } from "@/lib/ghost"
 import styles from "@/styles"
 
@@ -6,6 +7,9 @@ export default function Post({ post }) {
   return (
     <section className={`${styles.paddings} relative z-10`}>
       <div className={`${styles.blogWidth} mx-auto`}>
+        <Link href="/blog" className="text-stone-500">
+          &#129120;
+        </Link>
         <p className="text-sm text-stone-500 my-5">
           ({new Date(post.published_at).toDateString()})
         </p>
