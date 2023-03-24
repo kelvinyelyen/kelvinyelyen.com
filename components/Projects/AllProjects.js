@@ -16,9 +16,9 @@ const AllProjects = () => {
             I possess a rare blend of technical abilities and design expertise,
             which enables me to develop software that not only functions
             properly but also impresses users with its pleasing appearance,
-            intuitive usage, and user-friendliness. I've collaborated on various
-            personal and team projects throughout my career, and here are some
-            that can be mentioned publicly.
+            intuitive usage, and user-friendliness. I&apos;ve collaborated on
+            various personal and team projects throughout my career, and here
+            are some that can be mentioned publicly.
           </p>
         </div>
         <hr className="h-px my-4 sm:my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
