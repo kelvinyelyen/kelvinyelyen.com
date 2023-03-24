@@ -16,7 +16,7 @@ const Header = () => {
             <h1></h1>
           ) : (
             <Link href="/">
-              <p className="text-[20px] -mt-1">&#10042; kelvinyelyen</p>
+              <p className="text-[20px] -mt-2">&#10042; kelvinyelyen</p>
             </Link>
           )}
         </div>
