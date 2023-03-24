@@ -1,6 +1,6 @@
 import Link from "next/link"
 import styles from "@/styles"
-import Project from "../Projects/Project"
+import SelectedProject from "../Projects/SelectedProject"
 import {selectedProjects} from "@/data/Projects"
 
 
@@ -14,7 +14,7 @@ const Selected = () => {
         <hr className="h-px my-4 sm:my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
 
         {selectedProjects.map((project) => (
-          <Project key={project.number} {...project} />
+          <SelectedProject key={project.number} {...project} />
         ))}
 
         <Link href="/projects">

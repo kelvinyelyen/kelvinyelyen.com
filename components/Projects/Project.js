@@ -19,6 +19,7 @@ const Project = ({ number, title, imageUrl, altText, year, type, url }) => {
           </div>
           <div className="text-xs md:text-sm hidden lg:block">&#129126;</div>
         </div>
+
       </Link>
 
       <hr className="h-px my-4 sm:my-8 bg-gray-300 dark:bg-neutral-500 border-0" />

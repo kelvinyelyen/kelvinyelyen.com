@@ -5,7 +5,7 @@ export const projects = [
     year: "2023",
     type: "CASE STUDY",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "/pro.jpg",
+    imageUrl: "/1.jpg",
     altText: "Project 1",
   },
   {
@@ -14,7 +14,7 @@ export const projects = [
     year: "2023",
     type: "DESIGN/DEV",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "/images/project2.jpg",
+    imageUrl: "/2.jpg",
     altText: "Project 2",
   },
   {
@@ -23,7 +23,7 @@ export const projects = [
     year: "2023",
     type: "DESIGN/DEV",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "/images/project3.jpg",
+    imageUrl: "/3.jpg",
     altText: "Project 3",
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
     year: "2023",
     type: "DEV",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "/images/project4.jpg",
+    imageUrl: "/4.jpg",
     altText: "Project 4",
   },
   {
@@ -41,7 +41,7 @@ export const projects = [
     year: "2023",
     type: "DESIGN",
     url: "https://www.behance.net/kelvinyelyen",
-    imageUrl: "/images/project4.jpg",
+    imageUrl: "/3.jpg",
     altText: "Project 5",
   },
 ]
@@ -53,7 +53,7 @@ export const selectedProjects = [
     year: "2023",
     type: "CASE STUDY",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "/pro.jpg",
+    imageUrl: "/1.jpg",
     altText: "Project 1",
   },
   {
@@ -62,7 +62,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DESIGN/DEV",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "/images/project2.jpg",
+    imageUrl: "/2.jpg",
     altText: "Project 2",
   },
   {
@@ -71,7 +71,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DESIGN/DEV",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "/images/project3.jpg",
+    imageUrl: "/3.jpg",
     altText: "Project 3",
   },
   {
@@ -80,7 +80,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DEV",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "/images/project4.jpg",
+    imageUrl: "/4.jpg",
     altText: "Project 4",
   },
 ]
