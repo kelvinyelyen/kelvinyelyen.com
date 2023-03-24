@@ -22,6 +22,9 @@ const AllProjects = () => {
           </p>
         </div>
         <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
+
+        
+
         {projects.map((project) => (
           <Project key={project.number} {...project} />
         ))}
@@ -31,3 +34,4 @@ const AllProjects = () => {
 }
 
 export default AllProjects
+    
