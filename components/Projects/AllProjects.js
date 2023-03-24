@@ -21,7 +21,7 @@ const AllProjects = () => {
             are some that can be mentioned publicly.
           </p>
         </div>
-        <hr className="h-px my-4 sm:my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
+        <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
         {projects.map((project) => (
           <Project key={project.number} {...project} />
         ))}
