@@ -11,7 +11,6 @@ const Header = () => {
         className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}
       >
         <div className="dark:text-secondary-white text-neutral-800">
-          {/* Conditionally render based on current path */}
           {router.pathname === "/" ? (
             <h1></h1>
           ) : (
