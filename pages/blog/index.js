@@ -30,7 +30,7 @@ export default function BlogPost({ posts }) {
                     <p className="text-xs md:text-sm">
                       ({new Date(post.published_at).toDateString()})
                     </p>
-                    <h2 className="text-base md:text-2xl font-medium">
+                    <h2 className="text-[25px] md:text-2xl font-medium">
                       {post.title}
                     </h2>
                     <p className="text-xs md:text-sm text-neutral-700 dark:text-secondary-white">
