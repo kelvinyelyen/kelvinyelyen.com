@@ -12,29 +12,32 @@ export default function Layout({ children, ...rest }) {
 
     const el = $content.current
 
-    scrollbar.current = SmoothScrollbar.init(el, {
-      damping: 0.04,
-      delegateTo: document,
-    })
+    if (window.innerWidth > 768) {
+      // only execute if viewport width is greater than 768px (adjust as needed)
+      scrollbar.current = SmoothScrollbar.init(el, {
+        damping: 0.04,
+        delegateTo: document,
+      })
 
-    scrollbar.current.setPosition(0, 0)
-    scrollbar.current.track.xAxis.element.remove()
+      scrollbar.current.setPosition(0, 0)
+      scrollbar.current.track.xAxis.element.remove()
 
-    ScrollTrigger.scrollerProxy(el, {
-      scrollTop(value) {
-        if (arguments.length) {
-          scrollbar.current.scrollTop = value
+      ScrollTrigger.scrollerProxy(el, {
+        scrollTop(value) {
+          if (arguments.length) {
+            scrollbar.current.scrollTop = value
+          }
+          return scrollbar.current.scrollTop
+        },
+      })
+
+      scrollbar.current.addListener(ScrollTrigger.update)
+
+      return () => {
+        if (scrollbar.current) {
+          scrollbar.current.destroy()
+          scrollbar.current = null
         }
-        return scrollbar.current.scrollTop
-      },
-    })
-
-    scrollbar.current.addListener(ScrollTrigger.update)
-
-    return () => {
-      if (scrollbar.current) {
-        scrollbar.current.destroy()
-        scrollbar.current = null
       }
     }
   }, [])
