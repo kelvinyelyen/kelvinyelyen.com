@@ -7,37 +7,50 @@ export default function Layout({ children, ...rest }) {
   const $content = useRef()
   const scrollbar = useRef()
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
+ useEffect(() => {
+   gsap.registerPlugin(ScrollTrigger)
 
-    const el = $content.current
+   const el = $content.current
 
-    scrollbar.current = SmoothScrollbar.init(el, {
-      damping: 0.04,
-      delegateTo: document,
-    })
+   const isMobile = window.innerWidth < 768 // check if device width is less than 768px
 
-    scrollbar.current.setPosition(0, 0)
-    scrollbar.current.track.xAxis.element.remove()
+   scrollbar.current = SmoothScrollbar.init(el, {
+     damping: isMobile ? 1 : 0.04, // set damping to 1 for mobile devices, 0.04 for desktop devices
+     delegateTo: document,
+   })
 
-    ScrollTrigger.scrollerProxy(el, {
-      scrollTop(value) {
-        if (arguments.length) {
-          scrollbar.current.scrollTop = value
-        }
-        return scrollbar.current.scrollTop
-      },
-    })
+   scrollbar.current.setPosition(0, 0)
+   scrollbar.current.track.xAxis.element.remove()
 
-    scrollbar.current.addListener(ScrollTrigger.update)
+   ScrollTrigger.scrollerProxy(el, {
+     scrollTop(value) {
+       if (arguments.length) {
+         scrollbar.current.scrollTop = value
+       }
+       return scrollbar.current.scrollTop
+     },
+   })
 
-    return () => {
-      if (scrollbar.current) {
-        scrollbar.current.destroy()
-        scrollbar.current = null
-      }
-    }
-  }, [])
+   scrollbar.current.addListener(ScrollTrigger.update)
+
+   if (isMobile) {
+     // disable scrollbars for mobile devices
+     document.body.style.overflow = "hidden"
+     el.style.overflow = "scroll"
+   }
+
+   return () => {
+     if (scrollbar.current) {
+       scrollbar.current.destroy()
+       scrollbar.current = null
+     }
+     if (isMobile) {
+       // re-enable scrollbars for mobile devices when component unmounts
+       document.body.style.overflow = ""
+     }
+   }
+ }, [])
+
 
   return (
     <div
