@@ -35,8 +35,8 @@ export default function Layout({ children, ...rest }) {
 
    if (isMobile) {
      // disable scrollbars for mobile devices
-     document.body.style.overflow = "hidden"
-     el.style.overflow = "scroll"
+     document.body.style.overflow = "hidden !important"
+     el.style.overflow = "scroll !important"
    }
 
    return () => {
