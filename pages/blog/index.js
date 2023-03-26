@@ -22,7 +22,7 @@ export default function BlogPost({ posts }) {
             </p>
           </div>
           <div className="md:col-span-2">
-            <hr className="h-px lg:mb-8 my-8 lg:my-0  bg-gray-300 dark:bg-neutral-500 border-0" />
+            <hr className="h-px lg:mb-8 mb-8 mt-4 lg:my-0  bg-gray-300 dark:bg-neutral-500 border-0" />
             {posts.map((post) => (
               <div key={post.id}>
                 <div className="flex justify-between text-start">
