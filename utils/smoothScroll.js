@@ -8,11 +8,6 @@ export default function Layout({ children, ...rest }) {
   const scrollbar = useRef()
 
   useEffect(() => {
-    if (!window.matchMedia("(min-width: 768px)").matches) {
-      // return early if current device is not a desktop device
-      return
-    }
-
     gsap.registerPlugin(ScrollTrigger)
 
     const el = $content.current
