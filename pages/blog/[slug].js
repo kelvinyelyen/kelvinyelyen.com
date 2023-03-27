@@ -8,11 +8,11 @@ export default function Post({ post }) {
     <section className={`${styles.paddings} relative z-10`}>
       <div className={`${styles.blogWidth} mx-auto`}>
         <Link href="/blog" className="text-stone-500">
-          <span class="inline-block bg-stone-500 rounded-full p-2">
+          <span className="inline-block bg-stone-500 rounded-full p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 384.67 384.67"
-              class="lg:w-2 lg:h-2 w-1 h-1 text-white transform rotate-45 scale-x-[-1]"
+              className="lg:w-2 lg:h-2 w-1 h-1 text-white transform rotate-45 scale-x-[-1]"
             >
               <g data-name="Layer 2">
                 <path
