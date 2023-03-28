@@ -5,7 +5,7 @@ export const projects = [
     year: "2023",
     type: "CASE STUDY",
     url: "",
-    imageUrl: "/1.jpg",
+    imageUrl: "images/1.jpg",
     altText: "Project 1",
   },
   {
@@ -14,7 +14,7 @@ export const projects = [
     year: "2023",
     type: "DESIGN/DEV",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "/2.jpg",
+    imageUrl: "images/2.jpg",
     altText: "Project 2",
   },
   {
@@ -23,7 +23,7 @@ export const projects = [
     year: "2023",
     type: "DESIGN/DEV",
     url: "",
-    imageUrl: "/3.jpg",
+    imageUrl: "images/3.jpg",
     altText: "Project 3",
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
     year: "2023",
     type: "DEV",
     url: "https://github.com/kelvinyelyen/typecast",
-    imageUrl: "/4.jpg",
+    imageUrl: "images/4.jpg",
     altText: "Project 4",
   },
   {
@@ -41,7 +41,7 @@ export const projects = [
     year: "2023",
     type: "DESIGN",
     url: "https://www.behance.net/kelvinyelyen",
-    imageUrl: "/3.jpg",
+    imageUrl: "images/3.jpg",
     altText: "Project 5",
   },
 ]
@@ -53,7 +53,7 @@ export const selectedProjects = [
     year: "2023",
     type: "CASE STUDY",
     url: "",
-    imageUrl: "/1.jpg",
+    imageUrl: "images/1.jpg",
     altText: "Project 1",
   },
   {
@@ -62,7 +62,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DESIGN/DEV",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "/atlas.png",
+    imageUrl: "images/atlas.png",
     altText: "Project 2",
   },
   {
@@ -71,7 +71,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DESIGN/DEV",
     url: "",
-    imageUrl: "/3.jpg",
+    imageUrl: "images/3.jpg",
     altText: "Project 3",
   },
   {
@@ -80,7 +80,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DEV",
     url: "https://github.com/kelvinyelyen/typecast",
-    imageUrl: "/4.jpg",
+    imageUrl: "images/4.jpg",
     altText: "Project 4",
   },
 ]
