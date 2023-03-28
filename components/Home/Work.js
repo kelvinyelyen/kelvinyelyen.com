@@ -1,5 +1,4 @@
 import styles from "@/styles"
-// import SplitTextAnimation from "../SplitTextAnimation"
 
 const Work = () => {
   return (
