@@ -24,7 +24,7 @@ const Contact = () => {
           <div className="text-stone-500 text-[12px]">
             <ul>
               <li>
-                <Link href="#">Email &#129125;</Link>
+                <Link href="mailto:kelvinyelyen@gmail.com" target="_blank">kelvinyelyen@gmail.com &#129125;</Link>
               </li>
               <li>
                 <Link href="https://github.com/kelvinyelyen" target="_blank">
