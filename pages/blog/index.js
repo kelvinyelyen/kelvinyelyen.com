@@ -1,11 +1,12 @@
 import Link from "next/link"
-import Image from "next/image"
 import { getPosts } from "@/lib/ghost"
 import styles from "@/styles"
+import Meta from "@/components/Meta"
 
 export default function BlogPost({ posts }) {
   return (
     <section className={`${styles.paddings} relative z-10`}>
+      <Meta description="Articulating a concise portrayal of my identity or occupation can prove to be challenging, as it encompasses a complexity that cannot be adequately conveyed through a mere handful of words." />
       <div
         className={`${styles.projectWidth} mx-auto dark:text-secondary-white`}
       >
