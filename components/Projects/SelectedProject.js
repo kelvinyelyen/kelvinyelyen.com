@@ -62,7 +62,7 @@ const SelectedProject = ({
 
   return (
     <>
-      <Link href={url}>
+      <Link href={url} target="_blank">
         <div
           className="grid grid-cols-2 sm:grid-cols-3 lg:my-10 my-0 text-end dark:text-secondary-white"
           onMouseEnter={handleMouseEnter}

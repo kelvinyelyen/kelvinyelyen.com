@@ -1,10 +1,10 @@
 export const projects = [
   {
     number: "/01",
-    title: "Agr.Ehrs",
-    year: "2023",
-    type: "CASE STUDY",
-    url: "",
+    title: "E.h.r",
+    year: "2021",
+    type: "PAPER/DEV",
+    url: "https://drive.google.com/file/d/1OfbmOqsmnb479wTh7FYDjtCgKnx1dJPR/view?usp=sharing",
     imageUrl: "images/1.jpg",
     altText: "Project 1",
   },
@@ -49,10 +49,10 @@ export const projects = [
 export const selectedProjects = [
   {
     number: "/01",
-    title: "Agr.Ehrs",
-    year: "2023",
-    type: "CASE STUDY",
-    url: "",
+    title: "E.h.r",
+    year: "2021",
+    type: "PAPER/DEV",
+    url: "https://drive.google.com/file/d/1OfbmOqsmnb479wTh7FYDjtCgKnx1dJPR/view?usp=sharing",
     imageUrl: "images/1.jpg",
     altText: "Project 1",
   },
