@@ -1,11 +1,13 @@
 import Link from "next/link"
 import { getPostBySlug, getPosts } from "@/lib/ghost"
 import styles from "@/styles"
+import Meta from "@/components/Meta"
 
 export default function Post({ post }) {
   
   return (
     <section className={`${styles.paddings} relative z-10`}>
+    <Meta title={post.title}/>
       <div className={`${styles.blogWidth} mx-auto`}>
         <Link href="/blog" className="text-stone-500">
           <span className="inline-block bg-stone-500 rounded-full p-2">
