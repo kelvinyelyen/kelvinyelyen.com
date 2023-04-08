@@ -71,7 +71,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DESIGN/DEVELOPMENT",
     url: "",
-    imageUrl: "images/3.jpg",
+    imageUrl: "",
     altText: "Project 3",
   },
   {
