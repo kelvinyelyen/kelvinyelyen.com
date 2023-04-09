@@ -8,7 +8,7 @@ const Inversion = () => {
 
   return (
     <div
-      className={`${styles.ipaddings} flex justify-between text-xs text-right lg:mt-0 -mt-[30px] relative`}
+      className={`${styles.ipaddings} flex justify-between text-xs text-right lg:mt-0 -mt-[20px] relative`}
     >
       <div className="lg:block hidden"> &#169; {new Date().getFullYear()}</div>
       <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
