@@ -15,7 +15,7 @@ export default function BlogPost({ posts }) {
             <p className="uppercase text-[10px] text-stone-500">
               (Musings, Shower-thoughts, Essays ... )
             </p>
-            <p className="text-neutral-700 dark:text-secondary-white text-[13px] md:text-base ">
+            <p className="text-[13px] md:text-[15px] ">
               At certain times, articulating a concise portrayal of my identity
               or occupation can prove to be challenging, as it encompasses a
               complexity that cannot be adequately conveyed through a mere

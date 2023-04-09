@@ -17,6 +17,7 @@ const SelectedProject = ({
   const handleMouseEnter = () => {
     if (!isMobileDevice()) {
       setShowImage(true)
+      gsap.to(imageRef.current, { scale: 1, autoAlpha: 1 })
     }
   }
 
@@ -31,7 +32,7 @@ const SelectedProject = ({
 
       // Update the position of the image with a parallax effect
       gsap.to(image, {
-        x: mouseX - 1,
+        x: mouseX - 100,
         y: mouseY - 100,
         duration: 2,
         ease: "power2.out",
@@ -51,18 +52,20 @@ const SelectedProject = ({
   const handleMouseLeave = () => {
     if (!isMobileDevice()) {
       setShowImage(false)
+      gsap.to(imageRef.current, { scale: 0.1, autoAlpha: 0 })
     }
   }
 
   useEffect(() => {
     if (isMobileDevice()) {
       setShowImage(false)
+      gsap.to(imageRef.current, { scale: 0.1, autoAlpha: 0 })
     }
   }, [])
 
   return (
     <>
-      <Link href={url} target="_blank">
+      <Link href={url} target="_blank" className="hover:text-stone-700">
         <div
           className="grid grid-cols-2 sm:grid-cols-3 lg:my-10 my-0 text-end dark:text-secondary-white"
           onMouseEnter={handleMouseEnter}
@@ -84,7 +87,6 @@ const SelectedProject = ({
           <div className="text-xs md:text-sm hidden lg:block">&#129126;</div>
         </div>
       </Link>
-
       <hr className="h-px my-4 sm:my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
 
       {showImage && (
@@ -92,7 +94,7 @@ const SelectedProject = ({
           ref={imageRef}
           src={imageUrl}
           alt={altText}
-          className="absolute w-[300px] h-[300px] object-cover rounded-md"
+          className="absolute w-[250px] h-[300px] object-cover rounded-lg"
         />
       )}
     </>

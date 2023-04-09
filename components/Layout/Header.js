@@ -1,9 +1,19 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
+import gsap from "gsap"
 import styles from "@/styles"
 
 const Header = () => {
   const router = useRouter()
+
+  const handleHover = (event) => {
+    gsap.from(event.target, {
+      y: event.target.offsetHeight,
+      opacity: 0,
+      duration: 0.3,
+      ease: "power2.out",
+    })
+  }
 
   return (
     <nav className={`${styles.xPaddings} py-8 relative`}>
@@ -21,10 +31,14 @@ const Header = () => {
         </div>
         <ul className="flex gap-5 text-xs dark:text-secondary-white uppercase">
           <li>
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects" onMouseEnter={handleHover}>
+              Projects
+            </Link>
           </li>
           <li>
-            <Link href="/blog">Blog</Link>
+            <Link href="/blog" onMouseEnter={handleHover}>
+              Blog
+            </Link>
           </li>
         </ul>
       </div>

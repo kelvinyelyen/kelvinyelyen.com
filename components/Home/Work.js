@@ -7,7 +7,7 @@ const Work = () => {
         <div className="lg:mt-5 flex justify-between">
           <article className="lg:mx-[200px] prose sm:prose-lg">
             <p className="text-[10px] text-stone-500 uppercase">(Work with me)</p>
-            <p className="md:text-[15px] text-[13px] dark:font-light dark:text-secondary-white">
+            <p className="md:text-base text-[13px] dark:font-light dark:text-secondary-white">
               I&apos;m currently focusing on software engineering and Product
               Design, as well as exploring new areas of technology eg. AI and
               pursuing my creative interest in design. I&apos;m always seeking

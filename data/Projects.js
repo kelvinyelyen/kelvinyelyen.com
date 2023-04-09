@@ -62,7 +62,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DESIGN/DEVELOPMENT",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "images/atlas.png",
+    imageUrl: "images/two.jpg",
     altText: "Project 2",
   },
   {
@@ -70,7 +70,7 @@ export const selectedProjects = [
     title: "Muzeyi",
     year: "2023",
     type: "DESIGN/DEVELOPMENT",
-    url: "",
+    url: "https://muzeyi.vercel.app/",
     imageUrl: "images/3.jpg",
     altText: "Project 3",
   },
@@ -80,7 +80,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DEVELOPMENT",
     url: "https://github.com/kelvinyelyen/typecast",
-    imageUrl: "images/4.jpg",
+    imageUrl: "images/typecast.jpg",
     altText: "Project 4",
   },
 ]

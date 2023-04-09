@@ -13,7 +13,7 @@ const AllProjects = () => {
             <p className="uppercase text-[10px] text-stone-500">
               (Software Eng, Web Apps, Product Design ... )
             </p>
-            <p className="text-neutral-700 dark:text-secondary-white text-[13px] md:text-base ">
+            <p className="text-[13px] md:text-[15px] ">
               I&apos;ve collaborated on various personal and team projects
               throughout my career, and here are some that can be mentioned
               publicly.
