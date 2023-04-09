@@ -7,7 +7,11 @@ export default function Post({ post }) {
   
   return (
     <section className={`${styles.paddings} relative z-10`}>
-    <Meta title={post.title}/>
+      <Meta
+        title={post.title}
+        ogImage={post.feature_image}
+        description={post.excerpt}
+      />
       <div className={`${styles.blogWidth} mx-auto`}>
         <Link href="/blog" className="text-stone-500">
           <span className="inline-block bg-stone-500 rounded-full p-2">
