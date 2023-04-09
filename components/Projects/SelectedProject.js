@@ -31,9 +31,9 @@ const SelectedProject = ({
 
       // Update the position of the image with a parallax effect
       gsap.to(image, {
-        x: mouseX - 100,
+        x: mouseX - 1,
         y: mouseY - 100,
-        duration: 2,
+        duration: 0,
         ease: "power2.out",
       })
 
@@ -92,7 +92,7 @@ const SelectedProject = ({
           ref={imageRef}
           src={imageUrl}
           alt={altText}
-          className="absolute w-[400px] h-[200px] object-cover "
+          className="absolute w-[300px] h-[300px] object-cover rounded-md"
         />
       )}
     </>
