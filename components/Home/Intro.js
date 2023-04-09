@@ -8,9 +8,9 @@ const Mobile = () => {
       <div className="my-[40px] lg:my-0 text-4xl lg:text-6xl">
         <Link href="/">
           <h1 className="font-monument tracking-tighter dark:text-secondary-white text-neutral-800 mb-1">
-            kelvin.yelyen
+            <span className="font-monument"> kelvin </span>yelyen
           </h1>
-          <p className=" dark:font-light font-monument dark:text-neutral-500 text-neutral-300">
+          <p className=" dark:font-light font-monument dark:text-neutral-500 text-neutral-400">
             Software <br />
             Engineer <br /> &amp; Designer
           </p>

@@ -33,7 +33,7 @@ const SelectedProject = ({
       gsap.to(image, {
         x: mouseX - 1,
         y: mouseY - 100,
-        duration: 0,
+        duration: 2,
         ease: "power2.out",
       })
 
