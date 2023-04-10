@@ -33,11 +33,6 @@ const Header = () => {
         </div>
         <ul className="flex gap-5 text-[12px] dark:text-stone-300 uppercase">
           <li>
-            <Link href="/" onMouseEnter={handleHover}>
-              About
-            </Link>
-          </li>
-          <li>
             <Link href="/projects" onMouseEnter={handleHover}>
               Projects
             </Link>
