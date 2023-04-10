@@ -9,7 +9,7 @@ const Work = () => {
             <p className="text-[10px] text-stone-500 uppercase">
               (Work with me)
             </p>
-            <p className="uppercase md:text-base text-[13px] dark:font-light dark:text-stone-300 text-justify">
+            <p className="uppercase md:text-base text-[12px] dark:font-light dark:text-stone-300 text-justify">
               I&apos;m currently focusing on software engineering and Product
               Design, as well as exploring new areas of technology (AI) and
               pursuing my creative interest in design.
