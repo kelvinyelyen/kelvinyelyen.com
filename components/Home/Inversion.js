@@ -8,11 +8,10 @@ const Inversion = () => {
 
   return (
     <div
-      className={`${styles.ipaddings} flex justify-between text-xs text-right lg:mt-0 -mt-[20px] relative`}
+      className={`${styles.ipaddings} flex justify-between text-xs text-right lg:mt-0 -mt-[20px] relative dark:text-stone-300`}
     >
-      <div className="lg:block hidden"> &#169; {new Date().getFullYear()}</div>
       <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-        <p>
+        <p className=" text-xs">
           <span className={currentTheme === "light" ? "active" : ""}>
             LIGHT{" "}
           </span>
@@ -20,6 +19,10 @@ const Inversion = () => {
           <span className={currentTheme === "dark" ? "active" : ""}> DARK</span>{" "}
         </p>
       </button>
+      <div className="lg:block hidden text-xl">
+        {" "}
+        &#169; {new Date().getFullYear()}
+      </div>
     </div>
   )
 }

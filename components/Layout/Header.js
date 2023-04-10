@@ -29,7 +29,12 @@ const Header = () => {
             </Link>
           )}
         </div>
-        <ul className="flex gap-5 text-xs dark:text-secondary-white uppercase">
+        <ul className="flex gap-5 text-xs dark:text-stone-300 uppercase">
+          <li>
+            <Link href="/" onMouseEnter={handleHover}>
+              About
+            </Link>
+          </li>
           <li>
             <Link href="/projects" onMouseEnter={handleHover}>
               Projects

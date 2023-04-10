@@ -67,7 +67,7 @@ const SelectedProject = ({
     <>
       <Link href={url} target="_blank" className="hover:text-stone-700">
         <div
-          className="grid grid-cols-2 sm:grid-cols-3 lg:my-10 my-0 text-end dark:text-secondary-white"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:my-10 my-0 text-end dark:text-stone-300"
           onMouseEnter={handleMouseEnter}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
@@ -87,7 +87,7 @@ const SelectedProject = ({
           <div className="text-xs md:text-sm hidden lg:block">&#129126;</div>
         </div>
       </Link>
-      <hr className="h-px my-4 sm:my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
+      <hr className="h-px my-4 sm:my-8 bg-gray-400 dark:bg-neutral-500 border-0" />
 
       {showImage && (
         <img

@@ -22,7 +22,7 @@ const Project = ({ number, title, imageUrl, altText, year, type, url }) => {
 
       </Link>
 
-      <hr className="h-px my-4 sm:my-8 bg-gray-300 dark:bg-neutral-500 border-0" />
+      <hr className="h-px my-4 sm:my-8 bg-gray-400 dark:bg-neutral-500 border-0" />
     </>
   )
 }

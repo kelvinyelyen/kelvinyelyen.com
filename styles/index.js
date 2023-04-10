@@ -1,7 +1,7 @@
 const styles = {
   innerWidth: "2xl:max-w-[1600px] w-full",
   interWidth: "lg:w-[80%] w-[100%]",
-  aboutWidth: "2xl:max-w-[850px] w-full",
+  aboutWidth: "2xl:max-w-[800px] w-full",
   blogWidth: "2xl:max-w-[700px] w-full",
   textWidth: "2xl:max-w-[1100px] w-full",
   projectWidth: "2xl:max-w-[1280px] w-full",

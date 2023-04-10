@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className={`${styles.xPaddings} py-8 relative`}>
       <div className={`${styles.innerWidth} mx-auto text-[10px]`}>
-        <hr className="h-px my-8 bg-gray-300 dark:bg-neutral-600 border-0" />
+        <hr className="h-px my-4 sm:my-8 bg-gray-400 dark:bg-neutral-500 border-0" />
         <div className="dark:font-light text-stone-500">
           <div className="flex justify-between uppercase">
             <div>

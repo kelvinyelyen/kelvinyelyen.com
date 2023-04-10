@@ -4,10 +4,10 @@ import styles from "@/styles"
 const Contact = () => {
   return (
     <div
-      className={`${styles.paddings} text-[12px] lg:text-[15px] -mb-20 relative`}
+      className={`${styles.paddings} text-[12px] lg:text-base -mb-20 relative`}
     >
       <div className="flex flex-col sm:flex-row justify-between uppercase">
-        <div className="dark:font-light uppercase dark:text-secondary-white mb-6 sm:mb-0">
+        <div className="dark:font-light uppercase dark:text-stone-300 mb-6 sm:mb-0">
           <p>
             Full-stack Engineering<sup className="text-stone-500"> 01 </sup>
           </p>
@@ -20,11 +20,13 @@ const Contact = () => {
           </p>
         </div>
         <div className="text-end">
-          <p className="dark:text-secondary-white">START A PROJECT</p>
+          <p className="dark:text-stone-300">START A PROJECT</p>
           <div className="text-stone-500 text-[12px]">
             <ul>
               <li>
-                <Link href="mailto:kelvinyelyen@gmail.com" target="_blank">kelvinyelyen@gmail.com &#129125;</Link>
+                <Link href="mailto:kelvinyelyen@gmail.com" target="_blank">
+                  kelvinyelyen@gmail.com &#129125;
+                </Link>
               </li>
               <li>
                 <Link href="https://github.com/kelvinyelyen" target="_blank">
