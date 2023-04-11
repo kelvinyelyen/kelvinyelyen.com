@@ -2,6 +2,10 @@ import Link from "next/link"
 import { getPostBySlug, getPosts } from "@/lib/ghost"
 import styles from "@/styles"
 import Meta from "@/components/Meta"
+import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm"
+import remarkCapitalize from "remark-capitalize"
+import remarkBreaks from "remark-breaks"
 
 export default function Post({ post }) {
   
@@ -40,7 +44,7 @@ export default function Post({ post }) {
             {post.title}
           </h1>
           <div
-            className="leading-7 text-[15px] lg:text-[16px] text-neutral-700 dark:text-secondary-white"
+            className="leading-7 text-sm lg:text-[16px] text-neutral-700 dark:text-secondary-white prose-sm md:prose-lg max-w-none"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>
