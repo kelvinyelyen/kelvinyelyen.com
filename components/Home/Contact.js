@@ -1,10 +1,12 @@
+import { useRef } from "react"
+import gsap from "gsap"
 import Link from "next/link"
 import styles from "@/styles"
 
 const Contact = () => {
   return (
     <div
-      className={`${styles.paddings} text-[12px] lg:text-base -mb-20 relative`}
+      className={`${styles.paddings} text-[12px] lg:text-[17px] -mb-20 relative`}
     >
       <div className="flex flex-col sm:flex-row justify-between uppercase">
         <div className="dark:font-light uppercase dark:text-stone-300 mb-6 sm:mb-0">
@@ -21,11 +23,11 @@ const Contact = () => {
         </div>
         <div className="text-end">
           <p className="dark:text-stone-300">START A PROJECT</p>
-          <div className="text-stone-500 text-[12px]">
+          <div className="text-stone-500 text-[12px] leading-6">
             <ul>
               <li>
                 <Link href="mailto:kelvinyelyen@gmail.com" target="_blank">
-                  kelvinyelyen@gmail.com &#129125;
+                  kelvinyelyen@gmail.com
                 </Link>
               </li>
               <li>

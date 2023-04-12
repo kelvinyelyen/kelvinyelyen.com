@@ -80,7 +80,7 @@ const SelectedProject = ({
               {title}
             </h2>
           </div>
-          <div className="text-[10px]">
+          <div className="md:text-[12px] text-[10px]">
             <p>{type}</p>
             <p>/{year}</p>
           </div>

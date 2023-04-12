@@ -15,11 +15,17 @@ const Footer = () => {
               </p>
             </div>
             <div className="hidden sm:block">
-              <Link href="https://kelvinyelyen.netlify.app/">
-                v1 &nbsp; &nbsp;
-              </Link>
-              <Link href="#">credits &nbsp; &nbsp;</Link>
-              <Link href="#">experiments</Link>
+              <ul className="flex gap-5">
+                <li>
+                  <Link href="https://kelvinyelyen.netlify.app/">v1</Link>
+                </li>
+                <li>
+                  <Link href="#">credits</Link>
+                </li>
+                <li>
+                  <Link href="#">experiments</Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

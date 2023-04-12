@@ -8,7 +8,7 @@ const Selected = () => {
   return (
     <section className={`${styles.paddings} relative z-10`}>
       <div className={`${styles.projectWidth} mx-auto`}>
-        <p className="text-[15px] text-secondary-white dark:text-neutral-600">
+        <p className="text-[17px] text-secondary-white dark:text-neutral-600">
           SELECTED WORK
         </p>
         <hr className="h-px my-4 sm:my-8 bg-gray-400 dark:bg-neutral-500 border-0" />
@@ -18,8 +18,8 @@ const Selected = () => {
         ))}
 
         <Link href="/projects">
-          <p className="text-right dark:font-light text-[13px] text-stone-500">
-            MORE WORK (5) &#129126;
+          <p className="text-right dark:font-light text-[12px] text-stone-500">
+            &#11044; &nbsp;MORE WORK (5) &#129126;
           </p>
         </Link>
       </div>

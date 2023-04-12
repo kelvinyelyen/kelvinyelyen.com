@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Apply some global styles to all elements on the page. */
 * {
   margin: 0;
@@ -13,24 +12,27 @@
   scroll-behavior: smooth;
 }
 
+p {
+  word-spacing: 2px;
+}
 
 /* Define a custom font face for MonumentExtended-Regular. */
 @font-face {
-  font-family: 'PPMonumentExtended-Regular';
-  src: url('/fonts/PPMonumentExtended-Regular.otf') format('opentype'),
-       url('/fonts/PPMonumentExtended-Light.otf') format('opentype'),
-       url('/fonts/PPMonumentExtended-LightItalic.otf') format('opentype');
+  font-family: "PPMonumentExtended-Regular";
+  src: url("/fonts/PPMonumentExtended-Regular.otf") format("opentype"),
+    url("/fonts/PPMonumentExtended-Light.otf") format("opentype"),
+    url("/fonts/PPMonumentExtended-LightItalic.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 /* Define a custom font face for NeueHaasDisplay. */
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: url('/fonts/NeueHaasDisplay-Roman.woff') format('woff'),
-         url('/fonts/NeueHaasDisplay-Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/fonts/NeueHaasDisplay-Roman.woff") format("woff"),
+    url("/fonts/NeueHaasDisplay-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Apply styles to the body (Dark & Light Mode) */
@@ -40,7 +42,6 @@
     transition: background-color 0.5s ease, color 0.5s ease;
   }
 }
-
 
 /* Styles for the SplitTextAnimation component */
 .reveal-text {
@@ -53,14 +54,13 @@
   display: flex;
 }
 
-
- /* Active button styling */
+/* Active button styling */
 .active {
   color: rgb(207, 207, 207);
 }
 
-p {
-  word-spacing: 2px;
+.dark-active {
+  @apply dark:text-stone-600;
 }
 
 .preloader {
@@ -77,58 +77,6 @@ p {
   justify-content: center;
 }
 
-.bg {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    right: -50%;
-    bottom: -50%;
-    width: 200%;
-    height: 200vh;
-    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
-    background-repeat: repeat;
-    animation: bg-animation .2s infinite;
-    opacity: .5;
-    visibility: visible;
-}
-
-@keyframes bg-animation {
-    0% {
-        transform: translate(0, 0)
-    }
-    10% {
-        transform: translate(-5%, -5%)
-    }
-    20% {
-        transform: translate(-10%, 5%)
-    }
-    30% {
-        transform: translate(5%, -10%)
-    }
-    40% {
-        transform: translate(-5%, 15%)
-    }
-    50% {
-        transform: translate(-10%, 5%)
-    }
-    60% {
-        transform: translate(15%, 0)
-    }
-    70% {
-        transform: translate(0, 10%)
-    }
-    80% {
-        transform: translate(-15%, 0)
-    }
-    90% {
-        transform: translate(10%, 5%)
-    }
-    100% {
-        transform: translate(5%, 0)
-    } 
-}
-
-
 .preloader-done {
   opacity: 0;
   pointer-events: none;
@@ -136,6 +84,59 @@ p {
 
 .preloader__inner {
   text-align: center;
+}
+
+/* Noisy background */
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 0.2s infinite;
+  opacity: 0.5;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
 }
 
 /* Smooth Scroll */
