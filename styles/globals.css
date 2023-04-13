@@ -10,6 +10,14 @@
   box-sizing: border-box;
   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   scroll-behavior: smooth;
+  overflow: none;
+  scrollbar-width: none; /* hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* hide scrollbar for IE, Edge */
+}
+
+/* For WebKit browsers (e.g. Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
 }
 
 p {
@@ -140,7 +148,7 @@ p {
 }
 
 /* Smooth Scroll */
-[data-scrollbar] {
+/* [data-scrollbar] {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   height: 100vh;
@@ -150,8 +158,7 @@ p {
   width: 0 !important;
   height: 0 !important;
   display: none !important;
-}
-
+} */
 
 .desktop-only::-webkit-scrollbar {
   width: 0 !important;
