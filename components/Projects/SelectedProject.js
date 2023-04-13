@@ -80,10 +80,10 @@ const SelectedProject = ({
       <Link
         href={url}
         target="_blank"
-        className="hover:dark:text-stone-600 hover:text-stone-600 my-10"
+        className="hover:dark:text-stone-700 hover:text-stone-500 my-10"
       >
         <div
-          className="grid grid-cols-2 sm:grid-cols-3 lg:my-0 my-5 text-end border-b-2 border-gray-400 dark:border-neutral-500 lg:py-10 pb-5"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:my-0 my-5 text-end border-b border-gray-400 dark:border-neutral-500 lg:py-10 pb-5"
           onMouseEnter={handleMouseEnter}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
@@ -99,7 +99,7 @@ const SelectedProject = ({
           <div className="md:text-[12px] text-[10px]  dark:text-stone-300">
             <p>{type}</p>
             <p>/{year}</p>
-            <div>
+            <span>
               {showImage && (
                 <img
                   ref={imageRef}
@@ -108,7 +108,7 @@ const SelectedProject = ({
                   className="absolute w-[400px] h-[400px] object-cover"
                 />
               )}
-            </div>
+            </span>
           </div>
           <div className="text-xs md:text-sm hidden lg:block">&#129126;</div>
         </div>
