@@ -23,7 +23,7 @@ const Contact = () => {
         </div>
         <div className="text-end">
           <p className="dark:text-stone-300">START A PROJECT</p>
-          <div className="text-stone-500 md:text-[12px] text-[10px] leading-6">
+          <div className="text-stone-500 md:text-[12px] text-[10px]">
             <ul>
               <li>
                 <Link href="mailto:kelvinyelyen@gmail.com" target="_blank">
