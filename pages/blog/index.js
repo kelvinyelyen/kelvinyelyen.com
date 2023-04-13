@@ -26,20 +26,23 @@ export default function BlogPost({ posts }) {
             <hr className="h-px lg:mb-8 mb-8 mt-4 lg:my-0  bg-gray-400 dark:bg-neutral-500 border-0" />
             {posts.map((post) => (
               <div key={post.id}>
-                <div className="flex justify-between text-start">
-                  <Link href={`/blog/${post.slug}`}>
-                    <p className="text-xs md:text-sm">
-                      ({new Date(post.published_at).toDateString()})
-                    </p>
-                    <h2 className="text-[20px] md:text-2xl font-medium">
-                      {post.title}
-                    </h2>
-                    <p className="text-xs md:text-sm text-neutral-700 dark:text-secondary-white">
-                      {post.excerpt}
-                    </p>
-                  </Link>
-                  <div className="text-xs md:text-sm">&#x1F866;</div>
-                </div>
+                <Link href={`/blog/${post.slug}`}>
+                  <div className="flex justify-between gap-10 text-start">
+                    
+                    <div>
+                      <p className="text-xs md:text-sm">
+                        ({new Date(post.published_at).toDateString()})
+                      </p>
+                      <h2 className="text-[20px] md:text-2xl font-medium">
+                        {post.title}
+                      </h2>
+                      <p className="text-xs md:text-sm text-neutral-700 dark:text-secondary-white">
+                        {post.excerpt}
+                      </p>
+                    </div>
+                    <div className="text-xs md:text-sm">&#x1F866;</div>
+                  </div>
+                </Link>
                 <hr className="h-px my-8 bg-gray-400 dark:bg-neutral-500 border-0" />
               </div>
             ))}
