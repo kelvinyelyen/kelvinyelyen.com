@@ -146,14 +146,18 @@ p {
   height: 100vh;
 }
 
-.desktop-only {
-  display: none; /* hide by default */
+[data-scrollbar]::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
 }
 
-@media screen and (min-width: 768px) {
-  .desktop-only {
-    display: block; /* show on desktop devices */
-    min-width: 100vw;
-    height: 100vh;
-  }
+
+.desktop-only::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.desktop-only {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -13,12 +13,12 @@ export default function Layout({ children, ...rest }) {
     const el = $content.current
 
     scrollbar.current = SmoothScrollbar.init(el, {
-      damping: 0.04,
+      damping: 0.1,
       delegateTo: document,
+      plugins: {
+        disableScroll: true, // add this option to prevent the default scrollbar from showing
+      },
     })
-
-    scrollbar.current.setPosition(0, 0)
-    scrollbar.current.track.xAxis.element.remove()
 
     ScrollTrigger.scrollerProxy(el, {
       scrollTop(value) {
@@ -43,7 +43,12 @@ export default function Layout({ children, ...rest }) {
     <div
       data-scrollbar
       ref={$content}
-      className="desktop-only" // add a class for desktop devices
+      style={{
+        overflow: "auto",
+        WebkitOverflowScrolling: "touch",
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
+      }}
       {...rest}
     >
       <div className="container">{children}</div>

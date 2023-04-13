@@ -8,10 +8,10 @@ const Inversion = () => {
 
   return (
     <div
-      className={`${styles.ipaddings} flex justify-between text-xs text-right lg:mt-[0] -mt-[20px] relative dark:text-stone-300`}
+      className={`${styles.ipaddings} flex justify-between text-right lg:mt-[0] -mt-[20px] relative dark:text-stone-300`}
     >
       <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-        <p className=" md:text-[17px] text-xs">
+        <p className=" md:text-[15px] text-xs">
           <span className={currentTheme === "light" ? "active" : ""}>
             LIGHT{" "}
           </span>
