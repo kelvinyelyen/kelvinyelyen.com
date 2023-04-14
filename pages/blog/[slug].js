@@ -2,13 +2,8 @@ import Link from "next/link"
 import { getPostBySlug, getPosts } from "@/lib/ghost"
 import styles from "@/styles"
 import Meta from "@/components/Meta"
-import ReactMarkdown from "react-markdown"
-import remarkGfm from "remark-gfm"
-import remarkCapitalize from "remark-capitalize"
-import remarkBreaks from "remark-breaks"
 
 export default function Post({ post }) {
-  
   return (
     <section className={`${styles.paddings} relative z-10`}>
       <Meta

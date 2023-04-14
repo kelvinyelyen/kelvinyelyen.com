@@ -34,7 +34,7 @@ const Meta = ({
 Meta.defaultProps = {
   title: "Kelvin Yelyen",
   keywords:
-    "software engineer, designer, software engineering, design, ai, science and technology, full-stack engineering, product design, graphic design",
+    "software engineer, designer, software engineering, design, ai, science and technology, full-stack engineering, product design, graphic design, ghana, africa",
   description:
     "Software engineer and designer based in Ghana, with a passion in utilizing science and technology to create innovative solutions.",
   author: "Kelvin Yelyen",

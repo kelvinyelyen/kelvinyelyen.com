@@ -8,24 +8,26 @@ const Inversion = () => {
 
   return (
     <div
-      className={`${styles.ipaddings} flex justify-between text-right lg:mt-[0] -mt-[20px] relative dark:text-stone-300`}
+      className={`${styles.xPaddings} text-right lg:mt-[0] -mt-[20px] relative dark:text-stone-300`}
     >
-      <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-        <p className=" md:text-[15px] text-xs">
-          <span className={currentTheme === "light" ? "active" : ""}>
-            LIGHT{" "}
-          </span>
-          /{" "}
-          <span
-            className={currentTheme === "dark" ? "dark-active" : "inactive"}
-          >
-            {" "}
-            DARK
-          </span>{" "}
-        </p>
-      </button>
-      <div className="lg:block hidden text-[17px]">
-        &#11044; &nbsp;GHANA, AVAILABLE WORLDWIDE
+      <div className={`${styles.innerWidth} mx-auto flex justify-between`}>
+        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+          <p className=" md:text-[15px] text-xs">
+            <span className={currentTheme === "light" ? "active" : ""}>
+              LIGHT{" "}
+            </span>
+            /{" "}
+            <span
+              className={currentTheme === "dark" ? "dark-active" : "inactive"}
+            >
+              {" "}
+              DARK
+            </span>{" "}
+          </p>
+        </button>
+        <div className="lg:block hidden text-[17px]">
+          &#11044; &nbsp;GHANA, AVAILABLE WORLDWIDE
+        </div>
       </div>
     </div>
   )

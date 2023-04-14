@@ -1,14 +1,14 @@
-import { useRef } from "react"
-import gsap from "gsap"
 import Link from "next/link"
 import styles from "@/styles"
 
 const Contact = () => {
   return (
     <div
-      className={`${styles.paddings} text-[13px] lg:text-[17px] -mb-20 relative`}
+      className={`${styles.xPaddings} text-[13px] lg:text-[17px] relative`}
     >
-      <div className="flex flex-col sm:flex-row justify-between uppercase">
+      <div
+        className={`${styles.innerWidth} mx-auto flex flex-col sm:flex-row justify-between uppercase`}
+      >
         <div className="dark:font-light uppercase dark:text-stone-300 mb-6 sm:mb-0">
           <p>
             Full-stack Engineering<sup className="text-stone-500"> 01 </sup>

@@ -4,8 +4,10 @@ import styles from "@/styles"
 
 const Mobile = () => {
   return (
-    <div className={`${styles.innerWidth} ${styles.xPaddings} lg:-mt-12 mt-0`}>
-      <div className="my-[40px] lg:my-0 text-4xl lg:text-7xl">
+    <div className={`${styles.xPaddings} lg:-mt-12 mt-0 mx-auto`}>
+      <div
+        className={`${styles.innerWidth} lg:-mt-12 mt-0 mx-auto my-[40px] lg:my-0 text-4xl lg:text-7xl`}
+      >
         <Link href="/">
           <h1 className="font-monument tracking-tighter dark:text-stone-300 text-neutral-800 mb-1">
             <span className="font-monument"> kelvin </span> yelyen

@@ -21,7 +21,7 @@ const AllProjects = () => {
           </div>
 
           <div className="col-span-2">
-            <hr className="h-px md:mt-10 bg-gray-400 dark:bg-neutral-500 border-0" />
+            <hr className="h-px bg-gray-400 dark:bg-neutral-500 border-0" />
             {projects.map((project) => (
               <Project key={project.number} {...project} />
             ))}
