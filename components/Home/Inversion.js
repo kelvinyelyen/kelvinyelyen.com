@@ -11,8 +11,11 @@ const Inversion = () => {
       className={`${styles.xPaddings} text-right lg:mt-[0] -mt-[20px] relative dark:text-stone-300`}
     >
       <div className={`${styles.innerWidth} mx-auto flex justify-between`}>
-        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-          <p className=" md:text-[15px] text-xs">
+        <button
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="z-10"
+        >
+          <p className=" md:text-[15px] text-xs ">
             <span className={currentTheme === "light" ? "active" : ""}>
               LIGHT{" "}
             </span>
