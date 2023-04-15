@@ -5,7 +5,7 @@ export const projects = [
     year: "2021",
     type: "PAPER & DEVELOPMENT",
     url: "https://drive.google.com/file/d/1OfbmOqsmnb479wTh7FYDjtCgKnx1dJPR/view?usp=sharing",
-    imageUrl: "images/1.jpg",
+    imageUrl: "images/ehr.png",
     altText: "Project 1",
   },
   {
@@ -14,7 +14,7 @@ export const projects = [
     year: "2023",
     type: "DESIGN & DEVELOPMENT",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "images/2.jpg",
+    imageUrl: "images/atlas.png",
     altText: "Project 2",
   },
   {
@@ -22,8 +22,8 @@ export const projects = [
     title: "Muzeyi",
     year: "2023",
     type: "DESIGN & DEVELOPMENT",
-    url: "",
-    imageUrl: "images/3.jpg",
+    url: "https://www.muzeyiyelyen.com/",
+    imageUrl: "images/muzeyi.png",
     altText: "Project 3",
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
     year: "2023",
     type: "DEVELOPMENT",
     url: "https://github.com/kelvinyelyen/typecast",
-    imageUrl: "images/4.jpg",
+    imageUrl: "images/typecast.png",
     altText: "Project 4",
   },
   {
@@ -53,7 +53,7 @@ export const selectedProjects = [
     year: "2021",
     type: "PAPER & DEVELOPMENT",
     url: "https://drive.google.com/file/d/1OfbmOqsmnb479wTh7FYDjtCgKnx1dJPR/view?usp=sharing",
-    imageUrl: "images/1.jpg",
+    imageUrl: "images/ehr.png",
     altText: "Project 1",
   },
   {
@@ -62,7 +62,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DESIGN & DEVELOPMENT",
     url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "images/two.jpg",
+    imageUrl: "images/atlas.png",
     altText: "Project 2",
   },
   {
@@ -70,8 +70,8 @@ export const selectedProjects = [
     title: "Muzeyi",
     year: "2023",
     type: "DESIGN & DEVELOPMENT",
-    url: "https://muzeyi.vercel.app/",
-    imageUrl: "images/3.jpg",
+    url: "https://www.muzeyiyelyen.com/",
+    imageUrl: "images/muzeyi.png",
     altText: "Project 3",
   },
   {
@@ -80,7 +80,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DEVELOPMENT",
     url: "https://github.com/kelvinyelyen/typecast",
-    imageUrl: "images/typecast.jpg",
+    imageUrl: "images/typecast.png",
     altText: "Project 4",
   },
 ]
