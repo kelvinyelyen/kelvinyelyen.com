@@ -11,11 +11,9 @@ const Selected = () => {
           SELECTED WORK
         </p>
         <hr className="h-px md:mt-10 bg-gray-400 dark:bg-neutral-500 border-0" />
-
         {selectedProjects.map((project) => (
           <SelectedProject key={project.number} {...project} />
         ))}
-
         <Link href="/projects">
           <p className="text-right dark:font-light text-[12px] text-stone-500 md:mt-10 mt-4">
             &#11044; &nbsp;MORE WORK (5) &#129126;

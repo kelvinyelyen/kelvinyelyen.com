@@ -5,7 +5,7 @@ const Work = () => {
     <section className={`${styles.paddings} relative z-10 lg:my-10 my-10`}>
       <div className={`${styles.textWidth} mx-auto`}>
         <div className="lg:mt-5 flex justify-between">
-          <article className="lg:mx-[200px]">
+          <article className="lg:mx-[280px]">
             <p className="text-[10px] text-stone-500 uppercase">
               (Work with me)
             </p>

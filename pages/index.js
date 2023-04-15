@@ -1,11 +1,18 @@
-import {  Intro, About, Inversion, Selected, Work, Contact } from "@/components/Home"
+import {
+  Intro,
+  About,
+  Inversion,
+  Selected,
+  Work,
+  Contact,
+} from "@/components/Home"
 import Meta from "@/components/Meta"
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Meta />
-      <Intro/>
+      <Intro />
       <About />
       <Inversion />
       <Selected />
