@@ -5,7 +5,7 @@ import { selectedProjects } from "@/data/Projects"
 
 const Selected = () => {
   return (
-    <section className={`${styles.paddings} relative z-10 lg:mt-0 -mt-[120px]`}>
+    <section className={`${styles.paddings} relative z-10 lg:mt-0 mt-[30px]`}>
       <div className={`${styles.projectWidth} mx-auto`}>
         <p className="text-[17px] text-secondary-white dark:text-neutral-600 mb-4">
           SELECTED WORK

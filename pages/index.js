@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       <Meta />
-      <div className="h-screen">
+      <div className="lg:h-screen">
         <Intro />
         <About />
         <Inversion />
