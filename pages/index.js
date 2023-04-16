@@ -12,9 +12,11 @@ export default function Home() {
   return (
     <div>
       <Meta />
-      <Intro />
-      <About />
-      <Inversion />
+      <div className="h-screen">
+        <Intro />
+        <About />
+        <Inversion />
+      </div>
       <Selected />
       <Work />
       <Contact />

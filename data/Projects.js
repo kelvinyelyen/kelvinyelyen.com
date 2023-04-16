@@ -23,7 +23,7 @@ export const projects = [
     year: "2023",
     type: "DESIGN & DEVELOPMENT",
     url: "https://www.muzeyiyelyen.com/",
-    imageUrl: "images/muzeyi.png",
+    imageUrl: "images/muzeyi2.png",
     altText: "Project 3",
   },
   {
@@ -71,7 +71,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DESIGN & DEVELOPMENT",
     url: "https://www.muzeyiyelyen.com/",
-    imageUrl: "images/muzeyi.png",
+    imageUrl: "images/muzeyi2.png",
     altText: "Project 3",
   },
   {
