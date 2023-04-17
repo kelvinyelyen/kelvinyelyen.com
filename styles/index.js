@@ -2,11 +2,11 @@ const styles = {
   innerWidth: "2xl:max-w-[1600px] w-full",
   interWidth: "lg:w-[80%] w-[100%]",
   aboutWidth: "2xl:max-w-[800px] w-full",
-  blogWidth: "2xl:max-w-[700px] w-full",
+  blogWidth: "2xl:max-w-[700px] xl:max-w-[700px]  w-full",
   textWidth: "2xl:max-w-[1100px] w-full",
   projectWidth: "2xl:max-w-[1280px] w-full",
 
-  paddings: "sm:p-16 xs:p-8 px-6 py-12",
+  paddings: "sm:p-16 xs:p-16 px-6 py-12",
   ipaddings: "sm:p-16 xs:p-8 px-6 py-12",
   yPaddings: "sm:py-16 xs:py-8 py-12",
   xPaddings: "sm:px-8 px-6",

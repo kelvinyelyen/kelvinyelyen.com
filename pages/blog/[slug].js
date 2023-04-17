@@ -34,12 +34,12 @@ export default function Post({ post }) {
           ({new Date(post.published_at).toDateString()})
         </p>
         <div className="dark:text-secondary-white">
-          <img src={post.feature_image} alt="" style={{ maxWidth: "100%" }} />
+          <img src={post.feature_image} alt="" />
           <h1 className="lg:text-[30px] text-[25px] leading-tight my-5">
             {post.title}
           </h1>
           <div
-            className="leading-7 text-sm lg:text-[16px] text-neutral-700 dark:text-secondary-white prose-sm md:prose-lg max-w-none"
+            className="lg:leading-9 leading-7 text-sm lg:text-[17px] text-neutral-700 dark:text-secondary-white prose-lg max-w-none"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>
