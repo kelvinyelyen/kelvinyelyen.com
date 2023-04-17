@@ -28,7 +28,7 @@ const Inversion = () => {
             </span>{" "}
           </p>
         </button>
-        <div className="lg:block hidden text-[17px]">
+        <div className="md:text-[17px] text-[13px]">
           &#11044; &nbsp;GHANA, AVAILABLE WORLDWIDE
         </div>
       </div>
