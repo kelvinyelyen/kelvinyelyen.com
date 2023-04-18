@@ -15,20 +15,28 @@ const Header = () => {
             <h1></h1>
           ) : (
             <Link href="/">
-              <p className="text-[20px] -mt-2">
-                &#10042; kelvin.yelyen
-              </p>
+              <p className="text-[20px] -mt-2">&#10042; kelvin.yelyen</p>
             </Link>
           )}
         </div>
         <ul className="flex gap-5 md:text-[12px] text-[10px] dark:text-stone-300 uppercase">
           <li>
-            <Link href="/projects">
+            <Link
+              href="/projects"
+              className={`nav-link ${
+                router.pathname === "/projects" ? "active" : ""
+              }`}
+            >
               Projects
             </Link>
           </li>
           <li>
-            <Link href="/blog">
+            <Link
+              href="/blog"
+              className={`nav-link ${
+                router.pathname === "/blog" ? "active" : ""
+              }`}
+            >
               Blog
             </Link>
           </li>

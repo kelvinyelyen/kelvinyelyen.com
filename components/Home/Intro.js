@@ -2,7 +2,7 @@ import Link from "next/link"
 import React from "react"
 import styles from "@/styles"
 
-const Mobile = () => {
+const Intro = () => {
   return (
     <div className={`${styles.xPaddings} lg:-mt-12 mt-10 mx-auto`}>
       <div
@@ -22,4 +22,4 @@ const Mobile = () => {
   )
 }
 
-export default Mobile
+export default Intro

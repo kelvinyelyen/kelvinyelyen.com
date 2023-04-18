@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-const Project = ({ number, title, imageUrl, altText, year, type, url }) => {
+const Project = ({ number, title, year, type, url }) => {
   return (
     <>
       <Link

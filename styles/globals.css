@@ -169,3 +169,6 @@ p {
   scrollbar-width: none;
 }
 
+.nav-link.active {
+   @apply dark:text-stone-600;
+}
