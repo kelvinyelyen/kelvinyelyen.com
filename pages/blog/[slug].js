@@ -33,13 +33,13 @@ export default function Post({ post }) {
         <p className="text-sm text-stone-500 my-5">
           ({new Date(post.published_at).toDateString()})
         </p>
-        <div className="dark:text-secondary-white">
+        <div className="">
           <img src={post.feature_image} alt="" />
           <h1 className="lg:text-[30px] text-[25px] leading-tight my-5">
             {post.title}
           </h1>
           <div
-            className="lg:leading-9 leading-7 text-sm lg:text-[17px] text-neutral-700 dark:text-secondary-white prose-lg max-w-none"
+            className="lg:leading-9 leading-7 text-sm lg:text-[17px] text-neutral-800 dark:text-neutral-400 prose dark:prose-invert prose-sm max-w-none"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>
