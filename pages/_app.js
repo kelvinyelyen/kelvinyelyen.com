@@ -1,6 +1,7 @@
 import { ThemeProvider } from "next-themes"
 import Layout from "@/components/Layout"
 import Script from "next/script"
+import { Analytics } from "@vercel/analytics/react"
 import "@/styles/globals.css"
 import Preloader from "@/components/Preloader"
 
@@ -30,6 +31,7 @@ export default function App({ Component, pageProps }) {
       <ThemeProvider attribute="class">
         <Layout>
           <Component {...pageProps} />
+          <Analytics />
         </Layout>
       </ThemeProvider>
     </div>
