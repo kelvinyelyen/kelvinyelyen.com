@@ -11,7 +11,7 @@ const Work = () => {
             </p>
             <p className="uppercase md:text-[17px] text-[13px] dark:font-light dark:text-stone-300">
               I&apos;m currently focusing on software engineering and Product
-              Design, as well as exploring new areas of technology (AI) and
+              Design, as well as exploring new areas of technology (Artificial Intelligence etc.) and
               pursuing my creative interest in design.
             </p>
           </article>
