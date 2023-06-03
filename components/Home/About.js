@@ -9,9 +9,8 @@ const About = () => {
         <div className="md:ml-[65%]">
           <p className="text-[10px] text-stone-500 lg:mx-[0px]">(ABOUT)</p>
           <p className="uppercase dark:font-light text-[13px] lg:text-[17px] dark:text-stone-300">
-            I&apos;m an indie software engineer and designer whose passion lies
-            in utilizing science and technology to create innovative solutions
-            that have a positive impact on the world.
+            Software engineer and designer passionate about utilizing science and technology to 
+            create innovative solutions that have a positive impact on the world.
           </p>
         </div>
       </div>

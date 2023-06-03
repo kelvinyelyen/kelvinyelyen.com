@@ -36,7 +36,7 @@ Meta.defaultProps = {
   keywords:
     "software engineer, designer, software engineering, technology, design, ai, artificial intelligence, science, science and technology, full-stack engineering, product design, graphic design, ghana, africa, fluidity, evolution",
   description:
-    "Software engineer and designer based in Ghana, with a passion in utilizing science and technology to create innovative solutions.",
+    "Software engineer and designer based in Ghana, passionate about utilizing science and technology to create innovative solutions.",
   author: "Kelvin Yelyen",
   ogType: "website",
   ogImage: "/og-image.png",
