@@ -4,7 +4,7 @@ import styles from "@/styles"
 const Contact = () => {
   return (
     <div
-      className={`${styles.xPaddings} text-[13px] lg:text-[17px] relative`}
+      className={`${styles.xPaddings} text-[13px] lg:text-[15px] relative`}
     >
       <div
         className={`${styles.innerWidth} mx-auto flex flex-col sm:flex-row justify-between uppercase`}

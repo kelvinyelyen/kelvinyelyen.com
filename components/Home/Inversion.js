@@ -15,7 +15,7 @@ const Inversion = () => {
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className="z-10"
         >
-          <p className=" md:text-[15px] text-xs ">
+          <p className="md:text-[15px] text-xs ">
             <span className={currentTheme === "light" ? "active" : ""}>
               LIGHT{" "}
             </span>
@@ -28,7 +28,7 @@ const Inversion = () => {
             </span>{" "}
           </p>
         </button>
-        <div className="md:text-[17px] text-xs text-stone-500 ">
+        <div className="md:text-[15px] text-xs text-stone-500 ">
           &#11044; &nbsp;GHANA, AVAILABLE WORLDWIDE
         </div>
       </div>
