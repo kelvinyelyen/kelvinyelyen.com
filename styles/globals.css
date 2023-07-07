@@ -46,7 +46,6 @@ p {
 /* Apply styles to the body (Dark & Light Mode) */
 @layer base {
   body {
-    @apply dark:bg-neutral-900 bg-white;
     transition: background-color 0.5s ease, color 0.5s ease;
   }
 }
