@@ -11,12 +11,12 @@ const AllProjects = () => {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <div className="lg:mr-[20%] mr-0">
             <p className="uppercase text-[10px] text-stone-500">
-              (Software Eng, Web Apps, Product Design ... )
+              (Software Eng, Product Design ... )
             </p>
             <p className="text-[13px] md:text-[15px] ">
-              I&apos;ve collaborated on various personal and team projects
-              throughout my career, and here are some that can be mentioned
-              publicly.
+              Curated collection of some of my projects spanning various domains,
+              including personal, client, and team-based projects. These
+              projects represent the ones that can be shared publicly.
             </p>
           </div>
 
