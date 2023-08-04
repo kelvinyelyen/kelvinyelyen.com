@@ -18,7 +18,7 @@ export const projects = [
     altText: "Project 3",
   },
   {
-    number: "/04",
+    number: "/03",
     title: "Typecast",
     year: "2023",
     type: "DEVELOPMENT",
@@ -44,6 +44,15 @@ export const projects = [
     imageUrl: "images/3.jpg",
     altText: "Project 5",
   },
+  {
+    number: "/04",
+    title: "Portal",
+    year: "2023",
+    type: "DEVELOPMENT",
+    url: "https://nextjs-postgres-auth-sooty.vercel.app/",
+    imageUrl: "images/typecast.png",
+    altText: "Project 4",
+  }
 ]
 
 export const selectedProjects = [
@@ -63,7 +72,7 @@ export const selectedProjects = [
     type: "DESIGN & DEVELOPMENT",
     url: "https://www.muzeyiyelyen.com/",
     imageUrl: "images/muzeyi2.png",
-    altText: "Project 3",
+    altText: "Project 2",
   },
   {
     number: "/03",
@@ -71,6 +80,15 @@ export const selectedProjects = [
     year: "2023",
     type: "DEVELOPMENT",
     url: "https://github.com/kelvinyelyen/typecast",
+    imageUrl: "images/typecast.png",
+    altText: "Project 3",
+  },
+  {
+    number: "/04",
+    title: "Portal",
+    year: "2023",
+    type: "DEVELOPMENT",
+    url: "https://nextjs-postgres-auth-sooty.vercel.app/",
     imageUrl: "images/typecast.png",
     altText: "Project 4",
   },
