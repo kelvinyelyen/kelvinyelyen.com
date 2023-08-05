@@ -124,7 +124,6 @@
     background-repeat: repeat;
     animation: bg-animation .2s infinite;
     opacity: .3;
-
     visibility: visible;
 }
 
