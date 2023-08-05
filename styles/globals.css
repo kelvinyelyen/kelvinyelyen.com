@@ -58,13 +58,13 @@
 }
 
 .intro {
-  line-height: 100px;
+  line-height: 90px;
 }
 
 /* For mobile devices */
 @media (max-width: 768px) {
   .intro {
-    line-height: 40px; /* Adjust the line height for mobile */
+    line-height: 50px; /* Adjust the line height for mobile */
   }
 }
 
