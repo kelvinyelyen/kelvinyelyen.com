@@ -28,7 +28,6 @@ export default function BlogPost({ posts }) {
               <div key={post.id}>
                 <Link href={`/blog/${post.slug}`}>
                   <div className="flex justify-between gap-10 text-start">
-                    
                     <div>
                       <p className="text-xs md:text-sm">
                         ({new Date(post.published_at).toDateString()})
@@ -40,7 +39,9 @@ export default function BlogPost({ posts }) {
                         {post.excerpt}
                       </p>
                     </div>
-                    <div className="text-xs md:text-sm">&#x1F866;</div>
+                    <div className="text-xs md:text-sm hidden lg:block">
+                      &#x1F866;
+                    </div>
                   </div>
                 </Link>
                 <hr className="h-px my-8 bg-gray-400 dark:bg-neutral-500 border-0" />
