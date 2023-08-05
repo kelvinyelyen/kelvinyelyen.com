@@ -50,7 +50,7 @@ export const projects = [
     year: "2023",
     type: "DEVELOPMENT",
     url: "https://nextjs-postgres-auth-sooty.vercel.app/",
-    imageUrl: "images/typecast.png",
+    imageUrl: "images/portal.png",
     altText: "Project 6",
   }
 ]
@@ -89,7 +89,7 @@ export const selectedProjects = [
     year: "2023",
     type: "DEVELOPMENT",
     url: "https://nextjs-postgres-auth-sooty.vercel.app/",
-    imageUrl: "images/typecast.png",
+    imageUrl: "images/portal.png",
     altText: "Project 4",
   },
 ]
