@@ -7,7 +7,7 @@ const Intro = () => {
 
     <div className={`${styles.xPaddings} mx-auto`}>
       <div
-        className={`${styles.innerWidth} mx-auto text-5xl lg:text-8xl`}
+        className={`${styles.innerWidth} mx-auto mt-[40px] lg:mt-0 text-5xl lg:text-8xl`}
       >
         <Link href="/">
           {/* <p className="dark:text-stone-300 text-neutral-800 mb-1">

@@ -13,7 +13,7 @@ export default function BlogPost({ posts }) {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <div className="lg:mr-[20%] mr-0 w-30">
             <p className="uppercase text-[10px] text-stone-500">
-              (Musings, Shower-thoughts, Essays ... )
+              [ Musings, Shower-thoughts, Essays ... ]
             </p>
             <p className="text-[13px] md:text-[15px] ">
               At certain times, articulating a concise portrayal of my identity

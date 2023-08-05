@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section className={`${styles.paddings} about relative z-10`}>
       <div
-        className={`${styles.innerWidth} mx-auto mt-[120px] lg:mt-[90px] lg:mb-0 mb-10`}
+        className={`${styles.innerWidth} mx-auto mt-[90px] lg:mt-[90px] lg:mb-0 mb-10`}
       >
         <div className="md:ml-[65%]">
           <p className="text-[10px] text-stone-500 lg:mx-[0px]">[ ABOUT ]</p>
