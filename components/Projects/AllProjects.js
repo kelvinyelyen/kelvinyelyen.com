@@ -11,7 +11,7 @@ const AllProjects = () => {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <div className="lg:mr-[20%] mr-0">
             <p className="uppercase text-[10px] text-stone-500">
-              (Software Eng, Product Design ... )
+              [ Software Engineering, Product Design ... ]
             </p>
             <p className="text-[13px] md:text-[15px] ">
               Curated collection of some of my projects spanning various domains,

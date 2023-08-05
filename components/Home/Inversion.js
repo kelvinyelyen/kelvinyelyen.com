@@ -8,7 +8,7 @@ const Inversion = () => {
 
   return (
     <div
-      className={`${styles.xPaddings} text-right relative dark:text-stone-300`}
+      className={`${styles.xPaddings} text-right relative dark:text-stone-300 mt-14`}
     >
       <div className={`${styles.innerWidth} mx-auto flex justify-between`}>
         <button

@@ -80,7 +80,7 @@ const SelectedProject = ({
       <Link
         href={url}
         target="_blank"
-        className="hover:dark:text-stone-700 hover:text-stone-500 my-10"
+        className="hover:dark:text-stone-700 hover:text-stone-500 "
       >
         <div
           className="grid grid-cols-2 sm:grid-cols-3 lg:my-0 my-5 text-end border-b border-gray-400 dark:border-neutral-500 lg:py-10 pb-5"

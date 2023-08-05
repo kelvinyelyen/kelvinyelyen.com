@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-family: "Roobert-Regular";
   scroll-behavior: smooth;
   overflow: none;
   scrollbar-width: none; /* hide scrollbar for Firefox */
@@ -20,9 +20,6 @@
   display: none;
 }
 
-p {
-  word-spacing: 2px;
-}
 
 /* Define a custom font face for MonumentExtended-Regular. */
 @font-face {
@@ -43,6 +40,16 @@ p {
   font-style: normal;
 }
 
+@font-face {
+    font-family: "Roobert-Regular";
+    src: url("https://db.onlinewebfonts.com/t/6228016f2b172c06410f3a2356d33f6c.eot");
+    src: url("https://db.onlinewebfonts.com/t/6228016f2b172c06410f3a2356d33f6c.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/6228016f2b172c06410f3a2356d33f6c.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/6228016f2b172c06410f3a2356d33f6c.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/6228016f2b172c06410f3a2356d33f6c.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/6228016f2b172c06410f3a2356d33f6c.svg#Roobert-Regular")format("svg");
+}
+
 /* Apply styles to the body (Dark & Light Mode) */
 @layer base {
   body {
@@ -50,6 +57,16 @@ p {
   }
 }
 
+.intro {
+  line-height: 100px;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .intro {
+    line-height: 40px; /* Adjust the line height for mobile */
+  }
+}
 /* Styles for the SplitTextAnimation component */
 .reveal-text {
   visibility: hidden;
@@ -105,7 +122,7 @@ p {
     background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
     background-repeat: repeat;
     animation: bg-animation .2s infinite;
-    opacity: .5;
+    opacity: .3;
     visibility: visible;
 }
 

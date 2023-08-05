@@ -12,10 +12,10 @@ const Header = () => {
       >
         <div className="dark:text-secondary-white text-neutral-800">
           {router.pathname === "/" ? (
-            <h1></h1>
+            <p className="sm:text-[20px] text-[10] -mt-2">kelvin&#10042;yelyen</p>
           ) : (
             <Link href="/">
-              <p className="text-[20px] -mt-2">kelvin&#10042;yelyen</p>
+              <p className="sm:text-[20px] text-[10] -mt-2">kelvin&#10042;yelyen</p>
             </Link>
           )}
         </div>
