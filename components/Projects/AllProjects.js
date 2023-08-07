@@ -18,8 +18,6 @@ const AllProjects = () => {
               Curated collection of some of my projects spanning various
               domains, including personal, client, and open-source projects.
               These projects represent the ones that can be shared publicly.
-            </p>
-            <p className="text-[13px] md:text-[15px]">
               Design Projects:{" "}
               <Link href="https://www.behance.net/kelvinyelyen">Behance</Link>
             </p>
