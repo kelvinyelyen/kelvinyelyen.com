@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Project from "./Project"
 import { projects } from "@/data/Projects"
 import styles from "@/styles"
@@ -14,9 +15,13 @@ const AllProjects = () => {
               [ Software Engineering, Product Design ... ]
             </p>
             <p className="text-[13px] md:text-[15px] ">
-              Curated collection of some of my projects spanning various domains,
-              including personal, client, and team-based projects. These
-              projects represent the ones that can be shared publicly.
+              Curated collection of some of my projects spanning various
+              domains, including personal, client, and open-source projects.
+              These projects represent the ones that can be shared publicly.
+            </p>
+            <p className="text-[13px] md:text-[15px]">
+              Design Projects:{" "}
+              <Link href="https://www.behance.net/kelvinyelyen">Behance</Link>
             </p>
           </div>
 

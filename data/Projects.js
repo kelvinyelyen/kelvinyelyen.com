@@ -1,11 +1,12 @@
 export const projects = [
   {
     number: "/01",
-    title: "E.h.r",
-    year: "2021",
-    type: "RESEARCH & DEVELOPMENT",
-    url: "https://drive.google.com/file/d/1OfbmOqsmnb479wTh7FYDjtCgKnx1dJPR/view?usp=sharing",
-    imageUrl: "images/ehr.png",
+    title: "Arcane",
+    description: "Newsletter automation",
+    year: "2023",
+    type: "DESIGN & DEVELOPMENT",
+    url: "https://github.com/kelvinyelyen/arcane",
+    imageUrl: "",
     altText: "Project 1",
   },
   {
@@ -28,41 +29,41 @@ export const projects = [
   },
   {
     number: "/04",
-    title: "Atlas",
-    year: "2023",
-    type: "DESIGN & DEVELOPMENT",
-    url: "https://atlasweatherfocus.vercel.app/",
-    imageUrl: "images/atlas.png",
-    altText: "Project 4",
-  },
-  {
-    number: "/05",
-    title: "Daily UI",
-    year: "2023",
-    type: "DESIGN",
-    url: "https://www.behance.net/kelvinyelyen",
-    imageUrl: "images/3.jpg",
-    altText: "Project 5",
-  },
-  {
-    number: "/06",
     title: "Portal",
     year: "2023",
     type: "DEVELOPMENT",
     url: "https://nextjs-postgres-auth-sooty.vercel.app/",
     imageUrl: "images/portal.png",
-    altText: "Project 6",
-  }
-]
-
-export const selectedProjects = [
+    altText: "Project 4",
+  },
   {
-    number: "/01",
+    number: "/05",
     title: "E.h.r",
     year: "2021",
     type: "RESEARCH & DEVELOPMENT",
     url: "https://drive.google.com/file/d/1OfbmOqsmnb479wTh7FYDjtCgKnx1dJPR/view?usp=sharing",
     imageUrl: "images/ehr.png",
+    altText: "Project 5",
+  },
+  {
+    number: "/06",
+    title: "Atlas",
+    year: "2023",
+    type: "DESIGN & DEVELOPMENT",
+    url: "https://atlasweatherfocus.vercel.app/",
+    imageUrl: "images/atlas.png",
+    altText: "Project 6",
+  },
+]
+
+export const selectedProjects = [
+  {
+    number: "/01",
+    title: "Arcane",
+    year: "2023",
+    type: "DESIGN & DEVELOPMENT",
+    url: "https://github.com/kelvinyelyen/arcane",
+    imageUrl: "",
     altText: "Project 1",
   },
   {
