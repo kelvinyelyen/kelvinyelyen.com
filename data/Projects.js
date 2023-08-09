@@ -29,30 +29,21 @@ export const projects = [
   },
   {
     number: "/04",
-    title: "Portal",
-    year: "2023",
-    type: "DEVELOPMENT",
-    url: "https://nextjs-postgres-auth-sooty.vercel.app/",
-    imageUrl: "images/portal.png",
-    altText: "Project 4",
-  },
-  {
-    number: "/05",
     title: "E.h.r",
     year: "2021",
     type: "RESEARCH & DEVELOPMENT",
     url: "https://drive.google.com/file/d/1OfbmOqsmnb479wTh7FYDjtCgKnx1dJPR/view?usp=sharing",
     imageUrl: "images/ehr.png",
-    altText: "Project 5",
+    altText: "Project 4",
   },
   {
-    number: "/06",
+    number: "/05",
     title: "Atlas",
     year: "2023",
     type: "DESIGN & DEVELOPMENT",
     url: "https://atlasweatherfocus.vercel.app/",
     imageUrl: "images/atlas.png",
-    altText: "Project 6",
+    altText: "Project 5",
   },
 ]
 
@@ -83,14 +74,5 @@ export const selectedProjects = [
     url: "https://github.com/kelvinyelyen/typecast",
     imageUrl: "images/typecast.png",
     altText: "Project 3",
-  },
-  {
-    number: "/04",
-    title: "Portal",
-    year: "2023",
-    type: "DEVELOPMENT",
-    url: "https://nextjs-postgres-auth-sooty.vercel.app/",
-    imageUrl: "images/portal.png",
-    altText: "Project 4",
   },
 ]
