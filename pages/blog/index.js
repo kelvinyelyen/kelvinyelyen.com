@@ -23,7 +23,7 @@ export default function BlogPost({ posts }) {
             </p>
           </div>
           <div className="md:col-span-2">
-            <hr className="h-px lg:mb-8 mb-8 mt-4 lg:my-0  bg-gray-400 dark:bg-neutral-500 border-0" />
+            <hr className="h-px lg:mb-8 mb-8 mt-4 lg:my-0 bg-gray-400 dark:bg-neutral-500 border-0" />
             {posts.map((post) => (
               <div key={post.id}>
                 <Link href={`/blog/${post.slug}`}>

@@ -75,4 +75,13 @@ export const selectedProjects = [
     imageUrl: "images/typecast.png",
     altText: "Project 3",
   },
+  {
+    number: "/04",
+    title: "E.h.r",
+    year: "2021",
+    type: "RESEARCH & DEVELOPMENT",
+    url: "https://drive.google.com/file/d/1OfbmOqsmnb479wTh7FYDjtCgKnx1dJPR/view?usp=sharing",
+    imageUrl: "images/ehr.png",
+    altText: "Project 4",
+  }
 ]

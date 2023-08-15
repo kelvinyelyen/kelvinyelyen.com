@@ -2,7 +2,7 @@ import styles from "@/styles"
 
 const Work = () => {
   return (
-    <section className={`${styles.paddings} relative z-10`}>
+    <section className={`${styles.paddings} relative z-10 mb-0 lg:mb-10`}>
       <div className={`${styles.textWidth} mx-auto`}>
         <div className="lg:mt-5 flex justify-between">
           <article className="lg:mx-[280px]">
@@ -11,8 +11,9 @@ const Work = () => {
             </p>
             <p className="md:text-[15px] text-[13px] dark:font-light dark:text-stone-300">
               Currently focusing on Software Engineering and Product Design, as
-              well as exploring new areas of science & technology — Artificial intelligence etc. and pursuing
-              my creative interest in design.
+              well as exploring new areas of science & technology — Artificial
+              intelligence and Neurotechnology while pursuing my general
+              creative interest in design.
             </p>
           </article>
         </div>
