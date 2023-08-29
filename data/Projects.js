@@ -2,7 +2,7 @@ export const projects = [
   {
     number: "/01",
     title: "Arcane",
-    description: "Newsletter automation with Python",
+    description: "Newsletter automation",
     year: "2023",
     type: "DESIGN & DEVELOPMENT",
     url: "https://github.com/kelvinyelyen/arcane",
@@ -22,7 +22,7 @@ export const projects = [
   {
     number: "/02",
     title: "Muzeyi",
-    description: "Illustrator, designer, writer portfolio",
+    description: "Portfolio",
     year: "2023",
     type: "DESIGN & DEVELOPMENT",
     url: "https://www.muzeyiyelyen.com/",
@@ -32,7 +32,7 @@ export const projects = [
   {
     number: "/03",
     title: "Electric Health Registry",
-    description: "Final year paper, project",
+    description: "Final year project",
     year: "2021",
     type: "RESEARCH & DEVELOPMENT",
     url: "https://drive.google.com/file/d/1OfbmOqsmnb479wTh7FYDjtCgKnx1dJPR/view?usp=sharing",
