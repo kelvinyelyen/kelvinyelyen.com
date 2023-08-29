@@ -11,19 +11,13 @@ const Header = () => {
         className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}
       >
         <div className="dark:text-secondary-white text-neutral-800">
-          {router.pathname === "/" ? (
+          <Link href="/">
             <p className="sm:text-[20px] text-[15] -mt-2">
-              kelvin&#10042;yelyen
+              kelvin,yelyen&#10042;
             </p>
-          ) : (
-            <Link href="/">
-              <p className="sm:text-[20px] text-[15] -mt-2">
-                kelvin&#10042;yelyen
-              </p>
-            </Link>
-          )}
+          </Link>
         </div>
-        <ul className="flex gap-5 md:text-[12px] text-[10px] dark:text-stone-300 uppercase">
+        <ul className="flex gap-5 md:text-[13px] text-[10px] dark:text-stone-300 uppercase">
           <li>
             <Link
               href="/projects"

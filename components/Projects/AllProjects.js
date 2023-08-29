@@ -1,19 +1,14 @@
 import Link from "next/link"
 import Project from "./Project"
-import { projects } from "@/data/Projects"
+import { projects, archived } from "@/data/Projects"
 import styles from "@/styles"
 
 const AllProjects = () => {
   return (
     <section className={`${styles.paddings} relative z-10`}>
-      <div
-        className={`${styles.projectWidth} mx-auto dark:text-secondary-white`}
-      >
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          <div className="lg:mr-[20%] mr-0">
-            <p className="uppercase text-[10px] text-stone-500">
-              [ Software Engineering, Product Design ... ]
-            </p>
+      <div className={`${styles.innerWidth} mx-auto dark:text-stone-300`}>
+        <div className="mb-20">
+          <div className="mb-6">
             <p className="text-[13px] md:text-[15px] ">
               Curated collection of some of my projects spanning various
               domains, including personal, client, and open-source projects.
@@ -23,12 +18,26 @@ const AllProjects = () => {
             </p>
           </div>
 
-          <div className="col-span-2">
-            <hr className="h-px bg-gray-400 dark:bg-neutral-500 border-0" />
+          <div className="">
+            <hr className="h-px bg-gray-200 dark:bg-neutral-800 border-0" />
             {projects.map((project) => (
               <Project key={project.number} {...project} />
             ))}
           </div>
+        </div>
+
+        <div className="mb-6">
+          <p className="uppercase text-[13px] text-stone-500">[ Archived ]</p>
+          <p className="text-[13px] md:text-[15px] ">
+            My experiments and archived projects.
+          </p>
+        </div>
+
+        <div className="">
+          <hr className="h-px bg-gray-200 dark:bg-neutral-800 border-0" />
+          {archived.map((archive) => (
+            <Project key={archive.number} {...archive} />
+          ))}
         </div>
       </div>
     </section>

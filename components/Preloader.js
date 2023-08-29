@@ -35,8 +35,7 @@ const Preloader = () => {
       <div className="bg"></div>
       <div className="preloader__inner">
         <h1 className="preloader__text text-[15px] lg:text-[25px] text-secondary-white">
-          <span className="font-extralight">Kelvin Yelyen</span> &nbsp;
-          Portfolio
+          <span className="font-extralight">Kelvin Yelyen Portfolio</span>
         </h1>
       </div>
     </div>
