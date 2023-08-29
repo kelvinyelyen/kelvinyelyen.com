@@ -13,17 +13,18 @@ const About = () => {
           </p>
           <br />
           <p>
-            I'm a software engineer and designer whose passion lies in utilizing
-            science and technology to create innovative solutions that have a
-            positive impact on the world. With a hacker's mentality, I'm
-            constantly seeking to break barriers and explore novel approaches to
-            problem-solving. Ultimately, my goal is to shape the future through
-            the advancements of science and technology. My commitment extends
-            towards cultivating a future wherein science and technology serve as
-            a powerful instrument for enriching the human experience, empowering
-            individuals, and amplifying our collective capabilities. Guided by a
-            philosophy rooted in enhancing the human experience, I strive to
-            strike a balance that fosters human growth and consciousness.
+            I&apos;m a software engineer and designer whose passion lies in
+            utilizing science and technology to create innovative solutions that
+            have a positive impact on the world. With a hacker&apos;s mentality,
+            I&apos;m constantly seeking to break barriers and explore novel
+            approaches to problem-solving. Ultimately, my goal is to shape the
+            future through the advancements of science and technology. My
+            commitment extends towards cultivating a future wherein science and
+            technology serve as a powerful instrument for enriching the human
+            experience, empowering individuals, and amplifying our collective
+            capabilities. Guided by a philosophy rooted in enhancing the human
+            experience, I strive to strike a balance that fosters human growth
+            and consciousness.
           </p>
           <br />
           <p>

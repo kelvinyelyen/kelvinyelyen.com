@@ -54,7 +54,7 @@ export const projects = [
 export const archived = [
   {
     number: "/01",
-    title: "Kinde-Auth",
+    title: "Kinde-auth",
     description: "Auth template with Kinde Nextjs SDK",
     year: "2023",
     type: "DESIGN & DEVELOPMENT",
