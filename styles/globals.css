@@ -20,25 +20,6 @@
   display: none;
 }
 
-/* Define a custom font face for MonumentExtended-Regular. */
-@font-face {
-  font-family: "PPMonumentExtended-Regular";
-  src: url("/fonts/PPMonumentExtended-Regular.otf") format("opentype"),
-    url("/fonts/PPMonumentExtended-Light.otf") format("opentype"),
-    url("/fonts/PPMonumentExtended-LightItalic.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Define a custom font face for NeueHaasDisplay. */
-@font-face {
-  font-family: "Neue Haas Grotesk Display Pro";
-  src: url("/fonts/NeueHaasDisplay-Roman.woff") format("woff"),
-    url("/fonts/NeueHaasDisplay-Light.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 
 @font-face {
     font-family: "Roobert-Regular";
@@ -85,7 +66,7 @@
 }
 
 .dark-active {
-  @apply dark:text-stone-600;
+  @apply dark:text-stone-500;
 }
 
 .preloader {
@@ -163,19 +144,6 @@
   }
 }
 
-/* Smooth Scroll */
-/* [data-scrollbar] {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  height: 100vh;
-}
-
-[data-scrollbar]::-webkit-scrollbar {
-  width: 0 !important;
-  height: 0 !important;
-  display: none !important;
-} */
-
 .desktop-only::-webkit-scrollbar {
   width: 0 !important;
 }
@@ -186,5 +154,5 @@
 }
 
 .nav-link.active {
-   @apply dark:text-stone-600;
+   @apply dark:text-stone-500;
 }

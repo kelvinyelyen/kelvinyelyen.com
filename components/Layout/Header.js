@@ -13,7 +13,7 @@ const Header = () => {
         <div className="dark:text-secondary-white text-neutral-800">
           <Link href="/">
             <p className="sm:text-[20px] text-[15] -mt-2">
-              kelvin,yelyen&#10042;
+              kelvin_yelyen
             </p>
           </Link>
         </div>

@@ -31,7 +31,7 @@ export default function BlogPost({ posts }) {
                     </h2>
                   </div>
                   <div className="text-xs md:text-sm">
-                    <p className="text-xs md:text-sm">
+                    <p className="text-xs md:text-sm text-stone-500">
                       ({new Date(post.published_at).toDateString()})
                     </p>
                   </div>
