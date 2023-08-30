@@ -16,8 +16,8 @@ const About = () => {
           </p>
           <br />
           <p>
-            Outside of work, I'm deeply passionate about travel, arts, culture,
-            philosophy, and neuroscience. Engaging in philosophical and
+            Outside of work, I&apos;m deeply passionate about travel, arts,
+            culture, philosophy, and neuroscience. Engaging in philosophical and
             neuroscience discussions, immersing myself in diverse art forms, and
             taking on creative projects. I believe that these experiences help
             me develop a well-rounded perspective, which in turn informs my work
