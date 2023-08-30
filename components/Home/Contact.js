@@ -20,7 +20,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="text-end">
-          <p className="dark:text-stone-300">START A PROJECT</p>
+          <p className="dark:text-stone-300 uppercase">Reach out</p>
           <div className="text-stone-500 cursor-pointer">
             <ul>
               <li>

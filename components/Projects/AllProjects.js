@@ -5,11 +5,11 @@ import styles from "@/styles"
 
 const AllProjects = () => {
   return (
-    <section className={`${styles.paddings} relative z-10`}>
+    <section className={`${styles.paddings} relative z-10 -mt-10`}>
       <div className={`${styles.innerWidth} mx-auto dark:text-stone-300`}>
         <div className="mb-20">
           <div className="mb-6">
-            <p className="text-[13px] md:text-[15px] ">
+            <p className="text-[14px] md:text-[16px] ">
               Curated collection of some of my projects spanning various
               domains, including personal, client, and open-source projects.
               These projects represent the ones that can be shared publicly.
@@ -26,9 +26,9 @@ const AllProjects = () => {
           </div>
         </div>
 
-        <div className="mb-6">
-          <p className="uppercase text-[13px] text-stone-500">[ Archived ]</p>
-          <p className="text-[13px] md:text-[15px] ">
+        <div className="mb-6 text-[14px] md:text-[16px] ">
+          <p className="uppercase  text-stone-500">[ Archived ]</p>
+          <p>
             My experiments and archived projects.
           </p>
         </div>

@@ -5,14 +5,14 @@ import Meta from "@/components/Meta"
 
 export default function BlogPost({ posts }) {
   return (
-    <section className={`${styles.paddings} relative z-10`}>
+    <section className={`${styles.paddings} relative z-10 -mt-10`}>
       <Meta description="Articulating a concise portrayal of my identity or occupation can prove to be challenging, as it encompasses a complexity that cannot be adequately conveyed through a mere handful of words." />
       <div className={`${styles.innerWidth} mx-auto dark:text-stone-300`}>
         <div className="mb-6">
-          <p className="uppercase text-[13px] text-stone-500">
+          <p className="uppercase text-[14px] md:text-[16px]  text-stone-500">
             [ Musings, Shower-thoughts ]
           </p>
-          <p className="text-[13px] md:text-[15px] ">
+          <p className="text-[14px] md:text-[16px] ">
             At certain times, articulating a concise portrayal of my identity or
             occupation can prove to be challenging, as it encompasses a
             complexity that cannot be adequately conveyed through a mere handful
@@ -26,12 +26,12 @@ export default function BlogPost({ posts }) {
               <Link href={`/blog/${post.slug}`}>
                 <div className="flex justify-between gap-10 text-start my-4 border-b border-gray-200 dark:border-neutral-800 pb-4">
                   <div>
-                    <h2 className="text-[13px] md:text-[15px] font-medium">
+                    <h2 className="text-[14px] md:text-[16px] font-medium">
                       {post.title}
                     </h2>
                   </div>
-                  <div className="text-xs md:text-sm">
-                    <p className="text-xs md:text-sm text-stone-500">
+                  <div className="text-[14px] md:text-[16px] ">
+                    <p className=" text-stone-500">
                       ({new Date(post.published_at).toDateString()})
                     </p>
                   </div>

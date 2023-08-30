@@ -12,12 +12,12 @@ const Header = () => {
       >
         <div className="dark:text-secondary-white text-neutral-800">
           <Link href="/">
-            <p className="sm:text-[20px] text-[15] -mt-2">
-              kelvin_yelyen
+            <p className="md:text-[30px] text-[20px] -mt-2">
+              kelvin<span className="text-stone-500">yelyen_</span>
             </p>
           </Link>
         </div>
-        <ul className="flex gap-5 md:text-[13px] text-[10px] dark:text-stone-300 uppercase">
+        <ul className="flex gap-5 md:text-[16px] text-[14px] dark:text-stone-300">
           <li>
             <Link
               href="/projects"
