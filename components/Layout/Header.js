@@ -5,11 +5,11 @@ import styles from "@/styles"
 const Header = () => {
   const router = useRouter()
 
+  const isRouteActive = (path) => router.pathname === path
+
   return (
     <nav className={`${styles.xPaddings} py-8 relative`}>
-      <div
-        className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}
-      >
+      <div className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}>
         <div className="dark:text-secondary-white text-neutral-800">
           <Link href="/">
             <p className="md:text-[30px] text-[20px] -mt-2">
@@ -21,20 +21,19 @@ const Header = () => {
           <li>
             <Link
               href="/projects"
+              passHref
               className={`nav-link ${
-                router.pathname === "/projects" ? "active" : ""
-              }`}
-            >
+                isRouteActive("/projects") ? "active" : ""}
+            `}>
               Projects
             </Link>
           </li>
           <li>
             <Link
               href="/blog"
-              className={`nav-link ${
-                router.pathname === "/blog" ? "active" : ""
-              }`}
-            >
+              passHref
+              className={`nav-link ${isRouteActive("/blog") ? "active" : ""}
+            `}>
               Blog
             </Link>
           </li>
