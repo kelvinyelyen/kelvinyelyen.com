@@ -3,11 +3,9 @@ import styles from "@/styles"
 
 const Contact = () => {
   return (
-    <div
-      className={`${styles.xPaddings} text-[13px] relative`}
-    >
+    <div className={`${styles.xPaddings} md:text-[16px] text-[14px] relative`}>
       <div
-        className={`${styles.innerWidth} mx-auto flex flex-col sm:flex-row justify-between uppercase`}
+        className={`${styles.innerWidth} mx-auto flex flex-col sm:flex-row justify-between`}
       >
         <div className="dark:font-light uppercase dark:text-stone-300 mb-6 sm:mb-0">
           <p>
@@ -23,7 +21,7 @@ const Contact = () => {
         </div>
         <div className="text-end">
           <p className="dark:text-stone-300">START A PROJECT</p>
-          <div className="text-stone-500 md:text-[13px] text-[13px]">
+          <div className="text-stone-500 cursor-pointer">
             <ul>
               <li>
                 <Link href="mailto:kelvinyelyen@gmail.com" target="_blank">
