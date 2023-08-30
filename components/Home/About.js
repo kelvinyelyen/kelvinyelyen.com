@@ -12,7 +12,7 @@ const About = () => {
             have a positive impact on the world. I&apos;m constantly seeking to
             break barriers and explore novel approaches to problem-solving.
             Ultimately, my goal is to shape the future through the advancements
-            of science and technology.
+            of science and technology. Curently exploring AI and Neurotechnology.
           </p>
           <br />
           <p>
