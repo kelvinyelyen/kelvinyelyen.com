@@ -1,6 +1,5 @@
 import styles from "@/styles"
 import Image from "next/image"
-import test from "@/public/images/test.jpg"
 import existential from "@/public/images/existential.jpg"
 import books from "@/public/images/books.jpg"
 import laptop from "@/public/images/laptop.jpg"
@@ -13,7 +12,7 @@ const About = () => {
       <div className={`${styles.innerWidth} mx-auto`}>
         <p className="text-[14px] text-stone-500 lg:mx-0">[ ABOUT ]</p>
         <div className="dark:font-light text-[14px] lg:text-[16px] dark:text-stone-200">
-         <p>
+          <p>
             I&apos;m a software engineer and designer whose passion lies in
             utilizing science and technology to create innovative solutions that
             have a positive impact on the world. I&apos;m constantly seeking to

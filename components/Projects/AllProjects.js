@@ -6,7 +6,7 @@ import styles from "@/styles"
 const AllProjects = () => {
   return (
     <section className={`${styles.paddings} relative z-10 -mt-10`}>
-      <div className={`${styles.innerWidth} mx-auto dark:text-stone-200`}>origin/main
+      <div className={`${styles.innerWidth} mx-auto dark:text-stone-200`}>
         <div className="mb-20">
           <div className="mb-6">
             <p className="text-[14px] md:text-[16px] ">
