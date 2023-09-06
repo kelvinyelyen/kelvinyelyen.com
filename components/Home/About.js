@@ -83,7 +83,6 @@ const About = () => {
               />
             </div>
           </div>
-          <br />
           <p>
             Outside of work, I&apos;m deeply passionate about travel, arts,
             culture, philosophy, and neuroscience. Engaging in philosophical and
