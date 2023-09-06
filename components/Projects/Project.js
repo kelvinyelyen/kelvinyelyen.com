@@ -10,7 +10,7 @@ const Project = ({ title, url, description }) => {
       >
         <div className="grid grid-cols-2 text-[14px] md:text-[16px] lg:my-0 my-4 text-end border-b border-gray-200 dark:border-neutral-800 lg:py-4 pb-4">
           <div className="flex dark:text-stone-200">
-            <h2>{title}</h2>
+         <h2>{title}</h2>
           </div>
           <div className="text-stone-500">{description}</div>
         </div>

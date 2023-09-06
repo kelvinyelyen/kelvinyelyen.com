@@ -1,5 +1,4 @@
 import styles from "@/styles"
-
 import Image from "next/image"
 import test from "@/public/images/test.jpg"
 import existential from "@/public/images/existential.jpg"
