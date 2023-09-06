@@ -3,8 +3,8 @@ import Image from "next/image"
 import existential from "@/public/images/existential.jpg"
 import books from "@/public/images/books.jpg"
 import laptop from "@/public/images/laptop.jpg"
-import kerubin from "@/public/images/kerubin.JPG"
-import rebel from "@/public/images/rebel.JPG"
+// import kerubin from "@/public/images/kerubin.JPG"
+// import rebel from "@/public/images/rebel.JPG"
 
 const About = () => {
   return (
@@ -25,7 +25,7 @@ const About = () => {
             <div className="relative h-40 mb-4">
               <Image
                 alt="Me speaking on stage at React Summit about the future of Next.js"
-                src={kerubin}
+                src={books}
                 fill
                 sizes="(max-width: 768px) 213px, 33vw"
                 priority
@@ -55,7 +55,7 @@ const About = () => {
             <div className="relative h-40 mb-4 sm:mb-0">
               <Image
                 alt="Me standing on stage at SmashingConf giving a talk about my optimism for the web"
-                src={rebel}
+                src={books}
                 fill
                 sizes="(max-width: 768px) 213px, 33vw"
                 priority
@@ -65,7 +65,7 @@ const About = () => {
             <div className="relative h-40 mb-4">
               <Image
                 alt="Me and Guillermo Rauch on stage for Vercel Ship, answering questions from the Next.js community"
-                src={kerubin}
+                src={books}
                 fill
                 sizes="(max-width: 768px) 213px, 33vw"
                 priority
