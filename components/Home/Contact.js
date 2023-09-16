@@ -35,7 +35,7 @@ const Contact = () => {
               </li>
               <li>
                 <Link href="https://twitter.com/kelvinyelyen" target="_blank">
-                  Twitter &#129125;
+                  X (Twitter) &#129125;
                 </Link>
               </li>
               <li>
