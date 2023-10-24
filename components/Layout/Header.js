@@ -20,7 +20,7 @@ const Header = () => {
           </Link>
         </div>
         <ul className="flex gap-5 md:text-[16px] text-[14px] dark:text-stone-200">
-          <li>
+          <li className="transition duration-200 ease-in-out hover:text-stone-500">
             <Link
               href="/projects"
               passHref
@@ -30,7 +30,7 @@ const Header = () => {
               Projects
             </Link>
           </li>
-          <li>
+          <li className="transition duration-200 ease-in-out hover:text-stone-500">
             <Link
               href="/blog"
               passHref

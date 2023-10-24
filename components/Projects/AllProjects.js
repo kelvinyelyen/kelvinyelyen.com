@@ -1,4 +1,3 @@
-import Link from "next/link"
 import Project from "./Project"
 import { projects, archived } from "@/content/Projects"
 import styles from "@/styles"
@@ -15,7 +14,7 @@ const AllProjects = () => {
             </p>
           </div>
 
-          <div className="">
+          <div>
             <hr className="h-px bg-gray-200 dark:bg-neutral-800 border-0" />
             {projects.map((project) => (
               <Project key={project.number} {...project} />
@@ -30,7 +29,7 @@ const AllProjects = () => {
           </p>
         </div>
 
-        <div className="">
+        <div>
           <hr className="h-px bg-gray-200 dark:bg-neutral-800 border-0" />
           {archived.map((archive) => (
             <Project key={archive.number} {...archive} />

@@ -25,7 +25,7 @@ module.exports = {
             a: {
               color: "",
               "&:hover": {
-                color: "#9B59B6",
+                color: "rgb(120 113 108)",
               },
               textDecoration: "underline",
             },

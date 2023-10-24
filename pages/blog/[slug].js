@@ -18,7 +18,7 @@ export default function Post({ post }) {
           </h1>
           <div className="grid grid-cols-2 lg:text-[16px] text-[15px] my-5 ">
             <p className="">{new Date(post.published_at).toDateString()}</p>
-            <Link href="/blog" className="text-end">
+            <Link href="/blog" className="text-end underline">
               Back
             </Link>
           </div>
