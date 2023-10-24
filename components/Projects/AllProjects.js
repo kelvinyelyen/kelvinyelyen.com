@@ -11,10 +11,7 @@ const AllProjects = () => {
           <div className="mb-6">
             <p className="text-[14px] md:text-[16px] ">
               Curated collection of some of my projects spanning various
-              domains, including personal, client, and open-source projects.
-              These projects represent the ones that can be shared publicly.
-              Design Projects:{" "}
-              <Link href="https://www.behance.net/kelvinyelyen">Behance</Link>
+              domains.
             </p>
           </div>
 
@@ -27,7 +24,7 @@ const AllProjects = () => {
         </div>
 
         <div className="mb-6 text-[14px] md:text-[16px] ">
-          <p className="uppercase  text-stone-500">[ Archived ]</p>
+          <p className="text-lg my-4">Archived</p>
           <p className="dark:text-stone-200">
             My experiments and archived projects.
           </p>

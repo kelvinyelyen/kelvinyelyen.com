@@ -20,7 +20,6 @@ const Contact = () => {
           </p>
         </div>
         <div className="text-end">
-          <p className="dark:text-stone-200 uppercase">Reach out</p>
           <div className="text-stone-500 cursor-pointer">
             <ul>
               <li>

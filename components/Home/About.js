@@ -10,7 +10,6 @@ const About = () => {
   return (
     <section className={`${styles.paddings} about relative z-10 -mt-10`}>
       <div className={`${styles.innerWidth} mx-auto`}>
-        <p className="text-[14px] text-stone-500 lg:mx-0">[ ABOUT ]</p>
         <div className="dark:font-light text-[14px] lg:text-[16px] dark:text-stone-200">
           <p>
             I&apos;m a software engineer and designer whose passion lies in

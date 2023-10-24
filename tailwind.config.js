@@ -23,11 +23,11 @@ module.exports = {
           css: {
             color: "#333",
             a: {
-              color: "#BE90D4",
+              color: "",
               "&:hover": {
                 color: "#9B59B6",
               },
-              textDecoration: "none",
+              textDecoration: "underline",
             },
             h3: {
               fontWeight: "100px",
