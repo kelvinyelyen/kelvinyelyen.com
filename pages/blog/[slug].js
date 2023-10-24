@@ -5,7 +5,7 @@ import Meta from "@/components/Meta"
 
 export default function Post({ post }) {
   return (
-    <section className={`${styles.paddings} relative z-10`}>
+    <section className={`${styles.paddings} relative z-10 -mt-10`}>
       <Meta
         title={post.title}
         ogImage={post.feature_image}
@@ -22,6 +22,7 @@ export default function Post({ post }) {
               Back
             </Link>
           </div>
+
           <div
             className="lg:leading-8 leading-8 text-[15px] lg:text-[16px] font-medium text-neutral-800 dark:text-stone-300 prose dark:prose-invert prose-sm max-w-none"
             dangerouslySetInnerHTML={{ __html: post.html }}
