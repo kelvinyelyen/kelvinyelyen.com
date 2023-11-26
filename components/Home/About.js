@@ -20,7 +20,7 @@ const About = () => {
             potential to drive advancements in AI while contributing to the
             comprehension of human cognition.
           </p>
-          <div className="columns-2 sm:columns-3 gap-4 my-8">
+          {/* <div className="columns-2 sm:columns-3 gap-4 my-8">
             <div className="relative h-40 mb-4">
               <Image
                 alt="My name is Japanese"
@@ -81,7 +81,8 @@ const About = () => {
                 className="rounded-lg object-cover"
               />
             </div>
-          </div>
+          </div> */}
+          <br />
           <p>
             Outside of work, I&apos;m deeply passionate about travel, arts,
             culture, philosophy, neuroscience etc. I enjoy engaging in

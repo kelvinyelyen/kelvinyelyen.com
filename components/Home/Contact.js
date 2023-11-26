@@ -9,10 +9,10 @@ const Contact = () => {
       >
         <div className="dark:font-light uppercase dark:text-stone-200 mb-6 sm:mb-0">
           <p>
-            Full-stack Engineering<sup className="text-stone-500"> 01 </sup>
+            Programming<sup className="text-stone-500"> 01 </sup>
           </p>
           <p>
-            Product Design (UI/UX Design)
+            Product Design (UX Design)
             <sup className="text-stone-500"> 02 </sup>
           </p>
           <p>
