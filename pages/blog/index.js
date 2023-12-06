@@ -17,15 +17,18 @@ export default function BlogPost({ posts }) {
           {posts.map((post) => (
             <div key={post.id}>
               <Link href={`/blog/${post.slug}`}>
-                <div className="flex justify-between  border-b border-gray-200 dark:border-neutral-800 py-2 lg:py-3 ">
+                <div className="flex justify-between  border-b border-gray-200 dark:border-neutral-800 py-3">
                   <div className="">
                     <h2 className="text-[14px] md:text-[16px] font-medium transition duration-200 ease-in-out hover:text-stone-500">
                       {post.title}
                     </h2>
                   </div>
-                  <div className="text-[10px] md:text-[16px] text-end">
+                  <div className="text-[14px] md:text-[16px] text-end">
                     <p className="text-stone-500">
-                      {new Date(post.published_at).toLocaleDateString("en-US")}
+                      {new Date(post.published_at).toLocaleDateString("en-US", {
+                        month: "2-digit",
+                        year: "numeric",
+                      })}
                     </p>
                   </div>
                 </div>

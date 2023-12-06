@@ -16,7 +16,7 @@ const Contact = () => {
             <sup className="text-stone-500"> 02 </sup>
           </p>
           <p>
-            Graphic Design<sup className="text-stone-500"> 03 </sup>
+            Research<sup className="text-stone-500"> 03 </sup>
           </p>
         </div>
         <div className="text-end">
