@@ -35,7 +35,7 @@ export const archived = [
   {
     number: "/01",
     title: "Kinde-auth",
-    description: "Auth template with Kinde Nextjs SDK",
+    description: "Kinde Nextjs SDK",
     year: "2023",
     type: "DESIGN & DEVELOPMENT",
     url: "https://kinde-auth.vercel.app/",
@@ -44,12 +44,12 @@ export const archived = [
   },
   {
     number: "/02",
-    title: "Trace-dependencies",
-    description: "Command-line tool",
+    title: "Next-auth",
+    description: "NextAuth integration w/ Prisma...",
     year: "2023",
-    type: "DEVELOPMENT",
+    type: "DESIGN & DEVELOPMENT",
     url: "https://github.com/kelvinyelyen/trace-dependencies",
-    imageUrl: "images/muzeyi2.png",
+    imageUrl: "",
     altText: "Project 2",
   },
   {
