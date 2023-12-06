@@ -35,7 +35,7 @@ export const archived = [
   {
     number: "/01",
     title: "Kinde-auth",
-    description: "Kinde Nextjs SDK",
+    description: "Kinde Nextjs SDK starter",
     year: "2023",
     type: "DESIGN & DEVELOPMENT",
     url: "https://kinde-auth.vercel.app/",
