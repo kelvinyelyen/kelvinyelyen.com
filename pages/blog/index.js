@@ -27,7 +27,7 @@ export default function BlogPost({ posts }) {
                     <p className="text-stone-500">
                       {new Date(post.published_at).toLocaleDateString("en-US", {
                         month: "2-digit",
-                        year: "numeric",
+                        year: "2-digit",
                       })}
                     </p>
                   </div>
