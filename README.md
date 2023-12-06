@@ -1,24 +1,5 @@
 # kelvinyelyen.com
-
-- **Framework**: [Next.js](https://nextjs.org/)
-- **Deployment**: [Vercel](https://vercel.com)
-- **Blog**: [GhostCMS](https://ghost.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com)
-- **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
-- **Analytics I**: [Google Analytics](https://analytics.google.com/)
-
-## Running Locally
-
-This application requires Node.js v16.13+.
-
-```bash
-git clone https://github.com/kelvinyelyen/kelvinyelyen.com.git
-cd kelvinyelyen.com
-npm install
-npm run dev
-```
-
-Create a `.env` file similar to `.env.example`.
+Version 2.0
 
 ## Cloning / Forking
 
