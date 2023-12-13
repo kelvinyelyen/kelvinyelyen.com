@@ -17,7 +17,7 @@ export default function Home() {
         </div>
       </section>
       <section className="mx-auto flex flex-col sm:flex-row justify-between my-10 leading-6">
-        <div className="uppercase">
+        <div className="uppercase mb-4">
           <p>
             Programming<sup className="text-primary-foreground"> 01 </sup>
           </p>
