@@ -27,7 +27,7 @@
     --ring: 0 0% 83.1%;
   }
 
-  .light {
+  /* .light {
     --background: 0 0% 100%;
     --foreground: 0 0% 15%;
 
@@ -50,7 +50,7 @@
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
     --radius: 0.5rem;
-  }
+  } */
 }
 
 @layer base {

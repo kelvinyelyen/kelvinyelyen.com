@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
       <Suspense>
         <GoogleAnalytics GA_MEASUREMENT_ID="G-27MSMZKLNN" />
       </Suspense>
-      <body className={GeistSans.className}>
+      <body className={GeistMono.className}>
         <Preloader />
         <SiteNav />
         <Providers>{children}</Providers>
