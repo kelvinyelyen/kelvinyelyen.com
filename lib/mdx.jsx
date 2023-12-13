@@ -26,6 +26,7 @@ function Table({ data }) {
     </table>
   )
 }
+Table.displayName = "Table"
 
 function CustomLink(props) {
   let href = props.href
@@ -44,10 +45,14 @@ function CustomLink(props) {
 
   return <a target="_blank" rel="noopener noreferrer" {...props} />
 }
+CustomLink.displayName = "CustomLink"
+
 
 function RoundedImage(props) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />
 }
+RoundedImage.displayName = "RoundedImage"
+
 
 function Callout(props) {
   return (
@@ -57,6 +62,8 @@ function Callout(props) {
     </div>
   )
 }
+Callout.displayName = "Callout"
+
 
 function ProsCard({ title, pros }) {
   return (
@@ -86,6 +93,8 @@ function ProsCard({ title, pros }) {
     </div>
   )
 }
+ProsCard.displayName = "ProsCard"
+
 
 function ConsCard({ title, cons }) {
   return (
@@ -111,11 +120,15 @@ function ConsCard({ title, cons }) {
     </div>
   )
 }
+ConsCard.displayName = "ConsCard"
+
 
 function Code({ children, ...props }) {
   let codeHTML = highlight(children)
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
+Code.displayName = "Code"
+
 
 function slugify(str) {
   return str
@@ -127,6 +140,7 @@ function slugify(str) {
     .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
     .replace(/\-\-+/g, "-") // Replace multiple - with single -
 }
+
 
 function createHeading(level) {
   return ({ children }) => {
