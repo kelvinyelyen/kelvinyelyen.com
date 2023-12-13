@@ -1,6 +1,7 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
+import { formatDateTimeFull } from "@/lib/date-helper"
 
 // Function to get post
 function getPost(slug) {
