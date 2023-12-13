@@ -1,3 +1,5 @@
+/* eslint-disable react/display-name */
+
 import Link from "next/link"
 import Image from "next/image"
 import { MDXRemote } from "next-mdx-remote/rsc"
@@ -47,12 +49,10 @@ function CustomLink(props) {
 }
 CustomLink.displayName = "CustomLink"
 
-
 function RoundedImage(props) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />
 }
 RoundedImage.displayName = "RoundedImage"
-
 
 function Callout(props) {
   return (
@@ -63,7 +63,6 @@ function Callout(props) {
   )
 }
 Callout.displayName = "Callout"
-
 
 function ProsCard({ title, pros }) {
   return (
@@ -95,7 +94,6 @@ function ProsCard({ title, pros }) {
 }
 ProsCard.displayName = "ProsCard"
 
-
 function ConsCard({ title, cons }) {
   return (
     <div className="border border-red-200 dark:border-red-900 bg-neutral-50 dark:bg-neutral-900 rounded-xl p-6 my-6 w-full">
@@ -122,13 +120,11 @@ function ConsCard({ title, cons }) {
 }
 ConsCard.displayName = "ConsCard"
 
-
 function Code({ children, ...props }) {
   let codeHTML = highlight(children)
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 Code.displayName = "Code"
-
 
 function slugify(str) {
   return str
@@ -140,8 +136,6 @@ function slugify(str) {
     .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
     .replace(/\-\-+/g, "-") // Replace multiple - with single -
 }
-slugify.displayName = "slugify"
-
 
 function createHeading(level) {
   return ({ children }) => {
@@ -160,7 +154,6 @@ function createHeading(level) {
     )
   }
 }
-createHeading.displayName = "createHeading"
 
 let components = {
   h1: createHeading(1),
