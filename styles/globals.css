@@ -1,72 +1,65 @@
-/* Import Tailwind's base styles, component styles, and utility classes. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Apply some global styles to all elements on the page. */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roobert-Regular";
-  scroll-behavior: smooth;
-  overflow: none;
-  scrollbar-width: none; /* hide scrollbar for Firefox */
-  -ms-overflow-style: none; /* hide scrollbar for IE, Edge */
-}
-
-/* For WebKit browsers (e.g. Chrome, Safari) */
-::-webkit-scrollbar {
-  display: none;
-}
-
-
-@font-face {
-    font-family: "Roobert-Regular";
-    src: url("https://db.onlinewebfonts.com/t/6228016f2b172c06410f3a2356d33f6c.eot");
-    src: url("https://db.onlinewebfonts.com/t/6228016f2b172c06410f3a2356d33f6c.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/6228016f2b172c06410f3a2356d33f6c.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/6228016f2b172c06410f3a2356d33f6c.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/6228016f2b172c06410f3a2356d33f6c.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/6228016f2b172c06410f3a2356d33f6c.svg#Roobert-Regular")format("svg");
-}
-
-/* Apply styles to the body (Dark & Light Mode) */
 @layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 25 5% 45%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 240 6% 85%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 85%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 25 5% 45%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 24 5% 14%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
   body {
-    transition: background-color 0.5s ease, color 0.5s ease;
+    @apply bg-background text-foreground;
   }
-}
-
-.intro {
-  line-height: 70px;
-}
-
-/* For mobile devices */
-@media (max-width: 768px) {
-  .intro {
-    line-height: 50px; /* Adjust the line height for mobile */
-  }
-}
-
-/* Styles for the SplitTextAnimation component */
-.reveal-text {
-  visibility: hidden;
-}
-
-.line {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-}
-
-/* Active button styling */
-.active {
-  color: rgb(207, 207, 207);
-}
-
-.dark-active {
-  @apply dark:text-stone-500;
 }
 
 .preloader {
@@ -104,7 +97,7 @@
     background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
     background-repeat: repeat;
     animation: bg-animation .2s infinite;
-    opacity: .3;
+    opacity: .5;
     visibility: visible;
 }
 
@@ -144,15 +137,105 @@
   }
 }
 
-.desktop-only::-webkit-scrollbar {
-  width: 0 !important;
+.prose .anchor {
+  @apply absolute invisible no-underline;
+
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
 }
 
-.desktop-only {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.anchor:hover {
+  @apply visible;
 }
 
-.nav-link.active {
-   @apply dark:text-stone-500;
+.prose a {
+  @apply transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+}
+
+.prose .anchor:after {
+  @apply text-neutral-300 dark:text-neutral-700;
+  content: '#';
+}
+
+.prose *:hover > .anchor {
+  @apply visible;
+}
+
+.prose pre {
+  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900;
+}
+
+.prose code {
+  @apply px-1 py-0.5 rounded-lg;
+}
+
+.prose pre code {
+  @apply p-0;
+  border: initial;
+  line-height: 1.5;
+}
+
+.prose code span {
+  @apply font-medium;
+}
+
+.prose img {
+  /* Don't apply styles to next/image */
+  @apply m-0;
+}
+
+.prose h2,
+h3,
+h4 {
+  @apply font-medium tracking-tighter !important;
+}
+
+.prose strong {
+  @apply font-medium;
+}
+
+.prose > :first-child {
+  /* Override removing top margin, causing layout shift */
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Remove Safari input shadow on mobile */
+input[type='text'],
+input[type='email'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.prose .tweet a {
+  text-decoration: inherit;
+  font-weight: 500;
+}
+
+table {
+  display: block;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.prose .callout > p {
+  margin: 0 !important;
+}
+
+.title {
+  text-wrap: balance;
 }

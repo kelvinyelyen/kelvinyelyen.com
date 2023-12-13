@@ -1,45 +1,63 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{html,js,jsx}",
-    "./components/**/*.{html,js,jsx}",
-    "./styles/**/*.{js,jsx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  mode: "jit",
   theme: {
+    container: {
+      center: true,
+      padding: "1.5rem",
+      screens: {
+        "2xl": "700px",
+      },
+    },
     extend: {
-      fontFamily: {
-        monument: ["PPMonumentExtended-Regular", "sans-serif"],
-        nhaas: ["Neue Haas Grotesk Display Pro", "sans-serif"],
+      typography: {
+        quoteless: {
+          css: {
+            "blockquote p:first-of-type::before": { content: "none" },
+            "blockquote p:first-of-type::after": { content: "none" },
+          },
+        },
       },
       colors: {
-        "secondary-white": "#b0b0b0",
-      },
-      transitionTimingFunction: {
-        "out-flex": "cubic-bezier(0.05, 0.6, 0.4, 0.9)",
-      },
-      typography: {
-        DEFAULT: {
-          css: {
-            color: "#333",
-            a: {
-              color: "",
-              "&:hover": {
-                color: "rgb(120 113 108)",
-              },
-              textDecoration: "underline",
-            },
-            h3: {
-              fontWeight: "100px",
-            },
-            li: {
-              bullets: "white",
-            },
-          },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
       },
     },
   },
   plugins: [require("@tailwindcss/typography")],
-  darkMode: "class",
 }

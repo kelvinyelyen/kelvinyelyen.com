@@ -1,0 +1,49 @@
+"use client"
+
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+
+const navItems = {
+  "/projects": {
+    name: "projects",
+  },
+  "/blog": {
+    name: "blog",
+  },
+}
+
+export default function SiteNav() {
+  const pathname = usePathname()
+  let cx = (...classes) => classes.filter(Boolean).join(" ")
+
+  const NavLink = ({ path, name }) => (
+    <li className="transition duration-200 ease-in-out hover:text-primary-foreground">
+      <Link href={path} passHref>
+        <p className={cx({ "text-primary-foreground": pathname === path })}>
+          {name}
+        </p>
+      </Link>
+    </li>
+  )
+
+  return (
+    <nav className="container py-8 relative text-foreground">
+      <div className={cx("mx-auto flex justify-between gap-8")}>
+        <Link href="/">
+          <p className="text-base">
+            kelvin<span className="text-primary-foreground">yelyen_</span>
+          </p>
+          <div className="text-sm text-primary-foreground">
+            <p>Indie Software Engineer</p>
+            <p>Ghana</p>
+          </div>
+        </Link>
+        <ul className="flex gap-5 text-sm">
+          {Object.entries(navItems).map(([path, { name }]) => (
+            <NavLink key={path} path={path} name={name} />
+          ))}
+        </ul>
+      </div>
+    </nav>
+  )
+}
