@@ -42,12 +42,12 @@ export default function Page() {
       <div className="py-2">
         {content.map((blog) => (
           <Link href={"/blog/" + blog.slug} passHref key={blog.slug}>
-            <div className="py-2 flex justify-between align-middle gap-2 border-b border-secondary-foreground transition duration-200 ease-in-out hover:text-primary-foreground relative">
-              <div>
+            <div className="py-2 grid md:grid-cols-3 grid-cols-1 justify-between align-middle border-b border-secondary-foreground transition duration-200 ease-in-out hover:text-primary-foreground relative">
+              <div className="col-span-2">
                 <h3>{blog.meta.title}</h3>
                 {/* <p className="text-primary-foreground text-sm">{blog.meta.summary}</p> */}
               </div>
-              <div className="my-auto text-primary-foreground text-sm">
+              <div className="my-auto col-span-1 text-primary-foreground text-sm lg:text-end">
                 <p>{blog.meta.publishedAt}</p>
               </div>
             </div>
