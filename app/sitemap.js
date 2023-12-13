@@ -1,19 +1,8 @@
 import fs from "fs"
 import path from "path"
 
-//TODO: Apply DRY principles
-export async function generateStaticParams() {
-  await generateRssFeed()
-  const files = fs.readdirSync(path.join("content"))
-
-  const paths = files.map((filename) => ({
-    slug: filename.replace(".mdx", ""),
-  }))
-
-  return paths
-}
-
-function getPost({ slug }) {
+// Function to get post
+function getPost(slug) {
   const markdownFile = fs.readFileSync(
     path.join("content", slug + ".mdx"),
     "utf-8"
@@ -32,11 +21,20 @@ function getPost({ slug }) {
 const URL = "https://kelvinyelyen.com"
 
 export default async function sitemap() {
-  let blogs = getPost().map((post) => ({
-    url: `{URL}/blog/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
-  }))
+  // Obtain slugs for posts
+  const files = fs.readdirSync(path.join("content"))
+  const paths = files.map((filename) => filename.replace(".mdx", ""))
 
+  // Generate blog URLs and last modified dates
+  let blogs = paths.map((slug) => {
+    const post = getPost(slug)
+    return {
+      url: `${URL}/blog/${slug}`,
+      lastModified: post.frontMatter.publishedAtFormatted,
+    }
+  })
+
+  // Define other routes
   let routes = ["", "/projects", "/blog"].map((route) => ({
     url: `${URL}${route}`,
     lastModified: new Date().toISOString().split("T")[0],
