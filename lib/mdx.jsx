@@ -140,6 +140,7 @@ function slugify(str) {
     .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
     .replace(/\-\-+/g, "-") // Replace multiple - with single -
 }
+slugify.displayName = "slugify"
 
 
 function createHeading(level) {
@@ -159,6 +160,7 @@ function createHeading(level) {
     )
   }
 }
+createHeading.displayName = "createHeading"
 
 let components = {
   h1: createHeading(1),
