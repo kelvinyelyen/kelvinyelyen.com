@@ -7,11 +7,9 @@ export default function Home() {
     <main className="container items-center text-sm text-foreground my-5">
       <section className="relative z-10">
         <div className="mx-auto">
-          <div className="leading-6">
+          <div className="prose prose-quoteless prose-stone prose-sm max-w-none dark:prose-invert leading-7">
             <p>{text.intro}</p>
-            <br />
-            <p>{text.hobbies}</p>
-            <br />
+            <p>{text.interests}</p>
             <p>{text.furtherInsights}</p>
           </div>
         </div>

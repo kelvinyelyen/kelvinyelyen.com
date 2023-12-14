@@ -9,7 +9,7 @@ const contentConfig = {
       development and computational cognitive science to game design 
       and human-computer interaction.
     `,
-    hobbies: `
+    interests: `
       Outside of work, I'm deeply passionate about philosophy,
       neuroscience, travel, arts and culture etc. I enjoy engaging in
       philosophical and neuroscientific discussions, immersing myself in

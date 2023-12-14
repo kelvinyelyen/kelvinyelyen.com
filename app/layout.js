@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Suspense } from "react"
 import GoogleAnalytics from "@/components/google-analytics"
 import { GeistSans } from "geist/font/sans"
@@ -62,6 +63,7 @@ export default function RootLayout({ children }) {
         <SiteNav />
         <Providers>{children}</Providers>
         <SiteFooter />
+        <SpeedInsights />
       </body>
       <Analytics />
     </html>
