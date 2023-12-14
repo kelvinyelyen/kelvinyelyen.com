@@ -35,6 +35,12 @@ function getPost({ slug }) {
 
 export async function generateMetadata({ params, searchParams }) {
   const blog = getPost({ slug: params.slug })
+  let ogImage = ""
+  ogImage = ogImage
+    ? `https://kelvinyelyen${ogImage}`
+    : `https://kelvinyelyen.com/og?title=${blog.frontMatter.title}`
+
+  console.log("Image:", ogImage)
 
   const metadata = {
     title: blog.frontMatter.title,
@@ -44,32 +50,19 @@ export async function generateMetadata({ params, searchParams }) {
       title: blog.frontMatter.title,
       description: blog.frontMatter.summary,
       publishedAt: blog.frontMatter.publishedAtFormatted,
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
       type: "article",
     },
     twitter: {
-      card: "summary",
-      site: "@kelvinyelyen",
-      creator: "@kelvinyelyen",
+      card: "summary_large_image",
       title: blog.frontMatter.title,
       description: blog.frontMatter.summary,
+      images: [ogImage],
     },
-  }
-
-  if (blog.frontMatter.image) {
-    const imageArray = Array.isArray(blog.frontMatter.image)
-      ? blog.frontMatter.image
-      : [blog.frontMatter.image]
-
-    metadata.openGraph = {
-      ...metadata.openGraph,
-      images: imageArray,
-    }
-
-    metadata.twitter.images = imageArray[0]
-
-    metadata.twitter.card = metadata.twitter.images
-      ? "summary_large_image"
-      : "summary"
   }
 
   return metadata
