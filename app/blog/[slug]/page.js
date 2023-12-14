@@ -37,7 +37,7 @@ export async function generateMetadata({ params, searchParams }) {
   const blog = getPost({ slug: params.slug })
   let image = ""
   let ogImage = image
-    ? `https://kelvinyelyen${image}`
+    ? `https://kelvinyelyen.com${image}`
     : `https://kelvinyelyen.com/og?title=${blog.frontMatter.title}`
 
   const metadata = {
