@@ -35,12 +35,10 @@ function getPost({ slug }) {
 
 export async function generateMetadata({ params, searchParams }) {
   const blog = getPost({ slug: params.slug })
-  let ogImage = ""
-  ogImage = ogImage
-    ? `https://kelvinyelyen${ogImage}`
+  let image = ""
+  let ogImage = image
+    ? `https://kelvinyelyen${image}`
     : `https://kelvinyelyen.com/og?title=${blog.frontMatter.title}`
-
-  console.log("Image:", ogImage)
 
   const metadata = {
     title: blog.frontMatter.title,
