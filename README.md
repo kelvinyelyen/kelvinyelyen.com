@@ -24,5 +24,5 @@ Let's connect and create something awesome together!
 - Website: [kelvinyelyen.com](kelvinyelyen.com)
 
 ### License
-This project is licensed under the MIT License - see the [LICENSE.md](link-to-license-file) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
 
