@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
-    --background: 0 0% 8%;
+    --background: 0 0% 6.5%;
     --foreground: 0 0% 90%;
 
     --primary: 0 0% 98%;
@@ -19,38 +20,11 @@
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --sh-class: #4c97f8;
+    --sh-identifier: white;
+    --sh-keyword: #f47067;
+    --sh-string: #0fa295;
   }
-
-  /* .light {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 15%;
-
-    --primary: 0 0% 9%;
-    --primary-foreground: 25 5% 45%;
-
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 240 6% 85%;
-
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-
-    --accent: 0 0% 94%;
-    --accent-foreground: 0 0% 9%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --radius: 0.5rem;
-  } */
 }
 
 @layer base {
@@ -139,7 +113,6 @@
 
 .prose .anchor {
   @apply absolute invisible no-underline;
-
   margin-left: -1em;
   padding-right: 0.5em;
   width: 80%;
@@ -165,7 +138,7 @@
 }
 
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900;
+  @apply bg-neutral-900 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 text-base;
 }
 
 .prose code {

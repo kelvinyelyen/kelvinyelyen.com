@@ -1,11 +1,12 @@
 /* eslint-disable react/display-name */
-
+import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { MDXRemote } from "next-mdx-remote/rsc"
+
 import { TweetComponent } from "../components/tweet"
 import { highlight } from "sugar-high"
-import React from "react"
+
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -62,7 +63,6 @@ function Callout(props) {
     </div>
   )
 }
-Callout.displayName = "Callout"
 
 function ProsCard({ title, pros }) {
   return (
@@ -120,11 +120,13 @@ function ConsCard({ title, cons }) {
 }
 ConsCard.displayName = "ConsCard"
 
+
 function Code({ children, ...props }) {
   let codeHTML = highlight(children)
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 Code.displayName = "Code"
+
 
 function slugify(str) {
   return str
