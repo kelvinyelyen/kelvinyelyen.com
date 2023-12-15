@@ -36,7 +36,7 @@ export default function Page() {
 
   return (
     <div className="container text-sm my-5 mb-[300px]">
-      <div className="mb-6">
+      <div className="mb-6 text-primary-foreground">
         <p>Thoughts, ideas, and opinions.</p>
       </div>
       <div className="py-2">
@@ -47,7 +47,7 @@ export default function Page() {
                 <h3>{blog.meta.title}</h3>
                 {/* <p className="text-primary-foreground text-sm">{blog.meta.summary}</p> */}
               </div>
-              <div className="my-auto col-span-1 text-primary-foreground text-sm lg:text-end">
+              <div className="my-auto col-span-1 text-primary-foreground lg:text-end">
                 <p>{blog.meta.publishedAt}</p>
               </div>
             </div>

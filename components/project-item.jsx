@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function ProjectItem({ title, url, description }) {
+export default function ProjectItem({ title, url, description, role }) {
   return (
     <>
       <Link
@@ -12,7 +12,7 @@ export default function ProjectItem({ title, url, description }) {
           <div className="col-span-1">
             <h3>{title}</h3>
           </div>
-          <div className="col-span-2 text-primary-foreground md:text-end text-xs ">
+          <div className="col-span-2 text-primary-foreground text-xs md:text-end">
             {description}
           </div>
         </div>

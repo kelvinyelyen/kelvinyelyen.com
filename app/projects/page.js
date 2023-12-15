@@ -1,4 +1,4 @@
-import ProjectItem from "@/components/project-item" 
+import ProjectItem from "@/components/project-item"
 import { projects, archived } from "@/config/projectConfig"
 
 export const metadata = {
@@ -13,10 +13,7 @@ export default function Page() {
       <div className="mx-auto text-foreground mb-[300px]">
         <div className="mb-12">
           <div className="mb-6">
-            <p className="">
-              Curated collection of some of my projects spanning various
-              domains.
-            </p>
+            <p>My project compilation across domains.</p>
           </div>
 
           <div>
@@ -28,9 +25,7 @@ export default function Page() {
 
         <div className="mb-6">
           <p className="text-lg my-2">Archived</p>
-          <p>
-            My experiments and archived projects.
-          </p>
+          <p>My experiments and archived projects.</p>
         </div>
 
         <div>

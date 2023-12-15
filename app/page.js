@@ -7,10 +7,14 @@ export default function Home() {
     <main className="container items-center text-sm text-foreground my-5">
       <section className="relative z-10">
         <div className="mx-auto">
-          <div className="prose prose-quoteless prose-stone prose-sm max-w-none dark:prose-invert leading-7">
+          <div className="prose prose-quoteless prose-stone prose-sm max-w-none dark:prose-invert leading-6">
             <p>{text.intro}</p>
             <p>{text.interests}</p>
-            <p>{text.furtherInsights}</p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: text.furtherInsights,
+              }}
+            />
           </div>
         </div>
       </section>

@@ -20,8 +20,8 @@ const contentConfig = {
     `,
     furtherInsights: `
       You can gain further insights into my background and interests
-      through my written works, projects, and various social media
-      profiles.
+      through my <a href="/blog">written works</a>, <a href="/projects">projects</a>,
+      and various social media profiles.
     `,
   },
 }

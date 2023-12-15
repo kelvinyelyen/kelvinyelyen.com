@@ -2,7 +2,7 @@ export const projects = [
   {
     number: "01",
     title: "Scarab",
-    description: "Building an open-source release note tracker",
+    description: "Open-source release note tracker",
     year: "2023",
     role: "Creator",
     url: "https://github.com/kelvinyelyen/scarab",
@@ -21,10 +21,10 @@ export const projects = [
   },
   {
     number: "03",
-    title: "Muzeyi",
+    title: "muzeyiyelyen.com",
     description: "Client / Portfolio",
     year: "2023",
-    role: "Creator",
+    role: "Commission",
     url: "https://www.muzeyiyelyen.com/",
     imageUrl: "",
     altText: "Project 3",
@@ -35,8 +35,7 @@ export const archived = [
   {
     number: "01",
     title: "Kinde-auth",
-    description:
-      "Robust authentication boilerplate for modern Next.js web apps",
+    description: "Kinde Nextjs SDK integration starter",
     year: "2023",
     role: "Creator",
     url: "https://kinde-auth.vercel.app/",
@@ -46,7 +45,7 @@ export const archived = [
   {
     number: "02",
     title: "Next-auth",
-    description: "NextAuth Boilerplate Integration with Prisma, Vercel Postgres",
+    description: "NextAuth starter with Prisma & Vercel Postgres",
     year: "2023",
     role: "Creator",
     url: "https://nextjs-postgres-auth-sooty.vercel.app/",
@@ -55,22 +54,12 @@ export const archived = [
   },
   {
     number: "03",
-    title: "Atlas",
-    description: "Streamlined weather app, a visual experiment",
+    title: "Atlas Weather",
+    description: "An aesthetic experiment",
     year: "2023",
     role: "Creator",
     url: "https://atlasweatherfocus.vercel.app/",
     imageUrl: "",
     altText: "Project 3",
-  },
-  {
-    number: "04",
-    title: "EHR",
-    description: "Undergrad thesis on Electronic Health Records",
-    year: "2021",
-    role: "Creator",
-    url: "https://drive.google.com/file/d/1OfbmOqsmnb479wTh7FYDjtCgKnx1dJPR/view?usp=sharing",
-    imageUrl: "images/ehr.png",
-    altText: "Project 4",
   },
 ]
