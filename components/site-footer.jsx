@@ -7,7 +7,7 @@ export function SiteFooter() {
   return (
     <footer className="container my-8">
       <div className="mx-auto text-xs">
-        <hr className="h-0.5px my-4 sm:my-8 bg-secondary-foreground" />
+        <hr className="h-0.5px my-4 sm:my-8 border-secondary-foreground" />
         <div className="flex justify-between">
           <p className="text-primary-foreground">
             {currentYear} &#169; Kelvin Yelyen
