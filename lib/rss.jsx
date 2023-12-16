@@ -1,12 +1,12 @@
 import RSS from "rss"
-import { getAllBlogs } from "./content-helper"
+import { getBlogContent } from "./blog"
 import fs from "fs"
 import path from "path"
 
 export const site_url = "https://kelvinyelyen.com"
 
 export default async function generateRssFeed() {
-  const allPosts = getAllBlogs()
+  const allPosts = getBlogContent()
 
   const feedOptions = {
     title: "Kelvin Yelyen",
@@ -22,12 +22,17 @@ export default async function generateRssFeed() {
   const feed = new RSS(feedOptions)
 
   allPosts.map((post) => {
-    if (post && post.meta.title && post.meta.description && post.meta.date) {
+    if (
+      post &&
+      post.metadata.title &&
+      post.metadata.description &&
+      post.metadata.date
+    ) {
       feed.item({
-        title: post.meta.title,
-        description: post.meta.description,
+        title: post.metadata.title,
+        description: post.metadata.description,
         url: `${site_url}/blog/${post.slug}`,
-        date: post.meta.date,
+        date: post.metadata.date,
       })
     }
   })

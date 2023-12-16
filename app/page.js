@@ -1,4 +1,5 @@
 import Link from "next/link"
+
 import contentConfig from "@/config/contentConfig"
 
 export default function Home() {

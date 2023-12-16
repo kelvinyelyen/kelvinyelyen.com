@@ -1,52 +1,28 @@
-import fs from "fs"
-import path from "path"
 import Link from "next/link"
-import matter from "gray-matter"
+
+import { generateSlugsFromFiles, getPost } from "@/lib/blog"
 import { CustomMDX } from "@/lib/mdx"
-import { formatDateTimeFull } from "@/lib/date-helper"
-import generateRssFeed from "@/lib/rss-helper"
+import generateRssFeed from "@/lib/rss"
 
 export async function generateStaticParams() {
   await generateRssFeed()
-  const files = fs.readdirSync(path.join("content"))
-
-  const paths = files.map((filename) => ({
-    slug: filename.replace(".mdx", ""),
-  }))
-
-  return paths
-}
-
-function getPost({ slug }) {
-  const markdownFile = fs.readFileSync(
-    path.join("content", slug + ".mdx"),
-    "utf-8"
-  )
-  const { data: frontMatter, content } = matter(markdownFile)
-  return {
-    frontMatter: {
-      ...frontMatter,
-      publishedAtFormatted: formatDateTimeFull(frontMatter.publishedAt),
-    },
-    slug,
-    content,
-  }
+  return generateSlugsFromFiles()
 }
 
 export async function generateMetadata({ params, searchParams }) {
   const blog = getPost({ slug: params.slug })
   let ogImage = `https://kelvinyelyen.com/og?title=${encodeURIComponent(
-    blog.frontMatter.title
+    blog.metadata.title
   )}`
-  
+
   const metadata = {
-    title: blog.frontMatter.title,
-    description: blog.frontMatter.summary,
-    publishedAt: blog.frontMatter.publishedAtFormatted,
+    title: blog.metadata.title,
+    description: blog.metadata.summary,
+    publishedAt: blog.metadata.publishedAtFormatted,
     openGraph: {
-      title: blog.frontMatter.title,
-      description: blog.frontMatter.summary,
-      publishedAt: blog.frontMatter.publishedAtFormatted,
+      title: blog.metadata.title,
+      description: blog.metadata.summary,
+      publishedAt: blog.metadata.publishedAtFormatted,
       images: [
         {
           url: ogImage,
@@ -56,8 +32,8 @@ export async function generateMetadata({ params, searchParams }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: blog.frontMatter.title,
-      description: blog.frontMatter.summary,
+      title: blog.metadata.title,
+      description: blog.metadata.summary,
       images: [ogImage],
     },
   }
@@ -66,8 +42,8 @@ export async function generateMetadata({ params, searchParams }) {
 }
 
 export default function Post({ params }) {
-  const props = getPost(params)
-  const { title, publishedAtFormatted, summary } = props.frontMatter
+  const post = getPost(params)
+  const { title, publishedAtFormatted, summary } = post.metadata
 
   return (
     <section className="container my-5 mb-[200px]">
@@ -82,9 +58,8 @@ export default function Post({ params }) {
             <Link href="/blog/">back</Link>
           </div>
         </div>
-
         {/* @ts-expect-error Server Component*/}
-        <CustomMDX source={props.content} />
+        <CustomMDX source={post.content} />
       </article>
     </section>
   )

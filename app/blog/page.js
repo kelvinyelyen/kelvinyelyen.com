@@ -1,10 +1,6 @@
-import fs from "fs"
-import path from "path"
-import matter from "gray-matter"
-
 import Link from "next/link"
 
-import { formatTimeAgo } from "@/lib/date-helper"
+import { getBlogContent } from "@/lib/blog"
 
 export const metadata = {
   title: "Blog",
@@ -12,27 +8,7 @@ export const metadata = {
 }
 
 export default function Page() {
-  const blogDir = "content"
-
-  const files = fs.readdirSync(path.join(blogDir))
-
-  const content = files.map((filename) => {
-    const fileContent = fs.readFileSync(path.join(blogDir, filename), "utf-8")
-    const { data: frontMatter } = matter(fileContent)
-    return {
-      meta: {
-        ...frontMatter,
-        publishedAt: new Date(frontMatter.publishedAt),
-      },
-      slug: filename.replace(".mdx", ""),
-    }
-  })
-
-  content.sort((a, b) => b.meta.publishedAt - a.meta.publishedAt)
-
-  content.forEach((blog) => {
-    blog.meta.publishedAt = formatTimeAgo(blog.meta.publishedAt)
-  })
+  const posts = getBlogContent()
 
   return (
     <div className="container text-sm my-5 mb-[300px]">
@@ -40,19 +16,23 @@ export default function Page() {
         <p>Thoughts, ideas, and opinions.</p>
       </div>
       <div className="py-2">
-        {content.map((blog) => (
-          <Link href={"/blog/" + blog.slug} passHref key={blog.slug}>
-            <div className="py-2 grid md:grid-cols-3 grid-cols-1 justify-between align-middle border-b border-secondary-foreground transition duration-200 ease-in-out hover:text-primary-foreground relative">
-              <div className="col-span-2">
-                <h3>{blog.meta.title}</h3>
-                {/* <p className="text-primary-foreground text-sm">{blog.meta.summary}</p> */}
+        {posts.map((post) => {
+          const {
+            metadata: { title, publishedAt, summary },
+          } = post
+          return (
+            <Link href={"/blog/" + post.slug} passHref key={post.slug}>
+              <div className="py-2 grid md:grid-cols-3 grid-cols-1 justify-between align-middle border-b border-secondary-foreground transition duration-200 ease-in-out hover:text-primary-foreground relative">
+                <div className="col-span-2">
+                  <h3>{title}</h3>
+                </div>
+                <div className="my-auto col-span-1 text-primary-foreground lg:text-end">
+                  <p>{publishedAt}</p>
+                </div>
               </div>
-              <div className="my-auto col-span-1 text-primary-foreground lg:text-end">
-                <p>{blog.meta.publishedAt}</p>
-              </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          )
+        })}
       </div>
     </div>
   )

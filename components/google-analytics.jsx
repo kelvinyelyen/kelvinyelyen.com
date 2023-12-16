@@ -3,7 +3,7 @@
 import { usePathname, useSearchParams } from "next/navigation"
 import Script from "next/script"
 import { useEffect } from "react"
-import * as gtag from "@/lib/gtag-helper"
+import * as gtag from "@/lib/gtag"
 
 export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
   {

@@ -1,11 +1,11 @@
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Suspense } from "react"
-import GoogleAnalytics from "@/components/google-analytics"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 
 import "@/styles/globals.css"
+import GoogleAnalytics from "@/components/google-analytics"
 import { Providers } from "./providers"
 import SiteNav from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
