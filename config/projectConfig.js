@@ -2,7 +2,7 @@ export const projects = [
   {
     number: "01",
     title: "Scarab",
-    description: "Open-source release note tracker",
+    description: "Open-source changlog management tool",
     year: "2023",
     role: "Creator",
     url: "https://github.com/kelvinyelyen/scarab",
