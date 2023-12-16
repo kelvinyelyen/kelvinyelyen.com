@@ -4,14 +4,14 @@
         <description><![CDATA[Software engineer and designer based in Ghana, passionate about utilizing science and technology to create innovative solutions.]]></description>
         <link>https://kelvinyelyen.com</link>
         <image>
-            <url>https://kelvinyelyen.com/img/favicon.png</url>
+            <url>https://kelvinyelyen.com/favicon.ico</url>
             <title>Kelvin Yelyen</title>
             <link>https://kelvinyelyen.com</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 16 Dec 2023 22:10:15 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 16 Dec 2023 23:18:23 GMT</lastBuildDate>
         <atom:link href="https://kelvinyelyen.com/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 16 Dec 2023 22:10:15 GMT</pubDate>
+        <pubDate>Sat, 16 Dec 2023 23:18:23 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2023, Kelvin Yelyen]]></copyright>
     </channel>
 </rss>
