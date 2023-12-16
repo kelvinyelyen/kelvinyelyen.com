@@ -11,9 +11,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params, searchParams }) {
   const blog = getPost({ slug: params.slug })
-  let ogImage = `https://kelvinyelyen.com/og?title=${encodeURIComponent(
-    blog.metadata.title
-  )}`
+  let ogImage = `https://kelvinyelyen.com/og?title=${blog.metadata.title}`
 
   const metadata = {
     title: blog.metadata.title,
