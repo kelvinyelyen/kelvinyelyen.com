@@ -23,6 +23,7 @@ export async function generateMetadata({ params, searchParams }) {
       title: blog.metadata.title,
       description: blog.metadata.summary,
       publishedAt: blog.metadata.publishedAtFormatted,
+      url: `https://kelvinyelyen.com/blog/${blog.slug}`,
       images: [
         {
           url: ogImage,
