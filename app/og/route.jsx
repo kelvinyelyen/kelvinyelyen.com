@@ -5,6 +5,10 @@ export const runtime = "edge"
 export async function GET(request) {
   const { searchParams } = new URL(request.url)
   const postTitle = searchParams.get("title")
+  const font = fetch(
+    new URL("../../public/fonts/kaisei-tokumin-bold.ttf", import.meta.url)
+  ).then((res) => res.arrayBuffer())
+  const fontData = await font
 
   return new ImageResponse(
     (
@@ -21,10 +25,11 @@ export async function GET(request) {
       >
         <div
           style={{
-            marginLeft: 190,
-            marginRight: 190,
+            marginLeft: 190, // Adjust as needed
+            marginRight: 190, // Adjust as needed
             display: "flex",
             fontSize: 130,
+            fontFamily: "Kaisei Tokumin",
             letterSpacing: "-0.05em",
             fontStyle: "normal",
             color: "white",
@@ -39,6 +44,13 @@ export async function GET(request) {
     {
       width: 1920,
       height: 1080,
+      fonts: [
+        {
+          name: "Kaisei Tokumin",
+          data: fontData,
+          style: "normal",
+        },
+      ],
     }
   )
 }
