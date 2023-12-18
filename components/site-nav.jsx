@@ -33,7 +33,7 @@ export default function SiteNav() {
           <p className="text-base text-foreground">
             kelvin<span className="text-primary-foreground">yelyen_</span>
           </p>
-          <div className="text-sm text-primary-foreground">
+          <div className="lg:text-sm text-xs text-primary-foreground">
             <p>software engineer \ designer</p>
             <p>Ghana</p>
           </div>
