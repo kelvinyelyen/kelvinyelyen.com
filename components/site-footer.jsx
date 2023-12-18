@@ -5,7 +5,7 @@ export function SiteFooter() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="container my-8">
+    <footer className="container my-8 tracking-tight">
       <div className="mx-auto text-xs">
         <hr className="h-0.5px my-4 sm:my-8 border-secondary-foreground" />
         <div className="flex justify-between">

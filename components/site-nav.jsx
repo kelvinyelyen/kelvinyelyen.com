@@ -27,7 +27,7 @@ export default function SiteNav() {
   )
 
   return (
-    <nav className="container py-8 relative text-foreground">
+    <nav className="container py-8 relative text-foreground tracking-tight">
       <div className={cx("mx-auto flex justify-between gap-8")}>
         <Link href="/">
           <p className="text-base text-foreground">

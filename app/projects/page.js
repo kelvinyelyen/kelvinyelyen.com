@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <section className="container my-5 text-sm">
+    <section className="container my-5 text-sm tracking-tight">
       <div className="mx-auto text-foreground mb-[300px]">
         <div className="mb-12">
           <div className="mb-6">
