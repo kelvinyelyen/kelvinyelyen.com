@@ -1,6 +1,5 @@
 # kelvinyelyen.com
-
-Version 2.0
+My personal website—a playground where I love to experiment and push the boundaries of various technologies. Built entirely from the ground up.
 
 ## Built With
 - JavaScript
