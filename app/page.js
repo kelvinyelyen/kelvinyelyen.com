@@ -1,64 +1,16 @@
-import Link from "next/link"
-
-import contentConfig from "@/config/contentConfig"
+import IntroText from "@/components/home/intro-text"
+import Categories from "@/components/home/categories"
+import ContactLinks from "@/components/home/contact-links"
 
 export default function Home() {
-  const { text, images } = contentConfig
   return (
     <main className="container items-center text-sm text-foreground my-10 tracking-tight">
       <section className="relative z-10">
-        <div className="mx-auto">
-          <div className="prose prose-quoteless prose-stone prose-sm max-w-none dark:prose-invert lg:leading-6 leading-relaxed">
-            <p>{text.intro}</p>
-            <p>{text.interests}</p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: text.furtherInsights,
-              }}
-            />
-          </div>
-        </div>
+        <IntroText />
       </section>
       <section className="mx-auto flex flex-col sm:flex-row justify-between my-16 lg:leading-6 leading-relaxed">
-        <div className="uppercase mb-4">
-          <p>
-            Programming<sup className="text-primary-foreground"> 01 </sup>
-          </p>
-          <p>
-            Product Design (UX Design)
-            <sup className="text-primary-foreground"> 02 </sup>
-          </p>
-        </div>
-        <div className="text-end">
-          <div className="text-primary-foreground cursor-pointer">
-            <ul>
-              <li className="transition duration-200 ease-in-out hover:text-stone-400">
-                <Link href="mailto:kelvinyelyen@gmail.com" target="_blank">
-                  kelvinyelyen@gmail.com
-                </Link>
-              </li>
-              <li className="transition duration-200 ease-in-out hover:text-stone-400">
-                <Link href="https://github.com/kelvinyelyen" target="_blank">
-                  GitHub &#129125;
-                </Link>
-              </li>
-              <li className="transition duration-200 ease-in-out hover:text-stone-400">
-                <Link href="https://twitter.com/kelvinyelyen" target="_blank">
-                  X (Twitter) &#129125;
-                </Link>
-              </li>
-              <li className="transition duration-200 ease-in-out hover:text-stone-400">
-                <Link
-                  href="https://www.linkedin.com/in/kelvinyelyen/"
-                  target="_blank"
-                  className="transition duration-200 ease-in-out hover:text-stone-400"
-                >
-                  Linkedin &#129125;
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <Categories />
+        <ContactLinks />
       </section>
     </main>
   )

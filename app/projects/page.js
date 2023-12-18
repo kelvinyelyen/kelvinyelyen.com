@@ -1,5 +1,5 @@
 import ProjectItem from "@/components/project-item"
-import { projects, archived } from "@/config/projectConfig"
+import projectData from "@/data/projects.json"
 
 export const metadata = {
   title: "Projects",
@@ -8,6 +8,8 @@ export const metadata = {
 }
 
 export default function Page() {
+  const { projects, archived } = projectData
+
   return (
     <section className="container my-5 text-sm tracking-tight">
       <div className="mx-auto text-foreground mb-[300px]">
@@ -15,7 +17,6 @@ export default function Page() {
           <div className="mb-6">
             <p>My project compilation across domains.</p>
           </div>
-
           <div>
             {projects.map((project) => (
               <ProjectItem key={project.number} {...project} />
@@ -27,7 +28,6 @@ export default function Page() {
           <p className="text-lg my-2">Archived</p>
           <p>My experiments and archived projects.</p>
         </div>
-
         <div>
           {archived.map((archive) => (
             <ProjectItem key={archive.number} {...archive} />

@@ -55,14 +55,13 @@ function RoundedImage(props) {
 RoundedImage.displayName = "RoundedImage"
 
 
-function Callout(props) {
-  return (
-    <div className="px-4 py-3 border border-neutral-700 bg-neutral-800 rounded p-1 text-sm flex items-center text-neutral-900 dark:text-neutral-100 mb-8">
-      <div className="flex items-center w-4 mr-4">{props.emoji}</div>
-      <div className="w-full callout">{props.children}</div>
+const Callout = ({ children }) => (
+  <div className="overflow-hidden rounded-lg bg-gradient-to-tr from-white/0 to-white/20 p-px">
+    <div className="rounded-[7px] bg-gradient-to-tr from-black to-neutral-950 p-6">
+      {children}
     </div>
-  );
-}
+  </div>
+)
 Callout.displayName = "Callout"
 
 function ProsCard({ title, pros }) {

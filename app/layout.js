@@ -6,7 +6,7 @@ import { GeistMono } from "geist/font/mono"
 
 import "@/styles/globals.css"
 import GoogleAnalytics from "@/components/google-analytics"
-import { Providers } from "./providers"
+import { Providers } from "../components/providers"
 import SiteNav from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
 import Preloader from "@/components/preloader"

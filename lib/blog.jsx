@@ -4,7 +4,7 @@ import matter from "gray-matter"
 
 import { formatTimeAgo, formatDateTimeFull } from "./dates"
 
-const blogDir = "content"
+const blogDir = "content/blog"
 
 function generateSlugsFromFiles() {
   const files = fs.readdirSync(path.join(blogDir))
