@@ -5,7 +5,7 @@ import contentConfig from "@/config/contentConfig"
 export default function Home() {
   const { text, images } = contentConfig
   return (
-    <main className="container items-center text-sm text-foreground my-5">
+    <main className="container items-center text-sm text-foreground my-10">
       <section className="relative z-10">
         <div className="mx-auto">
           <div className="prose prose-quoteless prose-stone prose-sm max-w-none dark:prose-invert leading-6">
@@ -19,7 +19,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mx-auto flex flex-col sm:flex-row justify-between my-10 leading-6">
+      <section className="mx-auto flex flex-col sm:flex-row justify-between my-16 leading-6">
         <div className="uppercase mb-4">
           <p>
             Programming<sup className="text-primary-foreground"> 01 </sup>
