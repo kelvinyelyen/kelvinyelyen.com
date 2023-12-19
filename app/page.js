@@ -4,7 +4,7 @@ import ContactLinks from "@/components/home/contact-links"
 
 export default function Home() {
   return (
-    <main className="container items-center text-sm text-foreground my-10 tracking-tight">
+    <main className="container items-center text-sm text-foreground my-5 tracking-tight">
       <section className="relative z-10">
         <IntroText />
       </section>
