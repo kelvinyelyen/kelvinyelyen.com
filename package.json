@@ -21,10 +21,8 @@
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-syntax-highlighter": "^15.5.0",
     "react-tweet": "^3.1.1",
     "rehype-highlight": "^7.0.0",
-    "remark-gfm": "^4.0.0",
     "rss": "^1.2.2",
     "sugar-high": "^0.5.6"
   },
