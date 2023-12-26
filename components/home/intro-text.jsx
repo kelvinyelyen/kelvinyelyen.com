@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function IntroText() {
   return (
     <div className="mx-auto">
-      <div className="prose prose-sm prose-invert max-w-none lg:leading-6 leading-relaxed">
+      <div className="prose prose-sm prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
         <p>
           I&apos;m a software engineer and designer whose passion lies in
           utilizing science and technology to create innovative solutions that
