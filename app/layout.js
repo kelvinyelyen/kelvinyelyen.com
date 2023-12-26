@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
       <body className={GeistMono.className}>
         <Preloader />
         <SiteNav />
-        <Providers>{children}</Providers>
+        {children}
         <SiteFooter />
         <SpeedInsights />
       </body>
