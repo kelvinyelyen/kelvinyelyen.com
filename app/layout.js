@@ -18,11 +18,11 @@ export const metadata = {
     template: "%s | Kelvin Yelyen",
   },
   description:
-    "Software engineer and designer based in Ghana, passionate about utilizing science and technology to create innovative solutions.",
+    "Software engineer and designer based in Ghana, currently working independently.",
   openGraph: {
     title: "Kelvin Yelyen",
     description:
-      "Software engineer and designer based in Ghana, passionate about utilizing science and technology to create innovative solutions.",
+      "Software engineer and designer based in Ghana, currently working independently.",
     url: "https://kelvinyelyen.com",
     siteName: "Kelvin Yelyen",
     locale: "en_GH",
