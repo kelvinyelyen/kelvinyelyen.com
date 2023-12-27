@@ -10,7 +10,7 @@ export default function IntroText() {
           have a positive impact on the world. I&apos;m constantly seeking to
           break barriers and explore novel approaches to problem-solving. My
           range of interests covers a broad spectrum, spanning from web
-          development and computational cognitive science to game design and
+          development and AI - computational cognitive science to game design and
           human-computer interaction.
         </p>
         <p>
