@@ -138,7 +138,7 @@
 }
 
 .prose pre {
-  @apply bg-neutral-900 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 text-lg;
+  @apply bg-neutral-900 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 text-[18px];
 }
 
 .prose code {
