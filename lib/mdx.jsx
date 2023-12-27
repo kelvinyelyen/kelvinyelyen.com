@@ -128,6 +128,11 @@ function Code({ children, ...props }) {
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
+function ColoredSpan({ color, children }) {
+  const style = { color: color || "#448CF1" }
+  return <span style={style}>{children}</span>
+}
+
 function slugify(str) {
   return str
     .toString()
@@ -171,6 +176,7 @@ let components = {
   ConsCard,
   StaticTweet: TweetComponent,
   Table,
+  ColoredSpan,
 }
 
 export function CustomMDX(props) {
