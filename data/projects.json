@@ -61,6 +61,16 @@
       "url": "https://atlasweatherfocus.vercel.app/",
       "imageUrl": "",
       "altText": "Project 3"
+    },
+    {
+      "number": "04",
+      "title": "Design Projects",
+      "description": "Some UX UI design projects",
+      "year": "2023",
+      "role": "Creator",
+      "url": "https://atlasweatherfocus.vercel.app/",
+      "imageUrl": "",
+      "altText": "Project 3"
     }
   ]
 }
