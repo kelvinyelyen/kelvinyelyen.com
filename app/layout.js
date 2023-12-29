@@ -27,6 +27,8 @@ export const metadata = {
     siteName: "Kelvin Yelyen",
     locale: "en_GH",
     type: "website",
+    author: "Kelvin Yelyen",
+    publishedTime: "2023-03-17T15:01:08+00:00",
   },
   robots: {
     index: true,
