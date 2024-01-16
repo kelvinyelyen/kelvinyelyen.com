@@ -214,12 +214,12 @@ table {
 }
 
 .hljs {
-  color: #abb2bf;
+  color: #cccccc;
 }
 
 .hljs-comment,
 .hljs-quote {
-  color: #5c6370;
+  color: #cccccc;
   font-style: italic;
 }
 

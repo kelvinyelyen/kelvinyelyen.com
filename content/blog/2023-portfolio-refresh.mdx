@@ -101,11 +101,34 @@ This set of functions exemplifies the handling and processing of .mdx files with
 
 
 ## Performance 
-### Migrating from Page Router to App Router
-// ...
+### **Migrating from Page Router to App Router**
 
-### Leveraging Next.js 14 Features
-// ...
+In this update, a significant move involved transitioning from the conventional Page Router to the advanced App Router. Both Next.js routers leverage file-based routing, differing in how routes are defined and organized. App Router uses nested folders for route definition, providing additional hierarchy and organization, while Page Router directly maps routes to files. The choice between the two depends on project complexity and the preferred level of organization.
 
-### Refining Metadata, SEO, and Sitemaps
-// ...
+<Image
+  alt="Heroku's original product, an in-browser IDE allowing you to instantly create and publish Rails apps."
+  src={`/images/2023-Portfolio-Refresh/routes.png`}
+  width={833}
+  height={623}
+/>
+
+*Defining Routes in app routers*
+
+The default choice between Server Components and Client Components depends on the routing strategy—Server Components are default in App Router, emphasizing server-side rendering, while Client Components are default in Page Router, prioritizing client-side rendering. The selection depends on specific requirements and architecture.
+
+#### Data Fetching
+
+- **Page Router:** Offers a variety of data fetching methods, including **`getServerSideProps`**, **`getStaticProps`**, **`getStaticPaths`** and **`getInitialProps`**. These methods cater to different scenarios such as server-side rendering, static site generation, and legacy universal data loading.
+- **App Router:** Emphasizes the use of the generic **`fetch`** function for client-side data fetching. This method is suitable for scenarios where data is loaded dynamically on the client side, it’s much simpler in my opinion.
+
+In my experience navigating between App Router and Page Router in Next.js, several factors influenced my decision-making process. The considerations encompassed aspects such as SEO, performance, flexibility, and the effort required for migration.
+
+I found that leveraging App Router, with its default server-side rendering for pages in the app directory, offered potential SEO advantages. The inclusion of Server Components within App Router enhanced performance, aligning well with the specific performance goals of my project. Notably, the flexibility provided by App Router, especially concerning nested layouts and data fetching, added a layer of convenience to the development process.
+
+However, I acknowledged that migrating existing projects to App Router might involve a substantial effort, requiring careful evaluation. For new projects, I opted to start with App Router, drawn to its modern features and flexibility. On the other hand, for existing projects, a thorough assessment of potential benefits preceded any consideration of migration.
+
+I found that Page Router sufficed for simpler projects with straightforward routing needs, while App Router emerged as the preferable choice for projects demanding complex routing and extensive data requirements. These considerations formed a strategic approach tailored to the unique characteristics of each project.
+
+### **Refining Metadata, SEO, and Sitemaps**
+
+Recognizing the pivotal impact of metadata, SEO strategies, and sitemaps on enhancing website performance, I directed my efforts toward refining these critical aspects. The process involved creating robust metadata to provide comprehensive information, implementing effective SEO strategies to improve search engine visibility, and ensuring regular updates to XML sitemaps for a seamless user experience. These concerted efforts were instrumental in optimizing the website's overall performance, contributing to improved discoverability and a more user-friendly interface.
