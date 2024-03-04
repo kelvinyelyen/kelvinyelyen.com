@@ -62,13 +62,13 @@ export default function RootLayout({ children }) {
       </Suspense>
 
       <body className={GeistSans.className}>
-        <Providers>
+        {/* <Providers> */}
           <Preloader />
           <SiteNav />
           {children}
           <SiteFooter />
           <SpeedInsights />
-        </Providers>
+        {/* </Providers> */}
       </body>
       <Analytics />
     </html>

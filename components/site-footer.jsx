@@ -13,7 +13,7 @@ export function SiteFooter() {
             {currentYear} &#169; Kelvin Yelyen
           </p>
           <div>
-            <ModeToggle />
+            {/* <ModeToggle /> */}
             <p>version 2.0</p>
           </div>
         </div>

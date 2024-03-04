@@ -3,9 +3,9 @@ import Link from "next/link"
 export default function Home() {
   return (
     <main className="container items-center text-sm my-5 tracking-tight">
-      <section className="relative z-10">
+      <section>
         <div className="mx-auto">
-          <div className="prose prose-sm prose-stone light:prose-invert max-w-none lg:leading-6 leading-relaxed">
+          <div className="prose prose-sm prose-stone dark:prose-invert max-w-none lg:leading-6 leading-relaxed">
             <p>
               I&apos;m a software engineer and designer whose passion lies in
               utilizing science and technology to create innovative solutions
