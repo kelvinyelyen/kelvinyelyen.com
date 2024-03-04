@@ -36,7 +36,8 @@ export default function Home() {
       <section className="mx-auto flex flex-col sm:flex-row justify-between my-16 lg:leading-6 leading-relaxed">
         <div className="uppercase mb-4">
           <p>
-            Programming<sup className="text-primary-foreground"> 01 </sup>
+            Programming
+            <sup className="text-primary-foreground"> 01 </sup>
           </p>
           <p>
             Product Design (UX Design)
