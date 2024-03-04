@@ -6,7 +6,7 @@ import { GeistMono } from "geist/font/mono"
 
 import "@/styles/globals.css"
 import GoogleAnalytics from "@/components/google-analytics"
-import { Providers } from "../components/providers"
+import { Providers } from "../providers/theme-provider"
 import SiteNav from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
 import Preloader from "@/components/preloader"
@@ -60,12 +60,15 @@ export default function RootLayout({ children }) {
       <Suspense>
         <GoogleAnalytics GA_MEASUREMENT_ID="G-27MSMZKLNN" />
       </Suspense>
+
       <body className={GeistSans.className}>
-        <Preloader />
-        <SiteNav />
-        {children}
-        <SiteFooter />
-        <SpeedInsights />
+        <Providers>
+          <Preloader />
+          <SiteNav />
+          {children}
+          <SiteFooter />
+          <SpeedInsights />
+        </Providers>
       </body>
       <Analytics />
     </html>
