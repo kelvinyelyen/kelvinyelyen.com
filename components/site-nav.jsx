@@ -30,7 +30,7 @@ export default function SiteNav() {
     <nav className="container py-8 relative text-foreground tracking-tight">
       <div className={cx("mx-auto flex justify-between gap-8")}>
         <Link href="/">
-          <p className="text-base text-foreground">
+          <p className="text-xl text-foreground">
             kelvin<span className="text-primary-foreground">yelyen_</span>
           </p>
           <div className="lg:text-sm text-xs text-primary-foreground">

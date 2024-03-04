@@ -12,7 +12,10 @@ export function SiteFooter() {
           <p className="text-primary-foreground">
             {currentYear} &#169; Kelvin Yelyen
           </p>
-          <Link href="/blog/2023-portfolio-refresh">Version 2.0</Link>
+          <div>
+            <ModeToggle />
+            <p>version 2.0</p>
+          </div>
         </div>
       </div>
     </footer>

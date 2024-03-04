@@ -11,9 +11,9 @@ export function ModeToggle() {
   }
 
   return (
-    <div className="relative text-foreground">
-      <button onClick={toggleTheme} className="z-10">
-        <p className="text-sm">
+    <div className="text-foreground mb-1">
+      <button onClick={toggleTheme} className="">
+        <p className="text-xs">
           <span className={isLight ? "active" : ""}>LIGHT </span> /{" "}
           <span className={!isLight ? "active dark-active" : "inactive"}>
             DARK
