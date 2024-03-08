@@ -5,7 +5,7 @@ export default function Home() {
     <main className="container items-center text-sm my-5 tracking-tight">
       <section>
         <div className="mx-auto">
-          <div className="prose prose-sm prose-stone dark:prose-invert max-w-none lg:leading-6 leading-relaxed">
+          <div className="prose prose-sm prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
             <p>
               I&apos;m a software engineer and designer whose passion lies in
               utilizing science and technology to create innovative solutions
