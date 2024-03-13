@@ -8,12 +8,12 @@ export default function Home() {
           <div className="prose prose-sm prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
             <p>
               I&apos;m a software engineer and designer whose passion lies in
-              utilizing science and technology to create innovative solutions
-              that have a positive impact on the world. I&apos;m constantly
-              seeking to break barriers and explore novel approaches to
-              problem-solving. My range of interests covers a broad spectrum,
-              spanning from web development and AI - computational cognitive
-              science to game design and human-computer interaction.
+              utilizing science and technology to create innovative solutions.
+              I&apos;m constantly seeking to break barriers and explore novel
+              approaches to problem-solving. My range of interests covers a
+              broad spectrum, spanning from web application development and AI
+              (computational cognitive science) to game design and
+              human-computer interaction.
             </p>
             <p>
               Outside of work, I&apos;m deeply passionate about philosophy,
