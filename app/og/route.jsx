@@ -26,9 +26,10 @@ export async function GET(request) {
         <div
           style={{
             marginLeft: 190, // Adjust as needed
+            marginTop: 190,
             marginRight: 190, // Adjust as needed
             display: "flex",
-            fontSize: 130,
+            fontSize: 90,
             fontFamily: "Kaisei Tokumin",
             letterSpacing: "-0.05em",
             fontStyle: "normal",
