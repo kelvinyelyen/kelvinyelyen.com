@@ -29,7 +29,7 @@ export async function GET(request) {
             marginTop: 190,
             marginRight: 190, // Adjust as needed
             display: "flex",
-            fontSize: 90,
+            fontSize: 120,
             fontFamily: "Kaisei Tokumin",
             letterSpacing: "-0.05em",
             fontStyle: "normal",
