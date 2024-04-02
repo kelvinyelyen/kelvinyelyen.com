@@ -7,17 +7,11 @@ export default function Home() {
         <div className="mx-auto">
           <div className="prose prose-sm prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
             <p>
-              I&apos;m a software engineer and designer currently working as a
-              faculty assistant at{" "}
-              <Link href="https://acity.edu.gh/">
-                {" "}
-                Academic City University College
-              </Link>
-              . I&apos;m constantly seeking to break barriers and explore novel
-              approaches to problem-solving. My range of interests covers a
-              broad spectrum, spanning web application development and
-              computational cognitive science to game design and human-computer
-              interaction.
+              Software engineer and designer constantly seeking to break
+              barriers and explore novel approaches to problem-solving. My range
+              of interests covers a broad spectrum, spanning web application
+              development and computational cognitive science to game design and
+              human-computer interaction.
             </p>
             <p>
               Outside of work, I&apos;m deeply passionate about philosophy,
