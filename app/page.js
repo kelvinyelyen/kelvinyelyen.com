@@ -7,22 +7,26 @@ export default function Home() {
         <div className="mx-auto">
           <div className="prose prose-sm prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
             <p>
-              I&apos;m a software engineer and designer whose passion lies in
-              utilizing science and technology to create innovative solutions.
-              I&apos;m constantly seeking to break barriers and explore novel
+              I&apos;m a software engineer and designer currently working as a
+              faculty assistant at{" "}
+              <Link href="https://acity.edu.gh/">
+                {" "}
+                Academic City University College
+              </Link>
+              . I&apos;m constantly seeking to break barriers and explore novel
               approaches to problem-solving. My range of interests covers a
-              broad spectrum, spanning from web application development and AI
-              (computational cognitive science) to game design and
-              human-computer interaction.
+              broad spectrum, spanning web application development and
+              computational cognitive science to game design and human-computer
+              interaction.
             </p>
             <p>
               Outside of work, I&apos;m deeply passionate about philosophy,
               neuroscience, travel, arts and culture etc. I enjoy engaging in
               philosophical and neuroscientific discussions, immersing myself in
               diverse art forms, and taking on creative projects. I believe that
-              these experiences help me develop a well-rounded perspective,
-              which in turn informs my work and drives my passion for innovation
-              and creativity.
+              these experiences contribute to my development of a well-rounded
+              perspective, informing my work and fueling my passion for
+              innovation and creativity.
             </p>
             <p>
               You can gain further insights into my background and interests
@@ -40,7 +44,7 @@ export default function Home() {
             <sup className="text-primary-foreground"> 01 </sup>
           </p>
           <p>
-           Engineering
+            Engineering
             <sup className="text-primary-foreground"> 02 </sup>
           </p>
         </div>
