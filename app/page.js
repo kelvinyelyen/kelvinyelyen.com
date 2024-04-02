@@ -33,14 +33,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mx-auto flex flex-col sm:flex-row justify-between my-16 lg:leading-6 leading-relaxed">
+      <section className="mx-auto flex flex-col sm:flex-row justify-between my-14 lg:leading-6 leading-relaxed">
         <div className="uppercase mb-4">
           <p>
-            Programming
+            Design
             <sup className="text-primary-foreground"> 01 </sup>
           </p>
           <p>
-            Product Design (UX Design)
+           Engineering
             <sup className="text-primary-foreground"> 02 </sup>
           </p>
         </div>

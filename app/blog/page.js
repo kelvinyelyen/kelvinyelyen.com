@@ -18,7 +18,7 @@ export default function Page() {
       <div className="py-2">
         {posts.map((post) => {
           const {
-            metadata: { title, publishedAt, summary },
+            metadata: { title, publishedAt, summary, tags },
           } = post
           return (
             <Link href={"/blog/" + post.slug} passHref key={post.slug}>

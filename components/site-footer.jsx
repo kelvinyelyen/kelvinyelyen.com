@@ -14,7 +14,9 @@ export function SiteFooter() {
           </p>
           <div>
             {/* <ModeToggle /> */}
-            <p>version 2.0</p>
+            <span class="inline-block bg-neutral-800 text-white text-xs font-normal px-2 py-1 rounded-full">
+              v2.2.25 
+            </span>
           </div>
         </div>
       </div>

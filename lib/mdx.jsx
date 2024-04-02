@@ -69,6 +69,14 @@ function Callout(props) {
   )
 }
 
+function Badge({ text }) {
+  return (
+      <span className="bg-neutral-800 text-white text-xs font-normal px-2 py-1 rounded-full">
+        {text}
+      </span>
+  )
+}
+
 function ProsCard({ title, pros }) {
   return (
     <div className="border border-emerald-200 dark:border-emerald-900 bg-neutral-50 dark:bg-neutral-900 rounded-xl p-6 my-4 w-full">
@@ -177,6 +185,7 @@ let components = {
   StaticTweet: TweetComponent,
   Table,
   ColoredSpan,
+  Badge,
 }
 
 export function CustomMDX(props) {
