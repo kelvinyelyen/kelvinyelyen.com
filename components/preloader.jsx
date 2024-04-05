@@ -1,7 +1,8 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { gsap } from "gsap"
+import Image from "next/image" // Import Next.js Image component
 
 const Preloader = () => {
   useEffect(() => {
@@ -23,7 +24,6 @@ const Preloader = () => {
         ease: "power2.in",
         delay: 1,
       })
-
       .to(".preloader", {
         opacity: 0,
         duration: 0.5,
@@ -35,11 +35,15 @@ const Preloader = () => {
   return (
     <div className="preloader bg-background">
       <div className="bg"></div>
-      <div className="preloader__inner">
-        <h1 className="preloader__text lg:text-xl text-base text-secondary-white">
-          <span className="text-primary-foreground font-normal">Kelvin Yelyen </span>
-          <span className="font-extralight">Portfolio</span>
-        </h1>
+      <div className="preloader__inner flex items-center">
+        {" "}
+        <Image
+          src="/images/icon-original.png"
+          alt="Your Image Alt Text"
+          width={50}
+          height={50}
+          className="inline-block mr-2"
+        />
       </div>
     </div>
   )
