@@ -12,8 +12,11 @@ export default function Page() {
 
   return (
     <div className="container text-sm my-5 mb-[300px] tracking-tight">
-      <div className="mb-6 text-primary-foreground">
-        <p>Thoughts, ideas, and opinions.</p>
+      <div className="mb-6 ">
+        <h1>Journal</h1>
+        <p className="text-primary-foreground">
+          Thoughts, ideas, and opinions.
+        </p>
       </div>
       <div className="py-2">
         {posts.map((post) => {
