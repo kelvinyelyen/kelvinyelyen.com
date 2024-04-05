@@ -1,0 +1,28 @@
+{
+  "work": [
+    {
+      "number": "01",
+      "company": "Academic City University College",
+      "role": "Faculty Assistant",
+      "year": "2024 — Present",
+      "url": "https://acity.edu.gh/",
+      "altText": "Work 1"
+    },
+    {
+      "number": "02",
+      "company": "Independent",
+      "role": "Software Engineer",
+      "year": "2023 — Present",
+      "url": "https://kelvinyelyen.com",
+      "altText": "Work 1"
+    },
+    {
+      "number": "03",
+      "company": "Vodafone Ghana",
+      "role": "Intern",
+      "year": "2020",
+      "url": "",
+      "altText": "Work 1"
+    }
+  ]
+}

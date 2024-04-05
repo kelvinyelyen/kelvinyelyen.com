@@ -69,6 +69,15 @@ export default function Home() {
                   Linkedin &#129125;
                 </Link>
               </li>
+              <li className="transition duration-200 ease-in-out hover:text-stone-400">
+                <Link
+                  href="https://www.behance.net/kelvinyelyen"
+                  target="_blank"
+                  className="transition duration-200 ease-in-out hover:text-stone-400"
+                >
+                  Behance &#129125;
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

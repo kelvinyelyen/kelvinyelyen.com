@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function ProjectItem({ title, url, description, role }) {
+export default function WorkItem({ company, role, year, url }) {
   return (
     <>
       <Link
@@ -9,16 +9,14 @@ export default function ProjectItem({ title, url, description, role }) {
         className="transition duration-200 ease-in-out hover:text-primary-foreground my-4"
       >
         <div className="grid md:grid-cols-3 grid-cols-1 text-sm border-b border-muted py-2 lg:py-2 relative">
-          <div className="col-span-1">
+          <div className="col-span-2">
             <h3>
-              {title} {"     "}
-              <span class="inline-block bg-neutral-800 text-white text-xs font-normal px-2 rounded-full">
-                {role}
-              </span>
+              {company},{"  "}{" "}
+              <span className="text-primary-foreground">{role}</span>
             </h3>
           </div>
-          <div className="col-span-2 text-primary-foreground text-xs md:text-end">
-            {description}
+          <div className="col-span-1 text-primary-foreground text-xs md:text-end">
+            {year}
           </div>
         </div>
       </Link>

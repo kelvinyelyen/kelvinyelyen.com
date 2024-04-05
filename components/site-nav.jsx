@@ -4,8 +4,8 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 const navItems = {
-  "/projects": {
-    name: "projects",
+  "/work": {
+    name: "work",
   },
   "/blog": {
     name: "blog",
