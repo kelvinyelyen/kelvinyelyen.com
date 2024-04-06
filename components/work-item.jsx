@@ -11,8 +11,8 @@ export default function WorkItem({ company, role, year, url }) {
         <div className="grid md:grid-cols-3 grid-cols-1 text-sm border-b border-muted py-2 lg:py-2 relative">
           <div className="col-span-2">
             <h3>
-              {company},{"  "}{" "}
-              <span className="text-primary-foreground">{role}</span>
+              {role},{"  "}{" "}
+              <span className="text-primary-foreground">{company}</span>
             </h3>
           </div>
           <div className="col-span-1 text-primary-foreground text-xs md:text-end">
