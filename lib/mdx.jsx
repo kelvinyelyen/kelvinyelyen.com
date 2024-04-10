@@ -160,8 +160,9 @@ function createHeading(level) {
       children
     )
   }
+    Heading.displayName = `Heading${level}`
+    return Heading
 }
-createHeading.displayName = "createHeading"
 
 let components = {
   h1: createHeading(1),
