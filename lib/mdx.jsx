@@ -161,6 +161,7 @@ function createHeading(level) {
     )
   }
 }
+createHeading.displayName = "createHeading"
 
 let components = {
   h1: createHeading(1),
