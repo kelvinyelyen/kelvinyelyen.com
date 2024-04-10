@@ -16,7 +16,7 @@ With this new update I focused on two main areas:
 Initially, my website was built using Next.js and a CMS. Selecting the right CMS was tricky due to the complexities involved. Eventually, I chose GhostCMS for its simplicity and convenient JavaScript Content API, which made integration quick and easy as compared to the others. 
 
 
-However, challenges with GhostCMS affected data formatting. Limited control over HTML data required substantial front-end styling. TThis highlighted the impact of the Ghost API on data handling and the effort needed for front-end design. Also, Ghost’s membership functionality isn't currently compatible with headless setups, potentially limiting expansion into memberships.
+However, challenges with GhostCMS affected data formatting. Limited control over HTML data required substantial front-end styling. This highlighted the impact of the Ghost API on data handling and the effort needed for front-end design. Also, Ghost’s membership functionality isn't currently compatible with headless setups, potentially limiting expansion into memberships.
 
 Recently, I contemplated migrating away from GhostCMS, considering alternative CMS options, including leveraging Notion's API. After comprehensive analysis, I opted for MDX—a developer-centric solution that addresses limitations encountered with GhostCMS, providing tailored flexibility for my requirements.
 
@@ -24,7 +24,7 @@ Recently, I contemplated migrating away from GhostCMS, considering alternative C
 MDX (Markdown eXtended) combines Markdown and JSX syntax, offering enhanced flexibility for creating customizable components. It allows direct inclusion of JSX components within content, enabling dynamic content creation that combines Markdown with JSX. Also, you can further enhance its capabilities using plugins such as `rehype` and `remark` for additional feature expansions.
 
 #### Setting up for Next.js
-While Next's package `@next/mdx` is a viable option, I chose `@next-remote-mdx` due to its expanded capabilities. Additionally, I utilized <ColoredSpan color="#448CF1">`gray-matter`</ColoredSpan> to enable metadata parsing within MDX.
+While Next's package `@next/mdx` is a viable option, I chose `@next-remote-mdx` due to its expanded capabilities. Additionally, I utilized `gray-matter` to enable metadata parsing within MDX.
 
 
 ```plaintext
@@ -105,21 +105,12 @@ This set of functions exemplifies the handling and processing of .mdx files with
 
 In this update, a significant move involved transitioning from the conventional Page Router to the advanced App Router. Both Next.js routers leverage file-based routing, differing in how routes are defined and organized. App Router uses nested folders for route definition, providing additional hierarchy and organization, while Page Router directly maps routes to files. The choice between the two depends on project complexity and the preferred level of organization.
 
-<Image
-  alt="Heroku's original product, an in-browser IDE allowing you to instantly create and publish Rails apps."
-  src={`/images/2023-Portfolio-Refresh/routes.png`}
-  width={833}
-  height={623}
-/>
-
-*Defining Routes in app routers*
-
 The default choice between Server Components and Client Components depends on the routing strategy—Server Components are default in App Router, emphasizing server-side rendering, while Client Components are default in Page Router, prioritizing client-side rendering. The selection depends on specific requirements and architecture.
 
 #### Data Fetching
 
-- **Page Router:** Offers a variety of data fetching methods, including **`getServerSideProps`**, **`getStaticProps`**, **`getStaticPaths`** and **`getInitialProps`**. These methods cater to different scenarios such as server-side rendering, static site generation, and legacy universal data loading.
-- **App Router:** Emphasizes the use of the generic **`fetch`** function for client-side data fetching. This method is suitable for scenarios where data is loaded dynamically on the client side, it’s much simpler in my opinion.
+- **Page Router:** Offers a variety of data fetching methods, including `getServerSideProps` , `getStaticProps`, `getStaticPaths` and `getInitialProps`. These methods cater to different scenarios such as server-side rendering, static site generation, and legacy universal data loading.
+- **App Router:** Emphasizes the use of the generic `fetch` function for client-side data fetching. This method is suitable for scenarios where data is loaded dynamically on the client side, it’s much simpler in my opinion.
 
 In my experience navigating between App Router and Page Router in Next.js, several factors influenced my decision-making process. The considerations encompassed aspects such as SEO, performance, flexibility, and the effort required for migration.
 

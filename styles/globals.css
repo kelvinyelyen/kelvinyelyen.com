@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
 
 @layer base {
   :root {
@@ -37,10 +36,15 @@
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
 
-    /* --sh-class: #4c97f8;
+    --sh-class: #4c97f8;
     --sh-identifier: white;
+    --sh-sign: #8996a3;
     --sh-keyword: #f47067;
-    --sh-string: #0fa295; */
+    --sh-string: #0fa295;
+    --sh-comment: #a19595;
+    --sh-jsxliterals: #6266d1;
+    --sh-property: #e25a1c;
+    --sh-entity: #e25a1c;
   }
 }
 
@@ -129,8 +133,13 @@
   }
 }
 
+.html {
+  min-width: 360px;
+}
+
 .prose .anchor {
   @apply absolute invisible no-underline;
+
   margin-left: -1em;
   padding-right: 0.5em;
   width: 80%;
@@ -148,7 +157,7 @@
 
 .prose .anchor:after {
   @apply text-neutral-300 dark:text-neutral-700;
-  content: "#";
+  content: '#';
 }
 
 .prose *:hover > .anchor {
@@ -156,11 +165,11 @@
 }
 
 .prose pre {
-  @apply bg-neutral-900 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 lg:text-[16px] text-[15px] leading-snug;
+  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900;
 }
 
 .prose code {
-  @apply px-1 py-0.5 rounded-lg;
+  @apply px-1 py-0.5 rounded-lg text-[13.5px];
 }
 
 .prose pre code {
@@ -170,7 +179,7 @@
 }
 
 .prose code span {
-  @apply font-normal;
+  @apply font-medium;
 }
 
 .prose img {
@@ -181,7 +190,7 @@
 .prose h2,
 h3,
 h4 {
-  @apply font-normal tracking-tighter !important;
+  @apply font-medium tracking-tighter !important;
 }
 
 .prose strong {
@@ -204,8 +213,8 @@ pre {
 }
 
 /* Remove Safari input shadow on mobile */
-input[type="text"],
-input[type="email"] {
+input[type='text'],
+input[type='email'] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -229,78 +238,4 @@ table {
 
 .title {
   text-wrap: balance;
-}
-
-.hljs {
-  color: #cccccc;
-}
-
-.hljs-comment,
-.hljs-quote {
-  color: #cccccc;
-  font-style: italic;
-}
-
-.hljs-doctag,
-.hljs-keyword,
-.hljs-formula {
-  color: #c678dd;
-}
-
-.hljs-section,
-.hljs-name,
-.hljs-selector-tag,
-.hljs-deletion,
-.hljs-subst {
-  color: #e06c75;
-}
-
-.hljs-literal {
-  color: #56b6c2;
-}
-
-.hljs-string,
-.hljs-regexp,
-.hljs-addition,
-.hljs-attribute,
-.hljs-meta .hljs-string {
-  color: #98c379;
-}
-
-.hljs-attr,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-type,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-number {
-  color: #d19a66;
-}
-
-.hljs-symbol,
-.hljs-bullet,
-.hljs-link,
-.hljs-meta,
-.hljs-selector-id,
-.hljs-title {
-  color: #61aeee;
-}
-
-.hljs-built_in,
-.hljs-title.class_,
-.hljs-class .hljs-title {
-  color: #e6c07b;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
-
-.hljs-link {
-  text-decoration: underline;
 }

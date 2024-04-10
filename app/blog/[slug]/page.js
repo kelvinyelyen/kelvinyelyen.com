@@ -46,7 +46,7 @@ export default function Post({ params }) {
 
   return (
     <section className="container my-5 mb-[100px] tracking-tight">
-      <article className="prose prose-quoteless prose-sm max-w-none prose-stone prose-invert leading-6">
+      <article className="prose prose-quoteless prose-sm max-w-none prose-stone prose-invert leading-6 font-base">
         <h1 className="lg:text-2xl text-xl font-normal">{title}</h1>
         <div className="flex justify-between items-center -mt-8 text-primary-foreground">
           <div>

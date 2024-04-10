@@ -1,19 +1,9 @@
-/* eslint-disable react/display-name */
-import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { MDXRemote } from "next-mdx-remote/rsc"
+import { TweetComponent } from "@/components/tweet"
 import { highlight } from "sugar-high"
-import rehypeHighlight from "rehype-highlight"
-
-import { TweetComponent } from "../components/tweet"
-
-const options = {
-  mdxOptions: {
-    remarkPlugins: [],
-    rehypePlugins: [rehypeHighlight],
-  },
-}
+import React from "react"
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -58,7 +48,6 @@ function CustomLink(props) {
 function RoundedImage(props) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />
 }
-RoundedImage.displayName = "RoundedImage"
 
 function Callout(props) {
   return (
@@ -71,9 +60,9 @@ function Callout(props) {
 
 function Badge({ text }) {
   return (
-      <span className="bg-neutral-800 text-white text-xs font-normal px-2 py-1 rounded-full">
-        {text}
-      </span>
+    <span className="bg-neutral-800 text-white text-xs font-normal px-2 py-1 rounded-full">
+      {text}
+    </span>
   )
 }
 
@@ -136,11 +125,6 @@ function Code({ children, ...props }) {
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
-function ColoredSpan({ color, children }) {
-  const style = { color: color || "#448CF1" }
-  return <span style={style}>{children}</span>
-}
-
 function slugify(str) {
   return str
     .toString()
@@ -183,8 +167,8 @@ let components = {
   ProsCard,
   ConsCard,
   StaticTweet: TweetComponent,
+  code: Code,
   Table,
-  ColoredSpan,
   Badge,
 }
 
@@ -193,7 +177,6 @@ export function CustomMDX(props) {
     <MDXRemote
       {...props}
       components={{ ...components, ...(props.components || {}) }}
-      options={options}
     />
   )
 }
