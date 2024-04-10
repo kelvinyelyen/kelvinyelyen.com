@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import Link from "next/link"
 import Image from "next/image"
 import { MDXRemote } from "next-mdx-remote/rsc"
@@ -160,8 +161,8 @@ function createHeading(level) {
       children
     )
   }
-    Heading.displayName = `Heading${level}`
-    return Heading
+  Heading.displayName = `Heading${level}`
+  return Heading
 }
 
 let components = {
