@@ -1,31 +1,40 @@
-import ProjectItem from "@/components/project-item"
-import WorkItem from "@/components/work-item"
-import projectData from "@/data/projects.json"
-import workData from "@/data/work.json"
+import ProjectItem from "@/components/project-item";
+import WorkItem from "@/components/work-item";
+import projectData from "@/data/projects.json";
+import workData from "@/data/work.json";
 
 export const metadata = {
   title: "Work",
   description:
     "Curated collection of some of my projects spanning various domains.",
-}
+};
 
 export default function Page() {
-  const { projects, archived } = projectData
-  const { work } = workData
+  const { projects } = projectData;
+  const { experience, education } = workData;
 
   return (
     <section className="container my-5 text-sm tracking-tight">
       <div className="mx-auto text-white mb-[100px]">
         <div className="mb-12">
           <div className="mb-6">
-            <h1>Work</h1>
-            <p className="text-primary-foreground">
-              Professional journey
-            </p>
+            <h1>Experience</h1>
+            <p className="text-primary-foreground">Professional journey</p>
           </div>
           <div>
-            {work.map((role) => (
-              <WorkItem key={role.number} {...role} />
+            {experience.map(({ number, ...role }) => (
+              <WorkItem key={number} {...role} />
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-12">
+          <div className="mb-6">
+            <h1>Education</h1>
+          </div>
+          <div>
+            {education.map(({ number, ...level }) => (
+              <WorkItem key={number} {...level} />
             ))}
           </div>
         </div>
@@ -38,12 +47,12 @@ export default function Page() {
             </p>
           </div>
           <div>
-            {projects.map((project) => (
-              <ProjectItem key={project.number} {...project} />
+            {projects.map(({ number, ...project }) => (
+              <ProjectItem key={number} {...project} />
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -49,16 +49,6 @@
       "url": "https://nextjs-postgres-auth-sooty.vercel.app/",
       "imageUrl": "",
       "altText": "Project 2"
-    },
-    {
-      "number": "06",
-      "title": "Atlas Weather",
-      "description": "An aesthetic experiment",
-      "year": "2023",
-      "role": "Archived",
-      "url": "https://atlasweatherfocus.vercel.app/",
-      "imageUrl": "",
-      "altText": "Project 3"
     }
   ]
 }
