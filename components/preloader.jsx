@@ -1,7 +1,7 @@
 "use client"
-
 import { useEffect } from "react"
 import { gsap } from "gsap"
+import Image from "next/image"
 
 const Preloader = () => {
   useEffect(() => {
@@ -35,7 +35,15 @@ const Preloader = () => {
     <div className="preloader bg-background">
       <div className="bg"></div>
       <div className="preloader__inner flex items-center">
-        <h1 className="lg:text-2xl text-xl font-extralight">Kelvin Yelyen</h1>
+        <div className="border-r border-white pr-4 mr-4">
+          <Image
+            src="/images/icon-original.png"
+            alt="Your image"
+            width={30}
+            height={30}
+          />
+        </div>
+        <h1 className="text-xl font-extralight">Kelvin Yelyen</h1>
       </div>
     </div>
   )
