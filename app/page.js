@@ -25,7 +25,7 @@ export default function Home() {
             <p>
               You can gain further insights into my background and interests
               through my <Link href="/blog">written works</Link>,{" "}
-              <Link href="/projects">projects</Link>, and various social media
+              <Link href="/work">projects</Link>, and various social media
               profiles.
             </p>
           </div>
