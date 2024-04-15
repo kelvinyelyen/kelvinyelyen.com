@@ -1,6 +1,6 @@
 import { getTweet } from "react-tweet/api"
 import { EmbeddedTweet, TweetNotFound } from "react-tweet"
-import "../styles/tweet.css"
+import "./tweet.css"
 
 const TweetContent = async ({ id, components, onError }) => {
   let error

@@ -35,7 +35,7 @@ const Preloader = () => {
     <div className="preloader bg-background">
       <div className="bg"></div>
       <div className="preloader__inner flex items-center">
-        <h1 className="lg:text-xl text-base font-extralight">Kelvin Yelyen</h1>
+        <h1 className="lg:text-2xl text-xl font-extralight">Kelvin Yelyen</h1>
       </div>
     </div>
   )

@@ -1,5 +1,4 @@
-import ProjectItem from "@/components/project-item"
-import WorkItem from "@/components/work-item"
+import { ProjectItem, WorkItem } from "@/components/item"
 import projectData from "@/data/projects.json"
 import workData from "@/data/work.json"
 
@@ -43,7 +42,7 @@ export default function Page() {
         <div className="mb-12">
           <div className="mb-6">
             <h1>Projects</h1>
-            <p className="text-primary-foreground">Creative intiatives</p>
+            <p className="text-primary-foreground">Creative initiatives</p>
           </div>
           <div>
             {projects.map(({ number, ...project }) => (

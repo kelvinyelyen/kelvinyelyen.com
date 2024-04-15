@@ -4,11 +4,10 @@ import { Suspense } from "react"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 
-import "@/styles/globals.css"
+import "./global.css"
 import GoogleAnalytics from "@/components/google-analytics"
-import { Providers } from "../providers/theme-provider"
-import SiteNav from "@/components/site-nav"
-import { SiteFooter } from "@/components/site-footer"
+import SiteNav from "@/components/nav"
+import { SiteFooter } from "@/components/footer"
 import Preloader from "@/components/preloader"
 
 export const metadata = {
@@ -60,13 +59,11 @@ export default function RootLayout({ children }) {
       </Suspense>
 
       <body className={GeistSans.className}>
-        {/* <Providers> */}
         <Preloader />
         <SiteNav />
         {children}
         <SiteFooter />
         <SpeedInsights />
-        {/* </Providers> */}
       </body>
       <Analytics />
     </html>

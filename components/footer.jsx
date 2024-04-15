@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { ModeToggle } from "./mode-toggle"
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear()

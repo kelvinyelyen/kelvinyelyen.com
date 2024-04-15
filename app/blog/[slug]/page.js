@@ -46,6 +46,28 @@ export default function Post({ params }) {
 
   return (
     <section className="container my-5 mb-[100px] tracking-tight">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.metadata.title,
+            datePublished: post.metadata.publishedAt,
+            dateModified: post.metadata.publishedAt,
+            description: post.metadata.summary,
+            image: post.metadata.image
+              ? `https://kelvinyelyen.com${post.metadata.image}`
+              : `https://kelvinyelyen.com/og?title=${post.metadata.title}`,
+            url: `https://kelvinyelyen.com/blog/${post.slug}`,
+            author: {
+              "@type": "Person",
+              name: "Kelvin Yelyen",
+            },
+          }),
+        }}
+      />
       <article className="prose prose-quoteless prose-sm max-w-none prose-stone prose-invert leading-6">
         <h1 className="lg:text-2xl text-xl font-normal">{title}</h1>
         <div className="flex justify-between items-center -mt-8 text-primary-foreground">

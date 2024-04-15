@@ -6,6 +6,10 @@ export const runtime = "edge"
 export async function GET(request) {
   const { searchParams } = new URL(request.url)
   const postTitle = searchParams.get("title")
+  const font = fetch(
+    new URL("../../public/fonts/kaisei-tokumin-bold.ttf", import.meta.url)
+  ).then((res) => res.arrayBuffer())
+  const fontData = await font
 
   return new ImageResponse(
     (
@@ -26,13 +30,13 @@ export async function GET(request) {
             marginRight: 190, // Adjust as needed
             marginTop: 240,
             display: "flex",
-            fontSize: 100,
+            fontSize: 80,
             letterSpacing: "-0.05em",
             fontStyle: "normal",
             color: "white",
             lineHeight: "100px",
             whiteSpace: "pre-wrap",
-            fontFamily: GeistSans.fontFamily,
+            fontFamily: "Kaisei Tokumin",
           }}
         >
           {postTitle}
@@ -44,7 +48,8 @@ export async function GET(request) {
       height: 1080,
       fonts: [
         {
-          name: "GeistSans",
+          name: "Kaisei Tokumin",
+          data: fontData,
           style: "normal",
         },
       ],

@@ -60,7 +60,6 @@ export default function Home() {
   )
 }
 
-// Reusable component for link items
 function LinkItem({ href, children }) {
   return (
     <li className="flex justify-end transition duration-200 ease-in-out hover:text-stone-400">

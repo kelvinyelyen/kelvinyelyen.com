@@ -4,23 +4,6 @@
 
 @layer base {
   :root {
-    /* --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-
-    --primary: 0 0% 98%;
-    --primary-foreground: 25 5% 45%;
-
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 24 5% 80%;
-
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-  }
-
-  .dark { */
     --background: 0 0% 5.9%;
     --foreground: 0 0% 90%;
 
@@ -152,7 +135,7 @@
 }
 
 .prose a {
-  @apply transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
 }
 
 .prose .anchor:after {
@@ -165,11 +148,11 @@
 }
 
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900;
+  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
 }
 
 .prose code {
-  @apply px-1 py-0.5 rounded-lg text-[13.5px];
+  @apply px-1 py-0.5 rounded-lg;
 }
 
 .prose pre code {
@@ -187,14 +170,27 @@
   @apply m-0;
 }
 
+.prose p {
+  @apply my-4 text-neutral-800 dark:text-neutral-200;
+}
+
 .prose h2,
 h3,
 h4 {
   @apply font-medium tracking-tighter !important;
 }
 
+
 .prose strong {
   @apply font-medium;
+}
+
+.prose ul {
+  @apply list-disc pl-6;
+}
+
+.prose ol {
+  @apply list-decimal pl-6;
 }
 
 .prose > :first-child {
@@ -220,20 +216,11 @@ input[type='email'] {
   appearance: none;
 }
 
-.prose .tweet a {
-  text-decoration: inherit;
-  font-weight: 500;
-}
-
 table {
   display: block;
   max-width: fit-content;
   overflow-x: auto;
   white-space: nowrap;
-}
-
-.prose .callout > p {
-  margin: 0 !important;
 }
 
 .title {
