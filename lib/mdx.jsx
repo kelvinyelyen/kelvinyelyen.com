@@ -1,10 +1,10 @@
-/* eslint-disable react/display-name */
+
+import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import { TweetComponent } from "@/components/tweet"
 import { highlight } from "sugar-high"
-import React from "react"
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -27,7 +27,6 @@ function Table({ data }) {
     </table>
   )
 }
-Table.displayName = "Table"
 
 function CustomLink(props) {
   let href = props.href
@@ -44,14 +43,16 @@ function CustomLink(props) {
     return <a {...props} />
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />
+  return (
+    <a target="_blank" rel="noopener noreferrer" {...props}>
+      {props.children}
+    </a>
+  )
 }
-CustomLink.displayName = "CustomLink"
 
 function RoundedImage(props) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />
 }
-RoundedImage.displayName = "RoundedImage"
 
 function Callout(props) {
   return (
@@ -61,16 +62,6 @@ function Callout(props) {
     </div>
   )
 }
-Callout.displayName = "Callout"
-
-function Badge({ text }) {
-  return (
-    <span className="bg-neutral-800 text-white text-xs font-normal px-2 py-1 rounded-full">
-      {text}
-    </span>
-  )
-}
-Badge.displayName = "Badge"
 
 function ProsCard({ title, pros }) {
   return (
@@ -100,7 +91,6 @@ function ProsCard({ title, pros }) {
     </div>
   )
 }
-ProsCard.displayName = "ProsCard"
 
 function ConsCard({ title, cons }) {
   return (
@@ -126,13 +116,11 @@ function ConsCard({ title, cons }) {
     </div>
   )
 }
-ConsCard.displayName = "ConsCard"
 
 function Code({ children, ...props }) {
   let codeHTML = highlight(children)
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
-Code.displayName = "Code"
 
 function slugify(str) {
   return str
@@ -161,8 +149,6 @@ function createHeading(level) {
       children
     )
   }
-  Heading.displayName = `Heading${level}`
-  return Heading
 }
 
 let components = {
@@ -180,7 +166,6 @@ let components = {
   StaticTweet: TweetComponent,
   code: Code,
   Table,
-  Badge,
 }
 
 export function CustomMDX(props) {
