@@ -3,7 +3,7 @@ import Link from "next/link"
 import { getBlogContent } from "@/lib/blog"
 
 export const metadata = {
-  title: "Blog",
+  title: "Journal",
   description: "Thoughts, ideas, and opinions.",
 }
 

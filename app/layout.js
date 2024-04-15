@@ -46,7 +46,7 @@ export const metadata = {
   alternates: {
     types: {
       "application/rss+xml": [
-        { url: "/rss.xml", title: "Kelvin Yelyen RSS Feed" },
+        { url: "/rss.xml", title: "Kelvin Yelyen's RSS Feed" },
       ],
     },
   },
@@ -61,11 +61,11 @@ export default function RootLayout({ children }) {
 
       <body className={GeistSans.className}>
         {/* <Providers> */}
-          <Preloader />
-          <SiteNav />
-          {children}
-          <SiteFooter />
-          <SpeedInsights />
+        <Preloader />
+        <SiteNav />
+        {children}
+        <SiteFooter />
+        <SpeedInsights />
         {/* </Providers> */}
       </body>
       <Analytics />

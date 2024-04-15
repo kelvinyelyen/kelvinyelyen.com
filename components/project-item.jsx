@@ -11,7 +11,7 @@ export default function ProjectItem({ title, url, description, role }) {
         <div className="grid md:grid-cols-3 grid-cols-1 text-sm border-b border-muted py-2 lg:py-2 relative">
           <div className="col-span-1">
             <h3>
-              {title} {"     "}
+              {title}
               <span class="inline-block bg-neutral-800 text-white text-xs font-normal px-2 rounded-full">
                 {role}
               </span>

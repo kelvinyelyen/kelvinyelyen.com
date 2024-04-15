@@ -14,10 +14,10 @@ export function ModeToggle() {
     <div className="text-foreground mb-1">
       <button onClick={toggleTheme} className="">
         <p className="text-xs">
-          <span className={isLight ? "active" : ""}>LIGHT </span> /{" "}
+          <span className={isLight ? "active" : ""}>LIGHT </span> /
           <span className={!isLight ? "active dark-active" : "inactive"}>
             DARK
-          </span>{" "}
+          </span>
         </p>
       </button>
     </div>

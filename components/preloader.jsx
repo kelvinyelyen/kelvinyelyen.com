@@ -2,7 +2,6 @@
 
 import { useEffect } from "react"
 import { gsap } from "gsap"
-import Image from "next/image" // Import Next.js Image component
 
 const Preloader = () => {
   useEffect(() => {
@@ -36,14 +35,7 @@ const Preloader = () => {
     <div className="preloader bg-background">
       <div className="bg"></div>
       <div className="preloader__inner flex items-center">
-        {" "}
-        <Image
-          src="/images/icon-original.png"
-          alt="Your Image Alt Text"
-          width={50}
-          height={50}
-          className="inline-block mr-2"
-        />
+        <h1 className="lg:text-xl text-base font-extralight">Kelvin Yelyen</h1>
       </div>
     </div>
   )

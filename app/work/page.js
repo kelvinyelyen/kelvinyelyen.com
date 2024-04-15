@@ -1,17 +1,17 @@
-import ProjectItem from "@/components/project-item";
-import WorkItem from "@/components/work-item";
-import projectData from "@/data/projects.json";
-import workData from "@/data/work.json";
+import ProjectItem from "@/components/project-item"
+import WorkItem from "@/components/work-item"
+import projectData from "@/data/projects.json"
+import workData from "@/data/work.json"
 
 export const metadata = {
   title: "Work",
   description:
-    "Curated collection of some of my projects spanning various domains.",
-};
+    "Creative initiatives, professional experience and educational background.",
+}
 
 export default function Page() {
-  const { projects } = projectData;
-  const { experience, education } = workData;
+  const { projects } = projectData
+  const { experience, education } = workData
 
   return (
     <section className="container my-5 text-sm tracking-tight">
@@ -31,6 +31,7 @@ export default function Page() {
         <div className="mb-12">
           <div className="mb-6">
             <h1>Education</h1>
+            <p className="text-primary-foreground">Academic background</p>
           </div>
           <div>
             {education.map(({ number, ...level }) => (
@@ -42,9 +43,7 @@ export default function Page() {
         <div className="mb-12">
           <div className="mb-6">
             <h1>Projects</h1>
-            <p className="text-primary-foreground">
-              Some of my project compilation across domains.
-            </p>
+            <p className="text-primary-foreground">Creative intiatives</p>
           </div>
           <div>
             {projects.map(({ number, ...project }) => (
@@ -54,5 +53,5 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
+  )
 }

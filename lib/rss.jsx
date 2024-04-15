@@ -10,8 +10,7 @@ export default async function generateRssFeed() {
 
   const feedOptions = {
     title: "Kelvin Yelyen",
-    description:
-      "Software engineer and designer based in Ghana, passionate about utilizing science and technology to create innovative solutions.",
+    description: "Software engineer and designer based in Ghana.",
     site_url: site_url,
     feed_url: `${site_url}/rss.xml`,
     image_url: `${site_url}/favicon.ico`,

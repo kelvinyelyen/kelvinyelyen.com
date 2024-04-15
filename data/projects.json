@@ -32,23 +32,33 @@
     },
     {
       "number": "04",
+      "title": "Algorithm Sandbox",
+      "description": "Curated collection of algorithms and data structures",
+      "year": "2024",
+      "role": "",
+      "url": "https://github.com/kelvinyelyen/algorithm-sandbox",
+      "imageUrl": "",
+      "altText": "Project 4"
+    },
+    {
+      "number": "05",
       "title": "Kinde-auth",
       "description": "Kinde Nextjs SDK integration starter",
       "year": "2023",
       "role": "Archived",
       "url": "https://kinde-auth.vercel.app/",
       "imageUrl": "",
-      "altText": "Project 1"
+      "altText": "Project 5"
     },
     {
-      "number": "05",
+      "number": "06",
       "title": "Next-auth",
       "description": "NextAuth starter with Prisma & Vercel Postgres",
       "year": "2023",
       "role": "Archived",
       "url": "https://nextjs-postgres-auth-sooty.vercel.app/",
       "imageUrl": "",
-      "altText": "Project 2"
+      "altText": "Project 6"
     }
   ]
 }
