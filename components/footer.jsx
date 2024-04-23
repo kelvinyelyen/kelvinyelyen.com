@@ -9,7 +9,7 @@ export function SiteFooter() {
         <hr className="h-0.5px my-4 sm:my-8 border-secondary-foreground" />
         <div className="flex justify-between items-center">
           <p className="text-primary-foreground">
-            {currentYear} &#169; Kelvin Yelyen
+            {currentYear} &#169; Kelvin Yelyen.
           </p>
           <div className="flex text-primary-foreground">
             <svg

@@ -51,14 +51,20 @@ export const metadata = {
   },
 }
 
+const cx = (...classes) => classes.filter(Boolean).join(" ")
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={cx(GeistSans.variable, GeistMono.variable)}
+    >
       <Suspense>
         <GoogleAnalytics GA_MEASUREMENT_ID="G-27MSMZKLNN" />
       </Suspense>
 
-      <body className={GeistSans.className}>
+      <body>
         <Preloader />
         <SiteNav />
         {children}
