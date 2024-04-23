@@ -17,6 +17,8 @@ export const metadata = {
     template: "%s | Kelvin Yelyen",
   },
   description: "Software engineer and designer based in Ghana.",
+  author: [{ name: "Kelvin Yelyen" }],
+  publishedTime: "2023-03-17T15:01:08+00:00",
   openGraph: {
     title: "Kelvin Yelyen",
     description: "Software engineer and designer based in Ghana.",
