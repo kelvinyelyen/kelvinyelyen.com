@@ -55,6 +55,7 @@ module.exports = {
         },
         tahiti: {
           DEFAULT: "hsl(var(--tahiti))",
+          foreground: "hsl(var(--accent-tahiti))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
