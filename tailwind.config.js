@@ -53,6 +53,9 @@ module.exports = {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        tahiti: {
+          DEFAULT: "hsl(var(--tahiti))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
