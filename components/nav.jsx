@@ -33,10 +33,10 @@ export default function SiteNav() {
           <p className="text-xl text-foreground">
             kelvin<span className="text-primary-foreground">yelyen_</span>
           </p>
-          <div className="lg:text-sm text-xs text-primary-foreground">
+    /*     <div className="lg:text-sm text-xs text-primary-foreground">
             <p>software engineer \ designer</p>
             <p>Ghana</p>
-          </div>
+          </div>    */
         </Link>
         <ul className="flex gap-5 text-sm">
           {Object.entries(navItems).map(([path, { name }]) => (
