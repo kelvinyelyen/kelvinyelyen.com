@@ -6,7 +6,7 @@ export function ProjectItem({ title, url, description, role }) {
       <Link
         href={url}
         target="_blank"
-        className="transition duration-200 ease-in-out hover:text-primary-foreground my-4"
+        className="transition duration-200 ease-in-out md:hover:text-primary-foreground my-4"
       >
         <div className="grid md:grid-cols-3 grid-cols-1 text-sm border-b border-muted py-2 lg:py-2 relative">
           <div className="col-span-1">

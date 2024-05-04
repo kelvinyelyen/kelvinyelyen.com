@@ -19,8 +19,8 @@
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
     
-    --tahiti: 0%, 2%, 2%, 82%;
-    --tahiti-foreground: 0%, 2%, 2%, 82%;
+    --tahiti: 0 0% 11.5%;
+    --tahiti-foreground: 0 0% 98%
     
     --sh-class: #4c97f8;
     --sh-identifier: white;
@@ -138,7 +138,7 @@
 }
 
 .prose a {
-  @apply transition-all decoration-stone-400 dark:decoration-stone-600 underline-offset-2 decoration-[0.5px];
+  @apply transition-all decoration-stone-400 dark:decoration-stone-400 underline-offset-2 decoration-[0.4px];
 }
 
 .prose .anchor:after {
@@ -151,7 +151,7 @@
 }
 
 .prose pre {
-  @apply bg-neutral-800 rounded-xl overflow-x-auto border border-neutral-800;
+  @apply bg-tahiti rounded-xl overflow-x-auto border border-tahiti;
 }
 
 .prose code {

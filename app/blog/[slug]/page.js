@@ -69,7 +69,7 @@ export default function Post({ params }) {
         }}
       />
       <article className="prose prose-quoteless prose-sm max-w-none prose-stone prose-invert leading-6">
-        <h1 className="lg:text-[26px] text-[22px] font-semibold">{title}</h1>
+        <h1 className="lg:text-[26px] text-[22px] font-medium">{title}</h1>
         <div className="flex justify-between items-center -mt-8 text-primary-foreground">
           <div>
             <p>{publishedAtFormatted}</p>
