@@ -13,7 +13,7 @@
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 24 5% 30%;
 
-    --muted: 0 0% 14.9%;
+    --muted: 0 0% 17%;
     --muted-foreground: 0 0% 63.9%;
 
     --accent: 0 0% 14.9%;
@@ -138,7 +138,7 @@
 }
 
 .prose a {
-  @apply transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  @apply transition-all decoration-stone-400 dark:decoration-stone-600 underline-offset-2 decoration-[0.5px];
 }
 
 .prose .anchor:after {

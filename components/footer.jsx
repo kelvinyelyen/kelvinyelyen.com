@@ -12,6 +12,7 @@ export function SiteFooter() {
             {currentYear} &#169; Kelvin Yelyen.
           </p>
           <div className="flex text-primary-foreground">
+          <p>Ghana /&nbsp;</p>
             <svg
               width="15"
               height="15"

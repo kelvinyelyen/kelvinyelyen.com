@@ -45,7 +45,7 @@ export default function Post({ params }) {
   const { title, publishedAtFormatted, summary } = post.metadata
 
   return (
-    <section className="container my-5 mb-[100px] tracking-tight">
+    <section className="container my-8 mb-[100px] tracking-tight">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -69,7 +69,7 @@ export default function Post({ params }) {
         }}
       />
       <article className="prose prose-quoteless prose-sm max-w-none prose-stone prose-invert leading-6">
-        <h1 className="lg:text-2xl text-xl font-normal">{title}</h1>
+        <h1 className="lg:text-[26px] text-[22px] font-semibold">{title}</h1>
         <div className="flex justify-between items-center -mt-8 text-primary-foreground">
           <div>
             <p>{publishedAtFormatted}</p>

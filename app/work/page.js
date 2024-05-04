@@ -13,11 +13,11 @@ export default function Page() {
   const { experience, education } = workData
 
   return (
-    <section className="container my-5 text-sm tracking-tight">
+    <section className="container my-8 text-sm tracking-tight">
       <div className="mx-auto text-white mb-[100px]">
         <div className="mb-12">
           <div className="mb-6">
-            <h1>Experience</h1>
+            <h1>Experience &nbsp;✴</h1>
             <p className="text-primary-foreground">Professional journey</p>
           </div>
           <div>
@@ -29,7 +29,7 @@ export default function Page() {
 
         <div className="mb-12">
           <div className="mb-6">
-            <h1>Education</h1>
+            <h1>Education &nbsp;✴</h1>
             <p className="text-primary-foreground">Academic background</p>
           </div>
           <div>
@@ -41,7 +41,7 @@ export default function Page() {
 
         <div className="mb-12">
           <div className="mb-6">
-            <h1>Projects</h1>
+            <h1>Projects &nbsp;✴</h1>
             <p className="text-primary-foreground">Creative initiatives</p>
           </div>
           <div>

@@ -11,9 +11,9 @@ export default function Page() {
   const posts = getBlogContent()
 
   return (
-    <div className="container text-sm my-5 mb-[100px] tracking-tight">
+    <div className="container text-sm my-8 mb-[100px] tracking-tight">
       <div className="mb-6 ">
-        <h1>Journal</h1>
+        <h1>Journal&nbsp; ✴</h1>
         <p className="text-primary-foreground">
           Thoughts, ideas, and opinions.
         </p>

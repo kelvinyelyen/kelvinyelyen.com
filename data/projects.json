@@ -33,7 +33,7 @@
     {
       "number": "04",
       "title": "Algorithm Sandbox",
-      "description": "Curated collection of algorithms and data structures",
+      "description": "Python implementation of algorithms and data structures",
       "year": "2024",
       "role": "",
       "url": "https://github.com/kelvinyelyen/algorithm-sandbox",

@@ -2,10 +2,10 @@ import { Link } from "next-view-transitions"
 
 export default function Home() {
   return (
-    <main className="container items-center text-sm my-5 tracking-tight">
+    <main className="container items-center text-sm my-8 tracking-tight">
       <section>
         <div className="mx-auto">
-          <div className="prose prose-sm prose-white prose-invert max-w-none lg:leading-6 leading-relaxed">
+          <div className="prose prose-sm prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
             <p>
               Software engineer and designer constantly seeking to break
               barriers and explore novel approaches to problem-solving. My range
