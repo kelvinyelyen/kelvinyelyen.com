@@ -25,7 +25,7 @@ export default function Page() {
           } = post
           return (
             <Link href={"/blog/" + post.slug} passHref key={post.slug}>
-              <div className="py-2 grid md:grid-cols-3 grid-cols-3 justify-between align-middle border-b border-muted transition duration-200 ease-in-out hover:text-primary-foreground relative">
+              <div className="lg:py-2 py-3 flex align-top md:grid-cols-3 grid-cols-3 justify-between border-b border-muted transition duration-200 ease-in-out md:hover:text-primary-foreground relative">
                 <div className="col-span-2">
                   <h3>{title}</h3>
                 </div>
