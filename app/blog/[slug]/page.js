@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "next-view-transitions"
 
 import { generateSlugsFromFiles, getPost } from "@/lib/blog"
 import { CustomMDX } from "@/lib/mdx"

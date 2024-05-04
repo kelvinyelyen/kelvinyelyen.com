@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "next-view-transitions"
 
 import { getBlogContent } from "@/lib/blog"
 
@@ -25,11 +25,11 @@ export default function Page() {
           } = post
           return (
             <Link href={"/blog/" + post.slug} passHref key={post.slug}>
-              <div className="py-2 grid md:grid-cols-3 grid-cols-1 justify-between align-middle border-b border-muted transition duration-200 ease-in-out hover:text-primary-foreground relative">
+              <div className="py-2 grid md:grid-cols-3 grid-cols-3 justify-between align-middle border-b border-muted transition duration-200 ease-in-out hover:text-primary-foreground relative">
                 <div className="col-span-2">
                   <h3>{title}</h3>
                 </div>
-                <div className="my-auto col-span-1 text-primary-foreground lg:text-end">
+                <div className="my-auto col-span-1 text-primary-foreground text-end">
                   <p>{publishedAt}</p>
                 </div>
               </div>
