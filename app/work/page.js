@@ -42,8 +42,9 @@ export default function Page() {
             ))}
           </div>
         </div>
+        <div className="mb-12"></div>
 
-        <div className="mb-12">
+        {/*<div className="mb-12">
           <div className="mb-6">
             <h1>
               Projects <sup className="text-primary-foreground"> 03 </sup>
@@ -55,7 +56,7 @@ export default function Page() {
               <ProjectItem key={number} {...project} />
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
