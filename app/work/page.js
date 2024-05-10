@@ -14,7 +14,7 @@ export default function Page() {
 
   return (
     <section className="container my-8 text-sm tracking-tight">
-      <div className="mx-auto text-white mb-[100px]">
+      <div className="mx-auto text-white mb-[200px]">
         <div className="mb-12">
           <div className="mb-6">
             <h1>
@@ -42,7 +42,6 @@ export default function Page() {
             ))}
           </div>
         </div>
-        <div className="mb-12"></div>
 
         {/*<div className="mb-12">
           <div className="mb-6">
