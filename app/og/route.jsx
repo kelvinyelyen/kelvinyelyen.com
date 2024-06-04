@@ -26,7 +26,7 @@ export async function GET(request) {
       >
         <div
           style={{
-            marginLeft: 240, // Adjust as needed
+            marginLeft: 180, // Adjust as needed
             marginRight: 900, // Adjust as needed
             display: "flex",
             fontSize: 90,
