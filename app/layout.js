@@ -67,7 +67,6 @@ export default function RootLayout({ children }) {
         <Suspense>
           <GoogleAnalytics GA_MEASUREMENT_ID="G-27MSMZKLNN" />
         </Suspense>
-
         <body>
           <Preloader />
           <SiteNav />
