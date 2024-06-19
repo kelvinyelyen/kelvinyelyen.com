@@ -47,7 +47,7 @@ export default function Home() {
             kelvinyelyen@gmail.com
           </LinkItem>
           <LinkItem href="https://github.com/kelvinyelyen">GitHub</LinkItem>
-          <LinkItem href="https://twitter.com/kelvinyelyen">Twitter</LinkItem>
+          <LinkItem href="https://x.com/kelvinyelyen">X</LinkItem>
           <LinkItem href="https://www.linkedin.com/in/kelvinyelyen/">
             Linkedin
           </LinkItem>
