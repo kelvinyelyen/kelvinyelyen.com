@@ -12,7 +12,7 @@ const navItems = {
   },
 }
 
-export default function SiteNav() {
+export function Nav() {
   const pathname = usePathname()
   let cx = (...classes) => classes.filter(Boolean).join(" ")
 
@@ -43,3 +43,46 @@ export default function SiteNav() {
     </nav>
   )
 }
+
+// "use client"
+
+// import cn from "clsx"
+// import { Link } from "../link"
+// import { usePathname } from "next/navigation"
+// import s from "./nav.module.scss"
+
+// const LINKS = [
+//   { href: "/", label: "about" },
+//   { href: "/work", label: "work" },
+//   { href: "/blog", label: "journal" },
+// ]
+
+// export function Nav() {
+//   const pathname = usePathname()
+
+//   return (
+//     <nav
+//       className={`${s.nav} container py-8 relative text-foreground tracking-tight`}
+//     >
+//       <div className={s.title}>
+//         <p className="text-[17px] text-foreground">
+//           kelvin<span className="text-primary-foreground">yelyen</span>
+//         </p>
+//         <span>{pathname}</span>
+//       </div>
+
+//       <ul className={s.list}>
+//         {LINKS.map((link) => (
+//           <li key={link.href}>
+//             <Link
+//               href={link.href}
+//               className={cn("link", s.link, pathname === link.href && s.active)}
+//             >
+//               {link.label}
+//             </Link>
+//           </li>
+//         ))}
+//       </ul>
+//     </nav>
+//   )
+// }

@@ -3,7 +3,7 @@ import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { MDXRemote } from "next-mdx-remote/rsc"
-import { TweetComponent } from "@/components/tweet"
+import { TweetComponent } from "@/components/tweet/tweet"
 import { highlight } from "sugar-high"
 
 function Table({ data }) {

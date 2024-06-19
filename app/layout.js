@@ -7,8 +7,8 @@ import { ViewTransitions } from "next-view-transitions"
 
 import "./global.css"
 import GoogleAnalytics from "@/components/google-analytics"
-import SiteNav from "@/components/nav"
-import { SiteFooter } from "@/components/footer"
+import { Nav } from "@/components/navigation/nav"
+import { Footer } from "@/components/footer/footer"
 import Preloader from "@/components/preloader"
 
 export const metadata = {
@@ -69,9 +69,9 @@ export default function RootLayout({ children }) {
         </Suspense>
         <body>
           <Preloader />
-          <SiteNav />
+          <Nav />
           {children}
-          <SiteFooter />
+          <Footer />
           <SpeedInsights />
         </body>
         <Analytics />
