@@ -7,8 +7,8 @@ import { ViewTransitions } from "next-view-transitions"
 
 import "./global.css"
 import GoogleAnalytics from "@/components/google-analytics"
-import { Nav } from "@/components/navigation/nav"
-import { Footer } from "@/components/footer/footer"
+import { Nav } from "@/components/nav"
+import { Footer } from "@/components/footer"
 import Preloader from "@/components/preloader"
 
 export const metadata = {
