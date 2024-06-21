@@ -225,3 +225,18 @@ table {
 .title {
   text-wrap: balance;
 }
+
+
+.MafsView {
+	@apply rounded-lg border-2 border-neutral-600 ;
+}
+
+@media (prefers-color-scheme: light) {
+	.MafsView {
+		--mafs-bg: #efefef;
+		--mafs-fg: #222;
+
+		--mafs-line-color: #aaa;
+		--grid-line-subdivision-color: #999;
+	}
+}
