@@ -13,10 +13,10 @@ function VectorExample() {
   const vec3 = vec.add(vec1, vec.rotate(vec2, -2 * angle))
 
   return (
-    <Mafs>
+    <Mafs height={300}>
       <Coordinates.Cartesian />
-      <Vector tip={vec1} />
-      <Vector tail={vec1} tip={vec2} />
+      <Vector tip={vec1} color="orange" />
+      <Vector tail={vec1} tip={vec2} color="green" />
       <Vector tail={vec2} tip={vec3} />
 
       {tip.element}
