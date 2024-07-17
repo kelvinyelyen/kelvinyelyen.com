@@ -1,5 +1,16 @@
+import remarkMath from "remark-math"
+import rehypeKatex from "rehype-katex"
+import mdx from "@next/mdx"
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+
+const withMDX = mdx({
+  extension: /\.mdx?$/,
+  options: {
+    rehypePlugins: [rehypeKatex],
+    remarkPlugins: [remarkMath],
+  },
+})
 
 const ContentSecurityPolicy = `
     default-src 'self' vercel.live;
@@ -42,5 +53,16 @@ const securityHeaders = [
   },
 ]
 
-module.exports = nextConfig
+const nextConfig = withMDX({
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: securityHeaders,
+      },
+    ]
+  },
+})
 
+export default nextConfig

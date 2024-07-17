@@ -16,7 +16,7 @@ export default function Page() {
         <div className="mb-6 ">
           <h1>Journal</h1>
           <p className="text-primary-foreground">
-            Thoughts, ideas, and opinions.
+            Thoughts, ideas, notes and opinions.
           </p>
         </div>
         <div className="py-2">

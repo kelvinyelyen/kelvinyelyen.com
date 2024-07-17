@@ -226,9 +226,8 @@ table {
   text-wrap: balance;
 }
 
-
 .MafsView {
-	@apply rounded-lg border-2 border-neutral-600 ;
+	@apply rounded-lg border-[1px] border-neutral-500 ;
 }
 
 @media (prefers-color-scheme: light) {

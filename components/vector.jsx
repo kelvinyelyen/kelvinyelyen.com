@@ -18,7 +18,6 @@ function VectorExample() {
       <Vector tip={vec1} color="orange" />
       <Vector tail={vec1} tip={vec2} color="green" />
       <Vector tail={vec2} tip={vec3} />
-
       {tip.element}
     </Mafs>
   )
