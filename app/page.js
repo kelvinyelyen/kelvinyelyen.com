@@ -7,11 +7,7 @@ export default function Home() {
         <div className="mx-auto">
           <div className="prose prose-sm prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
             <p>
-              Software engineer and designer constantly seeking to break
-              barriers and explore novel approaches to problem-solving. My range
-              of interests covers a broad spectrum, spanning web application
-              development and computational cognitive science to game design and
-              human-computer interaction.
+              Software engineer and designer dedicated to breaking new ground and exploring novel approaches to problem-solving. My interests span a diverse range, including computational cognitive science, game design, and human-computer interaction.
             </p>
             <p>
               Outside of work, I&apos;m deeply passionate about philosophy,
