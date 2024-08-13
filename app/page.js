@@ -7,7 +7,7 @@ export default function Home() {
         <div className="mx-auto">
           <div className="prose prose-sm prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
             <p>
-              Software engineer and designer dedicated to breaking new ground and exploring novel approaches to problem-solving. My interests span a diverse range, including computational cognitive science, game design, and human-computer interaction.
+              Software engineer and designer dedicated to breaking new ground and exploring novel approaches to problem-solving. My interests span a diverse range, including computational neuroscience/cognitive science, game design, and human-computer interaction.
             </p>
             <p>
               Outside of work, I&apos;m deeply passionate about philosophy,
@@ -46,9 +46,6 @@ export default function Home() {
           <LinkItem href="https://x.com/kelvinyelyen">X</LinkItem>
           <LinkItem href="https://www.linkedin.com/in/kelvinyelyen/">
             Linkedin
-          </LinkItem>
-          <LinkItem href="https://www.behance.net/kelvinyelyen">
-            Behance
           </LinkItem>
         </div>
       </section>
