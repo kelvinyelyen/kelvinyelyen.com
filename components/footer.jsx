@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="container my-8 tracking-tight">
       <div className="mx-auto text-xs">
-        <hr className="h-0.5px my-4 sm:my-8 border-secondary-foreground" />
+        <hr className="h-0.5px my-4 sm:my-8 border-muted" />
         <div className="flex justify-between items-center">
           <p className="text-primary-foreground">
             {currentYear} &#169; Kelvin Yelyen.
