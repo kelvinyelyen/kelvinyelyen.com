@@ -70,10 +70,10 @@ export default function RootLayout({ children }) {
         <Suspense>
           <GoogleAnalytics GA_MEASUREMENT_ID="G-27MSMZKLNN" />
         </Suspense>
-        <body>
+        <body className="flex flex-col min-h-screen">
           <Preloader />
           <Nav />
-          {children}
+          <main className="flex-1">{children}</main>
           <Footer />
           <SpeedInsights />
         </body>
