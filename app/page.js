@@ -1,6 +1,8 @@
 import { Link } from "next-view-transitions"
+import { getBlogContent } from "@/lib/blog"
 
 export default function Home() {
+  const posts = getBlogContent()
   return (
     <main className="container items-center text-sm my-8 tracking-tight">
       <section>
@@ -23,15 +25,44 @@ export default function Home() {
               development of a well-rounded perspective, informing my work and
               fueling my passion for innovation and creativity.
             </p>
-            <p>
+            {/* <p>
               You can gain further insights into my background and interests
               through my <Link href="/blog">written works</Link>,{" "}
               <Link href="/work">projects</Link>, and various social media
               profiles.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
+
+      <section className="my-14">
+        <h1 className="font-semibold">Journal</h1>
+        <div className="py-2">
+          {posts.slice(0, 4).map((post) => {
+            const {
+              metadata: { title, publishedAt, summary, tags },
+            } = post
+            return (
+              <Link href={"/blog/" + post.slug} passHref key={post.slug}>
+                <div className="lg:py-2 py-3 flex align-top md:grid-cols-3 grid-cols-3 justify-between border-b border-muted transition duration-200 ease-in-out md:hover:text-primary-foreground relative">
+                  <div className="col-span-2">
+                    <h3>{title}</h3>
+                  </div>
+                  <div className="my-auto col-span-1 text-primary-foreground text-end">
+                    <p>{publishedAt}</p>
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
+        <div className="py-2">
+          <Link href="#" className="underline">
+            All post
+          </Link>
+        </div>
+      </section>
+
       <section className="mx-auto flex flex-col sm:flex-row justify-between my-14 lg:leading-6 leading-relaxed">
         <div className="mb-4">
           <p className="transition duration-200 ease-in-out hover:text-stone-400">
