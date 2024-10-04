@@ -25,17 +25,17 @@ export default function Home() {
               development of a well-rounded perspective, informing my work and
               fueling my passion for innovation and creativity.
             </p>
-            {/* <p>
+            <p>
               You can gain further insights into my background and interests
               through my <Link href="/blog">written works</Link>,{" "}
               <Link href="/work">projects</Link>, and various social media
               profiles.
-            </p> */}
+            </p>
           </div>
         </div>
       </section>
 
-      <section className="my-10">
+      {/* <section className="my-10">
         <h1 className="font-semibold">Journal</h1>
         <div className="py-2">
           {posts.slice(0, 4).map((post) => {
@@ -56,10 +56,10 @@ export default function Home() {
             )
           })}
         </div>
-        <div className="py-2 flex underline">
+        <div className="py-2 flex underline transition duration-200 ease-in-out hover:text-stone-400">
           <Link href="/blog">All post</Link>
         </div>
-      </section>
+      </section> */}
 
       <section className="mx-auto my-10 lg:leading-6 leading-relaxed text-primary-foreground">
         <div className="text-primary-foreground flex flex-row space-x-4">
@@ -77,7 +77,7 @@ export default function Home() {
 
 function LinkItem({ href, children }) {
   return (
-    <li className="flex justify-end transition duration-200 ease-in-out hover:text-stone-400">
+    <li className="flex justify-end transition duration-200 ease-in-out hover:text-stone-200">
       <Link href={href} target="_blank" className="flex items-center">
         {children}
         <span>
