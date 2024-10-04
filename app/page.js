@@ -56,15 +56,12 @@ export default function Home() {
             )
           })}
         </div>
-        <div className="py-2">
-          <Link href="/blog" className="underline">
-            All post
-          </Link>
+        <div className="py-2 flex underline">
+          <Link href="/blog">All post</Link>
         </div>
       </section>
 
       <section className="mx-auto my-10 lg:leading-6 leading-relaxed text-primary-foreground">
-        You can gain further insights into my background and interests
         <div className="text-primary-foreground flex flex-row space-x-4">
           <LinkItem href="mailto:kelvinyelyen@gmail.com">Email</LinkItem>
           <LinkItem href="https://github.com/kelvinyelyen">GitHub</LinkItem>
@@ -81,11 +78,7 @@ export default function Home() {
 function LinkItem({ href, children }) {
   return (
     <li className="flex justify-end transition duration-200 ease-in-out hover:text-stone-400">
-      <Link
-        href={href}
-        target="_blank"
-        className="flex align-center items-center"
-      >
+      <Link href={href} target="_blank" className="flex items-center">
         {children}
         <span>
           <svg
