@@ -17,7 +17,7 @@ export default function Page() {
       <div className="mx-auto text-white mb-[200px]">
         <div className="mb-12">
           <div className="mb-6">
-            <h1>
+            <h1 className="font-semibold">
               Experience <sup className="text-primary-foreground"> 01 </sup>
             </h1>
             <p className="text-primary-foreground">Professional journey</p>
@@ -31,7 +31,7 @@ export default function Page() {
 
         <div className="mb-12">
           <div className="mb-6">
-            <h1>
+            <h1 className="font-semibold">
               Education <sup className="text-primary-foreground"> 02 </sup>
             </h1>
             <p className="text-primary-foreground">Academic background</p>
