@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { ProjectItem, WorkItem } from "@/components/item"
 import projectData from "@/data/projects.json"
 import workData from "@/data/work.json"
@@ -42,6 +43,13 @@ export default function Page() {
             ))}
           </div>
         </div>
+        <Link
+          href="https://docs.google.com/document/d/1DSLtMOM3OMOGYvzs17h0UxYYz2QT5OTy6qJjh0yEWZ8/edit?usp=sharing"
+          className="underline transition duration-200 ease-in-out hover:text-stone-200"
+          blank_target="_blank"
+        >
+          Full CV
+        </Link>
 
         {/*<div className="mb-12">
           <div className="mb-6">

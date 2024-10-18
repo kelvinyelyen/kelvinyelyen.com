@@ -65,10 +65,13 @@ export default function Home() {
         <div className="text-primary-foreground flex flex-row space-x-4">
           <LinkItem href="mailto:kelvinyelyen@gmail.com">Email</LinkItem>
           <LinkItem href="https://github.com/kelvinyelyen">GitHub</LinkItem>
-          <LinkItem href="https://x.com/kelvinyelyen">X</LinkItem>
+          <LinkItem href="https://x.com/kelvinyelyen">
+            X (Formerly Twitter)
+          </LinkItem>
           <LinkItem href="https://www.linkedin.com/in/kelvinyelyen/">
             Linkedin
           </LinkItem>
+          <LinkItem href="https://medium.com/@kelvinyelyen">Medium</LinkItem>
         </div>
       </section>
     </main>
@@ -80,7 +83,7 @@ function LinkItem({ href, children }) {
     <li className="flex justify-end transition duration-200 ease-in-out hover:text-stone-200">
       <Link href={href} target="_blank" className="flex items-center">
         {children}
-        <span>
+        {/* <span>
           <svg
             width="15"
             height="15"
@@ -95,7 +98,7 @@ function LinkItem({ href, children }) {
               clipRule="evenodd"
             ></path>
           </svg>
-        </span>
+        </span> */}
       </Link>
     </li>
   )

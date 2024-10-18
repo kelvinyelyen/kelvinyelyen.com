@@ -8,7 +8,6 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { ViewTransitions } from "next-view-transitions"
 
-
 import GoogleAnalytics from "@/components/google-analytics"
 import { Nav } from "@/components/nav"
 import { Footer } from "@/components/footer"
