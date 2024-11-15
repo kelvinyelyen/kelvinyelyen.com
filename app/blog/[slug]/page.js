@@ -43,7 +43,6 @@ export async function generateMetadata({ params, searchParams }) {
 export default function Post({ params }) {
   const post = getPost(params)
   const { title, publishedAtFormatted, summary } = post.metadata
-
   return (
     <section className="container my-8 mb-[100px] tracking-tight">
       <script
@@ -70,7 +69,7 @@ export default function Post({ params }) {
       />
       <article className="prose prose-quoteless prose-sm max-w-none prose-stone prose-invert leading-6">
         <h1 className="lg:text-[26px] text-[22px] font-medium">{title}</h1>
-        <div className="flex justify-between items-center -mt-8 text-primary-foreground">
+        <div className="flex justify-between items-center -mt-8 text-foreground-contrast">
           <div>
             <p>{publishedAtFormatted}</p>
           </div>
@@ -80,6 +79,7 @@ export default function Post({ params }) {
         </div>
         {/* @ts-expect-error Server Component*/}
         <CustomMDX source={post.content} />
+        {console.log("Custom:", <CustomMDX source={post.content} />)}
       </article>
     </section>
   )

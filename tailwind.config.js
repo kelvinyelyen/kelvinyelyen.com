@@ -31,6 +31,7 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        "foreground-contrast": "hsl(var(--foreground-contrast))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
@@ -55,7 +56,7 @@ module.exports = {
         },
         tahiti: {
           DEFAULT: "hsl(var(--tahiti))",
-          foreground: "hsl(var(--accent-tahiti))",
+          foreground: "hsl(var(--tahiti-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",

@@ -15,7 +15,7 @@ export default function Page() {
 
   return (
     <section className="container my-8 text-sm tracking-tight">
-      <div className="mx-auto text-white mb-[200px]">
+      <div className="mx-auto text-foreground-contrast mb-[200px]">
         <div className="mb-12">
           <div className="mb-6">
             <h1 className="font-semibold">
@@ -50,20 +50,6 @@ export default function Page() {
         >
           Full CV
         </Link>
-
-        {/*<div className="mb-12">
-          <div className="mb-6">
-            <h1>
-              Projects <sup className="text-primary-foreground"> 03 </sup>
-            </h1>
-            <p className="text-primary-foreground">Creative initiatives</p>
-          </div>
-          <div>
-            {projects.map(({ number, ...project }) => (
-              <ProjectItem key={number} {...project} />
-            ))}
-          </div>
-        </div> */}
       </div>
     </section>
   )
