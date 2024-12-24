@@ -2,11 +2,12 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { MDXRemote, compileMDX } from "next-mdx-remote/rsc"
+import { MDXRemote } from "next-mdx-remote/rsc"
+import remarkGfm from "remark-gfm"
+import remarkMath from "remark-math"
+import rehypeKatex from "rehype-katex"
 import { TweetComponent } from "@/components/tweet/tweet"
 import { highlight } from "sugar-high"
-import rehypeKatex from "rehype-katex"
-import remarkMath from "remark-math"
 import VectorExample from "@/components/vector"
 
 function Table({ data }) {
@@ -172,20 +173,11 @@ const components = {
   VectorExample,
 }
 
-
-export async function compileMdxContent(source) {
-  const { content, frontmatter } = await compileMDX({
-    source,
-    components,
-    options: {
-      mdxOptions: {
-        remarkPlugins: [remarkMath],
-        rehypePlugins: [rehypeKatex],
-      },
-    },
-  })
-
-  return { content, frontmatter }
+const options = {
+  mdxOptions: {
+    remarkPlugins: [remarkGfm, remarkMath],
+    rehypePlugins: [rehypeKatex],
+  },
 }
 
 export function CustomMDX(props) {
@@ -193,8 +185,7 @@ export function CustomMDX(props) {
     <MDXRemote
       {...props}
       components={{ ...components, ...(props.components || {}) }}
-      rehypePlugins={[rehypeKatex, { strict: true, throwOnError: true }]}
-      remarkPlugins={[remarkMath]}
+      options={options}
     />
   )
 }

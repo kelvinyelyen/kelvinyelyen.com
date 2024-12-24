@@ -1,6 +1,7 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
+import { serialize } from "next-mdx-remote/serialize"
 
 import { formatTimeAgo, formatDateTimeFull } from "./dates"
 
@@ -16,19 +17,20 @@ function generateSlugsFromFiles() {
   return paths
 }
 
-function getPost({ slug }) {
+async function getPost({ slug }) {
   const markdownFile = fs.readFileSync(
     path.join(blogDir, slug + ".mdx"),
     "utf-8"
   )
   const { data: frontMatter, content } = matter(markdownFile)
+
   return {
     metadata: {
       ...frontMatter,
       publishedAtFormatted: formatDateTimeFull(frontMatter.publishedAt),
     },
     slug,
-    content,
+    content: content,
   }
 }
 

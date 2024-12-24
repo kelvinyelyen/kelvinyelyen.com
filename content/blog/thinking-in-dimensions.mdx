@@ -27,4 +27,183 @@ Vector Example:
     <VectorExample />
 </div>
 
+## Vector Properties
+
+Vectors have a length (magnitude) and exist in specific dimensions, such as 2D (plane) or 3D (space).
+
+## The Coordinate System
+
+The coordinate system provides a framework for locating points in space. In 2D, it consists of a plane with a horizontal $x-axis$ and a vertical $y-axis$. In 3D, it adds a $z-axis$ perpendicular to the $xy-plane$.
+
+## Vector Operations:
+
+Fundamental vector operations include **addition** and **scalar multiplication** (scaling). These operations preserve the direction and magnitude of vectors.
+
+**Vector addition** is a fundamental operation in linear algebra where two or more vectors are combined to produce a new vector. The result is obtained by adding the corresponding components of the vectors.
+
+**Scalar multiplication** is a fundamental vector operation that involves multiplying a vector by a scalar (a single number). This operation changes the magnitude of the vector while preserving its direction, unless the scalar is negative, which reverses the direction.
+
+## **Basis**
+
+A basis is a set of linearly independent vectors that can span an entire space. Each vector in the basis is essential because it cannot be expressed as a linear combination of the others. For instance, in 2D, the standard basis consists of vectors [1, 0] and [0, 1], which span the entire xy-plane. It’s like having two primary colors, red and blue, that can be mixed to create a whole range of colors on a palette.
+
+## **Linear Combination**
+
+Vectors can be combined through scaling (multiplication by a scalar) and addition. A linear combination of vectors involves scaling each vector by a scalar and then adding them together to produce a new vector.
+
+## **Span**
+
+The span of a set of vectors is the set of all possible vectors that can be obtained by linear combinations of those vectors. It defines the space that the vectors can reach. Imagine the span as the area you can cover with different moves in a video game, combining different moves to reach various points.
+
+## **Linear Independence**
+
+Vectors are linearly independent if none can be expressed as a combination of the others. In other words, they do not lie on the same line (or plane in higher dimensions). Linear independence ensures that each vector in a set contributes uniquely to the space it spans.
+
+## **Linear Transformation and Matrices**
+
+Linear transformations can be thought of as functions that take input vectors and produce output vectors. The word transformation instead of functions suggest movement.
+
+A transformation is linear if it has these properties: _**lines remain lines**_, and _**the origin remains fixed**_. Additionally, linear transformations must satisfy _**additivity**_ and _**scaling**_ properties.
+
+A two-dimensional linear transformation is completely described by just four numbers: the two coordinates for where $\hat{i}$ (i-hat) (the unit vector in the x-direction) lands and the two coordinates for where $\hat{j}$ (j-hat) (the unit vector in the y-direction) lands. This is commonly packaged into a $2 \times 2$ grid of numbers called a $2 \times 2$ matrix. Therefore, matrices are essentially representations of linear transformations of space.
+
+For a linear transformation $T$, if:
+
 $$T(\hat{i}) = \begin{bmatrix} a \\ b \end{bmatrix} \quad \text{and} \quad T(\hat{j}) = \begin{bmatrix} c \\ d \end{bmatrix},$$
+
+then the transformation matrix $A$ is:
+
+$$A = \begin{bmatrix} a & c \\ b & d \end{bmatrix}.$$
+
+## **Matrix Multiplication as Composition**
+
+**Matrix Composition through Multiplication**
+
+Matrix composition involves applying one transformation after another. For example, if you rotate a shape and then shear it, the resulting transformation can be represented by multiplying the rotation matrix by the shear matrix. Essentially, matrix multiplication is the mathematical operation that combines these transformations.
+
+**Noncommutativity**
+
+Matrix multiplication is not commutative, which means that the order in which you multiply matrices matters. For matrices $A$ and $B$, it is typically the case that $(AB \neq BA)$. However, scalar multiplication with matrices is always commutative: $(CA = AC)$ for a scalar $C$ and matrix $A$.
+
+**Associativity**
+
+Matrix multiplication is associative, meaning that the way in which matrices are grouped during multiplication does not affect the result. For matrices $A$, $B$, and $C$, $$(AB)C = A(BC)$$ holds true.
+
+
+## **Determinant**
+
+The determinant of a matrix measures how a linear transformation scales volume. In 2D, the determinant represents the scaling factor of area, while in 3D, it represents the scaling factor of volume. Specifically, for a transformation matrix $A$:
+
+- If $det(A) = 1$, the transformation **preserves area (in 2D) or volume (in 3D)**. The shape of the object remains the same, but it might be rotated or reflected.
+- If $det(A) > 1$, the transformation **scales up** the area or volume. The object is stretched, making it larger than the original.
+- If $det(A) < 1$, the transformation **scales down** the area or volume. The object is compressed, making it smaller than the original. If $det(A)$ is negative, this scaling down is accompanied by a reflection.
+- If $det(A) = 0$, the transformation **squashes the area or volume to zero**, indicating that the transformation is not invertible and the matrix is singular. The transformation collapses the object into a lower dimension, effectively flattening it.
+
+## **Linear Systems of Equations**
+
+Linear algebra provides a robust framework for solving systems of linear equations, which are a set of equations where each equation is a linear combination of unknown variables. In many fields, including physics, engineering, economics, and computer science, such systems arise naturally. The unknowns in these equations can represent quantities like voltages in a circuit, forces in a mechanical structure, stock prices in financial models, or, significantly for machine learning, parameters in models that need to be adjusted to fit data.
+
+### **Formulation**
+
+A system of linear equations can be expressed compactly using matrix notation as:
+
+$$A\mathbf{X} = \mathbf{B}$$
+
+Where:
+
+- $A$ is a matrix representing the coefficients of the system.
+- $\mathbf{X}$ is a column vector of unknown variables.
+- $\mathbf{B}$ is a column vector representing the constants or outcomes.
+
+  
+
+For example, consider the following system of two linear equations with two unknowns $x_1$ and $x_2$:
+$$
+\begin{aligned}  
+a_{11}x_1 + a_{12}x_2 &= b_1 \\  
+a_{21}x_1 + a_{22}x_2 &= b_2  
+\end{aligned}
+$$
+
+This can be written in matrix form as:
+
+$$
+\begin{pmatrix}  
+a_{11} & a_{12} \\  
+a_{21} & a_{22}  
+\end{pmatrix}  
+\begin{pmatrix}  
+x_1 \\  
+x_2  
+\end{pmatrix} =  
+\begin{pmatrix}  
+b_1 \\  
+b_2  
+\end{pmatrix}
+$$
+
+In this representation:
+
+- The matrix $A$ contains the coefficients $a_{ij}$ of the variables $x_1$ and $x_2$.
+- The vector $\mathbf{X}$ contains the unknowns.
+- The vector $\mathbf{B}$ contains the known constants or outcomes of the system.
+
+### **Solutions to Linear Systems**
+
+The solution to a system of linear equations depends on the nature of the matrix $A$ and how the equations relate to one another. The system may have:
+
+- **A Unique Solution**: When there is exactly one solution that satisfies all the equations. This happens if the matrix $A$ is square (i.e., the same number of equations as unknowns) and has full rank (i.e., the equations are linearly independent).
+- **Infinitely Many Solutions**: When the system is underdetermined, meaning there are fewer independent equations than unknowns. In this case, there are infinitely many solutions that satisfy the system. This typically occurs when the equations represent the same line or plane in higher-dimensional space.
+- **No Solution**: When the system is inconsistent, meaning the equations contradict each other, and no single set of values for the unknowns can satisfy all the equations. In machine learning, such inconsistency might indicate poor data quality or an ill-posed problem.
+
+### **Methods of Solution**
+
+Several methods can be employed to solve systems of linear equations, depending on the size and properties of the system:
+
+1. **Substitution and Elimination**:  
+    These are manual techniques used to simplify the system and reduce the number of variables, making it easier to solve. Substitution is useful for small systems, but it becomes inefficient as the number of equations grows.
+    
+2. **Matrix Inversion**:  
+    If the matrix $A$ is square and invertible, the system can be solved by multiplying both sides of the equation $A\mathbf{X} = \mathbf{B}$ by the inverse of $A$, leading to the solution: $\mathbf{X} = A^{-1} \mathbf{B}$.
+    
+    However, finding the inverse of a matrix can be computationally expensive for large systems, and it may not always exist.
+    
+3. **Gaussian Elimination**:  
+    A widely used method for systematically reducing the matrix $A$ to row-echelon form through a series of row operations. Once in this form, back-substitution can be used to solve for the unknowns. This method is more efficient than substitution for larger systems.
+
+4. **LU Decomposition**:  
+    This technique decomposes the matrix $A$ into the product of two matrices: a lower triangular matrix $L$ and an upper triangular matrix $U$. This simplifies solving the system, particularly when dealing with large matrices, as triangular systems are easier to solve.
+
+## **Inverse Matrices**
+
+An inverse matrix, written as $A^{-1}$, reverses the effect of a matrix $A$. If $A$ transforms a vector $\mathbf{x}$ into another vector $\mathbf{b}$ (i.e., $A\mathbf{x} = \mathbf{b}$), then using the inverse matrix $A^{-1}$ brings you back to the original vector:
+
+$$
+\mathbf{x} = A^{-1} \mathbf{b}
+$$
+
+In other words, the inverse matrix undoes what $A$ did.
+
+A matrix has an inverse only if it is square (same number of rows and columns) and its determinant is not zero. If the determinant is zero, the matrix doesn’t have an inverse.
+
+## **Column Space**
+
+The column space of a matrix is the set of all possible outputs or vectors you can get by multiplying the matrix with different input vectors. It’s the span of the matrix’s columns.
+
+## **Rank**
+
+The rank of a matrix is the number of linearly independent columns. It tells us the number of dimensions spanned by the columns. A **full-rank matrix** (where rank equals the number of columns) has no redundant columns. For a $3 \times 3$ matrix, a rank of 3 means it fully spans 3D space. So a more precise definition of rank is that it’s the number of dimensions in the column space. When this rank is as high as it can be, equaling the number of columns in the matrix, the matrix is called “full-rank”.
+
+## **Null Space (Kernel)**
+
+The null space of a matrix is the set of vectors that, when multiplied by the matrix, result in the zero vector. It shows the dependencies among the columns. If the null space only includes the zero vector, the columns are independent.
+
+## **Gaussian Elimination and Row Echelon Form**
+
+Gaussian elimination simplifies a matrix to row echelon form (REF) using row operations. A matrix in REF has these properties:
+
+1. Nonzero rows are above rows of all zeros.
+2. The first nonzero number in each row (leading entry) is to the right of the leading entry in the row above.
+3. All entries below a leading entry are zeros.
+
+This process makes it easier to solve the system of equations through back-substitution.

@@ -29,6 +29,7 @@
     "react-dom": "^19.0.0",
     "react-tweet": "^3.2.1",
     "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.0",
     "remark-math": "^6.0.0",
     "rss": "^1.2.2",
     "sass": "^1.83.0",
