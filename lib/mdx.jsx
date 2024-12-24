@@ -2,7 +2,7 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { MDXRemote } from "next-mdx-remote/rsc"
+import { MDXRemote, compileMDX } from "next-mdx-remote/rsc"
 import { TweetComponent } from "@/components/tweet/tweet"
 import { highlight } from "sugar-high"
 import rehypeKatex from "rehype-katex"
@@ -170,6 +170,22 @@ const components = {
   code: Code,
   Table,
   VectorExample,
+}
+
+
+export async function compileMdxContent(source) {
+  const { content, frontmatter } = await compileMDX({
+    source,
+    components,
+    options: {
+      mdxOptions: {
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+      },
+    },
+  })
+
+  return { content, frontmatter }
 }
 
 export function CustomMDX(props) {
