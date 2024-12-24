@@ -9,8 +9,8 @@ export async function generateStaticParams() {
   return generateSlugsFromFiles()
 }
 
-export async function generateMetadata({ params, searchParams }) {
-  const blog = getPost({ slug: params.slug })
+export async function generateMetadata({ params }) {
+  const blog = await getPost({ slug: params.slug })
   let ogImage = `https://kelvinyelyen.com/og?title=${blog.metadata.title}`
 
   const metadata = {
@@ -79,7 +79,6 @@ export default function Post({ params }) {
         </div>
         {/* @ts-expect-error Server Component*/}
         <CustomMDX source={post.content} />
-        {console.log("Custom:", <CustomMDX source={post.content} />)}
       </article>
     </section>
   )

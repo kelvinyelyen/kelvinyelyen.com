@@ -1,5 +1,4 @@
 /* eslint-disable react/display-name */
-import dynamic from "next/dynamic"
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -8,10 +7,7 @@ import { TweetComponent } from "@/components/tweet/tweet"
 import { highlight } from "sugar-high"
 import rehypeKatex from "rehype-katex"
 import remarkMath from "remark-math"
-
-const VectorExample = dynamic(() => import("@/components/vector"), {
-  ssr: false,
-})
+import VectorExample from "@/components/vector"
 
 function Table({ data }) {
   const headers = data.headers.map((header, index) => (
