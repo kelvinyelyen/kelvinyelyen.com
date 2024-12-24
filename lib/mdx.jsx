@@ -8,7 +8,7 @@ import remarkMath from "remark-math"
 import rehypeKatex from "rehype-katex"
 import { TweetComponent } from "@/components/tweet/tweet"
 import { highlight } from "sugar-high"
-import VectorExample from "@/components/vector"
+import { VectorExample, UnitVectorDemo } from "@/components/vector"
 
 function Table({ data }) {
   const headers = data.headers.map((header, index) => (
@@ -55,7 +55,7 @@ function CustomLink(props) {
 }
 
 function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />
+  return <Image alt={props.alt} className="rounded-xl" {...props} />
 }
 
 function Callout(props) {
@@ -171,6 +171,7 @@ const components = {
   code: Code,
   Table,
   VectorExample,
+  UnitVectorDemo,
 }
 
 const options = {

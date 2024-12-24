@@ -61,16 +61,12 @@ export default function Home() {
 
       <section className="mx-auto my-10 lg:leading-6 leading-relaxed text-primary-foreground">
         <div className="text-primary-foreground flex flex-row space-x-4">
-          <LinkItem href="https://github.com/kelvinyelyen">GitHub</LinkItem>
-          <LinkItem href="https://x.com/kelvinyelyen">
-            X
-          </LinkItem>
+          <LinkItem href="https://github.com/kelvinyelyen">[GitHub]</LinkItem>
+          <LinkItem href="https://x.com/kelvinyelyen">[X]</LinkItem>
           <LinkItem href="https://www.linkedin.com/in/kelvinyelyen/">
-            Linkedin
+            [Linkedin]
           </LinkItem>
-          <LinkItem href="https://kelvinyelyen.substack.com">
-            Substack
-          </LinkItem>
+          <LinkItem href="https://kelvinyelyen.substack.com">[Substack]</LinkItem>
         </div>
       </section>
     </main>
@@ -84,7 +80,7 @@ function LinkItem({ href, children }) {
         <Link
           href={href}
           target="_blank"
-          className="flex items-center underline"
+          className="flex items-center"
         >
           {children}
         </Link>
