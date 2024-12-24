@@ -78,10 +78,16 @@ export default function Home() {
 
 function LinkItem({ href, children }) {
   return (
-    <li className="flex justify-end transition duration-200 ease-in-out hover:text-stone-200">
-      <Link href={href} target="_blank" className="flex items-center underline">
-        {children}
-      </Link>
-    </li>
+    <ul>
+      <li className="flex justify-end transition duration-200 ease-in-out hover:text-stone-200">
+        <Link
+          href={href}
+          target="_blank"
+          className="flex items-center underline"
+        >
+          {children}
+        </Link>
+      </li>
+    </ul>
   )
 }
