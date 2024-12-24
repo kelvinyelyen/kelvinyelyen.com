@@ -21,9 +21,7 @@ export default function Home() {
               neuroscience, game design, travel, arts and culture etc. I enjoy
               engaging in philosophical and neuroscientific discussions,
               immersing myself in diverse art forms, and taking on creative
-              projects. I believe that these experiences contribute to my
-              development of a well-rounded perspective, informing my work and
-              fueling my passion for innovation and creativity.
+              projects.
             </p>
             <p>
               You can gain further insights into my background and interests
@@ -69,6 +67,9 @@ export default function Home() {
           </LinkItem>
           <LinkItem href="https://www.linkedin.com/in/kelvinyelyen/">
             Linkedin
+          </LinkItem>
+          <LinkItem href="https://kelvinyelyen.substack.com">
+            Substack
           </LinkItem>
         </div>
       </section>
