@@ -1,6 +1,5 @@
 import Link from "next/link"
-import { ProjectItem, WorkItem } from "@/components/item"
-import projectData from "@/data/projects.json"
+import { WorkItem } from "@/components/item"
 import workData from "@/data/work.json"
 
 export const metadata = {
@@ -10,7 +9,6 @@ export const metadata = {
 }
 
 export default function Page() {
-  const { projects } = projectData
   const { experience, education } = workData
 
   return (
