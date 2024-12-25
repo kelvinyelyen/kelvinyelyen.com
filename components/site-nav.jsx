@@ -10,6 +10,9 @@ const navItems = {
   "/blog": {
     name: "journal",
   },
+  "/reading": {
+    name: "reading",
+  },
 }
 
 export function Nav() {

@@ -31,7 +31,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto my-10 lg:leading-6 leading-relaxed text-primary-foreground">
+      <section className="mx-auto my-10 lg:leading-6 leading-relaxed">
         <div className="text-primary-foreground flex flex-row space-x-4">
           <LinkItem href="https://github.com/kelvinyelyen">[GitHub]</LinkItem>
           <LinkItem href="https://x.com/kelvinyelyen">[X]</LinkItem>
@@ -41,12 +41,6 @@ export default function Home() {
           <LinkItem href="https://kelvinyelyen.substack.com">
             [Substack]
           </LinkItem>
-          <Link
-            href="/reading"
-            className="flex justify-end transition duration-200 ease-in-out hover:text-stone-200"
-          >
-            [Reading]
-          </Link>
         </div>
       </section>
     </main>
@@ -57,11 +51,7 @@ function LinkItem({ href, children }) {
   return (
     <ul>
       <li className="flex justify-end transition duration-200 ease-in-out hover:text-stone-200">
-        <Link
-          href={href}
-          target="_blank"
-          className="flex items-center"
-        >
+        <Link href={href} target="_blank" className="flex items-center">
           {children}
         </Link>
       </li>

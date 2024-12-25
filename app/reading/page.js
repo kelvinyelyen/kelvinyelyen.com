@@ -11,7 +11,7 @@ export default function Page() {
   const lists = sortCategoryContent(rawLists)
 
   return (
-    <div className="container text-sm my-8 mb-[100px] tracking-tight text-foreground-contrast">
+    <div className="container text-sm my-8 tracking-tight text-foreground-contrast">
       <div>
         <div className="mb-6 ">
           <h1 className="font-semibold">Reading</h1>
