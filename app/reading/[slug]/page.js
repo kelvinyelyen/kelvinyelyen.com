@@ -76,7 +76,7 @@ export default async function Reading({ params }) {
             <p>{publishedAtFormatted}</p>
           </div>
           <div className="ml-auto">
-            <Link href="/blog/">back</Link>
+            <Link href="/reading">back</Link>
           </div>
         </div>
         {/* @ts-expect-error Server Component */}
