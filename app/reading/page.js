@@ -3,7 +3,7 @@ import { getCategoryContent, sortCategoryContent } from "@/lib/content-handler"
 
 export const metadata = {
   title: "Reading",
-  description: "Thoughts, ideas, and opinions.",
+  description: "Reading List.",
 }
 
 export default function Page() {

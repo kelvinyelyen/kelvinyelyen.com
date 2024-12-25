@@ -38,7 +38,15 @@ export default function Home() {
           <LinkItem href="https://www.linkedin.com/in/kelvinyelyen/">
             [Linkedin]
           </LinkItem>
-          <LinkItem href="https://kelvinyelyen.substack.com">[Substack]</LinkItem>
+          <LinkItem href="https://kelvinyelyen.substack.com">
+            [Substack]
+          </LinkItem>
+          <Link
+            href="/reading"
+            className="flex justify-end transition duration-200 ease-in-out hover:text-stone-200"
+          >
+            [Reading]
+          </Link>
         </div>
       </section>
     </main>
