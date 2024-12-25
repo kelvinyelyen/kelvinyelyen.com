@@ -2,13 +2,9 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { MDXRemote } from "next-mdx-remote/rsc"
-import remarkGfm from "remark-gfm"
-import remarkMath from "remark-math"
-import rehypeKatex from "rehype-katex"
-import { TweetComponent } from "@/components/tweet/tweet"
+import { TweetComponent } from "@/components/mdx/tweet/tweet"
 import { highlight } from "sugar-high"
-import { VectorExample, UnitVectorDemo } from "@/components/vector"
+import { VectorExample, UnitVectorDemo } from "@/components/mdx/vector"
 
 function Table({ data }) {
   const headers = data.headers.map((header, index) => (
@@ -21,7 +17,6 @@ function Table({ data }) {
       ))}
     </tr>
   ))
-
   return (
     <table>
       <thead>
@@ -155,38 +150,15 @@ function createHeading(level) {
   }
 }
 
-const components = {
-  h1: createHeading(1),
-  h2: createHeading(2),
-  h3: createHeading(3),
-  h4: createHeading(4),
-  h5: createHeading(5),
-  h6: createHeading(6),
-  Image: RoundedImage,
-  a: CustomLink,
+export {
+  Table,
+  CustomLink,
+  RoundedImage,
   Callout,
   ProsCard,
   ConsCard,
-  StaticTweet: TweetComponent,
-  code: Code,
-  Table,
+  Code,
+  TweetComponent,
   VectorExample,
   UnitVectorDemo,
-}
-
-const options = {
-  mdxOptions: {
-    remarkPlugins: [remarkGfm, remarkMath],
-    rehypePlugins: [rehypeKatex],
-  },
-}
-
-export function CustomMDX(props) {
-  return (
-    <MDXRemote
-      {...props}
-      components={{ ...components, ...(props.components || {}) }}
-      options={options}
-    />
-  )
 }

@@ -1,28 +1,27 @@
 import { Link } from "next-view-transitions"
 import { generateSlugsFromCategory, getContent } from "@/lib/content-handler"
 import { CustomMDX } from "@/lib/mdx-utils"
-import generateRssFeed from "@/lib/rss"
 
 export async function generateStaticParams() {
-  const blogSlugs = generateSlugsFromCategory("journal")
-  return blogSlugs
+  const listSlugs = generateSlugsFromCategory("reading")
+  return listSlugs
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params
-  const blog = await getContent({ category: "journal", slug })
+  const list = await getContent({ category: "reading", slug })
 
-  const ogImage = `https://kelvinyelyen.com/og?title=${blog.metadata.title}`
+  const ogImage = `https://kelvinyelyen.com/og?title=${list.metadata.title}`
 
   const metadata = {
-    title: blog.metadata.title,
-    description: blog.metadata.summary,
-    publishedAt: blog.metadata.publishedAtFormatted,
+    title: list.metadata.title,
+    description: list.metadata.summary,
+    publishedAt: list.metadata.publishedAtFormatted,
     openGraph: {
-      title: blog.metadata.title,
-      description: blog.metadata.summary,
-      publishedAt: blog.metadata.publishedAtFormatted,
-      url: `https://kelvinyelyen.com/blog/${blog.slug}`,
+      title: list.metadata.title,
+      description: list.metadata.summary,
+      publishedAt: list.metadata.publishedAtFormatted,
+      url: `https://kelvinyelyen.com/reading/${list.slug}`,
       images: [
         {
           url: ogImage,
@@ -32,8 +31,8 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: blog.metadata.title,
-      description: blog.metadata.summary,
+      title: list.metadata.title,
+      description: list.metadata.summary,
       images: [ogImage],
     },
   }
@@ -41,10 +40,10 @@ export async function generateMetadata({ params }) {
   return metadata
 }
 
-export default async function Post({ params }) {
+export default async function Reading({ params }) {
   const { slug } = await params
-  const post = await getContent({ category: "journal", slug })
-  const { title, publishedAtFormatted, summary } = post.metadata
+  const list = await getContent({ category: "reading", slug })
+  const { title, publishedAtFormatted, summary } = list.metadata
 
   return (
     <section className="container my-8 mb-[100px] tracking-tight">
@@ -54,15 +53,15 @@ export default async function Post({ params }) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: post.metadata.title,
-            datePublished: post.metadata.publishedAt,
-            dateModified: post.metadata.publishedAt,
-            description: post.metadata.summary,
-            image: post.metadata.image
-              ? `https://kelvinyelyen.com${post.metadata.image}`
-              : `https://kelvinyelyen.com/og?title=${post.metadata.title}`,
-            url: `https://kelvinyelyen.com/blog/${post.slug}`,
+            "@type": "BookLists",
+            headline: list.metadata.title,
+            datePublished: list.metadata.publishedAt,
+            dateModified: list.metadata.publishedAt,
+            description: list.metadata.summary,
+            image: list.metadata.image
+              ? `https://kelvinyelyen.com${list.metadata.image}`
+              : `https://kelvinyelyen.com/og?title=${list.metadata.title}`,
+            url: `https://kelvinyelyen.com/blog/${list.slug}`,
             author: {
               "@type": "Person",
               name: "Kelvin Yelyen",
@@ -81,7 +80,7 @@ export default async function Post({ params }) {
           </div>
         </div>
         {/* @ts-expect-error Server Component */}
-        <CustomMDX source={post.content} />
+        <CustomMDX source={list.content} />
       </article>
     </section>
   )

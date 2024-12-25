@@ -1,4 +1,4 @@
-import { getBlogContent } from "@/lib/blog"
+import { getBlogContent } from "@/lib/content-handler"
 
 const URL = "https://kelvinyelyen.com"
 

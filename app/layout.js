@@ -9,8 +9,8 @@ import { GeistMono } from "geist/font/mono"
 import { ViewTransitions } from "next-view-transitions"
 
 import GoogleAnalytics from "@/components/google-analytics"
-import { Nav } from "@/components/nav"
-import { Footer } from "@/components/footer"
+import { Nav } from "@/components/site-nav"
+import { Footer } from "@/components/site-footer"
 import Preloader from "@/components/preloader"
 
 export const metadata = {

@@ -1,5 +1,5 @@
 import RSS from "rss"
-import { getBlogContent } from "./blog"
+import { getBlogContent } from "./content-handler"
 import fs from "fs"
 import path from "path"
 
