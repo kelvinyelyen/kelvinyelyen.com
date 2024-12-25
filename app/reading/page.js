@@ -7,8 +7,8 @@ export const metadata = {
 }
 
 export default function Page() {
-  const rawPosts = getCategoryContent("reading")
-  const posts = sortCategoryContent(rawPosts)
+  const rawLists = getCategoryContent("reading")
+  const lists = sortCategoryContent(rawLists)
 
   return (
     <div className="container text-sm my-8 mb-[100px] tracking-tight text-foreground-contrast">
@@ -26,7 +26,7 @@ export default function Page() {
           </p>
         </div>
         <div className="py-2">
-          {posts.map(({ slug, metadata }) => {
+          {lists.map(({ slug, metadata }) => {
             const randomColor = `#${Math.floor(
               Math.random() * 16777215
             ).toString(16)}`

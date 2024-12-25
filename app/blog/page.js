@@ -7,8 +7,8 @@ export const metadata = {
 }
 
 export default function Page() {
-  const rawLists = getCategoryContent("journal")
-  const lists = sortCategoryContent(rawLists)
+  const rawPosts = getCategoryContent("journal")
+  const posts = sortCategoryContent(rawPosts)
 
   return (
     <div className="container text-sm my-8 mb-[100px] tracking-tight text-foreground-contrast">
@@ -20,9 +20,9 @@ export default function Page() {
           </p>
         </div>
         <div className="py-2">
-          {lists.map(({ slug, metadata }) => {
+          {posts.map(({ slug, metadata }) => {
             return (
-              <Link href={"/reading/" + slug} passHref key={slug}>
+              <Link href={"/blog/" + slug} passHref key={slug}>
                 <div className="lg:py-2 py-3 flex align-top md:grid-cols-3 grid-cols-3 justify-between border-b border-muted transition duration-200 ease-in-out md:hover:text-primary-foreground relative">
                   <div className="col-span-2">
                     <h1>{metadata.title}</h1>
