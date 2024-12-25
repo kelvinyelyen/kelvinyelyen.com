@@ -1,12 +1,12 @@
 import RSS from "rss"
-import { getBlogContent } from "./content-handler"
+import { getContent } from "./content-handler"
 import fs from "fs"
 import path from "path"
 
 export const site_url = "https://kelvinyelyen.com"
 
 export default async function generateRssFeed() {
-  const allPosts = getBlogContent()
+  const allPosts = getContent({ category: "journal", slug })
 
   const feedOptions = {
     title: "Kelvin Yelyen",
