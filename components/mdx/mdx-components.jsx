@@ -65,7 +65,7 @@ function Callout(props) {
 function ProsCard({ title, pros }) {
   return (
     <div className="border border-emerald-200 dark:border-emerald-900 bg-neutral-50 dark:bg-neutral-900 rounded-xl p-6 my-4 w-full">
-      <span>{`You might use ${title} if...`}</span>
+      <span>{title}</span>
       <div className="mt-4">
         {pros.map((pro) => (
           <div key={pro} className="flex font-medium items-baseline mb-2">
@@ -94,7 +94,7 @@ function ProsCard({ title, pros }) {
 function ConsCard({ title, cons }) {
   return (
     <div className="border border-red-200 dark:border-red-900 bg-neutral-50 dark:bg-neutral-900 rounded-xl p-6 my-6 w-full">
-      <span>{`You might not use ${title} if...`}</span>
+      <span>{title}</span>
       <div className="mt-4">
         {cons.map((con) => (
           <div key={con} className="flex font-medium items-baseline mb-2">
@@ -118,7 +118,14 @@ function ConsCard({ title, cons }) {
 
 function Code({ children, ...props }) {
   const codeHTML = highlight(children)
-  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
+  return (
+    <pre>
+      <code
+        dangerouslySetInnerHTML={{ __html: codeHTML }}
+        {...props}
+      />
+    </pre>
+  )
 }
 
 function slugify(str) {

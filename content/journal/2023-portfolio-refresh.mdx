@@ -27,8 +27,8 @@ MDX (Markdown eXtended) combines Markdown and JSX syntax, offering enhanced flex
 While Next's package `@next/mdx` is a viable option, I chose `@next-remote-mdx` due to its expanded capabilities. Additionally, I utilized `gray-matter` to enable metadata parsing within MDX.
 
 
-```plaintext
-// Example MDX file structure
+<Code>
+{`// Example MDX file structure
 
 ---
 title: "My MDX Example"
@@ -47,16 +47,17 @@ This is a **paragraph** in MDX. You can use _Markdown_ syntax here.
 
 <Callout>
     Callout Text	
-</Callout>
-```
+</Callout>`}
+</Code>
 
 MDX allows direct inclusion of JSX components within content, as demonstrated with `<Callout></Callout>`, combining Markdown with JSX for dynamic content creation.
 
 #### Processing .mdx files
 Here's a snippet illustrating the handling and processing of .mdx files within a Next.js environment for blog content:
 
-```jsx
-// JavaScript code handling .mdx files
+
+<Code>
+{`// JavaScript code handling .mdx files
 
 import fs from "fs"
 import path from "path"
@@ -94,8 +95,9 @@ function getPost({ slug }) {
 }
 // ...
 
-export { generateSlugsFromFiles, getPost, getBlogContent }
-```
+export { generateSlugsFromFiles, getPost, getBlogContent }`}
+</Code>
+
 
 This set of functions exemplifies the handling and processing of .mdx files within a Next.js environment for managing blog content. By utilizing these functions, we can generate slugs, retrieve specific posts, and acquire sorted blog content efficiently.
 
