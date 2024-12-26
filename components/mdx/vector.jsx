@@ -6,7 +6,17 @@ import "mafs/font.css"
 
 import { Mafs, Coordinates, useMovablePoint, Vector, vec, Text } from "mafs"
 
-// UnitVectorDemo Component
+function ArrowInSpace({ vector }) {
+  const [x, y] = vector
+
+  return (
+    <Mafs height={300}>
+      <Coordinates.Cartesian />
+      <Vector tip={[x, y]} color="red" />
+    </Mafs>
+  )
+}
+
 function UnitVectorDemo() {
   const im = useMovablePoint([5, 0], {
     constrain: "horizontal",
@@ -66,8 +76,7 @@ function UnitVectorDemo() {
   )
 }
 
-// VectorExample Component
-function VectorExample() {
+function Vector3D() {
   const tip = useMovablePoint([0.4, 0.6])
 
   const vec1 = tip.point
@@ -86,4 +95,4 @@ function VectorExample() {
   )
 }
 
-export { UnitVectorDemo, VectorExample }
+export { ArrowInSpace, UnitVectorDemo, Vector3D }

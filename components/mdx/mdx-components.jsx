@@ -4,7 +4,11 @@ import Link from "next/link"
 import Image from "next/image"
 import { TweetComponent } from "@/components/mdx/tweet/tweet"
 import { highlight } from "sugar-high"
-import { VectorExample, UnitVectorDemo } from "@/components/mdx/vector"
+import {
+  ArrowInSpace,
+  Vector3D,
+  UnitVectorDemo,
+} from "@/components/mdx/vector"
 
 function Table({ data }) {
   const headers = data.headers.map((header, index) => (
@@ -166,6 +170,7 @@ export {
   ConsCard,
   Code,
   TweetComponent,
-  VectorExample,
+  ArrowInSpace,
+  Vector3D,
   UnitVectorDemo,
 }
