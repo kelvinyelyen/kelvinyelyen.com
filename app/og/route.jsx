@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og"
-import { GeistSans } from "geist/font/sans"
+import { GeistMono } from "geist/font/mono"
 
 export const runtime = "edge"
 
@@ -7,7 +7,7 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url)
   const postTitle = searchParams.get("title")
   const font = fetch(
-    new URL("../../public/fonts/kaisei-tokumin-bold.ttf", import.meta.url)
+    new URL("../../public/fonts/GeistMono-Regular.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer())
   const fontData = await font
 
@@ -35,7 +35,7 @@ export async function GET(request) {
             color: "white",
             lineHeight: "80px",
             whiteSpace: "pre-wrap",
-            fontFamily: "Kaisei Tokumin",
+            fontFamily: "GeistMono",
           }}
         >
           {postTitle}
@@ -47,7 +47,7 @@ export async function GET(request) {
       height: 1080,
       fonts: [
         {
-          name: "Kaisei Tokumin",
+          name: "GeistMono",
           data: fontData,
           style: "normal",
         },
