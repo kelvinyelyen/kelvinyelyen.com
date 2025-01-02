@@ -7,7 +7,7 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url)
   const postTitle = searchParams.get("title")
   const font = fetch(
-    new URL("https://kelvinyelyen.com/fonts/GeistMono-Regular.woff2", import.meta.url)
+    new URL("https://kelvinyelyen.com/fonts/GeistMono-Regular.woff", import.meta.url)
   ).then((res) => res.arrayBuffer())
   const fontData = await font
 
