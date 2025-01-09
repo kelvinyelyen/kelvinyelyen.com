@@ -30,7 +30,7 @@ export async function GET(request) {
             letterSpacing: "-0.05em",
             fontStyle: "medium",
             color: "white",
-            lineHeight: "150px",
+            lineHeight: "95px",
             whiteSpace: "pre-wrap",
           }}
         >
