@@ -23,10 +23,11 @@ export async function GET(request) {
       >
         <div
           style={{
-            marginLeft: 180,
+            marginLeft: 95,
             marginRight: 500,
+            marginTop: 750,
             display: "flex",
-            fontSize: "90px",
+            fontSize: "60px",
             letterSpacing: "-0.05em",
             fontStyle: "medium",
             color: "white",
