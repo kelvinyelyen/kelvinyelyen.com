@@ -57,7 +57,7 @@ export default function Page() {
         </div>
 
         <Link
-          href="https://docs.google.com/document/d/1DSLtMOM3OMOGYvzs17h0UxYYz2QT5OTy6qJjh0yEWZ8/edit?usp=sharing"
+          href="https://drive.google.com/file/d/1a2SroEwfHbUHmwbm68rZu7G272KNySno/view?usp=sharing"
           className="flex text-primary-foreground transition duration-200 ease-in-out hover:text-stone-200"
           blank_target="_blank"
         >
