@@ -25,7 +25,7 @@ export async function GET(request) {
           style={{
             marginLeft: 95,
             marginRight: 500,
-            marginTop: 750,
+            marginTop: 520,
             display: "flex",
             fontSize: "60px",
             letterSpacing: "-0.05em",
