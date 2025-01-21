@@ -21,7 +21,7 @@ export function Nav() {
 
   const NavLink = ({ path, name }) => (
     <li className="transition duration-200 ease-in-out md:hover:text-primary-foreground">
-      <Link href={path} passHref>
+    <Link href={path} passHref style={{ viewTransitionName: {name} }}>
         <p className={cx({ "text-primary-foreground": pathname === path })}>
           {name}
         </p>

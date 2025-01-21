@@ -14,7 +14,7 @@ export default function Page() {
     <div className="container text-sm my-8 mb-[100px] tracking-tight text-foreground-contrast">
       <div>
         <div className="mb-6 ">
-          <h1 className="font-semibold">Journal</h1>
+          <h1 className="font-semibold" style={{viewTransitionName: "journal"}}>Journal</h1>
           <p className="text-primary-foreground">
             Thoughts, ideas, notes and opinions.
           </p>

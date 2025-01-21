@@ -14,8 +14,13 @@ export default function Page() {
     <div className="container text-sm my-8 tracking-tight text-foreground-contrast">
       <div>
         <div className="mb-6 ">
-          <h1 className="font-semibold">Reading</h1>
-          <p className="text-primary-foreground">
+          <h1
+            className="font-semibold"
+            style={{ viewTransitionName: "reading" }}
+          >
+            Reading
+          </h1>
+          <p className="text-primary-foreground mt-2">
             My childhood hobby of reading has evolved into a lifelong passion.
             My choices of books are greatly influenced by my fascination with
             Arts and Culture, Philosophy, Neuroscience, Technology, and other
