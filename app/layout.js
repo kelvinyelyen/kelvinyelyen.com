@@ -6,7 +6,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Suspense } from "react"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
-import { ViewTransitions } from "next-view-transitions"
+
+// @ts-expect-error types are not available yet?
+import { unstable_ViewTransition as ViewTransition } from "react"
 
 import GoogleAnalytics from "@/components/google-analytics"
 import { Nav } from "@/components/site-nav"
@@ -60,7 +62,7 @@ const cx = (...classes) => classes.filter(Boolean).join(" ")
 
 export default function RootLayout({ children }) {
   return (
-    <ViewTransitions>
+    <ViewTransition name="crossfade">
       <html
         lang="en"
         suppressHydrationWarning
@@ -78,6 +80,6 @@ export default function RootLayout({ children }) {
         </body>
         <Analytics />
       </html>
-    </ViewTransitions>
+    </ViewTransition>
   )
 }
