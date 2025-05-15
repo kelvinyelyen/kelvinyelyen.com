@@ -7,19 +7,19 @@ export default function Home() {
         <div className="mx-auto">
           <div className="prose prose-sm text-foreground-contrast prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
             <p>
-              I&apos;m dedicated to breaking new ground and exploring
-              novel approaches to problem-solving. My interests include bridging
-              the gap between cognitive science and artificial intelligence. I
-              am particularly interested in how insights from these areas can be
-              applied to enhance intelligent systems and advance our
-              understanding of human cognition.
+              I&apos;m ddedicated to exploring novel approaches to
+              problem-solving at the intersection of computational neuroscience,
+              artificial intelligence, and computer science. My interests lie in
+              understanding how intelligence emerges, biologically and
+              computationally, and in leveraging these insights to develop more
+              adaptive and human-aligned intelligent systems.
             </p>
             <p>
-              Outside of work, I&apos;m deeply passionate about philosophy,
-              neuroscience, game design, travel, arts and culture etc. I enjoy
+              Outside of work, I&apos;m passionate about philosophy,
+              neuroscience, game design, travel, arts, and culture. I enjoy
               engaging in philosophical and neuroscientific discussions,
-              immersing myself in diverse art forms, and taking on creative
-              projects.
+              immersing myself in diverse artistic expressions, and pursuing
+              creative projects that challenge conventional thinking.
             </p>
             <p>
               You can gain further insights into my background and interests
