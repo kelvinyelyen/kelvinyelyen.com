@@ -7,7 +7,7 @@ export default function Home() {
         <div className="mx-auto">
           <div className="prose prose-sm text-foreground-contrast prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
             <p>
-              I&apos;m ddedicated to exploring novel approaches to
+              I&apos;m dedicated to exploring novel approaches to
               problem-solving at the intersection of computational neuroscience,
               artificial intelligence, and computer science. My interests lie in
               understanding how intelligence emerges, biologically and
