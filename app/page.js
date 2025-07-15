@@ -7,10 +7,10 @@ export default function Home() {
         <div className="mx-auto">
           <div className="prose prose-sm text-foreground-contrast prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
             <p>
-              I am a software engineer with a background in computer science, currently exploring ideas at the intersection of computer science, artificial intelligence and neuroscience. I am particularly interested in how intelligence emerges, biologically and computationally and how this understanding might inform the development of more adaptive and human-aligned technologies.
+              I am a software engineer with a background in computer science, currently exploring research and engineering questions at the intersection of artificial intelligence, neuroscience, and cognitive science. My interests center on understanding how intelligence emerges both in biological and computational systems. I'm particularly focused on drawing insights from neural mechanisms to improve AI models, and conversely, using computational approaches to deepen our understanding of the brain.            
             </p>
             <p>
-              Outside of this, I am passionate about philosophy, engineering, game design, arts, and culture. I enjoy exploring the connections between art and logic, and between science and storytelling.
+              Outside of work, I am passionate about philosophy, engineering, game design, arts, and culture. I enjoy exploring the interplay between logic and creativity, and how scientific and artistic perspectives can jointly illuminate complex ideas.
             </p>
           </div>
         </div>
