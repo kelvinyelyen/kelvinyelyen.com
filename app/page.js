@@ -7,7 +7,7 @@ export default function Home() {
         <div className="mx-auto">
           <div className="prose prose-sm text-foreground-contrast prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
             <p>
-              With a background in computer science, I explore research and engineering questions at the intersection of artificial intelligence, neuroscience, and cognitive science. My work focuses on understanding how intelligence emerges in both biological and computational systems, drawing insights from neural mechanisms to design more adaptive machine learning models, while also using computational approaches to deepen our understanding of the brain.{" "}
+              With a background in computer science, I explore research and engineering questions at the intersection of artificial intelligence, neuroscience, and cognitive science. My work focuses on understanding how intelligence emerges in both biological and computational systems, drawing insights from neural mechanisms to design more adaptive machine learning models, while also using computational approaches to deepen our understanding of the brain.
               <Link
                 href="https://drive.google.com/file/d/1a2SroEwfHbUHmwbm68rZu7G272KNySno/view?usp=sharing"
                 target="_blank"
@@ -18,7 +18,7 @@ export default function Home() {
               </Link>
             </p>
             <p>
-              Outside of work, I'm interested in philosophy, game design, and the arts, areas where technical thinking meets creative expression.
+              Outside of work, I&apos;m interested in philosophy, game design, and the arts, areas where technical thinking meets creative expression.
             </p>
           </div>
         </div>
