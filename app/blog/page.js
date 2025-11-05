@@ -15,7 +15,7 @@ export default function Page() {
       <div className="mb-6">
         <h1 className="font-semibold">Journal</h1>
         <p className="text-muted-foreground">
-          Thoughts, ideas, notes and opinions.
+          Notes and ideas.
         </p>
       </div>
       

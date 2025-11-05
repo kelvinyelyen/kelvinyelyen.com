@@ -37,8 +37,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto my-10">
-        <h2 className="text-sm font-medium mb-3 text-muted-foreground">
+      <section className="mx-auto my-10 text-sm">
+        <h2 className="font-medium mb-3 text-muted-foreground">
           Currently Reading
         </h2>
         <ul className="space-y-2">
@@ -47,8 +47,8 @@ export default function Home() {
                 <span className="">
                   {item.title}
                 </span>
-                <span className="text-xs text-muted-foreground/80">
-                  — {item.author}
+                <span className="text-muted-foreground">
+                  {" "}— {item.author}
                 </span>
             </li>
           ))}

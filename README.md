@@ -1,3 +1,7 @@
 # kelvinyelyen.com
-Repository for my personal website, built entirely from the ground up using Next.js, Vercel and MDX.
 
+Source code for my personal website: [kelvinyelyen.com](https://kelvinyelyen.com)
+
+- **Next.js 15** 
+- **Tailwind CSS**
+- **MDX**

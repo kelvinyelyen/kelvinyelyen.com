@@ -1,0 +1,170 @@
+---
+title: "Iterating Toward Realism: Testing Input Models in the LIF Neuron"
+publishedAt: "2025-09-24"
+summary: "Exploring how different mathematical inputs—deterministic, noisy, and Poisson—bring computational neurons closer to biology."
+---
+
+The Leaky Integrate-and-Fire (LIF) model is one of the simplest mathematical descriptions of how a neuron works. It captures two essential behaviors: the neuron's membrane potential tends to *leak* back toward a resting level, but at the same time it integrates incoming signals. If enough inputs arrive and push the membrane potential past a threshold, the neuron emits an action potential (spike) and resets. This model strips away much of the biology but preserves the essence of neuronal excitability.
+
+## Membrane potential and graded potentials
+
+To understand this, it helps to distinguish between a *membrane potential* and *graded potentials*.
+
+- The **membrane potential** is the baseline electrical charge across the neuron's membrane.
+- **Graded potentials** are small local changes in this voltage caused by synaptic input. They are variable in amplitude and decay over time and distance.
+
+A single graded potential may not trigger a spike, but when multiple graded potentials overlap (temporal or spatial summation), the combined depolarization can cross threshold and generate a full **action potential**.
+
+Unlike graded potentials, an action potential is **all-or-nothing**: it has the same stereotyped shape regardless of input strength.
+
+## Continuous-time membrane equation
+
+To simulate the behavior of a neuron, we need to turn its continuous mathematical description into something that a computer can calculate. In continuous form, the LIF model is an ordinary differential equation (ODE) describing how fast the voltage changes $(dV(t)/dt)$:
+
+$$
+\tau_m \frac{dV(t)}{dt} = E_L - V(t) + R\,I(t),
+$$
+
+where:
+- $\tau_m$ is the membrane time constant (ms),
+- $E_L$ is the leak (resting) potential (mV),
+- $R$ is the membrane resistance (MΩ),
+- $I(t)$ is the input current (nA).
+
+This describes how the membrane voltage evolves over time in response to synaptic input.
+
+## Discrete-time (Euler) integration
+
+Computers, however, cannot handle continuous changes — they work in discrete time steps. So we approximate the derivative with a **finite difference**:
+
+$$
+\frac{dV}{dt} \approx \frac{V(t+\Delta t) - V(t)}{\Delta t}.
+$$
+
+Substituting into the ODE:
+
+$$
+\tau_m \frac{V(t+\Delta t) - V(t)}{\Delta t} = E_L - V(t) + R\,I(t),
+$$
+
+so the **Euler update rule** becomes:
+
+$$
+\boxed{V(t+\Delta t) = V(t) + \frac{\Delta t}{\tau_m}\Big(E_L - V(t) + R\,I(t)\Big)}
+$$
+
+This is the **Euler update rule**, which says: take the current voltage, compute the slope from the ODE, and nudge the voltage forward by a small increment $\Delta t$. Repeating this process gives us the trajectory of the neuron's voltage over time. This process is called **numerical integration**: we reconstruct the continuous behavior by stepping through time in small jumps.
+
+## Input current models
+
+The behavior of the LIF neuron depends strongly on the input $I(t)$. Common models:
+
+### (A) Deterministic sinusoidal input
+
+$$
+I(t) = I_{\text{mean}} \Big( 1 + \sin(2\pi t / T) \Big),
+$$
+
+where $I_{\text{mean}}$ is the average current and $T$ is the oscillation period. Plugging this into the Euler update rule means the membrane potential will rise and fall in rhythm with the sinusoid. The neuron may fire spikes at certain phases of the oscillation depending on whether the peaks push the voltage above threshold. This is useful for studying **phase-locking** and resonance phenomena.
+
+But real synaptic inputs are not perfectly rhythmic. They are **stochastic**. A common way to model this is with a noisy current:
+
+### (B) Additive Gaussian noise
+
+$$
+I(t) = I_{\text{mean}} + \sigma \eta(t),
+$$
+
+Here $\eta(t)$ is Gaussian white noise (random values with zero mean and unit variance), and $\sigma$ controls the noise amplitude. Inserting this into the update equation makes the voltage fluctuate irregularly, producing spiking patterns that look far more like real cortical neurons.
+
+### (C) Poisson presynaptic spikes
+
+An even closer approximation to biology is to model presynaptic spikes directly as a **Poisson process** with rate $\lambda$. Each presynaptic spike at time $t_k$ generates an exponentially decaying postsynaptic current:
+
+$$
+I(t) = \sum_k w\, e^{-(t-t_k)/\tau_s} H(t-t_k),
+$$
+
+where $w$ is synaptic weight, $\tau_s$ the synaptic decay, and $H$ the Heaviside function ensuring that currents only start after a spike. This builds the neuron's input as a random but statistically structured sum of many tiny currents.
+
+The key idea is that deterministic inputs reveal the clean, theoretical dynamics of a neuron, while stochastic inputs capture the messier but more realistic conditions neurons face in the brain. Together, these perspectives provide complementary insights. By using discrete-time numerical integration, we can simulate either case and watch how the membrane potential evolves, sometimes predictably, sometimes irregularly, just like in real neural networks.
+
+## Spike rule and reset
+
+After each Euler update:
+
+$$
+\text{if } V(t+\Delta t) \ge V_{\text{th}}, \quad \text{record spike and set } V(t+\Delta t) \leftarrow V_{\text{reset}}.
+$$
+
+A refractory period can optionally be imposed.
+
+## Worked numerical example
+
+### Parameters
+
+$$
+\tau_m = 10~\text{ms}, \quad \Delta t = 1~\text{ms}, \\
+E_L = -65~\text{mV}, \quad R = 10~\text{M}\Omega, \\
+V(0) = -65~\text{mV}, \quad V_{\text{th}} = -50~\text{mV}, \quad V_{\text{reset}} = -65~\text{mV}.
+$$
+
+$R \cdot I$ gives units in mV: e.g., $R \cdot 1$ nA = 10 mV.
+
+### Input cases
+
+1. Constant: $I=1.5$ nA
+2. Sinusoidal: $I=0.8(1+\sin(2\pi t / 20))$ nA
+3. Noise: $I=1.0 + 0.5 \xi(t)$, with $\xi \sim \mathcal{N}(0,1)$
+4. Poisson: rate $\lambda=20$ Hz, weight $w=0.6$ nA
+
+### First-step arithmetic
+
+Using $\Delta t / \tau_m = 0.1$:
+
+- Constant input: $V(1) = -63.5$ mV
+- Sinusoidal input: $V(1) = -64.2$ mV
+- Noise (example sample $I=1.152$): $V(1) \approx -63.85$ mV
+- Poisson input (no spike): $V(1) = -65.0$ mV
+- Poisson input (with spike): $V(1) = -64.4$ mV
+
+### Simulated values (0–10 ms)
+
+| $t$ (ms) | $V_{\text{const}}$ (mV) | $V_{\text{sin}}$ (mV) | $I_{\text{sin}}$ (nA) | $V_{\text{noise}}$ (mV) | $I_{\text{noise}}$ (nA) | $V_{\text{pois}}$ (mV) | spike |
+|----------|-------------------------|-----------------------|-----------------------|-------------------------|-------------------------|-------------------------|-------|
+| 0        | -65.000                 | -65.000               | 0.800                 | -65.000                 | 1.152                   | -65.000                 | 0     |
+| 1        | -63.500                 | -64.200               | 1.047                 | -63.848                 | 0.480                   | -65.000                 | 0     |
+| 2        | -62.150                 | -63.233               | 1.270                 | -63.483                 | 1.375                   | -65.000                 | 0     |
+| 3        | -60.935                 | -62.139               | 1.447                 | -62.259                 | 1.470                   | -65.000                 | 0     |
+| 4        | -59.842                 | -60.978               | 1.561                 | -61.063                 | 0.024                   | -65.000                 | 0     |
+| 5        | -58.857                 | -59.819               | 1.600                 | -61.432                 | 0.349                   | -65.000                 | 0     |
+| 6        | -57.972                 | -58.738               | 1.561                 | -61.440                 | 1.064                   | -65.000                 | 1     |
+| 7        | -57.174                 | -57.803               | 1.447                 | -60.732                 | 0.842                   | -64.400                 | 0     |
+| 8        | -56.457                 | -57.075               | 1.270                 | -60.317                 | 0.992                   | -64.460                 | 0     |
+| 9        | -55.811                 | -56.598               | 1.047                 | -59.794                 | 0.573                   | -64.514                 | 0     |
+| 10       | -55.230                 | -56.391               | 0.800                 | -59.741                 | 1.440                   | -64.563                 | 0     |
+
+## Pseudocode (implementation sketch)
+```python
+# Parameters
+dt = 1.0           # ms
+tau = 10.0         # ms
+EL = -65.0         # mV
+R = 10.0           # MOhm
+V = EL             # initial potential
+Vth = -50.0        # threshold
+Vreset = -65.0
+
+# Simulation loop
+for step in range(N_steps):
+    t = step * dt
+    I = get_input_at_time(t)          # depends on chosen model
+    V = V + (dt/tau) * (EL - V + R*I)
+    if V >= Vth:
+        record_spike(t)
+        V = Vreset
+    record_V(t, V)
+```
+
+## Reference
+- https://colab.research.google.com/drive/1ecaifJtgvZBc8QzcabNCsXnObv0ssqGj?usp=sharing
