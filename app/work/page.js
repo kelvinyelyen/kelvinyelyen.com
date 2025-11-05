@@ -1,5 +1,5 @@
 import { Link } from "next-view-transitions"
-import { WorkItem, EducationItem } from "@/components/item"
+import { WorkItem, EducationItem, ProjectItem } from "@/components/item"
 import { getCategoryContent } from "@/lib/content-handler"
 
 export const metadata = {
@@ -11,30 +11,16 @@ export const metadata = {
 export default function Page() {
   const experience = getCategoryContent("work")
   const education = getCategoryContent("work/education")
+  const project = getCategoryContent("work/projects")
 
   return (
     <section className="container my-8 text-sm tracking-tight">
       <div className="mx-auto text-foreground-contrast space-y-12">
-        <Section
-          title="Experience"
-          subtitle="Professional journey"
-          number="01"
-        >
-          {experience.map(({ slug, metadata }) => (
-            <WorkItem
-              key={slug}
-              role={metadata.role}
-              company={metadata.company}
-              year={metadata.year}
-              website={metadata.website}
-            />
-          ))}
-        </Section>
+        
 
         <Section
           title="Education"
-          subtitle="Academic background"
-          number="02"
+          number="01"
         >
           {education.map(({ slug, metadata }) => (
             <EducationItem
@@ -46,7 +32,33 @@ export default function Page() {
             />
           ))}
         </Section>
-
+        <Section
+          title="Experience"
+          number="02"
+        >
+          {experience.map(({ slug, metadata }) => (
+            <WorkItem
+              key={slug}
+              role={metadata.role}
+              company={metadata.company}
+              year={metadata.year}
+              website={metadata.website}
+            />
+          ))}
+        </Section>
+        <Section
+          title="2025"
+          number="03"
+        >
+          {project.map(({ slug, metadata }) => (
+            <ProjectItem
+              key={slug}
+              title={metadata.title}
+              people={metadata.people}
+              link={metadata.link}
+            />
+          ))}
+        </Section>
       </div>
     </section>
   )

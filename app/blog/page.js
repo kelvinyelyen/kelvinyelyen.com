@@ -11,10 +11,10 @@ export default function Page() {
   const posts = sortCategoryContent(rawPosts)
 
   return (
-    <div className="container text-sm my-8 mb-24 tracking-tight text-foreground-contrast">
+    <div className="container text-sm my-8 mb-24 tracking-tight">
       <div className="mb-6">
         <h1 className="font-semibold">Journal</h1>
-        <p className="text-primary-foreground">
+        <p className="text-muted-foreground">
           Thoughts, ideas, notes and opinions.
         </p>
       </div>
@@ -27,10 +27,10 @@ export default function Page() {
             className="block py-3 lg:py-2 border-b border-muted transition duration-200 ease-in-out md:hover:text-primary-foreground"
           >
             <div className="flex items-center justify-between gap-4">
-              <h2 className="flex-1">{metadata.title}</h2>
+              <h2 className="flex-1 font -medium">{metadata.title}</h2>
               <time 
                 dateTime={metadata.publishedAt} 
-                className="text-primary-foreground text-end whitespace-nowrap"
+                className="text-muted-foreground text-end whitespace-nowrap"
               >
                 {metadata.publishedAt}
               </time>

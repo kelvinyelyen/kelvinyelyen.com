@@ -1,46 +1,78 @@
-import Link from "next/link"
+import { Link } from "next-view-transitions"
 
 export function WorkItem({ company, role, year, website }) {
   return (
-    <>
-      <Link
-        href={website}
-        target="_blank"
-        className="transition duration-200 ease-in-out md:hover:text-primary-foreground my-4"
-      >
-        <div className="grid md:grid-cols-3 grid-cols-1 text-sm border-b border-muted py-3 lg:py-2 relative">
-          <div className="col-span-2">
-            {role},&nbsp;
-            <span className="text-primary-foreground">{company}</span>
-          </div>
-          <div className="col-span-1 text-primary-foreground text-xs md:text-end">
-            {year}
-          </div>
+    <Link
+      href={website}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block py-3 lg:py-2 border-b border-muted transition-colors duration-200 ease-in-out hover:border-primary-foreground/30"
+    >
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm">
+        <div className="flex-1">
+          <span className="font-medium group-hover:text-primary-foreground transition-colors duration-200">
+            {role}
+          </span>
+          <span className="text-muted-foreground">, {company}</span>
         </div>
-      </Link>
-    </>
+        <time className="text-muted-foreground text-xs md:text-sm whitespace-nowrap">
+          {year}
+        </time>
+      </div>
+    </Link>
   )
 }
 
-
 export function EducationItem({ institution, degree, year, website }) {
   return (
-    <>
-      <Link
-        href={website}
-        target="_blank"
-        className="transition duration-200 ease-in-out md:hover:text-primary-foreground my-4"
-      >
-        <div className="grid md:grid-cols-3 grid-cols-1 text-sm border-b border-muted py-3 lg:py-2 relative">
-          <div className="col-span-2">
-            {degree},&nbsp;
-            <span className="text-primary-foreground">{institution}</span>
-          </div>
-          <div className="col-span-1 text-primary-foreground text-xs md:text-end">
-            {year}
-          </div>
+    <Link
+      href={website}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block py-3 lg:py-2 border-b border-muted transition-colors duration-200 ease-in-out hover:border-primary-foreground/30"
+    >
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm">
+        <div className="flex-1">
+          <span className="font-medium group-hover:text-primary-foreground transition-colors duration-200">
+            {degree}
+          </span>
+          <span className="text-muted-foreground">, {institution}</span>
         </div>
-      </Link>
-    </>
+        <time className="text-muted-foreground text-xs md:text-sm whitespace-nowrap">
+          {year}
+        </time>
+      </div>
+    </Link>
+  )
+}
+
+export function ProjectItem({ title, people, link }) {
+  const highlightName = (text, name = "Kelvin Yelyen") => {
+    const parts = text.split(new RegExp(`(\\b${name}\\b)`, "gi"))
+    return parts.map((part, i) =>
+      part.toLowerCase() === name.toLowerCase() ? (
+        <strong key={i}>{part}</strong>
+      ) : (
+        part
+      )
+    )
+  }
+
+  return (
+    <Link
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block py-4 border-b border-muted/50 transition-all duration-200 ease-in-out hover:border-primary-foreground/30"
+    >
+      <div className="space-y-1">
+        <h3 className="font-medium group-hover:text-primary-foreground transition-colors duration-200">
+          {title}
+        </h3>
+        <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/80 transition-colors duration-200">
+          {highlightName(people)}
+        </p>
+      </div>
+    </Link>
   )
 }

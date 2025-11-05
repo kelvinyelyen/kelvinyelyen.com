@@ -23,11 +23,11 @@ export function Nav() {
   const pathname = usePathname()
 
   return (
-    <nav className="container py-8 relative text-foreground tracking-tight">
+    <nav className="container py-8 relative tracking-tight">
       <div className="mx-auto flex justify-between items-center gap-8">
         <Link href="/">
-          <span className="text-[17px] text-foreground">
-            kelvin<span className="text-primary-foreground">yelyen_</span>
+          <span className="text-[17px]">
+            kelvin<span className="text-muted-foreground">yelyen_</span>
           </span>
         </Link>
         <ul className="flex gap-5 text-sm">
