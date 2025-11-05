@@ -2,10 +2,12 @@ import { Link } from "next-view-transitions"
 
 const READING_LIST = [
   {
+    id: 1,
     title: "Norwegian Wood",
     author: "Haruki Murakami",
   },
   {
+    id: 2,
     title: "The Way of Zen",
     author: "Alan W. Watts",
   },
@@ -41,7 +43,7 @@ export default function Home() {
         </h2>
         <ul className="space-y-2">
           {READING_LIST.map((item) => (
-            <li>
+            <li key={item.id}>
                 <span className="text-muted-foreground">
                   {item.title}
                 </span>
