@@ -7,7 +7,7 @@ import { highlight } from "sugar-high"
 import {
   ArrowInSpace,
   Vector3D,
-  UnitVectorDemo,
+  UnitVectorDemo
 } from "@/components/mdx/vector"
 
 function Table({ data }) {
@@ -172,5 +172,5 @@ export {
   TweetComponent,
   ArrowInSpace,
   Vector3D,
-  UnitVectorDemo,
+  UnitVectorDemo
 }

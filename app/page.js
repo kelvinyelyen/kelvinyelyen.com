@@ -18,7 +18,7 @@ export default function Home() {
     <main className="container items-center text-sm my-8 tracking-tight">
       <section>
         <div className="mx-auto">
-          <div className="prose prose-sm prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
+          <div className="prose-sm max-w-none lg:leading-6 leading-relaxed">
             <p>
               With a background in computer science, I explore research and engineering questions at the intersection of artificial intelligence, neuroscience, and cognitive science. My work focuses on understanding how intelligence emerges in both biological and computational systems, drawing insights from neural mechanisms to design more adaptive machine learning models, while also using computational approaches to deepen our understanding of the brain.{" "}
               <Link
@@ -44,7 +44,7 @@ export default function Home() {
         <ul className="space-y-2">
           {READING_LIST.map((item) => (
             <li key={item.id}>
-                <span className="text-muted-foreground">
+                <span className="">
                   {item.title}
                 </span>
                 <span className="text-xs text-muted-foreground/80">

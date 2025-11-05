@@ -27,6 +27,7 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
+            
           </nav>
           <p className="text-muted-foreground whitespace-nowrap">
             © {currentYear} Kelvin Yelyen

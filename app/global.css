@@ -28,7 +28,7 @@ main {
 @layer base {
   :root {
     --foreground-contrast: 25 5% 80%;
-    --background: 0 0% 6%;
+    --background: 0 0% 9%;
     --foreground: 0 0% 90%;
 
     --primary: 0 0% 98%;
@@ -43,7 +43,7 @@ main {
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
 
-    --tahiti: 0 0% 10.5%;
+    --tahiti: 0 0% 12.5%;
     --tahiti-foreground: 25 5% 75%;
 
     --sh-class: #4c97f8;

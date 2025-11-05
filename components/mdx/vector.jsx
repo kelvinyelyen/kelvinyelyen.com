@@ -4,7 +4,7 @@ import React from 'react'
 import "mafs/core.css"
 import "mafs/font.css"
 
-import { Mafs, Coordinates, useMovablePoint, Vector, vec, Text } from "mafs"
+import { Mafs, Coordinates, useMovablePoint, Vector, vec, Text, Plot, Theme } from "mafs"
 
 function ArrowInSpace({ vector }) {
   const [x, y] = vector
@@ -95,4 +95,5 @@ function Vector3D() {
   )
 }
 
-export { ArrowInSpace, UnitVectorDemo, Vector3D }
+
+export { ArrowInSpace, UnitVectorDemo, Vector3D  }
