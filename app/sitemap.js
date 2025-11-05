@@ -10,11 +10,6 @@ export default function sitemap() {
     lastModified: post.metadata.publishedAt,
   }))
 
-    const readingList = reading.map((list) => ({
-      url: `${URL}/reading/${list.slug}`,
-      lastModified: list.metadata.publishedAt,
-    }))
-
   const routes = ["/", "/work", "/blog"].map((route) => ({
     url: `${URL}${route}`,
     lastModified: new Date().toISOString().split("T")[0],
