@@ -4,45 +4,50 @@ import { Link } from "next-view-transitions"
 import { usePathname } from "next/navigation"
 
 const navItems = {
+  "/": {
+    name: "about",
+  },
   "/work": {
     name: "work",
   },
   "/blog": {
     name: "journal",
   },
-  "/reading": {
-    name: "reading",
-  },
+}
+
+function cx(...classes) {
+  return classes.filter(Boolean).join(" ")
 }
 
 export function Nav() {
   const pathname = usePathname()
-  let cx = (...classes) => classes.filter(Boolean).join(" ")
-
-  const NavLink = ({ path, name }) => (
-    <li className="transition duration-200 ease-in-out md:hover:text-primary-foreground">
-    <Link href={path} passHref style={{ viewTransitionName: {name} }}>
-        <p className={cx({ "text-primary-foreground": pathname === path })}>
-          {name}
-        </p>
-      </Link>
-    </li>
-  )
 
   return (
     <nav className="container py-8 relative text-foreground tracking-tight">
-      <div className={cx("mx-auto flex justify-between align-middle gap-8")}>
+      <div className="mx-auto flex justify-between items-center gap-8">
         <Link href="/">
-          <p className="text-[17px] text-foreground">
+          <span className="text-[17px] text-foreground">
             kelvin<span className="text-primary-foreground">yelyen_</span>
-          </p>
+          </span>
         </Link>
         <ul className="flex gap-5 text-sm">
           {Object.entries(navItems).map(([path, { name }]) => (
-            <NavLink key={path} path={path} name={name} />
+            <NavLink key={path} path={path} name={name} isActive={pathname === path} />
           ))}
         </ul>
       </div>
     </nav>
+  )
+}
+
+function NavLink({ path, name, isActive }) {
+  return (
+    <li className="transition duration-200 ease-in-out md:hover:text-primary-foreground">
+      <Link href={path}>
+        <span className={cx(isActive && "text-primary-foreground")}>
+          {name}
+        </span>
+      </Link>
+    </li>
   )
 }

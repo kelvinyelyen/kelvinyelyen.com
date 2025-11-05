@@ -12,6 +12,7 @@ import GoogleAnalytics from "@/components/google-analytics"
 import { Nav } from "@/components/site-nav"
 import { Footer } from "@/components/site-footer"
 import Preloader from "@/components/preloader"
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
   metadataBase: new URL("https://kelvinyelyen.com"),
@@ -20,8 +21,7 @@ export const metadata = {
     template: "%s | Kelvin Yelyen",
   },
   description: "Software engineer based in Ghana.",
-  author: [{ name: "Kelvin Yelyen" }],
-  publishedTime: "2023-03-17T15:01:08+00:00",
+  authors: [{ name: "Kelvin Yelyen" }],
   openGraph: {
     title: "Kelvin Yelyen",
     description: "Software engineer based in Ghana.",
@@ -29,8 +29,6 @@ export const metadata = {
     siteName: "Kelvin Yelyen",
     locale: "en_GH",
     type: "website",
-    author: "Kelvin Yelyen",
-    publishedTime: "2023-03-17T15:01:08+00:00",
   },
   robots: {
     index: true,
@@ -44,8 +42,9 @@ export const metadata = {
     },
   },
   twitter: {
-    title: "Kelvin Yelyen",
     card: "summary_large_image",
+    title: "Kelvin Yelyen",
+    description: "Software engineer based in Ghana.",
   },
   alternates: {
     types: {
@@ -56,7 +55,9 @@ export const metadata = {
   },
 }
 
-const cx = (...classes) => classes.filter(Boolean).join(" ")
+function cx(...classes) {
+  return classes.filter(Boolean).join(" ")
+}
 
 export default function RootLayout({ children }) {
   return (
@@ -66,17 +67,22 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className={cx(GeistSans.variable, GeistMono.variable)}
       >
-        <Suspense>
-          <GoogleAnalytics GA_MEASUREMENT_ID="G-27MSMZKLNN" />
-        </Suspense>
         <body className="flex flex-col min-h-screen">
+          <Suspense>
+            <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID} />
+          </Suspense>
           <Preloader />
           <Nav />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1"><ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >{children}</ThemeProvider></main>
           <Footer />
+          <Analytics />
           <SpeedInsights />
         </body>
-        <Analytics />
       </html>
     </ViewTransitions>
   )

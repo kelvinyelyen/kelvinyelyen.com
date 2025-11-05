@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "next-view-transitions"
 import { WorkItem, EducationItem } from "@/components/item"
 import { getCategoryContent } from "@/lib/content-handler"
 
@@ -14,56 +14,54 @@ export default function Page() {
 
   return (
     <section className="container my-8 text-sm tracking-tight">
-      <div className="mx-auto text-foreground-contrast">
-        <div className="mb-12">
-          <div className="mb-6">
-            <h1 className="font-semibold">
-              Experience <sup className="text-primary-foreground"> 01 </sup>
-            </h1>
-            <p className="text-primary-foreground">Professional journey</p>
-          </div>
-          <div>
-            {experience.map(({ slug, metadata }) => (
-              <WorkItem
-                key={slug}
-                role={metadata.role}
-                company={metadata.company}
-                year={metadata.year}
-                website={metadata.website}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="mx-auto text-foreground-contrast">
-        <div className="mb-12">
-          <div className="mb-6">
-            <h1 className="font-semibold">
-              Education <sup className="text-primary-foreground"> 02 </sup>
-            </h1>
-            <p className="text-primary-foreground">Academic background</p>
-          </div>
-          <div>
-            {education.map(({ slug, metadata }) => (
-              <EducationItem
-                key={slug}
-                degree={metadata.degree}
-                institution={metadata.institution}
-                year={metadata.year}
-                website={metadata.website}
-              />
-            ))}
-          </div>
-        </div>
-
-        <Link
-          href="https://drive.google.com/file/d/1a2SroEwfHbUHmwbm68rZu7G272KNySno/view?usp=sharing"
-          className="flex text-primary-foreground transition duration-200 ease-in-out hover:text-stone-200"
-          blank_target="_blank"
+      <div className="mx-auto text-foreground-contrast space-y-12">
+        <Section
+          title="Experience"
+          subtitle="Professional journey"
+          number="01"
         >
-          [Full CV]
-        </Link>
+          {experience.map(({ slug, metadata }) => (
+            <WorkItem
+              key={slug}
+              role={metadata.role}
+              company={metadata.company}
+              year={metadata.year}
+              website={metadata.website}
+            />
+          ))}
+        </Section>
+
+        <Section
+          title="Education"
+          subtitle="Academic background"
+          number="02"
+        >
+          {education.map(({ slug, metadata }) => (
+            <EducationItem
+              key={slug}
+              degree={metadata.degree}
+              institution={metadata.institution}
+              year={metadata.year}
+              website={metadata.website}
+            />
+          ))}
+        </Section>
+
       </div>
     </section>
+  )
+}
+
+function Section({ title, subtitle, number, children }) {
+  return (
+    <div>
+      <div className="mb-6">
+        <h2 className="font-semibold">
+          {title} <sup className="text-primary-foreground"> {number} </sup>
+        </h2>
+        <p className="text-primary-foreground">{subtitle}</p>
+      </div>
+      <div>{children}</div>
+    </div>
   )
 }
