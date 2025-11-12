@@ -22,7 +22,7 @@ export default function Home() {
             <p>
               With a background in computer science, I explore research and engineering questions at the intersection of artificial intelligence, neuroscience, and cognitive science. My work focuses on understanding how intelligence emerges in both biological and computational systems, drawing insights from neural mechanisms to design more adaptive machine learning models, while also using computational approaches to deepen our understanding of the brain.{" "}
               <Link
-                href="https://drive.google.com/file/d/1EYR0JvFyxm3gCDJ-07bl0Wj2CwjKRHC6/view?usp=sharing"
+                href="https://drive.google.com/file/d/1PfEDoALLGI4S99Meb0zAqh_GMxPMFB7s/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground underline decoration-dotted underline-offset-4 transition duration-200 ease-in-out hover:text-stone-200"
