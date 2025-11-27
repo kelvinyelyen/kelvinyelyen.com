@@ -51,7 +51,10 @@ export function ProjectItem({ title, people, link }) {
     const parts = text.split(new RegExp(`(\\b${name}\\b)`, "gi"))
     return parts.map((part, i) =>
       part.toLowerCase() === name.toLowerCase() ? (
-        <strong key={i}>{part}</strong>
+        // using Tailwind utility class
+        <span key={i} className="underline">
+          {part}
+        </span>
       ) : (
         part
       )
