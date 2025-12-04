@@ -1,4 +1,4 @@
-import { CustomMDX } from "@/lib/mdx-utils"
+import { CustomMDX } from "@/lib/mdx"
 import { readFileSync } from "fs"
 import { join } from "path"
 

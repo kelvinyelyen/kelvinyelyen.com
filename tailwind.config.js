@@ -6,6 +6,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./content/**/*.mdx",
   ],
+  darkMode: "class",
   theme: {
     container: {
       center: true,

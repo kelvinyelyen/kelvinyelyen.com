@@ -8,11 +8,10 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { ViewTransitions } from "next-view-transitions"
 
-import GoogleAnalytics from "@/components/google-analytics"
-import { Nav } from "@/components/site-nav"
-import { Footer } from "@/components/site-footer"
-import Preloader from "@/components/preloader"
-import { ThemeProvider } from "@/components/theme-provider"
+import GoogleAnalytics from "@/components/analytics"
+import { Nav } from "@/components/layout/navbar"
+import { Footer } from "@/components/layout/footer"
+import Preloader from "@/components/ui/preloader"
 
 export const metadata = {
   metadataBase: new URL("https://kelvinyelyen.com"),
@@ -73,12 +72,7 @@ export default function RootLayout({ children }) {
           </Suspense>
           <Preloader />
           <Nav />
-          <main className="flex-1"><ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >{children}</ThemeProvider></main>
+          <main className="flex-1">{children}</main>
           <Footer />
           <Analytics />
           <SpeedInsights />

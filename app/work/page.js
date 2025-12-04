@@ -1,6 +1,6 @@
 import { Link } from "next-view-transitions"
-import { WorkItem, EducationItem, ProjectItem } from "@/components/item"
-import { getCategoryContent } from "@/lib/content-handler"
+import { WorkItem, EducationItem, ProjectItem } from "@/components/ui/resume-items"
+import { getCategoryContent } from "@/lib/content"
 
 export const metadata = {
   title: "Work",
@@ -16,7 +16,7 @@ export default function Page() {
   return (
     <section className="container my-8 text-sm tracking-tight">
       <div className="mx-auto text-foreground-contrast space-y-12">
-        
+
 
         <Section
           title="Education"

@@ -7,6 +7,7 @@ html,
 body {
   height: 100%;
   margin: 0;
+  scrollbar-gutter: stable;
 }
 
 #__next {
@@ -27,25 +28,35 @@ main {
 
 @layer base {
   :root {
-    --foreground-contrast: 25 5% 80%;
     --background: 0 0% 9%;
     --foreground: 0 0% 90%;
-
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 90%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 90%;
     --primary: 0 0% 98%;
     --primary-foreground: 25 5% 70%;
-
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 24 5% 30%;
-
     --muted: 0 0% 17%;
     --muted-foreground: 0 0% 63.9%;
-
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
 
     --tahiti: 0 0% 12.5%;
     --tahiti-foreground: 25 5% 75%;
 
+    /* Syntax Highlighting Dark */
     --sh-class: #4c97f8;
     --sh-identifier: white;
     --sh-sign: #8996a3;
@@ -70,6 +81,7 @@ main {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -107,8 +119,7 @@ main {
   bottom: -50%;
   width: 200%;
   height: 200vh;
-  background: transparent
-    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
   background-repeat: repeat;
   animation: bg-animation 0.2s infinite;
   opacity: 0.5;
@@ -119,33 +130,43 @@ main {
   0% {
     transform: translate(0, 0);
   }
+
   10% {
     transform: translate(-5%, -5%);
   }
+
   20% {
     transform: translate(-10%, 5%);
   }
+
   30% {
     transform: translate(5%, -10%);
   }
+
   40% {
     transform: translate(-5%, 15%);
   }
+
   50% {
     transform: translate(-10%, 5%);
   }
+
   60% {
     transform: translate(15%, 0);
   }
+
   70% {
     transform: translate(0, 10%);
   }
+
   80% {
     transform: translate(-15%, 0);
   }
+
   90% {
     transform: translate(10%, 5%);
   }
+
   100% {
     transform: translate(5%, 0);
   }
@@ -178,7 +199,7 @@ main {
   content: "#";
 }
 
-.prose *:hover > .anchor {
+.prose *:hover>.anchor {
   @apply visible;
 }
 
@@ -216,7 +237,7 @@ h4 {
   @apply font-medium;
 }
 
-.prose > :first-child {
+.prose> :first-child {
   /* Override removing top margin, causing layout shift */
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
@@ -227,8 +248,10 @@ pre::-webkit-scrollbar {
 }
 
 pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* Remove Safari input shadow on mobile */
@@ -251,7 +274,7 @@ table {
   white-space: nowrap;
 }
 
-.prose .callout > p {
+.prose .callout>p {
   margin: 0 !important;
 }
 
@@ -273,3 +296,35 @@ table {
   }
 }
 
+/* View Transitions */
+@keyframes blur-out {
+  from {
+    filter: blur(0px);
+    opacity: 1;
+  }
+
+  to {
+    filter: blur(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes blur-in {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+
+  to {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+::view-transition-old(root) {
+  animation: 0.4s ease-in-out both blur-out;
+}
+
+::view-transition-new(root) {
+  animation: 0.4s ease-in-out both blur-in;
+}

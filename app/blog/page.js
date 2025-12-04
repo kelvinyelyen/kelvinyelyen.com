@@ -1,5 +1,5 @@
 import { Link } from "next-view-transitions"
-import { getCategoryContent, sortCategoryContent } from "@/lib/content-handler"
+import { getCategoryContent, sortCategoryContent } from "@/lib/content"
 
 export const metadata = {
   title: "Journal",
@@ -18,18 +18,18 @@ export default function Page() {
           Notes and ideas.
         </p>
       </div>
-      
+
       <div className="py-2 space-y-0">
         {posts.map(({ slug, metadata }) => (
-          <Link 
-            href={`/blog/${slug}`} 
+          <Link
+            href={`/blog/${slug}`}
             key={slug}
             className="block py-3 lg:py-2 border-b border-muted transition duration-200 ease-in-out md:hover:text-primary-foreground"
           >
             <div className="flex items-center justify-between gap-4">
               <h2 className="flex-1 font -medium">{metadata.title}</h2>
-              <time 
-                dateTime={metadata.publishedAt} 
+              <time
+                dateTime={metadata.publishedAt}
                 className="text-muted-foreground text-end whitespace-nowrap"
               >
                 {metadata.publishedAt}

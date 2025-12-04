@@ -1,9 +1,9 @@
-import { getCategoryContent } from "@/lib/content-handler"
+import { getCategoryContent } from "@/lib/content"
 
 const URL = "https://kelvinyelyen.com"
 
 export default function sitemap() {
-  const blogs =  getCategoryContent("journal")
+  const blogs = getCategoryContent("journal")
 
   const blogPosts = blogs.map((post) => ({
     url: `${URL}/blog/${post.slug}`,

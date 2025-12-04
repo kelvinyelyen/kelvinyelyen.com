@@ -6,7 +6,7 @@ export function WorkItem({ company, role, year, website }) {
       href={website}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block py-3 lg:py-2 border-b border-muted transition-colors duration-200 ease-in-out hover:border-primary-foreground/30"
+      className="group block py-3 lg:py-2 border-b border-muted transition-colors duration-200 ease-in-out"
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm">
         <div className="flex-1">
@@ -29,7 +29,7 @@ export function EducationItem({ institution, degree, year, website }) {
       href={website}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block py-3 lg:py-2 border-b border-muted transition-colors duration-200 ease-in-out hover:border-primary-foreground/30"
+      className="group block py-3 lg:py-2 border-b border-muted transition-colors duration-200 ease-in-out"
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm">
         <div className="flex-1">
@@ -66,7 +66,7 @@ export function ProjectItem({ title, people, link }) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block py-4 border-b border-muted/50 transition-all duration-200 ease-in-out hover:border-primary-foreground/30"
+      className="group block py-4 border-b border-muted/50 transition-all duration-200 ease-in-out"
     >
       <div className="space-y-1">
         <h3 className="font-medium group-hover:text-primary-foreground transition-colors duration-200">

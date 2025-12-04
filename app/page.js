@@ -1,17 +1,6 @@
 import { Link } from "next-view-transitions"
-
-const READING_LIST = [
-  {
-    id: 1,
-    title: "Norwegian Wood",
-    author: "Haruki Murakami",
-  },
-  {
-    id: 2,
-    title: "The Way of Zen",
-    author: "Alan W. Watts",
-  },
-]
+import { READING_LIST } from "@/lib/data"
+import { LinkItem } from "@/components/ui/link-item"
 
 export default function Home() {
   return (
@@ -44,12 +33,12 @@ export default function Home() {
         <ul className="space-y-2">
           {READING_LIST.map((item) => (
             <li key={item.id}>
-                <span className="">
-                  {item.title}
-                </span>
-                <span className="text-muted-foreground">
-                  {" "}— {item.author}
-                </span>
+              <span className="">
+                {item.title}
+              </span>
+              <span className="text-muted-foreground">
+                {" "}— {item.author}
+              </span>
             </li>
           ))}
         </ul>
@@ -68,20 +57,5 @@ export default function Home() {
         </ul>
       </section>
     </main>
-  )
-}
-
-function LinkItem({ href, children }) {
-  return (
-    <li className="transition duration-200 ease-in-out hover:text-stone-200">
-      <Link 
-        href={href} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="flex items-center"
-      >
-        [{children}]
-      </Link>
-    </li>
   )
 }

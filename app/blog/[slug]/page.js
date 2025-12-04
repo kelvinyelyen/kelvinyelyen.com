@@ -1,6 +1,6 @@
 import { Link } from "next-view-transitions"
-import { generateSlugsFromCategory, getContent } from "@/lib/content-handler"
-import { CustomMDX } from "@/lib/mdx-utils"
+import { generateSlugsFromCategory, getContent } from "@/lib/content"
+import { CustomMDX } from "@/lib/mdx"
 import generateRssFeed from "@/lib/rss"
 
 export async function generateStaticParams() {

@@ -11,7 +11,7 @@ export function Footer() {
           <nav aria-label="Footer navigation">
             <ul className="flex gap-4 text-muted-foreground">
               <li>
-                <Link 
+                <Link
                   href="/rss.xml"
                   className="transition duration-200 ease-in-out hover:text-stone-200"
                 >
@@ -19,7 +19,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
+                <Link
                   href="/books"
                   className="transition duration-200 ease-in-out hover:text-stone-200"
                 >
@@ -27,7 +27,7 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
-            
+
           </nav>
           <p className="text-muted-foreground whitespace-nowrap">
             © {currentYear} Kelvin Yelyen

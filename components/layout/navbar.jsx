@@ -23,7 +23,7 @@ export function Nav() {
   const pathname = usePathname()
 
   return (
-    <nav className="container py-8 relative tracking-tight">
+    <nav className="container py-8 relative tracking-tight" style={{ viewTransitionName: 'navbar' }}>
       <div className="mx-auto flex justify-between items-center gap-8">
         <Link href="/">
           <span className="text-[17px]">
@@ -41,6 +41,15 @@ export function Nav() {
 }
 
 function NavLink({ path, name, isActive }) {
+  if (isActive) {
+    return (
+      <li className="transition duration-200 ease-in-out md:hover:text-primary-foreground">
+        <span className={cx(isActive && "text-primary-foreground")}>
+          {name}
+        </span>
+      </li>
+    )
+  }
   return (
     <li className="transition duration-200 ease-in-out md:hover:text-primary-foreground">
       <Link href={path}>
