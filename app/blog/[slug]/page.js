@@ -77,7 +77,6 @@ export default async function Post({ params }) {
             <p>{publishedAtFormatted}</p>
           </div>
           <div className="ml-auto">
-            <Link href="/blog/">back</Link>
           </div>
         </div>
         {/* @ts-expect-error Server Component */}
