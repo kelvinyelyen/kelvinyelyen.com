@@ -1,4 +1,4 @@
-import { Link } from "next-view-transitions"
+
 import { WorkItem, EducationItem, ProjectItem } from "@/components/ui/resume-items"
 import { getCategoryContent } from "@/lib/content"
 
@@ -9,9 +9,9 @@ export const metadata = {
 }
 
 export default function Page() {
-  const experience = getCategoryContent("work")
-  const education = getCategoryContent("work/education")
-  const project = getCategoryContent("work/projects")
+  const experience = getCategoryContent("resume/experience")
+  const education = getCategoryContent("resume/education")
+  const projects = getCategoryContent("resume/projects")
 
   return (
     <section className="container my-8 text-sm tracking-tight">
@@ -50,7 +50,7 @@ export default function Page() {
           title="2025"
           number="03"
         >
-          {project.map(({ slug, metadata }) => (
+          {projects.map(({ slug, metadata }) => (
             <ProjectItem
               key={slug}
               title={metadata.title}
