@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
           </Suspense>
           <Preloader />
           <Nav />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1" style={{ viewTransitionName: 'main' }}>{children}</main>
           <Footer />
           <Analytics />
           <SpeedInsights />

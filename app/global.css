@@ -321,10 +321,10 @@ table {
   }
 }
 
-::view-transition-old(root) {
+::view-transition-old(main) {
   animation: 0.4s ease-in-out both blur-out;
 }
 
-::view-transition-new(root) {
+::view-transition-new(main) {
   animation: 0.4s ease-in-out both blur-in;
 }

@@ -25,11 +25,17 @@ export function Nav() {
   return (
     <nav className="container py-8 relative tracking-tight" style={{ viewTransitionName: 'navbar' }}>
       <div className="mx-auto flex justify-between items-center gap-8">
-        <Link href="/">
-          <span className="text-[17px]">
+        {pathname === "/" ? (
+          <span className="text-[17px] cursor-default">
             kelvin<span className="text-muted-foreground">yelyen_</span>
           </span>
-        </Link>
+        ) : (
+          <Link href="/">
+            <span className="text-[17px]">
+              kelvin<span className="text-muted-foreground">yelyen_</span>
+            </span>
+          </Link>
+        )}
         <ul className="flex gap-5 text-sm">
           {Object.entries(navItems).map(([path, { name }]) => (
             <NavLink key={path} path={path} name={name} isActive={pathname === path} />
