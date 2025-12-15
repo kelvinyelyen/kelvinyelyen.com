@@ -1,11 +1,8 @@
 "use client"
 
 import { useEffect } from "react"
-import { usePathname } from "next/navigation"
 
 export function BackNavigationHandler() {
-    const pathname = usePathname()
-
     useEffect(() => {
         const handlePopState = () => {
             // Check if mobile (md breakpoint is usually 768px in Tailwind)
@@ -27,11 +24,6 @@ export function BackNavigationHandler() {
             window.removeEventListener("popstate", handlePopState)
         }
     }, [])
-
-    // Also remove class on path change just in case (cleanup)
-    useEffect(() => {
-        document.documentElement.classList.remove("no-view-transition")
-    }, [pathname])
 
     return null
 }
