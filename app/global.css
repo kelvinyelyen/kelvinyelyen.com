@@ -328,3 +328,9 @@ table {
 ::view-transition-new(main) {
   animation: 0.4s ease-in-out both blur-in;
 }
+
+html.no-view-transition ::view-transition-group(*),
+html.no-view-transition ::view-transition-old(*),
+html.no-view-transition ::view-transition-new(*) {
+  animation: none !important;
+}
