@@ -1,7 +1,16 @@
 # kelvinyelyen.com
 
-Source code for my personal website: [kelvinyelyen.com](https://kelvinyelyen.com)
+Source code for [kelvinyelyen.com](https://kelvinyelyen.com).
 
-- **Next.js 15** 
+## Stack
+
+- **Next.js 15**
 - **Tailwind CSS**
 - **MDX**
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
