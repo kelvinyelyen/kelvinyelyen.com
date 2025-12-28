@@ -16,23 +16,24 @@ export default function Page() {
         <h1 className="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground mb-1">
           Writing
         </h1>
-        <p className="text-muted-foreground italic">
+        <p className="text-muted-foreground">
           Technical notes and ideas.
         </p>
       </div>
 
-      <div className="space-y-0">
+      <div className="py-2 space-y-0">
         {posts.map(({ slug, metadata }) => (
           <Link
             href={`/blog/${slug}`}
             key={slug}
-            className="group block py-3 border-b border-muted/10 transition-colors duration-200"
+            className="block py-3 lg:py-2 border-b border-muted transition duration-200 ease-in-out md:hover:text-primary-foreground"
           >
-            <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
-              <h2 className="text-sm font-normal text-foreground group-hover:text-muted-foreground transition-colors">
-                {metadata.title}
-              </h2>
-              <time dateTime={metadata.publishedAt} className="text-muted-foreground text-end whitespace-nowrap">
+            <div className="flex items-center justify-between gap-4">
+              <h2 className="flex-1 font -medium">{metadata.title}</h2>
+              <time
+                dateTime={metadata.publishedAt}
+                className="text-muted-foreground text-end whitespace-nowrap"
+              >
                 {metadata.publishedAt}
               </time>
             </div>
