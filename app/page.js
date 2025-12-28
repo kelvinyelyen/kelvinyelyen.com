@@ -15,6 +15,19 @@ export default function Home() {
         </div>
       </section>
 
+    <section>
+      {projects.map(({ slug, metadata }) => (
+        <ProjectItem
+          key={slug}
+          title={metadata.title}
+          authors={metadata.authors}
+          document={metadata.document}
+          venue={metadata.venue}
+          date={metadata.date}
+        />
+      ))}
+      </section>
+            
       <section className="mx-auto my-10 lg:leading-6 leading-relaxed">
         <ul className="text-muted-foreground flex flex-row space-x-4">
           <LinkItem href="https://drive.google.com/file/d/1PfEDoALLGI4S99Meb0zAqh_GMxPMFB7s/view?usp=sharing">Read CV</LinkItem>
