@@ -46,13 +46,13 @@ export function EducationItem({ institution, degree, year, website }) {
   )
 }
 
-export function ProjectItem({title, authors, document, code, date }) {
+export function ProjectItem({title, authors, document, venue, date }) {
   const highlightName = (text, name = "Kelvin Yelyen") => {
     const parts = text.split(new RegExp(`(\\b${name}\\b)`, "gi"))
     return parts.map((part, i) =>
       part.toLowerCase() === name.toLowerCase() ? (
         // using Tailwind utility class
-        <span key={i} className="underline">
+        <span key={i} className="font-bold">
           {part}
         </span>
       ) : (
@@ -63,7 +63,7 @@ export function ProjectItem({title, authors, document, code, date }) {
 
   return (
     <Link
-      href={link}
+      href={document}
       target="_blank"
       rel="noopener noreferrer"
       className="group block py-4 border-b border-muted/50 transition-all duration-200 ease-in-out"
