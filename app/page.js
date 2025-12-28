@@ -3,6 +3,7 @@ import { LinkItem } from "@/components/ui/link-item"
 import { WorkItem, EducationItem, ProjectItem } from "@/components/ui/resume-items"
 
 export default function Home() {
+  const projects = getCategoryContent("resume/projects")
   return (
     <main className="container items-center text-sm my-8 tracking-tight">
       <section>
@@ -16,16 +17,19 @@ export default function Home() {
       </section>
 
     <section>
-      {projects.map(({ slug, metadata }) => (
-        <ProjectItem
-          key={slug}
-          title={metadata.title}
-          authors={metadata.authors}
-          document={metadata.document}
-          venue={metadata.venue}
-          date={metadata.date}
-        />
-      ))}
+      <div className="divide-y divide-muted/20">
+            {projects.map(({ slug, metadata }) => (
+              <ProjectItem
+                key={slug}
+                title={metadata.title}
+                authors={metadata.authors}
+                document={metadata.document}
+                code={metadata.code}
+                venue={metadata.venue}
+                date={metadata.date}
+              />
+            ))}
+          </div>
       </section>
             
       <section className="mx-auto my-10 lg:leading-6 leading-relaxed">
