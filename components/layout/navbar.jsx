@@ -27,12 +27,12 @@ export function Nav() {
       <div className="mx-auto flex justify-between items-center gap-8">
         {pathname === "/" ? (
           <span className="text-[17px] cursor-default">
-            kelvin<span className="text-muted-foreground">yelyen_</span>
+            kelvin<span className="text-muted-foreground">yelyen</span>
           </span>
         ) : (
           <Link href="/">
             <span className="text-[17px]">
-              kelvin<span className="text-muted-foreground">yelyen_</span>
+              kelvin<span className="text-muted-foreground">yelyen</span>
             </span>
           </Link>
         )}
