@@ -56,7 +56,7 @@ export default function Page() {
               title={metadata.title}
               authors={metadata.authors}
               document={metadata.document}
-              code={metadata.code}
+              venue={metadata.venue}
               date={metadata.date}
             />
           ))}
