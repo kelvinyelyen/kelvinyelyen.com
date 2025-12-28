@@ -24,7 +24,7 @@ export default function Home() {
         <h2 className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-8 border-b border-muted/20 pb-2">
           Selected Research
         </h2>
-        <div className="space-y-0 divide-y divide-muted/10">
+        <div className="space-y-0 text-sm divide-y divide-muted/10">
           {projects.map(({ slug, metadata }) => (
             <ProjectItem
               key={slug}
