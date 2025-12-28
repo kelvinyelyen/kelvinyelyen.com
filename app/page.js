@@ -8,7 +8,7 @@ export default function Home() {
         <div className="mx-auto">
           <div className="prose-sm max-w-none lg:leading-6 leading-relaxed">
             <p>
-              I build computational models at the intersection of artificial intelligence and neuroscience. My work focuses on reverse-engineering biological intelligence to understand how it emerges in neural systems and to design more adaptive machine learning architectures—drawing on neural decoding, brain-inspired design, and computational models of intelligence.{" "}
+              I build computational models at the intersection of artificial intelligence and neuroscience. My work focuses on the bidirectional link between biological and artificial intelligence: translating neural mechanisms into more adaptive machine learning architectures, and using artificial intelligence to model and deepen our understanding of the brain.
             </p>
           </div>
         </div>
