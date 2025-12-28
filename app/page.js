@@ -6,7 +6,7 @@ export default function Home() {
   const projects = getCategoryContent("resume/projects")
 
   return (
-    <main className="container max-w-2xl my-12 tracking-tight">
+    <main className="my-12 tracking-tight">
       {/* Narrative Section: The "Abstract" */}
       <section className="mb-16">
         <div className="prose-sm max-w-none leading-relaxed text-foreground">
