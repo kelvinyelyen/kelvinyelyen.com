@@ -10,7 +10,7 @@ export default function Home() {
       {/* Narrative Section: The "Abstract" */}
       <section className="mb-16">
         <div className="prose-sm max-w-none leading-relaxed text-foreground">
-          <p className="text-[15px]">
+          <p>
             I build computational models at the intersection of artificial intelligence and neuroscience. 
             My work focuses on the bidirectional link between biological and artificial intelligence: 
             translating neural mechanisms into more adaptive machine learning architectures, 
