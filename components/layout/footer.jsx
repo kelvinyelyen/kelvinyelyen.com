@@ -14,7 +14,7 @@ export function Footer() {
       style={{ viewTransitionName: "footer" }}
     >
       <div className="mx-auto text-xs">
-        <hr className="my-4 border-t border-muted" />
+        <hr className="my-4 border-t border-muted/50" />
 
         <div className="flex justify-between items-center my-8 gap-4">
           <nav aria-label="Footer navigation">
