@@ -26,7 +26,7 @@ export default function Page() {
           <Link
             href={`/blog/${slug}`}
             key={slug}
-            className="block py-3 lg:py-2 border-muted/20 hover:border-foreground/20"
+            className="block py-4 border-b border-muted/20 transition-colors duration-200 ease-in-out hover:border-muted-foreground/30 group"
           >
             <div className="flex items-center justify-between gap-4">
               <h2 className="flex-1 font -medium">{metadata.title}</h2>
