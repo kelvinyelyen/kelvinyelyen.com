@@ -1,5 +1,4 @@
 import { Link } from "next-view-transitions"
-import { READING_LIST } from "@/lib/data"
 import { LinkItem } from "@/components/ui/link-item"
 
 export default function Home() {
