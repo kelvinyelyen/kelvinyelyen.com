@@ -1,5 +1,6 @@
 import { Link } from "next-view-transitions"
 import { LinkItem } from "@/components/ui/link-item"
+import { WorkItem, EducationItem, ProjectItem } from "@/components/ui/resume-items"
 
 export default function Home() {
   return (
