@@ -76,7 +76,7 @@ export function ProjectItem({title, authors, document, venue, date }) {
           {highlightName(authors)}
         </p>
         <p className="text-sm text-muted-foreground">
-          {venue}
+          [{venue}]
         </p>
       </div>
     </Link>
