@@ -64,7 +64,7 @@ export default function Page() {
 function Section({ title, children }) {
   return (
     <section className="flex flex-col">
-      <div className="mb-6 border-b border-muted/20 pb-2">
+      <div className="mb-6 border-b border-muted/50 pb-2">
         <h2 className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">
           {title}
         </h2>
