@@ -11,7 +11,7 @@ const navItems = {
     name: "work",
   },
   "/blog": {
-    name: "journal",
+    name: "notes",
   },
 }
 
