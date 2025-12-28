@@ -54,8 +54,10 @@ export default function Page() {
             <ProjectItem
               key={slug}
               title={metadata.title}
-              people={metadata.people}
-              link={metadata.link}
+              authors={metadata.authors}
+              document={metadata.document}
+              code={metadata.code}
+              date={metadata.date}
             />
           ))}
         </Section>
