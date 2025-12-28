@@ -17,7 +17,7 @@ export default function Page() {
           Writing
         </h1>
         <p className="text-muted-foreground italic">
-          Technical notes and perspectives on systems of intelligence.
+          Technical notes and ideas.
         </p>
       </div>
 
@@ -26,21 +26,14 @@ export default function Page() {
           <Link
             href={`/blog/${slug}`}
             key={slug}
-            className="group block py-4 border-b border-muted/10 transition-colors duration-200"
+            className="group block py-3 border-b border-muted/10 transition-colors duration-200"
           >
             <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
-              <h2 className="text-sm font-medium text-foreground group-hover:text-muted-foreground transition-colors">
+              <h2 className="text-sm font-normal text-foreground group-hover:text-muted-foreground transition-colors">
                 {metadata.title}
               </h2>
-              <time
-                dateTime={metadata.publishedAt}
-                className="text-xs text-muted-foreground/60 tabular-nums shrink-0"
-              >
-                {new Date(metadata.publishedAt).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: '2-digit',
-                  day: '2-digit'
-                }).replace(/\//g, '.')}
+              <time dateTime={metadata.publishedAt} className="text-muted-foreground text-end whitespace-nowrap">
+                {metadata.publishedAt}
               </time>
             </div>
           </Link>
