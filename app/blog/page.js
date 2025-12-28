@@ -12,7 +12,7 @@ export default function Page() {
 
   return (
     <main className="container my-12 text-sm tracking-tight">
-      <div className="mb-12 border-b border-muted/20 pb-4">
+      <div className="mb-12 border-b border-muted/30 pb-4">
         <h1 className="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground mb-1">
           Writing
         </h1>
