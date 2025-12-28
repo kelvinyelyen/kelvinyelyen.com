@@ -7,7 +7,6 @@ export default function Home() {
 
   return (
     <main className="container my-12 tracking-tight">
-      {/* Narrative Section: The "Abstract" */}
       <section className="mb-16">
         <div className="prose-sm max-w-none leading-relaxed text-foreground">
           <p>
@@ -19,12 +18,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Primary Work Section */}
       <section className="mb-16">
-        <h2 className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-8 border-b border-muted/20 pb-2">
+        <h2 className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-8 border-b border-muted/50 pb-2">
           Selected Research
         </h2>
-        <div className="space-y-0 text-sm divide-y divide-muted/10">
+        <div className="space-y-0 text-sm divide-y divide-muted/50">
           {projects.map(({ slug, metadata }) => (
             <ProjectItem
               key={slug}
@@ -39,8 +37,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Connections Section: The "Footnotes" */}
-      <section className="mt-20 pt-8 border-t border-muted/10">
+      <section className="mt-20 pt-8">
         <nav>
           <ul className="flex flex-wrap gap-x-6 gap-y-3 text-[13px] font-medium text-muted-foreground">
             <LinkItem href="https://drive.google.com/file/d/...">CV</LinkItem>
