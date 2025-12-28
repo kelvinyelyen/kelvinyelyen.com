@@ -13,7 +13,7 @@ export default function Page() {
   const education = getCategoryContent("resume/education")
 
   return (
-    <section className="container my-12 text-sm tracking-tight max-w-2xl">
+    <section className="container my-12 text-sm tracking-tight">
       <div className="mx-auto space-y-16">
     
         <Section title="Education">
