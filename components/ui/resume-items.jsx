@@ -46,7 +46,7 @@ export function EducationItem({ institution, degree, year, website }) {
   )
 }
 
-export function ProjectItem({ title, people, link }) {
+export function ProjectItem({title, authors, document, code, date }) {
   const highlightName = (text, name = "Kelvin Yelyen") => {
     const parts = text.split(new RegExp(`(\\b${name}\\b)`, "gi"))
     return parts.map((part, i) =>
@@ -73,7 +73,7 @@ export function ProjectItem({ title, people, link }) {
           {title}
         </h3>
         <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/80 transition-colors duration-200">
-          {highlightName(people)}
+          {highlightName(authors)}
         </p>
       </div>
     </Link>
