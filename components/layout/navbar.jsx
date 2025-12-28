@@ -4,51 +4,65 @@ import { Link } from "next-view-transitions"
 import { usePathname } from "next/navigation"
 
 const navItems = {
-  "/": {
-    name: "about",
-  },
-  "/work": {
-    name: "work",
-  },
-  "/blog": {
-    name: "notes",
-  },
+  "/": {
+    name: "about",
+  },
+  "/work": {
+    name: "work",
+  },
+  "/blog": {
+    name: "notes",
+  },
 }
 
 function cx(...classes) {
-  return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(" ")
 }
 
 export function Nav() {
-  const pathname = usePathname()
+  const pathname = usePathname()
 
-  return (
-    <nav className="container py-8 relative tracking-tight"> 
-      <div className="mx-auto flex justify-between items-center gap-8">
-        <Link href="/" className="group">
-          <span className="text-[17px] font-medium transition-colors">
-            kelvin<span className="text-muted-foreground group-hover:text-foreground transition-colors">yelyen</span>
-          </span>
-        </Link>
-        
-        <ul className="flex gap-6 text-sm">
-          {Object.entries(navItems).map(([path, { name }]) => (
-            <NavLink key={path} path={path} name={name} isActive={pathname === path} />
-          ))}
-        </ul>
-      </div>
-    </nav>
-  )
+  return (
+    <nav className="container py-8 relative tracking-tight" style={{ viewTransitionName: 'navbar' }}>
+      <div className="mx-auto flex justify-between items-center gap-8">
+        {pathname === "/" ? (
+          <span className="text-[17px] cursor-default">
+            kelvin<span className="text-muted-foreground">yelyen</span>
+          </span>
+        ) : (
+          <Link href="/">
+            <span className="text-[17px]">
+              kelvin<span className="text-muted-foreground">yelyen</span>
+            </span>
+          </Link>
+        )}
+        <ul className="flex gap-5 text-sm">
+          {Object.entries(navItems).map(([path, { name }]) => (
+            <NavLink key={path} path={path} name={name} isActive={pathname === path} />
+          ))}
+        </ul>
+      </div>
+    </nav>
+  )
 }
 
 function NavLink({ path, name, isActive }) {
-  return (
-    <li className="list-none">
-      <Link href={path}>
-        <span className={cx(isActive && "text-primary-foreground")}>
-          {name}
-        </span>
-      </Link>
-    </li>
-  )
+  if (isActive) {
+    return (
+      <li className="transition duration-200 ease-in-out md:hover:text-primary-foreground">
+        <span className={cx(isActive && "text-primary-foreground")}>
+          {name}
+        </span>
+      </li>
+    )
+  }
+  return (
+    <li className="transition duration-200 ease-in-out md:hover:text-primary-foreground">
+      <Link href={path}>
+        <span className={cx(isActive && "text-primary-foreground")}>
+          {name}
+        </span>
+      </Link>
+    </li>
+  )
 }
