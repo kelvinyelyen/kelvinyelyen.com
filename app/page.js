@@ -40,7 +40,7 @@ export default function Home() {
       <section className="mt-20 pt-8">
         <nav>
           <ul className="flex flex-wrap gap-x-6 gap-y-3 text-[13px] font-medium text-muted-foreground">
-            <LinkItem href="https://drive.google.com/file/d/...">CV</LinkItem>
+            <LinkItem href="https://drive.google.com/file/d/1WrAu-gMjW0jJ0qo_oDWs7Ebimy7Mee1T/view?usp=sharing">CV</LinkItem>
             <LinkItem href="https://github.com/kelvinyelyen">GitHub</LinkItem>
             <LinkItem href="https://x.com/kelvinyelyen">X</LinkItem>
             <LinkItem href="https://www.linkedin.com/in/kelvinyelyen/">LinkedIn</LinkItem>
