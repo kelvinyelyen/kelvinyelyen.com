@@ -44,14 +44,10 @@ export function Nav() {
 function NavLink({ path, name, isActive }) {
   return (
     <li className="list-none">
-      <Link 
-        href={path}
-        className={cx(
-          "transition-colors duration-200 ease-in-out hover:text-foreground",
-          isActive ? "text-foreground font-medium" : "text-muted-foreground"
-        )}
-      >
-        {name}
+      <Link href={path}>
+        <span className={cx(isActive && "text-primary-foreground")}>
+          {name}
+        </span>
       </Link>
     </li>
   )
