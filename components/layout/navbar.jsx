@@ -23,20 +23,15 @@ export function Nav() {
   const pathname = usePathname()
 
   return (
-    <nav className="container py-8 relative tracking-tight" style={{ viewTransitionName: 'navbar' }}>
+    <nav className="container py-8 relative tracking-tight"> 
       <div className="mx-auto flex justify-between items-center gap-8">
-        {pathname === "/" ? (
-          <span className="text-[17px] cursor-default">
-            kelvin<span className="text-muted-foreground">yelyen</span>
+        <Link href="/" className="group">
+          <span className="text-[17px] font-medium transition-colors">
+            kelvin<span className="text-muted-foreground group-hover:text-foreground transition-colors">yelyen</span>
           </span>
-        ) : (
-          <Link href="/">
-            <span className="text-[17px]">
-              kelvin<span className="text-muted-foreground">yelyen</span>
-            </span>
-          </Link>
-        )}
-        <ul className="flex gap-5 text-sm">
+        </Link>
+        
+        <ul className="flex gap-6 text-sm">
           {Object.entries(navItems).map(([path, { name }]) => (
             <NavLink key={path} path={path} name={name} isActive={pathname === path} />
           ))}
@@ -47,21 +42,16 @@ export function Nav() {
 }
 
 function NavLink({ path, name, isActive }) {
-  if (isActive) {
-    return (
-      <li className="transition duration-200 ease-in-out md:hover:text-primary-foreground">
-        <span className={cx(isActive && "text-primary-foreground")}>
-          {name}
-        </span>
-      </li>
-    )
-  }
   return (
-    <li className="transition duration-200 ease-in-out md:hover:text-primary-foreground">
-      <Link href={path}>
-        <span className={cx(isActive && "text-primary-foreground")}>
-          {name}
-        </span>
+    <li className="list-none">
+      <Link 
+        href={path}
+        className={cx(
+          "transition-colors duration-200 ease-in-out hover:text-foreground",
+          isActive ? "text-foreground font-medium" : "text-muted-foreground"
+        )}
+      >
+        {name}
       </Link>
     </li>
   )
