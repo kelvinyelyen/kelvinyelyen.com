@@ -17,10 +17,8 @@ export default function Page() {
     <section className="container my-8 text-sm tracking-tight">
       <div className="mx-auto text-foreground-contrast space-y-12">
 
-
         <Section
           title="Education"
-          number="01"
         >
           {education.map(({ slug, metadata }) => (
             <EducationItem
@@ -34,7 +32,6 @@ export default function Page() {
         </Section>
         <Section
           title="Experience"
-          number="02"
         >
           {experience.map(({ slug, metadata }) => (
             <WorkItem
@@ -48,7 +45,6 @@ export default function Page() {
         </Section>
         <Section
           title="2025"
-          number="03"
         >
           {projects.map(({ slug, metadata }) => (
             <ProjectItem
@@ -71,10 +67,12 @@ function Section({ title, subtitle, number, children }) {
     <div>
       <div className="mb-6">
         <h2 className="font-semibold">
-          {title} <sup className="text-primary-foreground"> {number} </sup>
+          {title}
         </h2>
         <p className="text-primary-foreground">{subtitle}</p>
       </div>
+    )
+}
       <div>{children}</div>
     </div>
   )
