@@ -10,36 +10,36 @@ export function Footer() {
   return (
     <footer className="container tracking-tight" style={{ viewTransitionName: 'footer' }}>
       <div className="mx-auto text-xs">
-        <hr className="my-4 border-t border-muted" />
-        <div className="flex justify-between items-center my-8 gap-4">
+        <hr className="my-8 border-t border-muted/20" />
+        <div className="flex justify-between items-center mb-12 gap-4">
           <nav aria-label="Footer navigation">
-            <ul className="flex gap-4 text-muted-foreground">
+            <ul className="flex gap-5 text-muted-foreground/60">
               <li>
                 <Link
                   href="/rss.xml"
-                  className="transition duration-200 ease-in-out hover:text-stone-200"
+                  className="transition-colors duration-200 hover:text-foreground"
                 >
                   [rss]
                 </Link>
               </li>
               <li>
                 {pathname === "/books" ? (
-                  <span className="transition duration-200 ease-in-out text-stone-200 cursor-default">
-                    [books]
+                  <span className="text-foreground cursor-default">
+                    [library]
                   </span>
                 ) : (
                   <Link
                     href="/books"
-                    className="transition duration-200 ease-in-out hover:text-stone-200"
+                    className="transition-colors duration-200 hover:text-foreground"
                   >
-                    [books]
+                    [library]
                   </Link>
                 )}
               </li>
             </ul>
-
           </nav>
-          <p className="text-muted-foreground whitespace-nowrap">
+          
+          <p className="text-muted-foreground/50 tabular-nums">
             © {currentYear} Kelvin Yelyen
           </p>
         </div>
