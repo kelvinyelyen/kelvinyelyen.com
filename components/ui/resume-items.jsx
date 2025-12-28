@@ -72,8 +72,11 @@ export function ProjectItem({title, authors, document, venue, date }) {
         <h3 className="md:hover:text-primary-foreground transition-colors duration-200">
           {title}
         </h3>
-        <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/80 transition-colors duration-200">
+        <p className="text-sm text-muted-foreground">
           {highlightName(authors)}
+        </p>
+        <p className="text-sm text-muted-foreground">
+          {venue}
         </p>
       </div>
     </Link>
