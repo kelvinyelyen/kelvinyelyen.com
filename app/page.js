@@ -14,7 +14,10 @@ export default function Home() {
             research interest at the intersection of artificial intelligence and neuroscience. 
             My research focuses on the bidirectional relationship between biological and artificial systems: 
             translating neural mechanisms into more adaptive machine learning architectures, and using computational 
-            models to deepen our understanding of the brain.
+            models to deepen our understanding of the brain. Before this, I worked as a freelance software engineer, 
+            designing and building scalable full-stack web systems. And my background is in Computer Science from the 
+            University for Development Studies.
+
           </p>
         </div>
       </section>
