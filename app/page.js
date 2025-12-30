@@ -10,10 +10,11 @@ export default function Home() {
       <section className="mb-16">
         <div className="prose-sm max-w-none leading-relaxed text-foreground">
           <p>
-            I build computational models at the intersection of artificial intelligence and neuroscience. 
-            My work focuses on the bidirectional link between biological and artificial intelligence: 
-            translating neural mechanisms into more adaptive machine learning architectures, 
-            and using artificial intelligence to model and deepen our understanding of the brain.
+            I am currently a Faculty Assistant at Academic City University. 
+            Independently, I explore the intersection of artificial intelligence and neuroscience. 
+            My research focuses on the bidirectional relationship between biological and artificial systems: 
+            translating neural mechanisms into more adaptive machine learning architectures, and using computational 
+            models to deepen our understanding of the brain.
           </p>
         </div>
       </section>
