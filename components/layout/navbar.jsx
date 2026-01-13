@@ -2,6 +2,7 @@
 
 import { Link } from "next-view-transitions"
 import { usePathname } from "next/navigation"
+import { cn } from "@/lib/utils"
 
 const navItems = {
   "/": { name: "about" },
@@ -9,12 +10,12 @@ const navItems = {
   "/blog": { name: "notes" },
 }
 
-export function Nav() {
+export function Nav({ className }) {
   const pathname = usePathname()
 
   return (
     <nav
-      className="container py-8 relative tracking-tight"
+      className={cn("container py-8 relative tracking-tight", className)}
       style={{ viewTransitionName: "navbar" }}
     >
       <div className="mx-auto flex justify-between items-center gap-8">
@@ -39,9 +40,10 @@ export function Nav() {
             return (
               <li
                 key={path}
-                className={`transition duration-200 ease-in-out ${
+                className={cn(
+                  "transition duration-200 ease-in-out",
                   !isActive && "md:hover:text-primary-foreground"
-                }`}
+                )}
               >
                 {isActive ? (
                   <span className="text-primary-foreground">{name}</span>

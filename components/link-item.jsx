@@ -1,8 +1,12 @@
 import { Link } from "next-view-transitions"
+import { cn } from "@/lib/utils"
 
-export function LinkItem({ href, children }) {
+export function LinkItem({ href, children, className }) {
     return (
-        <li className="transition duration-200 ease-in-out hover:text-stone-200">
+        <li className={cn(
+            "transition duration-200 ease-in-out hover:text-primary-foreground",
+            className
+        )}>
             <Link
                 href={href}
                 target="_blank"

@@ -47,7 +47,7 @@ export default async function Post({ params }) {
   const { title, publishedAtFormatted, summary } = post.metadata
 
   return (
-    <section className="container my-8 mb-[100px] tracking-tight">
+    <section className="container my-12 mb-[100px] tracking-tight">
       <script
         type="application/ld+json"
         suppressHydrationWarning

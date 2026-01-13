@@ -1,12 +1,16 @@
 import { Link } from "next-view-transitions"
+import { cn } from "@/lib/utils"
 
-export function WorkItem({ company, role, year, website }) {
+export function WorkItem({ company, role, year, website, className }) {
   return (
     <Link
       href={website}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block py-3 lg:py-2 border-b border-muted/50 transition-colors duration-200 ease-in-out"
+      className={cn(
+        "group block py-3 lg:py-2 border-b border-muted/50 transition-colors duration-200 ease-in-out",
+        className
+      )}
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm">
         <div className="flex-1">
@@ -23,13 +27,16 @@ export function WorkItem({ company, role, year, website }) {
   )
 }
 
-export function EducationItem({ institution, degree, year, website }) {
+export function EducationItem({ institution, degree, year, website, className }) {
   return (
     <Link
       href={website}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block py-3 lg:py-2 border-b border-muted/50 transition-colors duration-200 ease-in-out"
+      className={cn(
+        "group block py-3 lg:py-2 border-b border-muted/50 transition-colors duration-200 ease-in-out",
+        className
+      )}
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm">
         <div className="flex-1">
@@ -46,7 +53,7 @@ export function EducationItem({ institution, degree, year, website }) {
   )
 }
 
-export function ProjectItem({title, authors, document, venue, date }) {
+export function ProjectItem({ title, authors, document, venue, date }) {
   const highlightName = (text, name = "Kelvin Yelyen") => {
     const parts = text.split(new RegExp(`(\\b${name}\\b)`, "gi"))
     return parts.map((part, i) =>
@@ -66,7 +73,9 @@ export function ProjectItem({title, authors, document, venue, date }) {
       href={document}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block py-4 border-b border-muted/50 transition-all duration-200 ease-in-out"
+      className={cn(
+        "group block py-3 lg:py-2 border-b border-muted/50 transition-all duration-200 ease-in-out"
+      )}
     >
       <div className="space-y-1">
         <h3 className="md:hover:text-primary-foreground transition-colors duration-200">

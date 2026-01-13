@@ -1,4 +1,4 @@
-import { WorkItem, EducationItem, ProjectItem } from "@/components/ui/resume-items"
+import { WorkItem, EducationItem, ProjectItem } from "@/components/work/resume-list"
 import { getCategoryContent } from "@/lib/content"
 
 export const metadata = {
@@ -8,14 +8,14 @@ export const metadata = {
 }
 
 export default function Page() {
-  const projects = getCategoryContent("resume/projects")
+  const projects = getCategoryContent("resume/projects/research")
   const experience = getCategoryContent("resume/experience")
   const education = getCategoryContent("resume/education")
 
   return (
     <section className="container my-12 text-sm tracking-tight">
       <div className="mx-auto space-y-16">
-    
+
         <Section title="Education">
           {education.map(({ slug, metadata }) => (
             <EducationItem
@@ -27,7 +27,7 @@ export default function Page() {
             />
           ))}
         </Section>
-            
+
         <Section title="Experience">
           {experience.map(({ slug, metadata }) => (
             <WorkItem
@@ -39,23 +39,21 @@ export default function Page() {
             />
           ))}
         </Section>
-            
+
         <Section title="Research">
-          <div className="divide-y divide-muted/20">
-            {projects.map(({ slug, metadata }) => (
-              <ProjectItem
-                key={slug}
-                title={metadata.title}
-                authors={metadata.authors}
-                document={metadata.document}
-                code={metadata.code}
-                venue={metadata.venue}
-                date={metadata.date}
-              />
-            ))}
-          </div>
+          {projects.map(({ slug, metadata }) => (
+            <ProjectItem
+              key={slug}
+              title={metadata.title}
+              authors={metadata.authors}
+              document={metadata.document}
+              code={metadata.code}
+              venue={metadata.venue}
+              date={metadata.date}
+            />
+          ))}
         </Section>
-              
+
       </div>
     </section>
   )

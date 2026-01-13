@@ -2,12 +2,14 @@
 import { useEffect } from "react"
 import { gsap } from "gsap"
 
-const Preloader = () => {
+export function Preloader() {
   useEffect(() => {
     const tl = gsap.timeline({
       onComplete: () => {
         const preloader = document.querySelector(".preloader")
-        preloader.classList.add("preloader-done")
+        if (preloader) {
+          preloader.classList.add("preloader-done")
+        }
       },
     })
 
@@ -41,5 +43,3 @@ const Preloader = () => {
     </div>
   )
 }
-
-export default Preloader

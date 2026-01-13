@@ -1,21 +1,21 @@
-import { LinkItem } from "@/components/ui/link-item"
-import { ProjectItem } from "@/components/ui/resume-items"
+import { LinkItem } from "@/components/link-item"
+import { ProjectItem } from "@/components/work/resume-list"
 import { getCategoryContent } from "@/lib/content"
 
 export default function Home() {
-  const projects = getCategoryContent("resume/projects")
+  const projects = getCategoryContent("resume/projects/research")
 
   return (
     <main className="container my-12 tracking-tight">
-      <section className="mb-16">
+      <section className="mb-12">
         <div className="prose-sm max-w-none leading-relaxed text-foreground">
           <p>
             I am currently a Faculty Assistant at Academic City University with
-            research interests at the intersection of artificial intelligence and neuroscience. 
-            My research focuses on the bidirectional relationship between biological and artificial systems: 
-            translating neural mechanisms into more adaptive machine learning architectures, and using computational 
-            models to deepen our understanding of the brain. Before this, I worked as a freelance software engineer, 
-            designing and building scalable full-stack web systems, and my background is in Computer Science from the 
+            research interests at the intersection of artificial intelligence and neuroscience.
+            My research focuses on the bidirectional relationship between biological and artificial systems:
+            translating neural mechanisms into more adaptive machine learning architectures, and using computational
+            models to deepen our understanding of the brain. Before this, I worked as a freelance software engineer,
+            designing and building scalable full-stack web systems, and my background is in Computer Science from the
             University for Development Studies.
 
           </p>

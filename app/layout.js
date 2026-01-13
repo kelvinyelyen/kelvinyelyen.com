@@ -11,8 +11,8 @@ import { ViewTransitions } from "next-view-transitions"
 import GoogleAnalytics from "@/components/analytics"
 import { Nav } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
-import Preloader from "@/components/ui/preloader"
-import { BackNavigationHandler } from "@/components/ui/back-navigation-handler"
+import { Preloader } from "@/components/preloader"
+import { BackNavigationHandler } from "@/components/back-navigation-handler"
 
 export const metadata = {
   metadataBase: new URL("https://kelvinyelyen.com"),
