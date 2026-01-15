@@ -8,6 +8,7 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { ViewTransitions } from "next-view-transitions"
 
+import { cn } from "@/lib/utils"
 import GoogleAnalytics from "@/components/analytics"
 import { Nav } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
@@ -55,17 +56,13 @@ export const metadata = {
   },
 }
 
-function cx(...classes) {
-  return classes.filter(Boolean).join(" ")
-}
-
 export default function RootLayout({ children }) {
   return (
     <ViewTransitions>
       <html
         lang="en"
         suppressHydrationWarning
-        className={cx(GeistSans.variable, GeistMono.variable)}
+        className={cn(GeistSans.variable, GeistMono.variable)}
       >
         <body className="flex flex-col min-h-screen">
           <Suspense>

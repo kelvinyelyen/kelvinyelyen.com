@@ -29,7 +29,7 @@ export default function Page() {
             className="block py-3 lg:py-2 border-b border-muted/50 transition duration-200 ease-in-out md:hover:text-muted-foreground"
           >
             <div className="flex items-center justify-between gap-4">
-              <h2 className="flex-1 font -medium">{metadata.title}</h2>
+              <h2 className="flex-1 font-medium">{metadata.title}</h2>
               <time
                 dateTime={metadata.publishedAt}
                 className="text-muted-foreground text-end whitespace-nowrap"

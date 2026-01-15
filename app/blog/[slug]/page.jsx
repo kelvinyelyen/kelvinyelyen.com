@@ -1,7 +1,6 @@
 import { Link } from "next-view-transitions"
 import { generateSlugsFromCategory, getContent } from "@/lib/content"
 import { CustomMDX } from "@/lib/mdx"
-import generateRssFeed from "@/lib/rss"
 
 export async function generateStaticParams() {
   const blogSlugs = generateSlugsFromCategory("journal")
