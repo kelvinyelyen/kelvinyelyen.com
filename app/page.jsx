@@ -14,7 +14,6 @@ export default function Home() {
             of artificial intelligence and neuroscience. My work and ongoing study explore the bidirectional relationship 
             between biological and artificial systems: translating neural mechanisms into more adaptive machine learning 
             architectures, and using computational models to deepen our understanding of the brain.
-            <br/>
             Prior to this, I worked as a freelance software engineer, designing and building scalable full-stack web systems. 
             I have a background in Computer Science from University for Development Studies.
           </p>
