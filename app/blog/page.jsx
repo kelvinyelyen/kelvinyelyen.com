@@ -1,5 +1,6 @@
 import { Link } from "next-view-transitions"
-import { getCategoryContent, sortCategoryContent } from "@/lib/content"
+import { getCategoryContent } from "@/lib/content"
+import { formatTimeAgo } from "@/lib/date"
 
 export const metadata = {
   title: "Writing",
@@ -7,8 +8,7 @@ export const metadata = {
 }
 
 export default function Page() {
-  const rawPosts = getCategoryContent("journal")
-  const posts = sortCategoryContent(rawPosts)
+  const posts = getCategoryContent("journal")
 
   return (
     <main className="container my-12 text-sm tracking-tight">
@@ -31,10 +31,10 @@ export default function Page() {
             <div className="flex items-center justify-between gap-4">
               <h2 className="flex-1 font-medium">{metadata.title}</h2>
               <time
-                dateTime={metadata.publishedAt}
+                dateTime={metadata.publishedAt.toISOString()}
                 className="text-muted-foreground text-end whitespace-nowrap"
               >
-                {metadata.publishedAt}
+                {formatTimeAgo(metadata.publishedAt)}
               </time>
             </div>
           </Link>

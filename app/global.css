@@ -318,10 +318,7 @@ input[type="email"] {
   font-weight: 500;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
+
 
 .prose .callout>p {
   margin: 0 !important;
@@ -339,43 +336,4 @@ table {
   --mafs-fg: #222;
   --mafs-line-color: #444;
   --grid-line-subdivision-color: #555;
-}
-
-/* View Transitions */
-@keyframes blur-out {
-  from {
-    filter: blur(0px);
-    opacity: 1;
-  }
-
-  to {
-    filter: blur(10px);
-    opacity: 0;
-  }
-}
-
-@keyframes blur-in {
-  from {
-    filter: blur(10px);
-    opacity: 0;
-  }
-
-  to {
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-
-::view-transition-old(main) {
-  animation: 0.4s ease-in-out both blur-out;
-}
-
-::view-transition-new(main) {
-  animation: 0.4s ease-in-out both blur-in;
-}
-
-html.no-view-transition ::view-transition-group(*),
-html.no-view-transition ::view-transition-old(*),
-html.no-view-transition ::view-transition-new(*) {
-  animation: none !important;
 }

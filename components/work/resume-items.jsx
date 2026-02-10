@@ -53,7 +53,7 @@ export function EducationItem({ institution, degree, year, website, className })
   )
 }
 
-export function ProjectItem({ title, authors, document, venue, date }) {
+export function ProjectItem({ title, authors, document, venue, className }) {
   const highlightName = (text, name = "Kelvin Yelyen") => {
     const parts = text.split(new RegExp(`(\\b${name}\\b)`, "gi"))
     return parts.map((part, i) =>
@@ -74,7 +74,8 @@ export function ProjectItem({ title, authors, document, venue, date }) {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "group block py-3 lg:py-2 border-b border-border/40 transition-all duration-200 ease-in-out"
+        "group block py-3 lg:py-2 border-b border-border/40 transition-colors duration-200 ease-in-out",
+        className
       )}
     >
       <div className="space-y-1">

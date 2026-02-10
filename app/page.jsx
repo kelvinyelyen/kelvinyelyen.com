@@ -31,9 +31,7 @@ export default function Home() {
               title={metadata.title}
               authors={metadata.authors}
               document={metadata.document}
-              code={metadata.code}
               venue={metadata.venue}
-              date={metadata.date}
             />
           ))}
         </div>
