@@ -1,2 +1,2 @@
-export { ProjectCard } from './project-card'
-export { WorkItem, EducationItem, ProjectItem } from './resume-list'
+
+export { WorkItem, EducationItem, ProjectItem } from './resume-items'

@@ -7,13 +7,13 @@ import { Suspense } from "react"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { ViewTransitions } from "next-view-transitions"
+import { ThemeProvider } from "next-themes"
 
 import { cn } from "@/lib/utils"
-import GoogleAnalytics from "@/components/analytics"
+import { GoogleAnalytics } from "@/components"
 import { Nav } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
-import { Preloader } from "@/components/preloader"
-import { BackNavigationHandler } from "@/components/back-navigation-handler"
+import { Preloader, BackNavigationHandler } from "@/components"
 
 export const metadata = {
   metadataBase: new URL("https://kelvinyelyen.com"),
@@ -65,16 +65,18 @@ export default function RootLayout({ children }) {
         className={cn(GeistSans.variable, GeistMono.variable)}
       >
         <body className="flex flex-col min-h-screen">
-          <Suspense>
-            <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID} />
-          </Suspense>
-          <Preloader />
-          <BackNavigationHandler />
-          <Nav />
-          <main className="flex-1" style={{ viewTransitionName: 'main' }}>{children}</main>
-          <Footer />
-          <Analytics />
-          <SpeedInsights />
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Suspense>
+              <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID} />
+            </Suspense>
+            <Preloader />
+            <BackNavigationHandler />
+            <Nav />
+            <main className="flex-1" style={{ viewTransitionName: 'main' }}>{children}</main>
+            <Footer />
+            <Analytics />
+            <SpeedInsights />
+          </ThemeProvider>
         </body>
       </html>
     </ViewTransitions>

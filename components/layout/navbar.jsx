@@ -31,7 +31,7 @@ export function Nav({ className }) {
           </Link>
         )}
 
-        <ul className="flex gap-5 text-sm">
+        <ul className="flex gap-5 text-sm text-muted-foreground">
           {Object.entries(navItems).map(([path, { name }]) => {
             const isActive =
               pathname === path ||
@@ -42,11 +42,11 @@ export function Nav({ className }) {
                 key={path}
                 className={cn(
                   "transition duration-200 ease-in-out",
-                  !isActive && "md:hover:text-primary-foreground"
+                  !isActive && "md:hover:text-stone-900 dark:md:hover:text-foreground"
                 )}
               >
                 {isActive ? (
-                  <span className="text-primary-foreground">{name}</span>
+                  <span className="text-stone-900 dark:text-foreground">{name}</span>
                 ) : (
                   <Link href={path}>{name}</Link>
                 )}

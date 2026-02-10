@@ -8,13 +8,13 @@ export function WorkItem({ company, role, year, website, className }) {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "group block py-3 lg:py-2 border-b border-muted/50 transition-colors duration-200 ease-in-out",
+        "group block py-3 lg:py-2 border-b border-border/40 transition-colors duration-200 ease-in-out",
         className
       )}
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm">
         <div className="flex-1">
-          <span className="md:hover:text-primary-foreground transition-colors duration-200">
+          <span className="md:group-hover:text-muted-foreground dark:md:group-hover:text-primary-foreground transition-colors duration-200">
             {role}
           </span>
           <span className="text-muted-foreground">, {company}</span>
@@ -34,13 +34,13 @@ export function EducationItem({ institution, degree, year, website, className })
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "group block py-3 lg:py-2 border-b border-muted/50 transition-colors duration-200 ease-in-out",
+        "group block py-3 lg:py-2 border-b border-border/40 transition-colors duration-200 ease-in-out",
         className
       )}
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm">
         <div className="flex-1">
-          <span className="md:hover:text-primary-foreground transition-colors duration-200">
+          <span className="md:group-hover:text-muted-foreground dark:md:group-hover:text-primary-foreground transition-colors duration-200">
             {degree}
           </span>
           <span className="text-muted-foreground">, {institution}</span>
@@ -74,11 +74,11 @@ export function ProjectItem({ title, authors, document, venue, date }) {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "group block py-3 lg:py-2 border-b border-muted/50 transition-all duration-200 ease-in-out"
+        "group block py-3 lg:py-2 border-b border-border/40 transition-all duration-200 ease-in-out"
       )}
     >
       <div className="space-y-1">
-        <h3 className="md:hover:text-primary-foreground transition-colors duration-200">
+        <h3 className="md:group-hover:text-muted-foreground dark:md:group-hover:text-primary-foreground transition-colors duration-200">
           {title}
         </h3>
         <p className="text-sm text-muted-foreground">

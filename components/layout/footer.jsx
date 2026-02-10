@@ -2,6 +2,7 @@
 
 import { Link } from "next-view-transitions"
 import { usePathname } from "next/navigation"
+import { ThemeToggle } from "@/components"
 
 export function Footer() {
   const pathname = usePathname()
@@ -14,7 +15,7 @@ export function Footer() {
       style={{ viewTransitionName: "footer" }}
     >
       <div className="mx-auto text-xs">
-        <hr className="my-4 border-t border-muted/50" />
+        <hr className="my-4 border-t border-border/40" />
 
         <div className="flex justify-between items-center my-8 gap-4">
           <nav aria-label="Footer navigation">
@@ -22,7 +23,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/rss.xml"
-                  className="transition duration-200 ease-in-out hover:text-stone-200"
+                  className="transition duration-200 ease-in-out hover:text-stone-800 dark:hover:text-stone-200"
                 >
                   [rss]
                 </Link>
@@ -30,17 +31,20 @@ export function Footer() {
 
               <li>
                 {isBooks ? (
-                  <span className="text-stone-200 cursor-default">
+                  <span className="text-stone-800 dark:text-stone-200 cursor-default">
                     [books]
                   </span>
                 ) : (
                   <Link
                     href="/books"
-                    className="transition duration-200 ease-in-out hover:text-stone-200"
+                    className="transition duration-200 ease-in-out hover:text-stone-800 dark:hover:text-stone-200"
                   >
                     [books]
                   </Link>
                 )}
+              </li>
+              <li>
+                <ThemeToggle />
               </li>
             </ul>
           </nav>

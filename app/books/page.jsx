@@ -15,7 +15,7 @@ export default function BooksPage() {
 
   return (
     <article className="container my-8 text-sm tracking-tight">
-      <div className="prose prose-sm prose-stone prose-invert max-w-none lg:leading-6 leading-relaxed">
+      <div className="prose prose-sm max-w-none lg:leading-6 leading-relaxed dark:prose-invert">
         <CustomMDX source={content} />
       </div>
     </article>

@@ -22,12 +22,14 @@ function Table({ data }) {
     </tr>
   ))
   return (
-    <table>
-      <thead>
-        <tr>{headers}</tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </table>
+    <div className="w-full overflow-x-auto mb-4">
+      <table className="w-full text-left border-collapse">
+        <thead>
+          <tr>{headers}</tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
   )
 }
 
@@ -120,15 +122,18 @@ function ConsCard({ title, cons }) {
   )
 }
 
-function Code({ children, ...props }) {
+function code({ children, ...props }) {
+  if (typeof children !== "string") {
+    // Fallback for non-string children (e.g. nested components if any)
+    return <code {...props}>{children}</code>
+  }
+
   const codeHTML = highlight(children)
   return (
-    <pre>
-      <code
-        dangerouslySetInnerHTML={{ __html: codeHTML }}
-        {...props}
-      />
-    </pre>
+    <code
+      dangerouslySetInnerHTML={{ __html: codeHTML }}
+      {...props}
+    />
   )
 }
 
@@ -168,7 +173,7 @@ export {
   Callout,
   ProsCard,
   ConsCard,
-  Code,
+  code,
   TweetComponent,
   ArrowInSpace,
   Vector3D,

@@ -1,4 +1,4 @@
-import { WorkItem, EducationItem, ProjectItem } from "@/components/work/resume-list"
+import { WorkItem, EducationItem, ProjectItem } from "@/components/work/resume-items"
 import { getCategoryContent } from "@/lib/content"
 
 export const metadata = {

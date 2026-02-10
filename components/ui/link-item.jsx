@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils"
 export function LinkItem({ href, children, className }) {
     return (
         <li className={cn(
-            "transition duration-200 ease-in-out hover:text-primary-foreground",
+            "transition duration-200 ease-in-out hover:text-stone-900 dark:hover:text-stone-200",
             className
         )}>
             <Link
