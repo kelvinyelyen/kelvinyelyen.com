@@ -8,7 +8,7 @@ body {
   height: 100%;
   margin: 0;
   scrollbar-gutter: stable;
-  font-size: 108%;
+  font-size: 110%;
 }
 
 #__next {
@@ -117,7 +117,7 @@ main {
   content: counter(sh-line-number);
   margin-right: 24px;
   text-align: right;
-  color: #3d3d3d;
+  color: #7a7979;
 }
 
 @layer base {

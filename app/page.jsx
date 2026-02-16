@@ -31,6 +31,7 @@ export default function Home() {
               title={metadata.title}
               authors={metadata.authors}
               document={metadata.document}
+              documentType={metadata.document_type}
               venue={metadata.venue}
             />
           ))}

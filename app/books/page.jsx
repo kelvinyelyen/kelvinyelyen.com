@@ -1,6 +1,7 @@
 import { CustomMDX } from "@/lib/mdx"
 import { readFileSync } from "fs"
 import { join } from "path"
+import matter from "gray-matter"
 
 export const metadata = {
   title: "Books",
@@ -8,10 +9,11 @@ export const metadata = {
 }
 
 export default function BooksPage() {
-  const content = readFileSync(
+  const fileContent = readFileSync(
     join(process.cwd(), "content/books.mdx"),
     "utf-8"
   )
+  const { content } = matter(fileContent)
 
   return (
     <article className="container my-8 text-sm tracking-tight">

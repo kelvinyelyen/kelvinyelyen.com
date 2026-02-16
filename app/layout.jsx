@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className={cn(GeistSans.variable, GeistMono.variable)}
       >
-        <body className="flex flex-col min-h-screen font-[350]">
+        <body className="flex flex-col min-h-screen">
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Suspense>
               <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID} />

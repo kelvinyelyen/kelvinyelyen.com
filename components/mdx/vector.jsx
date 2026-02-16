@@ -7,7 +7,9 @@ import "mafs/font.css"
 import { Mafs, Coordinates, useMovablePoint, Vector, vec, Text, Plot, Theme } from "mafs"
 
 function ArrowInSpace({ vector }) {
-  const [x, y] = vector
+  const [x, y] = typeof vector === "string"
+    ? vector.split(",").map(Number)
+    : vector
 
   return (
     <Mafs height={300}>
@@ -96,4 +98,4 @@ function Vector3D() {
 }
 
 
-export { ArrowInSpace, UnitVectorDemo, Vector3D  }
+export { ArrowInSpace, UnitVectorDemo, Vector3D }

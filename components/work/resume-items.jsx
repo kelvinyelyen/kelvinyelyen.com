@@ -59,7 +59,7 @@ export function ProjectItem({ title, authors, document, venue, className }) {
     return parts.map((part, i) =>
       part.toLowerCase() === name.toLowerCase() ? (
         // using Tailwind utility class
-        <span key={i} className="font-bold">
+        <span key={i} className="font-semibold">
           {part}
         </span>
       ) : (
@@ -69,26 +69,27 @@ export function ProjectItem({ title, authors, document, venue, className }) {
   }
 
   return (
-    <Link
-      href={document}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={cn(
-        "group block py-3 lg:py-2 border-b border-border/40 transition-colors duration-200 ease-in-out",
-        className
-      )}
-    >
-      <div className="space-y-1">
-        <h3 className="md:group-hover:text-muted-foreground dark:md:group-hover:text-primary-foreground transition-colors duration-200">
+    <div className={cn(
+      "group block py-3 lg:py-2 border-b border-border/40 space-y-1",
+      className
+    )}>
+      <Link
+        href={document}
+        target="_blank"
+        rel="noopener noreferrer"
+
+      >
+        <p className="underline">
           {title}
-        </h3>
-        <p className="text-sm text-muted-foreground">
-          {highlightName(authors)}
         </p>
-        <p className="text-sm text-muted-foreground">
-          [{venue}]
-        </p>
-      </div>
-    </Link>
+      </Link>
+      <p className="text-sm">
+        {highlightName(authors)}
+      </p>
+      <p className="text-sm text-muted-foreground">
+        {venue}
+      </p>
+    </div>
+
   )
 }
