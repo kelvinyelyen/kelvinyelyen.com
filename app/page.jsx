@@ -11,9 +11,9 @@ export default function Home() {
         <div className="prose-sm max-w-none leading-relaxed text-foreground">
           <p>
             I am currently a Faculty Assistant at Academic City University, with research interests at the intersection
-            of artificial intelligence and neuroscience. My work and ongoing study explore the bidirectional relationship
-            between biological and artificial systems: translating neural mechanisms into more adaptive machine learning
-            architectures, and using computational models to deepen our understanding of the brain.
+            of artificial intelligence and neuroscience. My work and ongoing study explore the bidirectional relationship 
+            between biological and artificial systems: examining how neural mechanisms can inform more adaptive machine 
+            learning architectures, and how computational models can be used to deepen our understanding of the brain.
             Prior to this, I worked as a freelance software engineer, designing and building scalable full-stack web systems.
             I have a background in Computer Science from University for Development Studies.
           </p>
