@@ -8,13 +8,13 @@ export function WorkItem({ company, role, year, website, className }) {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "group block py-3 lg:py-2 border-b border-border/40 transition-colors duration-200 ease-in-out",
+        "group block py-3 lg:py-2 border-b border-border/40",
         className
       )}
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm">
         <div className="flex-1">
-          <span className="md:group-hover:text-muted-foreground dark:md:group-hover:text-primary-foreground transition-colors duration-200">
+          <span className="md:hover:text-muted-foreground dark:md:hover:text-primary-foreground">
             {role}
           </span>
           <span className="text-muted-foreground">, {company}</span>
@@ -34,13 +34,13 @@ export function EducationItem({ institution, degree, year, website, className })
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "group block py-3 lg:py-2 border-b border-border/40 transition-colors duration-200 ease-in-out",
+        "group block py-3 lg:py-2 border-b border-border/40",
         className
       )}
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm">
         <div className="flex-1">
-          <span className="md:group-hover:text-muted-foreground dark:md:group-hover:text-primary-foreground transition-colors duration-200">
+          <span className="md:group-hover:text-muted-foreground dark:md:group-hover:text-primary-foreground">
             {degree}
           </span>
           <span className="text-muted-foreground">, {institution}</span>
@@ -79,7 +79,7 @@ export function ProjectItem({ title, authors, document, venue, className }) {
         rel="noopener noreferrer"
 
       >
-        <p className="underline">
+        <p className="underline text-sm">
           {title}
         </p>
       </Link>

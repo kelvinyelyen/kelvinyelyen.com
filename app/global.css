@@ -234,7 +234,7 @@ main {
 }
 
 .prose a {
-  @apply transition-all decoration-stone-400 dark:decoration-stone-500 underline-offset-2 decoration-[0.4px];
+  @apply decoration-stone-400 dark:decoration-stone-500 underline-offset-2 decoration-[0.4px];
 }
 
 .prose .anchor:after {

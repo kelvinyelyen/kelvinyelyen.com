@@ -19,17 +19,14 @@ export function Nav({ className }) {
       style={{ viewTransitionName: "navbar" }}
     >
       <div className="mx-auto flex justify-between items-center gap-8">
-        {pathname === "/" ? (
-          <span className="text-[17px] cursor-default">
+        <Link
+          href="/"
+          className={cn(pathname === "/" && "pointer-events-none")}
+        >
+          <span className="text-[17px]">
             kelvin<span className="text-muted-foreground">yelyen</span>
           </span>
-        ) : (
-          <Link href="/">
-            <span className="text-[17px]">
-              kelvin<span className="text-muted-foreground">yelyen</span>
-            </span>
-          </Link>
-        )}
+        </Link>
 
         <ul className="flex gap-5 text-sm text-muted-foreground">
           {Object.entries(navItems).map(([path, { name }]) => {

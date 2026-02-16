@@ -16,10 +16,18 @@ export default function BooksPage() {
   const { content } = matter(fileContent)
 
   return (
-    <article className="container my-8 text-sm tracking-tight">
-      <div className="prose prose-sm max-w-none lg:leading-6 leading-relaxed dark:prose-invert">
+    <main className="container my-12 text-sm tracking-tight">
+      <div className="mb-6 border-b border-muted/15 pb-2">
+        <h1 className="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground mb-1">
+          Books
+        </h1>
+        <p className="text-muted-foreground">
+          My reading list and book recommendations.
+        </p>
+      </div>
+      <div className="prose prose-quoteless prose-sm max-w-none leading-6 text-foreground dark:prose-invert">
         <CustomMDX source={content} />
       </div>
-    </article>
+    </main>
   )
 }
