@@ -10,12 +10,12 @@ export default function Home() {
       <section className="mb-12">
         <div className="prose-sm max-w-none leading-relaxed text-foreground">
           <p>
-            I am currently a Faculty Assistant at Academic City University, with research interests at the intersection
-            of artificial intelligence and neuroscience. My work and ongoing study explore the bidirectional relationship 
-            between biological and artificial systems: examining how neural mechanisms can inform more adaptive machine 
+            I am currently a Faculty Assistant at <a href="https://acity.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-2">Academic City University</a>, with research interests at the intersection
+            of artificial intelligence and neuroscience. My work and ongoing study explore the bidirectional relationship
+            between biological and artificial systems: examining how neural mechanisms can inform more adaptive machine
             learning architectures, and how computational models can be used to deepen our understanding of the brain.
             Prior to this, I worked as a freelance software engineer, designing and building scalable full-stack web systems.
-            I have a background in Computer Science from University for Development Studies.
+            I have a background in Computer Science from <a href="https://uds.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-2">University for Development Studies</a>.
           </p>
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function Home() {
 
       <section className="mt-20 pt-8">
         <nav>
-          <ul className="flex flex-wrap gap-x-6 gap-y-3 text-[13px] font-medium text-muted-foreground">
+          <ul className="flex flex-wrap gap-x-6 gap-y-3 text-xs text-muted-foreground">
             <LinkItem href="https://drive.google.com/drive/folders/1vSpuEMBHVt9m0rQqy02TLqi4-AqmBRk9?usp=sharing">CV</LinkItem>
             <LinkItem href="https://github.com/kelvinyelyen">GitHub</LinkItem>
             <LinkItem href="https://x.com/kelvinyelyen">X</LinkItem>

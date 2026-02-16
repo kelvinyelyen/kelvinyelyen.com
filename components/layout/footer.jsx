@@ -12,7 +12,6 @@ export function Footer() {
   return (
     <footer
       className="container tracking-tight"
-      style={{ viewTransitionName: "footer" }}
     >
       <div className="mx-auto text-xs">
         <hr className="my-4 border-t border-border/40" />
