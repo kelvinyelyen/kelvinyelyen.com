@@ -15,7 +15,7 @@ export function Nav({ className }) {
 
   return (
     <nav
-      className={cn("container py-8 relative tracking-tight", className)}
+      className={cn("container py-4 relative tracking-tight", className)}
       style={{ viewTransitionName: "navbar" }}
     >
       <div className="mx-auto flex justify-between items-center gap-8">

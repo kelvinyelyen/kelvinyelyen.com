@@ -16,7 +16,7 @@ export function Footer() {
       <div className="mx-auto text-xs">
         <hr className="my-4 border-t border-border/40" />
 
-        <div className="flex justify-between items-center my-8 gap-4">
+        <div className="flex justify-between items-center my-6 gap-4">
           <nav aria-label="Footer navigation">
             <ul className="flex gap-4 text-muted-foreground">
               <li>

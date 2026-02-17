@@ -13,8 +13,8 @@ export default function Page() {
   const education = getCategoryContent("resume/education")
 
   return (
-    <section className="container my-12 text-sm tracking-tight">
-      <div className="mx-auto space-y-16">
+    <section className="container my-8 text-sm tracking-tight">
+      <div className="mx-auto space-y-12">
 
         <Section title="Education">
           {education.map(({ slug, metadata }) => (
@@ -62,7 +62,7 @@ export default function Page() {
 function Section({ title, children }) {
   return (
     <section className="flex flex-col">
-      <div className="mb-6 border-b border-muted/50 pb-2">
+      <div className="mb-4 border-b border-muted/50 pb-2">
         <h2 className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">
           {title}
         </h2>

@@ -6,8 +6,8 @@ export default function Home() {
   const projects = getCategoryContent("resume/projects/research")
 
   return (
-    <main className="container my-12 tracking-tight">
-      <section className="mb-12">
+    <main className="container my-8 tracking-tight">
+      <section className="mb-8">
         <div className="prose-sm max-w-none leading-relaxed text-foreground">
           <p>
             I am currently a Faculty Assistant at <a href="https://acity.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-2">Academic City University</a>, with research interests at the intersection
@@ -20,8 +20,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mb-16">
-        <h2 className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-8 border-b border-muted/50 pb-2">
+      <section className="mb-8">
+        <h2 className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-6 border-b border-muted/50 pb-2">
           Selected Research
         </h2>
         <div className="space-y-0 text-sm divide-y divide-muted/50">
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-20 pt-8">
+      <section className="mt-12 pt-6">
         <nav>
           <ul className="flex flex-wrap gap-x-6 gap-y-3 text-xs text-muted-foreground">
             <LinkItem href="https://drive.google.com/drive/folders/1vSpuEMBHVt9m0rQqy02TLqi4-AqmBRk9?usp=sharing">CV</LinkItem>

@@ -11,8 +11,8 @@ export default function Page() {
   const posts = getCategoryContent("journal")
 
   return (
-    <main className="container my-12 text-sm tracking-tight">
-      <div className="mb-6 border-b border-muted/15 pb-2">
+    <main className="container my-8 text-sm tracking-tight">
+      <div className="mb-4 border-b border-muted/15 pb-2">
         <h1 className="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground mb-1">
           Writing
         </h1>
