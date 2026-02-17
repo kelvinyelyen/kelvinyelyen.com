@@ -16,8 +16,8 @@ export default function BooksPage() {
   const { content } = matter(fileContent)
 
   return (
-    <main className="container my-12 text-sm tracking-tight">
-      <div className="mb-6 border-b border-muted/15 pb-2">
+    <main className="container my-8 text-sm tracking-tight">
+      <div className="mb-4 border-b border-muted/15 pb-2">
         <h1 className="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground mb-1">
           Books
         </h1>

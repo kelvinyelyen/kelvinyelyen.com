@@ -8,7 +8,15 @@ body {
   height: 100%;
   margin: 0;
   scrollbar-gutter: stable;
-  font-size: 110%;
+  font-size: 106%;
+}
+
+@media (min-width: 640px) {
+
+  html,
+  body {
+    font-size: 109%;
+  }
 }
 
 #__next {
@@ -130,28 +138,7 @@ main {
   }
 }
 
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999999;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.preloader-done {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.preloader__inner {
-  text-align: center;
-}
 
 /* Noisy background */
 .bg {

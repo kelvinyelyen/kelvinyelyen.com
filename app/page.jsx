@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="container my-8 tracking-tight">
       <section className="mb-8">
-        <div className="prose-sm max-w-none leading-relaxed text-foreground">
+        <div className="prose prose-quoteless prose-sm max-w-none leading-6 text-foreground dark:prose-invert">
           <p>
             I am currently a Faculty Assistant at <a href="https://acity.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-2">Academic City University</a>, with research interests at the intersection
             of artificial intelligence and neuroscience. My work and ongoing study explore the bidirectional relationship
@@ -42,10 +42,12 @@ export default function Home() {
         <nav>
           <ul className="flex flex-wrap gap-x-6 gap-y-3 text-xs text-muted-foreground">
             <LinkItem href="https://drive.google.com/drive/folders/1vSpuEMBHVt9m0rQqy02TLqi4-AqmBRk9?usp=sharing">CV</LinkItem>
+            <LinkItem href="mailto:kelvinyelyen@gmail.com">Email</LinkItem>
             <LinkItem href="https://github.com/kelvinyelyen">GitHub</LinkItem>
             <LinkItem href="https://x.com/kelvinyelyen">X</LinkItem>
             <LinkItem href="https://www.linkedin.com/in/kelvinyelyen/">LinkedIn</LinkItem>
             <LinkItem href="https://kelvinyelyen.substack.com">Substack</LinkItem>
+
           </ul>
         </nav>
       </section>

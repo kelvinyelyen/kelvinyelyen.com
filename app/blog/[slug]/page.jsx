@@ -1,5 +1,6 @@
 import { Link } from "next-view-transitions"
 import { generateSlugsFromCategory, getContent } from "@/lib/content"
+import { formatDate } from "@/lib/date"
 import { CustomMDX } from "@/lib/mdx"
 
 export async function generateStaticParams() {
@@ -43,10 +44,10 @@ export async function generateMetadata({ params }) {
 export default async function Post({ params }) {
   const { slug } = await params
   const post = await getContent({ category: "journal", slug })
-  const { title, publishedAtFormatted, summary } = post.metadata
+  const { title, publishedAt, summary } = post.metadata
 
   return (
-    <section className="container my-12 mb-[100px] tracking-tight">
+    <section className="container my-8 mb-[100px] tracking-tight">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -69,15 +70,17 @@ export default async function Post({ params }) {
           }),
         }}
       />
-      <article className="prose prose-quoteless prose-sm max-w-none leading-6 text-foreground dark:prose-invert">
-        <h1 className="lg:text-[26px] text-[22px] font-medium">{title}</h1>
-        <div className="flex justify-between items-center -mt-8">
-          <div>
-            <p>{publishedAtFormatted}</p>
-          </div>
-          <div className="ml-auto">
-          </div>
+
+      <header className="mb-10">
+        <h1 className="lg:text-[26px] text-[22px] font-semibold">{title}</h1>
+        <div className="flex flex-col mt-6">
+          <p className="font-semibold text-sm">{summary}</p>
+          <p className="text-sm text-foreground mt-6">{formatDate(publishedAt)}</p>
         </div>
+        <hr className="mt-8 border-stone-200 dark:border-stone-800" />
+      </header>
+
+      <article className="prose prose-quoteless prose-sm max-w-none leading-6 text-foreground dark:prose-invert">
         {/* @ts-expect-error Server Component */}
         <CustomMDX source={post.content} />
       </article>

@@ -1,4 +1,4 @@
-export { Preloader } from './ui/preloader'
+
 export { ThemeToggle } from './ui/theme-toggle'
 export { LinkItem } from './ui/link-item'
 export { default as GoogleAnalytics } from './google-analytics'

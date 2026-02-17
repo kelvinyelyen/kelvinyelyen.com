@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils"
 import { GoogleAnalytics } from "@/components"
 import { Nav } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
-import { Preloader, BackNavigationHandler } from "@/components"
+import { BackNavigationHandler } from "@/components"
 
 export const metadata = {
   metadataBase: new URL("https://kelvinyelyen.com"),
@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
             <Suspense>
               <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID} />
             </Suspense>
-            <Preloader />
+
             <BackNavigationHandler />
             <Nav />
             <main className="flex-1" style={{ viewTransitionName: 'main' }}>{children}</main>
