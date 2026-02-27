@@ -12,16 +12,15 @@ module.exports = {
       center: true,
       padding: "1rem",
       screens: {
-        "2xl": "750px",
-        xl: "750px",
-        lg: "750px",
-        md: "750px",
+        "2xl": "680px",
+        xl: "680px",
+        lg: "680px",
+        md: "680px",
       },
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
+        sans: ["var(--font-stix)", '"STIX Two Text"', "Georgia", "serif"],
       },
       typography: {
         quoteless: {

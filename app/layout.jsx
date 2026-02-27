@@ -4,16 +4,17 @@ import "katex/dist/katex.min.css"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Suspense } from "react"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+import { STIX_Two_Text } from "next/font/google"
 import { ViewTransitions } from "next-view-transitions"
-import { ThemeProvider } from "next-themes"
 
 import { cn } from "@/lib/utils"
 import { GoogleAnalytics } from "@/components"
-import { Nav } from "@/components/layout/navbar"
-import { Footer } from "@/components/layout/footer"
-import { BackNavigationHandler } from "@/components"
+
+const stixTwoText = STIX_Two_Text({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-stix",
+})
 
 export const metadata = {
   metadataBase: new URL("https://kelvinyelyen.com"),
@@ -62,21 +63,17 @@ export default function RootLayout({ children }) {
       <html
         lang="en"
         suppressHydrationWarning
-        className={cn(GeistSans.variable, GeistMono.variable)}
+        className={cn(stixTwoText.variable)}
       >
         <body className="flex flex-col min-h-screen">
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Suspense>
-              <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID} />
-            </Suspense>
-
-            <BackNavigationHandler />
-            <Nav />
+          <Suspense>
+            <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID} />
+          </Suspense>
+          <Suspense>
             <main className="flex-1" style={{ viewTransitionName: 'main' }}>{children}</main>
-            <Footer />
-            <Analytics />
-            <SpeedInsights />
-          </ThemeProvider>
+          </Suspense>
+          <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </ViewTransitions>

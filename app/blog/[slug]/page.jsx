@@ -1,44 +1,36 @@
-import { Link } from "next-view-transitions"
+import { SubpageNav } from "@/components/layout"
 import { generateSlugsFromCategory, getContent } from "@/lib/content"
 import { formatDate } from "@/lib/date"
 import { CustomMDX } from "@/lib/mdx"
 
 export async function generateStaticParams() {
-  const blogSlugs = generateSlugsFromCategory("journal")
-  return blogSlugs
+  return generateSlugsFromCategory("journal")
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params
-  const blog = await getContent({ category: "journal", slug })
+  const { metadata } = await getContent({ category: "journal", slug })
+  const ogImage = `https://kelvinyelyen.com/og?title=${metadata.title}`
 
-  const ogImage = `https://kelvinyelyen.com/og?title=${blog.metadata.title}`
-
-  const metadata = {
-    title: blog.metadata.title,
-    description: blog.metadata.summary,
-    publishedAt: blog.metadata.publishedAtFormatted,
+  return {
+    title: metadata.title,
+    description: metadata.summary,
+    publishedAt: metadata.publishedAtFormatted,
     openGraph: {
-      title: blog.metadata.title,
-      description: blog.metadata.summary,
-      publishedAt: blog.metadata.publishedAtFormatted,
-      url: `https://kelvinyelyen.com/blog/${blog.slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
+      title: metadata.title,
+      description: metadata.summary,
+      publishedAt: metadata.publishedAtFormatted,
+      url: `https://kelvinyelyen.com/blog/${slug}`,
+      images: [{ url: ogImage }],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: blog.metadata.title,
-      description: blog.metadata.summary,
+      title: metadata.title,
+      description: metadata.summary,
       images: [ogImage],
     },
   }
-
-  return metadata
 }
 
 export default async function Post({ params }) {
@@ -47,7 +39,9 @@ export default async function Post({ params }) {
   const { title, publishedAt, summary } = post.metadata
 
   return (
-    <section className="container my-8 mb-[100px] tracking-tight">
+    <main className="container my-12 px-5 sm:px-0">
+      <SubpageNav />
+
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -55,13 +49,13 @@ export default async function Post({ params }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            headline: post.metadata.title,
-            datePublished: post.metadata.publishedAt,
-            dateModified: post.metadata.publishedAt,
-            description: post.metadata.summary,
+            headline: title,
+            datePublished: publishedAt,
+            dateModified: publishedAt,
+            description: summary,
             image: post.metadata.image
               ? `https://kelvinyelyen.com${post.metadata.image}`
-              : `https://kelvinyelyen.com/og?title=${post.metadata.title}`,
+              : `https://kelvinyelyen.com/og?title=${title}`,
             url: `https://kelvinyelyen.com/blog/${post.slug}`,
             author: {
               "@type": "Person",
@@ -71,19 +65,19 @@ export default async function Post({ params }) {
         }}
       />
 
-      <header className="mb-10">
-        <h1 className="lg:text-[26px] text-[22px] font-semibold">{title}</h1>
-        <div className="flex flex-col mt-6">
-          <p className="font-semibold text-sm">{summary}</p>
-          <p className="text-sm text-foreground mt-6">{formatDate(publishedAt)}</p>
+      <header className="mt-10 mb-10">
+        <h1 className="text-[25px] font-semibold">{title}</h1>
+        <div className="flex flex-col mt-4 sm:mt-6 gap-4 sm:gap-6">
+          <p className="font-semibold">{summary}</p>
+          <p className="text-foreground">{formatDate(publishedAt)}</p>
         </div>
-        <hr className="mt-8 border-stone-200 dark:border-stone-800" />
+        <hr className="mt-8 border-stone-200" />
       </header>
 
-      <article className="prose prose-quoteless prose-sm max-w-none leading-6 text-foreground dark:prose-invert">
+      <article className="prose prose-quoteless max-w-none text-foreground">
         {/* @ts-expect-error Server Component */}
         <CustomMDX source={post.content} />
       </article>
-    </section>
+    </main>
   )
 }

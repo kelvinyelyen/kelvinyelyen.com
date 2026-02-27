@@ -1,9 +1,10 @@
 import { Link } from "next-view-transitions"
+import { SubpageNav } from "@/components/layout"
 import { getCategoryContent } from "@/lib/content"
 import { formatTimeAgo } from "@/lib/date"
 
 export const metadata = {
-  title: "Writing",
+  title: "Notes",
   description: "Technical notes and perspectives on computational neuroscience and artificial intelligence.",
 }
 
@@ -11,35 +12,28 @@ export default function Page() {
   const posts = getCategoryContent("journal")
 
   return (
-    <main className="container my-8 text-sm tracking-tight">
-      <div className="mb-4 border-b border-muted/15 pb-2">
-        <h1 className="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground mb-1">
-          Writing
-        </h1>
-        <p className="text-muted-foreground">
-          Technical notes and ideas.
-        </p>
-      </div>
+    <main className="container my-12 px-5 sm:px-0">
+      <SubpageNav />
+      <h1 className="text-[25px] font-semibold mt-10 mb-6">Notes</h1>
 
-      <div className="space-y-0">
+      <ul className="space-y-2 sm:space-y-1.5">
         {posts.map(({ slug, metadata }) => (
-          <Link
-            href={`/blog/${slug}`}
-            key={slug}
-            className="block py-3 lg:py-2 border-b border-border/40 md:hover:text-muted-foreground"
-          >
-            <div className="flex items-center justify-between gap-4">
-              <h2 className="flex-1 font-medium">{metadata.title}</h2>
-              <time
-                dateTime={metadata.publishedAt.toISOString()}
-                className="text-muted-foreground text-end whitespace-nowrap"
+          <li key={slug} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-4">
+            <span className="flex items-baseline gap-2">
+              <span className="text-foreground shrink-0">▪</span>
+              <Link
+                href={`/blog/${slug}`}
+                className="underline underline-offset-2 decoration-[0.5px]"
               >
-                {formatTimeAgo(metadata.publishedAt)}
-              </time>
-            </div>
-          </Link>
+                {metadata.title}
+              </Link>
+            </span>
+            <span className="text-muted-foreground whitespace-nowrap text-sm sm:text-base pl-5 sm:pl-0">
+              {formatTimeAgo(metadata.publishedAt)}
+            </span>
+          </li>
         ))}
-      </div>
+      </ul>
     </main>
   )
 }

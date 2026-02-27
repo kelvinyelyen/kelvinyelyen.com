@@ -1,3 +1,4 @@
+import { SubpageNav } from "@/components/layout"
 import { CustomMDX } from "@/lib/mdx"
 import { readFileSync } from "fs"
 import { join } from "path"
@@ -9,23 +10,14 @@ export const metadata = {
 }
 
 export default function BooksPage() {
-  const fileContent = readFileSync(
-    join(process.cwd(), "content/books.mdx"),
-    "utf-8"
-  )
-  const { content } = matter(fileContent)
+  const filePath = join(process.cwd(), "content/books.mdx")
+  const { content } = matter(readFileSync(filePath, "utf-8"))
 
   return (
-    <main className="container my-8 text-sm tracking-tight">
-      <div className="mb-4 border-b border-muted/15 pb-2">
-        <h1 className="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground mb-1">
-          Books
-        </h1>
-        <p className="text-muted-foreground">
-          My reading list and book recommendations.
-        </p>
-      </div>
-      <div className="prose prose-quoteless prose-sm max-w-none leading-6 text-foreground dark:prose-invert">
+    <main className="container my-12 px-5 sm:px-0">
+      <SubpageNav />
+      <h1 className="text-[25px] font-semibold mt-10 mb-6">Books</h1>
+      <div className="prose prose-quoteless max-w-none text-foreground">
         <CustomMDX source={content} />
       </div>
     </main>

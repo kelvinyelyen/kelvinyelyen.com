@@ -1,2 +1,1 @@
-export { Nav } from './navbar'
-export { Footer } from './footer'
+export { SubpageNav } from './subpage-nav'
