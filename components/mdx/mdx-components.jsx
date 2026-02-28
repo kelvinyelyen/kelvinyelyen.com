@@ -3,7 +3,7 @@ import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { TweetComponent } from "@/components/mdx/tweet/tweet"
-import { highlight } from "sugar-high"
+
 import { Icons } from "@/components/icons"
 import {
   ArrowInSpace,
@@ -113,20 +113,7 @@ function ConsCard({ title, cons }) {
   )
 }
 
-function code({ children, ...props }) {
-  if (typeof children !== "string") {
-    // Fallback for non-string children (e.g. nested components if any)
-    return <code {...props}>{children}</code>
-  }
 
-  const codeHTML = highlight(children)
-  return (
-    <code
-      dangerouslySetInnerHTML={{ __html: codeHTML }}
-      {...props}
-    />
-  )
-}
 
 function slugify(str) {
   return str
@@ -165,7 +152,6 @@ export {
   Callout,
   ProsCard,
   ConsCard,
-  code,
   TweetComponent,
   ArrowInSpace,
   Vector3D,

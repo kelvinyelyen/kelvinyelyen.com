@@ -3,7 +3,7 @@ import { Link } from "next-view-transitions"
 export default function Home() {
   return (
     <main className="container my-12 px-5 sm:px-0">
-      <section className="mb-10">
+      <section>
         <h1 className="text-[22px] sm:text-[25px] font-semibold mb-6">Kelvin Yelyen</h1>
 
         <div className="space-y-5 text-foreground">
@@ -28,9 +28,9 @@ export default function Home() {
         </div>
       </section>
 
-      <hr className="border-foreground my-6" />
+      <hr className="border-stone-200 my-8" />
 
-      <section className="mb-10">
+      <section>
         <p className="mb-5 text-foreground">Some representative lines of work include:</p>
 
         <div className="space-y-5 text-foreground">

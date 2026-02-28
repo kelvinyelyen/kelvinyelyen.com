@@ -34,11 +34,12 @@
     "react-dom": "^19.2.1",
     "react-tweet": "^3.2.2",
     "rehype-katex": "^7.0.1",
+    "rehype-pretty-code": "^0.14.1",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
     "rss": "^1.2.2",
     "sass": "^1.94.2",
-    "sugar-high": "^0.7.5",
+    "shiki": "^3.0.0",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {

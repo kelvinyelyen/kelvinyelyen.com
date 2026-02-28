@@ -59,17 +59,6 @@ main {
 
     --tahiti: 0 0% 99%;
     --tahiti-foreground: 0 0% 20%;
-
-    /* Syntax Highlighting Light */
-    --sh-identifier: #354150;
-    --sh-keyword: #f47067;
-    --sh-string: #00a99a;
-    --sh-class: #8d85ff;
-    --sh-property: #4e8fdf;
-    --sh-entity: #6eafad;
-    --sh-jsxliterals: #bf7db6;
-    --sh-sign: #8996a3;
-    --sh-comment: #a19595;
   }
 
   .dark {
@@ -95,29 +84,14 @@ main {
 
     --tahiti: 0 0% 12.5%;
     --tahiti-foreground: 0 0% 75%;
-
-    /* Syntax Highlighting Dark */
-    --sh-identifier: #e2e2e2;
-    --sh-keyword: #f47067;
-    --sh-string: #00a99a;
-    --sh-class: #8d85ff;
-    --sh-property: #4e8fdf;
-    --sh-entity: #6eafad;
-    --sh-jsxliterals: #bf7db6;
-    --sh-sign: #8996a3;
-    --sh-comment: #a19595;
   }
-}
 
-.sh__line::before {
-  counter-increment: sh-line-number 1;
-  content: counter(sh-line-number);
-  margin-right: 24px;
-  text-align: right;
-  color: #7a7979;
-}
+  /* Shiki dual-theme: show light theme by default, dark theme in dark mode */
+  html:not(.dark) [data-theme="dark"],
+  html.dark [data-theme="light"] {
+    display: none;
+  }
 
-@layer base {
   * {
     @apply border-border;
   }
@@ -184,7 +158,24 @@ main {
   @apply p-0 text-[13.5px];
   border: initial;
   line-height: 1.5;
-  counter-reset: sh-line-number;
+  counter-reset: line;
+}
+
+.prose pre code [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 24px;
+  text-align: right;
+  color: #7a7979;
+}
+
+@media (max-width: 639px) {
+  .prose pre code {
+    font-size: 12px;
+    line-height: 1.4;
+  }
 }
 
 .prose code span {
@@ -217,6 +208,16 @@ h4 {
 .prose td {
   font-size: 17px;
   line-height: 26px;
+}
+
+@media (max-width: 639px) {
+
+  .prose table,
+  .prose th,
+  .prose td {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .prose> :first-child {
