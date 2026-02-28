@@ -66,7 +66,7 @@ export default async function Post({ params }) {
       />
 
       <header className="mt-10 mb-10">
-        <h1 className="text-[25px] font-semibold">{title}</h1>
+        <h1 className="text-[22px] sm:text-[25px] font-semibold">{title}</h1>
         <div className="flex flex-col mt-4 sm:mt-6 gap-4 sm:gap-6">
           <p className="font-semibold">{summary}</p>
           <p className="text-foreground">{formatDate(publishedAt)}</p>

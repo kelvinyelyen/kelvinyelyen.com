@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </section>
 
-      <hr className="border-foreground my-10" />
+      <hr className="border-foreground my-6" />
 
       <section className="mb-10">
         <p className="mb-5 text-foreground">Some representative lines of work include:</p>
@@ -56,8 +56,6 @@ export default function Home() {
           <a href="https://x.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">X</a>
           <span className="text-muted-foreground">·</span>
           <a href="https://www.linkedin.com/in/kelvinyelyen/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">LinkedIn</a>
-          <span className="text-muted-foreground">·</span>
-          <a href="https://kelvinyelyen.substack.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">Substack</a>
         </p>
         <p className="text-foreground">
           <a href="mailto:kelvinyelyen@gmail.com" className="underline underline-offset-2 decoration-[0.5px]">kelvinyelyen [at] gmail [dot] com</a>

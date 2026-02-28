@@ -142,6 +142,13 @@ main {
   line-height: 26px;
 }
 
+@media (max-width: 639px) {
+  .prose {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
 .katex {
   font-size: 1em !important;
 }
