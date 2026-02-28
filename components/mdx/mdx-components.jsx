@@ -24,7 +24,7 @@ function Table({ data }) {
   ))
   return (
     <div className="w-full overflow-x-auto my-4 relative">
-      <table className="w-full text-sm text-left border-collapse min-w-full">
+      <table className="w-full text-left border-collapse min-w-full">
         <thead>
           <tr>{headers}</tr>
         </thead>
@@ -37,7 +37,7 @@ function Table({ data }) {
 function table(props) {
   return (
     <div className="w-full overflow-x-auto my-4 relative">
-      <table className="w-full text-sm text-left border-collapse min-w-full" {...props} />
+      <table className="w-full text-left border-collapse min-w-full" {...props} />
     </div>
   )
 }

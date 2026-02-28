@@ -23,6 +23,13 @@ body {
   line-height: 26px;
 }
 
+@media (max-width: 639px) {
+  body {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
 main {
   flex: 1;
 }
@@ -196,6 +203,13 @@ h4 {
 .prose p,
 .prose li {
   color: var(--foreground);
+}
+
+.prose table,
+.prose th,
+.prose td {
+  font-size: 17px;
+  line-height: 26px;
 }
 
 .prose> :first-child {
