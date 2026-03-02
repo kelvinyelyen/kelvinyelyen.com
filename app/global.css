@@ -63,11 +63,11 @@ main {
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background: 0 0% 7%;
+      --background: 0 0% 10%;
       --foreground: 0 0% 90%;
-      --card: 0 0% 7%;
+      --card: 0 0% 10%;
       --card-foreground: 0 0% 90%;
-      --popover: 0 0% 7%;
+      --popover: 0 0% 10%;
       --popover-foreground: 0 0% 90%;
       --primary: 0 0% 98%;
       --primary-foreground: 0 0% 70%;
@@ -150,7 +150,7 @@ main {
 
 @media (prefers-color-scheme: dark) {
   .prose pre {
-    background-color: var(--shiki-dark-bg, #0d1117);
+    background-color: var(--shiki-dark-bg, #0d1117) !important;
   }
 }
 
@@ -181,7 +181,7 @@ main {
 
 @media (prefers-color-scheme: dark) {
   .prose pre code span[data-line] span {
-    color: var(--shiki-dark);
+    color: var(--shiki-dark) !important;
   }
 }
 

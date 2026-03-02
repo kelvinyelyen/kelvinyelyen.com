@@ -17,7 +17,7 @@ export default function BooksPage() {
     <main className="container my-12 px-5 sm:px-0">
       <SubpageNav />
       <h1 className="text-[25px] font-semibold mt-10 mb-6">Books</h1>
-      <div className="prose prose-quoteless max-w-none text-foreground">
+      <div className="prose prose-quoteless dark:prose-invert max-w-none text-foreground">
         <CustomMDX source={content} />
       </div>
     </main>

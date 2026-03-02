@@ -74,7 +74,7 @@ export default async function Post({ params }) {
         <hr className="mt-8 border-stone-200" />
       </header>
 
-      <article className="prose prose-quoteless max-w-none text-foreground">
+      <article className="prose prose-quoteless dark:prose-invert max-w-none text-foreground">
         {/* @ts-expect-error Server Component */}
         <CustomMDX source={post.content} />
       </article>
