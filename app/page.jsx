@@ -13,7 +13,7 @@ export default function Home() {
               Academic City University
             </a>
             , with research interests at the intersection of artificial intelligence and neuroscience.
-            My work explores the bidirectional relationship between biological and artificial systems:
+            My work and ongoing study explores the bidirectional relationship between biological and artificial systems:
             examining how neural mechanisms can inform more adaptive machine learning architectures,
             and how computational models can deepen our understanding of the brain.
           </p>
