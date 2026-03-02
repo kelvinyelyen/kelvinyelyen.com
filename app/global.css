@@ -96,6 +96,15 @@ main {
   body {
     @apply bg-background text-foreground;
   }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+  }
 }
 
 /* Prose styles */
@@ -155,6 +164,11 @@ main {
 
   .prose a {
     color: var(--foreground) !important;
+  }
+
+  .prose thead,
+  .prose tbody tr {
+    border-color: hsl(0, 0%, 18%) !important;
   }
 }
 
