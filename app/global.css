@@ -86,11 +86,6 @@ main {
     --tahiti-foreground: 0 0% 75%;
   }
 
-  /* Shiki dual-theme: show light theme by default, dark theme in dark mode */
-  html:not(.dark) [data-theme="dark"],
-  html.dark [data-theme="light"] {
-    display: none;
-  }
 
   * {
     @apply border-border;
@@ -147,7 +142,12 @@ main {
 
 .prose pre {
   @apply rounded-lg overflow-x-auto lg:px-5 border border-border/40;
-  background-color: hsl(var(--tahiti));
+  /* Shiki applies its own background via style attr, we just set a fallback */
+  background-color: var(--shiki-light-bg, #f6f8fa);
+}
+
+html.dark .prose pre {
+  background-color: var(--shiki-dark-bg, #0d1117);
 }
 
 .prose code {
@@ -171,15 +171,12 @@ main {
   color: #7a7979;
 }
 
-@media (max-width: 639px) {
-  .prose pre code {
-    font-size: 12px;
-    line-height: 1.4;
-  }
+.prose pre code span[data-line] span {
+  color: var(--shiki-light);
 }
 
-.prose code span {
-  @apply font-medium;
+html.dark .prose pre code span[data-line] span {
+  color: var(--shiki-dark);
 }
 
 .prose img {
@@ -187,8 +184,8 @@ main {
 }
 
 .prose h2,
-h3,
-h4 {
+.prose h3,
+.prose h4 {
   @apply font-semibold tracking-tight !important;
   color: var(--foreground) !important;
 }

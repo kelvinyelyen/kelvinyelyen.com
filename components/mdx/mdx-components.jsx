@@ -77,43 +77,38 @@ function Callout(props) {
   )
 }
 
-function ProsCard({ title, pros }) {
+function FeedbackCard({ title, items, type }) {
+  const isPros = type === "pros"
+  const Icon = isPros ? Icons.Check : Icons.Cross
+  const containerClass = isPros
+    ? "border-emerald-200 dark:border-emerald-900 my-4"
+    : "border-red-200 dark:border-red-900 my-6"
+  const iconClass = isPros ? "text-emerald-500" : "text-red-500"
+
   return (
-    <div className="border border-emerald-200 dark:border-emerald-900 bg-neutral-50 dark:bg-neutral-900 rounded-lg p-6 my-4 w-full">
+    <div className={`border bg-neutral-50 dark:bg-neutral-900 rounded-lg p-6 w-full ${containerClass}`}>
       <span>{title}</span>
       <div className="mt-4">
-        {pros.map((pro) => (
-          <div key={pro} className="flex font-medium items-baseline mb-2">
+        {items.map((item) => (
+          <div key={item} className="flex font-medium items-baseline mb-2">
             <div className="h-4 w-4 mr-2">
-              <Icons.Check className="h-4 w-4 text-emerald-500" />
+              <Icon className={`h-4 w-4 ${iconClass}`} />
             </div>
-            <span>{pro}</span>
+            <span>{item}</span>
           </div>
         ))}
       </div>
     </div>
   )
+}
+
+function ProsCard({ title, pros }) {
+  return <FeedbackCard title={title} items={pros} type="pros" />
 }
 
 function ConsCard({ title, cons }) {
-  return (
-    <div className="border border-red-200 dark:border-red-900 bg-neutral-50 dark:bg-neutral-900 rounded-lg p-6 my-6 w-full">
-      <span>{title}</span>
-      <div className="mt-4">
-        {cons.map((con) => (
-          <div key={con} className="flex font-medium items-baseline mb-2">
-            <div className="h-4 w-4 mr-2">
-              <Icons.Cross className="h-4 w-4 text-red-500" />
-            </div>
-            <span>{con}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
+  return <FeedbackCard title={title} items={cons} type="cons" />
 }
-
-
 
 function slugify(str) {
   return str
@@ -122,24 +117,19 @@ function slugify(str) {
     .trim()
     .replace(/\s+/g, "-")
     .replace(/&/g, "-and-")
-    .replace(/[^\w\-]+/g, "")
-    .replace(/\-\-+/g, "-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/--+/g, "-")
 }
 
 function createHeading(level) {
+  const Tag = `h${level}`
   return ({ children }) => {
     const slug = slugify(children)
-    return React.createElement(
-      `h${level}`,
-      { id: slug },
-      [
-        React.createElement("a", {
-          href: `#${slug}`,
-          key: `link-${slug}`,
-          className: "anchor",
-        }),
-      ],
-      children
+    return (
+      <Tag id={slug}>
+        <a href={`#${slug}`} key={`link-${slug}`} className="anchor" />
+        {children}
+      </Tag>
     )
   }
 }

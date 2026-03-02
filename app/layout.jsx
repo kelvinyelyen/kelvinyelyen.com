@@ -8,7 +8,7 @@ import { STIX_Two_Text } from "next/font/google"
 import { ViewTransitions } from "next-view-transitions"
 
 import { cn } from "@/lib/utils"
-import { GoogleAnalytics } from "@/components"
+import { GoogleAnalytics, ThemeProvider } from "@/components"
 
 const stixTwoText = STIX_Two_Text({
   subsets: ["latin"],
@@ -66,14 +66,20 @@ export default function RootLayout({ children }) {
         className={cn(stixTwoText.variable)}
       >
         <body className="flex flex-col min-h-screen">
-          <Suspense>
-            <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID} />
-          </Suspense>
-          <Suspense>
-            <main className="flex-1" style={{ viewTransitionName: 'main' }}>{children}</main>
-          </Suspense>
-          <Analytics />
-          <SpeedInsights />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+          >
+            <Suspense>
+              <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID} />
+            </Suspense>
+            <Suspense>
+              <main className="flex-1" style={{ viewTransitionName: 'main' }}>{children}</main>
+            </Suspense>
+            <Analytics />
+            <SpeedInsights />
+          </ThemeProvider>
         </body>
       </html>
     </ViewTransitions>

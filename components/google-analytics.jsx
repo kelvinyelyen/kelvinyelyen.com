@@ -6,10 +6,7 @@ import { useEffect } from "react"
 import * as gtag from "@/lib/gtag"
 
 export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
-  {
-    /* Google Analytics*/
-  }
-
+  // Google Analytics
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -18,11 +15,8 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
 
     gtag.pageview(GA_MEASUREMENT_ID, url)
   }, [pathname, searchParams, GA_MEASUREMENT_ID])
-  {
-    /* -- End - Google Analytics -- */
-  }
+  // -- End - Google Analytics --
   return (
-    // Google Analytics
     <>
       <Script
         strategy="afterInteractive"
@@ -43,6 +37,5 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
         }}
       />
     </>
-    // -- End - Google Analytics --
   )
 }
