@@ -150,7 +150,11 @@ main {
 
 @media (prefers-color-scheme: dark) {
   .prose pre {
-    background-color: var(--shiki-dark-bg, #0d1117) !important;
+    background-color: hsl(0, 0%, 14%) !important;
+  }
+
+  .prose a {
+    color: var(--foreground) !important;
   }
 }
 

@@ -71,7 +71,7 @@ export default async function Post({ params }) {
           <p className="font-semibold">{summary}</p>
           <p className="text-foreground">{formatDate(publishedAt)}</p>
         </div>
-        <hr className="mt-8 border-stone-200" />
+        <hr className="mt-8 border-stone-200 dark:border-stone-800" />
       </header>
 
       <article className="prose prose-quoteless dark:prose-invert max-w-none text-foreground">
