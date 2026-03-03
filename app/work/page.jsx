@@ -13,7 +13,7 @@ function highlightAuthor(text) {
   const parts = text.split(new RegExp(`(${AUTHOR_NAME})`, "gi"))
   return parts.map((part, i) =>
     part.toLowerCase() === AUTHOR_NAME.toLowerCase()
-      ? <strong key={i}>{part}</strong>
+      ? <strong key={i} className="text-foreground">{part}</strong>
       : part
   )
 }

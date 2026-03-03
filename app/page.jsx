@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </section>
 
-      <hr className="border-stone-200 my-8" />
+      <hr className="my-8 border-stone-200 dark:border-stone-800" />
 
       <section>
         <p className="mb-5 text-foreground">Some representative lines of work include:</p>

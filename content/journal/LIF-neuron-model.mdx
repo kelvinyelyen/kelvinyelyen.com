@@ -35,7 +35,7 @@ This describes how the membrane voltage evolves over time in response to synapti
 
 ## Discrete-time (Euler) integration
 
-Computers, however, cannot handle continuous changes — they work in discrete time steps. So we approximate the derivative with a **finite difference**:
+Computers, however, cannot handle continuous changes  they work in discrete time steps. So we approximate the derivative with a **finite difference**:
 
 $$
 \frac{dV}{dt} \approx \frac{V(t+\Delta t) - V(t)}{\Delta t}
@@ -169,6 +169,7 @@ for step in range(N_steps):
     record_V(t, V)
 ```
 
+---
 ## Reference
 
 - [Leaky Integrate-and-Fire (LIF) Neuron Simulation](https://colab.research.google.com/drive/1ecaifJtgvZBc8QzcabNCsXnObv0ssqGj?usp=sharing)

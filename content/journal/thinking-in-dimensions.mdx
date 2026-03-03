@@ -4,16 +4,21 @@ publishedAt: "2024-06-21"
 summary: "Rediscovering linear algebra through physics, computation, and the way we process information."
 ---
 
-I used to think of linear algebra as just abstract math; vectors, matrices, and formulas that felt disconnected from reality. But now, as I apply them, they’ve become more than just numbers. Vectors are how I understand movement, data, and even thought. Circling back to the fundamentals, I now see how these mathematical tools shape the world around me; connecting physics, computation and the very way we process and interact with information.
+I used to think of linear algebra as just abstract math vectors, matrices, and formulas that felt disconnected from reality. But now, as I apply them, they’ve become more than just numbers. They feel like a way to *look under the hood*.
+
+We spend so much time describing the brain by its outputs: memory, attention, decision-making, habits. That’s the “software.” But if you want to model what’s happening underneath, the engine that makes those outputs possible, you need a language built for huge, parallel systems.
+
+And surprisingly, that language is linear algebra.
+
+Not because it’s fancy, but because it’s fast: it lets you represent *many things at once* in a single object. It stops being math for solving for $x$ and starts feeling like a map, a way to see structure.
 
 ## Vectors
 
-The traditional explanation for vectors is basically *'anything with magnitude and direction.'* While this is true in many contexts, vectors can be understood from various perspectives depending on their application.
-
+The traditional explanation for vectors is basically *“anything with magnitude and direction.”* While that’s true in many contexts, vectors become much clearer when you see how different fields treat them, and why all those views are secretly the same thing.
 
 ### **Physics: The Arrow in Space**
-Vectors are often represented as arrows pointing in space, defined by their magnitude and direction. These vectors don’t just live in two-dimensional space, they live in all dimensions, representing quantities like velocity, force, and momentum. 
 
+Vectors are often represented as arrows pointing in space, defined by their magnitude and direction. These vectors don’t just live in two-dimensional space, they live in all dimensions, representing quantities like velocity, force, and momentum.
 
 <div className="MafsView">
     <ArrowInSpace vector="3, 2" />
@@ -35,9 +40,11 @@ $$
 
 This velocity vector tells you the car is moving at 10 meters per second along the x-axis. Vectors are indispensable in physics for representing how things move and interact in space.
 
-
 ### **Computer Science: Ordered Lists of Numbers**
-In Computer Science, vectors are often understood as ordered lists of numbers, which are crucial for representing and manipulating data in algorithms and data structures. Think of a vector like a set of neurons in the brain, where each number in the vector is like an individual neuron firing based on a certain stimulus. Just as neurons work together to process information, the numbers in a vector collectively help a machine process data.
+
+In Computer Science, vectors are often understood as ordered lists of numbers, crucial for representing and manipulating data in algorithms and data structures.
+
+Think of a vector like a set of neurons in the brain, where each number is like an individual neuron firing based on a certain stimulus. Just as neurons work together to process information, the numbers in a vector collectively help a machine process data.
 
 For instance, imagine we want to represent the basic idea of someone's emotions in a vector. We could have a vector that represents happiness, sadness, and surprise, where each number in the vector represents the intensity of each emotion:
 
@@ -50,26 +57,27 @@ In this case:
 - 0.1 represents a low intensity of sadness,
 - 0.5 represents a moderate intensity of surprise.
 
-By manipulating such vectors, just like the brain processes sensory information, computers can analyze complex datasets. This helps with tasks such as pattern recognition (identifying common features in data), machine learning (training algorithms to make predictions), and data visualization (graphing and interpreting data). These vectors serve as a simple but powerful way to structure and work with data in computer science.
+By manipulating such vectors, computers can analyze complex datasets. This helps with tasks such as pattern recognition, machine learning, and data visualization.
 
+But this “list of numbers” view is only half the story.
 
 ### **Mathematics: Manipulating Vectors**
 
-In mathematics, vectors are not just arrows or lists of numbers, they are tools used to perform calculations like adding, scaling, and comparing vectors.
+In mathematics, vectors are not just arrows or lists of numbers, they are objects you can combine.
 
-- **Vector Addition**: When you add two vectors, you simply add their corresponding components. For example, adding vectors $\mathbf{u} = \begin{bmatrix}1 \\ 2\end{bmatrix}$ and $\mathbf{v} = \begin{bmatrix}3 \\ 4\end{bmatrix}$:
+- **Vector Addition**: When you add two vectors, you add corresponding components. For example, adding $\mathbf{u} = \begin{bmatrix}1 \\ 2\end{bmatrix}$ and $\mathbf{v} = \begin{bmatrix}3 \\ 4\end{bmatrix}$:
 
   $$
   \mathbf{u} + \mathbf{v} = \begin{bmatrix}1+3 \\ 2+4\end{bmatrix} = \begin{bmatrix}4 \\ 6\end{bmatrix}
   $$
 
-- **Scalar Multiplication**: This is when you multiply a vector by a number (scalar). For example, multiplying vector $\mathbf{v} = \begin{bmatrix}2 \\ 3\end{bmatrix}$ by 2:
+- **Scalar Multiplication**: Multiply a vector by a number. For example, multiplying $\mathbf{v} = \begin{bmatrix}2 \\ 3\end{bmatrix}$ by 2:
 
   $$
   2 \cdot \mathbf{v} = 2 \cdot \begin{bmatrix}2 \\ 3\end{bmatrix} = \begin{bmatrix}4 \\ 6\end{bmatrix}
   $$
 
-- **Dot Product**: The dot product is a way to measure how much two vectors align with each other. For example, with $\mathbf{a} = \begin{bmatrix}1 \\ 3\end{bmatrix}$ and $\mathbf{b} = \begin{bmatrix}4 \\ 2\end{bmatrix}$, the dot product is:
+- **Dot Product**: A way to measure alignment. For example, with $\mathbf{a} = \begin{bmatrix}1 \\ 3\end{bmatrix}$ and $\mathbf{b} = \begin{bmatrix}4 \\ 2\end{bmatrix}$:
 
   $$
   \mathbf{a} \cdot \mathbf{b} = 1 \cdot 4 + 3 \cdot 2 = 10
@@ -81,7 +89,7 @@ The dot product helps measure similarity, which is useful in areas like machine 
 
 Vectors are essential when it comes to understanding space, whether it’s about location, movement, or forces.
 
-For example, in 3D space, a vector like \( [3, 4, 5] \) could represent a point that’s 3 units along the x-axis, 4 along the y-axis, and 5 along the z-axis. This is how we define where something is in space.
+For example, in 3D space, a vector like \( [3, 4, 5] \) could represent a point that’s 3 units along the x-axis, 4 along the y-axis, and 5 along the z-axis.
 
 <div className="MafsView">
     <Vector3D />
@@ -93,8 +101,238 @@ Vectors also come into play when we need to change things around, like stretchin
 
 At the heart of it, vectors are the link between numbers and space. The numbers inside a vector can represent how far and in which direction to move in a given space. And by doing simple math on these numbers, we can shift, rotate, or scale objects in space, something that happens regularly in game design, physics simulations, or 3D modeling.
 
+And once you internalize that “a list can be an arrow,” you can make the jump to neuroscience.
+
 ---
 
+## From Space to Neural State
+
+In neuroscience, a vector isn’t just an arrow floating in space or a row in a spreadsheet.
+
+It’s a snapshot of simultaneity.
+
+A brain doesn’t do one thing at a time. Populations of neurons fire together, and the system’s state is best captured all at once.
+
+If you record from $N$ neurons at a single moment in time, their firing rates can be written as:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_N
+\end{bmatrix}
+$$
+
+This vector is not just a list, geometrically, it is a coordinate in an $N$-dimensional space. Each neuron defines an axis. A particular pattern of firing becomes a single point in that high-dimensional space.
+
+We can’t visualize $10{,}000$ dimensions, but the rules don’t change. The 3D arrow is just a crutch for intuition. The math scales.
+
+### Magnitude vs Direction (intensity vs pattern)
+
+A neural state vector has two separable meanings:
+
+- **Magnitude**: overall activity level (how “loud” the population is)
+- **Direction**: the pattern across neurons (the “melody” of activity)
+
+You can have the same pattern at different intensities.
+
+### Normalization (remove scale, keep pattern)
+
+Often, what matters is not the overall intensity of neural firing, but the pattern of activity across neurons.
+
+We normalize the vector:
+
+$$
+\hat{\mathbf{x}} = \frac{\mathbf{x}}{\|\mathbf{x}\|}
+$$
+
+This produces a unit vector of length 1.
+
+Normalization preserves direction (the pattern) while removing magnitude (the intensity). In geometric terms, we project the neural state onto the surface of a unit sphere, preserving structure while removing scale.
+
+It’s a practical way to compare states fairly:
+same melody, normalized volume.
+
+
+
+## Neural Processing: Combining States
+
+Neural activity doesn’t just sit in one state, it mixes, shifts, and evolves.
+
+### Linear Combinations
+
+Complex activity patterns can be built from simpler ones through linear combinations:
+
+$$
+\mathbf{z} = a\mathbf{x} + b\mathbf{y}
+$$
+
+This is scaling and adding, stretching one direction, stretching another, and seeing where you land.
+
+A useful way to think about it: you don’t need a thousand different “movement instructions” to navigate a space. You need a few good ones, *independent* ones.
+
+### Redundancy, dependence, and degrees of freedom
+
+If two neurons are locked together (one is always a multiple of the other), you don’t really have two degrees of freedom, you have redundancy.
+
+Geometrically, the data stops filling the full space and starts living on a lower-dimensional sheet.
+
+That isn’t just a math observation. It’s a structural insight: the system’s true complexity is lower than its raw dimensionality.
+
+
+
+## Neural Listening: The Dot Product
+
+How does one neuron “listen” to many inputs and decide whether to respond?
+
+The dot product models this kind of integration.
+
+Algebraically:
+
+$$
+\mathbf{x} \cdot \mathbf{y} = \sum_i x_i y_i
+$$
+
+In early visual processing, we often model a neuron like this:
+
+- $\mathbf{r}$ = retinal firing rates (the input pattern)
+- $\mathbf{w}$ = synaptic weights (the neuron's template)
+
+The neuron’s firing rate is:
+
+$$
+g = \mathbf{w} \cdot \mathbf{r}
+$$
+
+Geometrically:
+
+$$
+\mathbf{x} \cdot \mathbf{y} = \|\mathbf{x}\| \|\mathbf{y}\| \cos(\theta)
+$$
+
+So the dot product is really a measure of alignment.
+
+- aligned $\Rightarrow$ large response
+- perpendicular $\Rightarrow$ zero response
+
+A neuron becomes a similarity detector:
+it asks how much the world matches what it’s tuned for.
+
+Recognition becomes geometry, projection onto an internal template.
+
+
+
+## Population Transformations: Matrices
+
+When we go from single neurons to populations (retina $\rightarrow$ LGN, or one layer $\rightarrow$ another), we move from vectors to matrices.
+
+Suppose the retina projects to the LGN through a weight matrix $P$:
+
+$$
+\mathbf{g}_p = P\mathbf{r}
+$$
+
+A matrix reshapes neural space. It can rotate, stretch, compress, and collapse dimensions.
+
+### Eigenvectors and eigenvalues (invariant directions)
+
+Some directions are special. If applying a matrix only scales a vector:
+
+$$
+P\mathbf{v} = \lambda \mathbf{v}
+$$
+
+Then $\mathbf{v}$ is an eigenvector and $\lambda$ is its eigenvalue.
+
+Eigenvectors are directions that “survive” the transformation, the system doesn’t rotate them into something else, it only amplifies or shrinks them.
+
+This is one reason eigenvectors matter in neuroscience: they can reveal dominant modes, patterns the circuit naturally preserves or pushes forward.
+
+### Null Space & Information Loss
+
+If a matrix has a null space, then:
+
+$$
+P\mathbf{x} = 0
+$$
+
+for some nonzero $\mathbf{x}$.
+
+This means different input patterns could produce identical outputs. Geometrically, dimensions collapse. Biologically, details are lost.
+
+Linear algebra gives a clean way to ask what a circuit preserves, and what it discards.
+
+
+
+## Solving Neural Systems: REF & RREF
+
+Neural population dynamics can often be written as a system:
+
+$$
+W\mathbf{x} = \mathbf{y}
+$$
+
+If we record $\mathbf{y}$ and know $W$, we may want to recover $\mathbf{x}$.
+
+Using Gaussian elimination, we transform $W$ into:
+
+- **Row Echelon Form (REF)** — triangular structure allowing back-substitution
+- **Reduced Row Echelon Form (RREF)** — fully isolated variables
+
+Conceptually, REF/RREF is about removing redundancy.
+
+Row operations don’t change the solution space, they reorganize it until independence becomes visible. Pivot columns mark independent directions. Dependent rows get exposed as repetition.
+
+It’s another example of the same theme: strip away clutter, keep structure.
+
+
+
+## Dimensionality Reduction: Removing Noise, Keeping Geometry
+
+Neural activity is high-dimensional, but neurons are correlated. Real activity often lives in a lower-dimensional subspace.
+
+### Principal Component Analysis (PCA)
+
+PCA finds new axes (principal components) that capture the maximum variance in the data.
+
+Instead of describing activity across thousands of neurons independently, we project activity into a smaller, meaningful subspace.
+
+We compress dimensionality while preserving structure, keeping the dominant directions and discarding low-variance directions that are often noise.
+
+### Nonlinear Reduction
+
+Not all neural relationships are linear. Some activity patterns lie on curved manifolds.
+
+Nonlinear dimensionality reduction methods (such as t-SNE) help unfold these manifolds so we can see clusters and neighborhoods in 2D or 3D maps.
+
+Either way, the goal is the same:
+reduce complexity without losing the shape of the system.
+
+
+
+## Vectors Beyond Arrows: Function Spaces
+
+One more shift: vectors don’t have to be arrows.
+
+A vector is anything that supports:
+- addition
+- scaling
+
+Polynomials form a vector space. Functions form vector spaces.
+
+That means everything above still applies, dot products, angles, projection, bases, but now the “points” are functions.
+
+It’s a reminder that we aren’t learning a neuroscience trick.
+
+We’re learning a universal language for relationships:
+a way to turn messy systems into geometry.
+
+And once you start seeing vectors as maps, it becomes hard to unsee.
+
+---
 
 ## References
   - [3Blue1Brown: Essence of Linear Algebra](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+  - [Neuromatch Computational Neuroscience Prerequisite: Linear Algebra (W0D3)](https://compneuro.neuromatch.io/tutorials/W0D3_LinearAlgebra/student/W0D3_Tutorial1.html)

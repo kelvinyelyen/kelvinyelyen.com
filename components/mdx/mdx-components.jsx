@@ -134,6 +134,10 @@ function createHeading(level) {
   }
 }
 
+function hr(props) {
+  return <hr className="my-8 border-stone-200 dark:border-stone-800" {...props} />
+}
+
 export {
   Table,
   table,
@@ -145,5 +149,6 @@ export {
   TweetComponent,
   ArrowInSpace,
   Vector3D,
-  UnitVectorDemo
+  UnitVectorDemo,
+  hr
 }
