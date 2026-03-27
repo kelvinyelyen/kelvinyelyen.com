@@ -13,26 +13,27 @@ function highlightAuthor(text) {
   const parts = text.split(new RegExp(`(${AUTHOR_NAME})`, "gi"))
   return parts.map((part, i) =>
     part.toLowerCase() === AUTHOR_NAME.toLowerCase()
-      ? <strong key={i} className="text-foreground">{part}</strong>
+      ? <span key={i} className="text-foreground">{part}</span>
       : part
   )
 }
 
 function ResumeItem({ item }) {
   return (
-    <li>
-      <a
-        href={item.website}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline underline-offset-2 decoration-[0.5px]"
-      >
-        {item.role || item.degree}
-      </a>
-      <span className="text-muted-foreground">
-        , {item.company || item.institution}
-      </span>
-      <span className="text-muted-foreground block sm:inline sm:ml-2">
+    <li className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-4">
+      <div className="flex flex-wrap items-baseline gap-x-2">
+        <a
+          href={item.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 decoration-[0.5px]"
+        >
+          {item.role || item.degree}
+        </a>
+        <span className="text-muted-foreground"> {item.company || item.institution}
+        </span>
+      </div>
+      <span className="text-muted-foreground text-[15px] whitespace-nowrap mt-1 sm:mt-0">
         {item.year}
       </span>
     </li>
@@ -77,7 +78,7 @@ export default function Page() {
                     href={metadata.document}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold underline underline-offset-2 decoration-[0.5px]"
+                    className="underline underline-offset-2 decoration-[0.5px]"
                   >
                     {metadata.title}
                   </a>
@@ -86,7 +87,7 @@ export default function Page() {
                     {highlightAuthor(metadata.authors)}
                   </span>
                 </div>
-                <div className="text-muted-foreground">{metadata.venue}</div>
+                <div>{metadata.venue}</div>
               </div>
             ))}
           </div>

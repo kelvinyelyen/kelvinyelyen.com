@@ -45,23 +45,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-4 space-y-4">
-        <p className="text-foreground flex flex-wrap gap-x-3 gap-y-1">
-          <Link href="/work" className="underline underline-offset-2 decoration-[0.5px]">Work</Link>
-          <span className="text-muted-foreground">·</span>
-          <Link href="/blog" className="underline underline-offset-2 decoration-[0.5px]">Notes</Link>
-          <span className="text-muted-foreground">·</span>
-          <a href="https://github.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">GitHub</a>
-          <span className="text-muted-foreground">·</span>
-          <a href="https://x.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">X</a>
-          <span className="text-muted-foreground">·</span>
-          <a href="https://www.linkedin.com/in/kelvinyelyen/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">LinkedIn</a>
-        </p>
-        <p className="text-foreground">
-          <a href="mailto:kelvinyelyen@gmail.com" className="underline underline-offset-2 decoration-[0.5px]">kelvinyelyen [at] gmail [dot] com</a>
-          <span className="text-muted-foreground"> / </span>
-          <a href="https://drive.google.com/drive/folders/1vSpuEMBHVt9m0rQqy02TLqi4-AqmBRk9?usp=sharing" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">CV</a>
-        </p>
+      <section className="mt-8 flex flex-col gap-4 text-[15px]">
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-muted-foreground">
+          <Link href="/work" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">Work</Link>
+          <Link href="/blog" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">Notes</Link>
+          <a href="https://github.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">Github</a>
+          <a href="https://x.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">X</a>
+          <a href="https://www.linkedin.com/in/kelvinyelyen/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">LinkedIn</a>
+        </div>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-muted-foreground">
+          <a href="mailto:kelvinyelyen@gmail.com" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">kelvinyelyen [at] gmail [dot] com</a>
+          <a href="https://drive.google.com/drive/folders/1vSpuEMBHVt9m0rQqy02TLqi4-AqmBRk9?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">CV</a>
+        </div>
       </section>
     </main>
   )

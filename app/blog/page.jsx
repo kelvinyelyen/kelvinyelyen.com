@@ -19,7 +19,6 @@ export default function Page() {
         {posts.map(({ slug, metadata }) => (
           <li key={slug} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-4">
             <span className="flex items-baseline gap-2">
-              <span className="text-foreground shrink-0">▪</span>
               <Link
                 href={`/blog/${slug}`}
                 className="underline underline-offset-2 decoration-[0.5px]"
