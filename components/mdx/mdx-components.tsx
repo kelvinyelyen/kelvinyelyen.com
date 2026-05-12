@@ -1,7 +1,6 @@
-/* eslint-disable react/display-name */
 import React from "react"
 import Link from "next/link"
-import Image from "next/image"
+import Image, { ImageProps } from "next/image"
 import { TweetComponent } from "@/components/mdx/tweet/tweet"
 
 import { Icons } from "@/components/icons"
@@ -11,7 +10,12 @@ import {
   UnitVectorDemo
 } from "@/components/mdx/vector"
 
-function Table({ data }) {
+interface TableData {
+  headers: string[]
+  rows: string[][]
+}
+
+export function Table({ data }: { data: TableData }) {
   const headers = data.headers.map((header, index) => (
     <th key={index}>{header}</th>
   ))
@@ -34,7 +38,7 @@ function Table({ data }) {
   )
 }
 
-function table(props) {
+export function table(props: React.TableHTMLAttributes<HTMLTableElement>) {
   return (
     <div className="w-full overflow-x-auto my-4 relative">
       <table className="w-full text-left border-collapse min-w-full" {...props} />
@@ -42,18 +46,18 @@ function table(props) {
   )
 }
 
-function CustomLink(props) {
-  const { href, children } = props
+export function CustomLink(props: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
+  const { href, children, ...rest } = props
 
-  if (href.startsWith("/")) {
+  if (href?.startsWith("/")) {
     return (
-      <Link href={href} {...props}>
+      <Link href={href} {...rest}>
         {children}
       </Link>
     )
   }
 
-  if (href.startsWith("#")) {
+  if (href?.startsWith("#")) {
     return <a {...props} />
   }
 
@@ -64,20 +68,26 @@ function CustomLink(props) {
   )
 }
 
-function RoundedImage(props) {
+export function RoundedImage(props: ImageProps) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />
 }
 
-function Callout(props) {
+export function Callout({ emoji, children }: { emoji: string; children: React.ReactNode }) {
   return (
     <div className="px-4 py-3 border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm flex items-center text-neutral-900 dark:text-neutral-100 mb-8">
-      <div className="flex items-center w-4 mr-4">{props.emoji}</div>
-      <div className="w-full callout">{props.children}</div>
+      <div className="flex items-center w-4 mr-4">{emoji}</div>
+      <div className="w-full callout">{children}</div>
     </div>
   )
 }
 
-function FeedbackCard({ title, items, type }) {
+interface FeedbackCardProps {
+  title: string
+  items: string[]
+  type: "pros" | "cons"
+}
+
+function FeedbackCard({ title, items, type }: FeedbackCardProps) {
   const isPros = type === "pros"
   const Icon = isPros ? Icons.Check : Icons.Cross
   const containerClass = isPros
@@ -87,7 +97,7 @@ function FeedbackCard({ title, items, type }) {
 
   return (
     <div className={`border bg-neutral-50 dark:bg-neutral-900 rounded-lg p-6 w-full ${containerClass}`}>
-      <span>{title}</span>
+      <span className="font-semibold">{title}</span>
       <div className="mt-4">
         {items.map((item) => (
           <div key={item} className="flex font-medium items-baseline mb-2">
@@ -102,15 +112,15 @@ function FeedbackCard({ title, items, type }) {
   )
 }
 
-function ProsCard({ title, pros }) {
+export function ProsCard({ title, pros }: { title: string; pros: string[] }) {
   return <FeedbackCard title={title} items={pros} type="pros" />
 }
 
-function ConsCard({ title, cons }) {
+export function ConsCard({ title, cons }: { title: string; cons: string[] }) {
   return <FeedbackCard title={title} items={cons} type="cons" />
 }
 
-function slugify(str) {
+function slugify(str: any): string {
   return str
     .toString()
     .toLowerCase()
@@ -121,9 +131,9 @@ function slugify(str) {
     .replace(/--+/g, "-")
 }
 
-function createHeading(level) {
-  const Tag = `h${level}`
-  return ({ children }) => {
+export function createHeading(level: number) {
+  return ({ children }: { children: React.ReactNode }) => {
+    const Tag = `h${level}` as any
     const slug = slugify(children)
     return (
       <Tag id={slug}>
@@ -134,21 +144,15 @@ function createHeading(level) {
   }
 }
 
-function hr(props) {
+
+
+export function hr(props: React.HTMLAttributes<HTMLHRElement>) {
   return <hr className="my-8 border-stone-200 dark:border-stone-800" {...props} />
 }
 
 export {
-  Table,
-  table,
-  CustomLink,
-  RoundedImage,
-  Callout,
-  ProsCard,
-  ConsCard,
   TweetComponent,
   ArrowInSpace,
   Vector3D,
-  UnitVectorDemo,
-  hr
+  UnitVectorDemo
 }

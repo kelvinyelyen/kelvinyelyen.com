@@ -1,5 +1,5 @@
 import { SubpageNav } from "@/components/layout"
-import { getCategoryContent } from "@/lib/content"
+import { getCategoryContent, PostMetadata } from "@/lib/content"
 
 export const metadata = {
   title: "Research & Experience",
@@ -9,7 +9,7 @@ export const metadata = {
 
 const AUTHOR_NAME = "Kelvin Yelyen"
 
-function highlightAuthor(text) {
+function highlightAuthor(text: string) {
   const parts = text.split(new RegExp(`(${AUTHOR_NAME})`, "gi"))
   return parts.map((part, i) =>
     part.toLowerCase() === AUTHOR_NAME.toLowerCase()
@@ -18,7 +18,7 @@ function highlightAuthor(text) {
   )
 }
 
-function ResumeItem({ item }) {
+function ResumeItem({ item }: { item: PostMetadata }) {
   return (
     <li className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-4">
       <div className="flex flex-wrap items-baseline gap-x-2">
@@ -84,7 +84,7 @@ export default function Page() {
                   </a>
                   {" "}
                   <span className="text-muted-foreground">
-                    {highlightAuthor(metadata.authors)}
+                    {highlightAuthor(metadata.authors || "")}
                   </span>
                 </div>
                 <div>{metadata.venue}</div>

@@ -1,16 +1,5 @@
-import remarkMath from "remark-math"
-import rehypeKatex from "rehype-katex"
-import withMDX from "@next/mdx"
-
 /** @type {import('next').NextConfig} */
-
-const nextConfig = withMDX({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
-  },
-})({
+const nextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
   async headers() {
     return [
@@ -21,11 +10,11 @@ const nextConfig = withMDX({
             key: "Content-Security-Policy",
             value: `
               default-src 'self';
-              script-src 'self' 'unsafe-eval' 'unsafe-inline';
-              style-src 'self' 'unsafe-inline';
+              script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://va.vercel-scripts.com;
+              style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
               img-src * blob: data:;
               connect-src *;
-              font-src 'self';
+              font-src 'self' https://fonts.gstatic.com;
             `.replace(/\n/g, ""),
           },
           { key: "Referrer-Policy", value: "origin-when-cross-origin" },
@@ -39,6 +28,6 @@ const nextConfig = withMDX({
       },
     ]
   },
-})
+}
 
 export default nextConfig

@@ -1,6 +1,7 @@
 import { Link } from "next-view-transitions"
 import { SubpageNav } from "@/components/layout"
 import { getCategoryContent } from "@/lib/content"
+import { formatDate } from "@/lib/date"
 
 export const metadata = {
   title: "Notes",
@@ -25,6 +26,9 @@ export default function Page() {
               >
                 {metadata.title}
               </Link>
+            </span>
+            <span className="text-muted-foreground text-[15px] whitespace-nowrap mt-1 sm:mt-0">
+              {formatDate(metadata.publishedAt)}
             </span>
           </li>
         ))}

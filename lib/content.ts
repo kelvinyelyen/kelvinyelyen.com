@@ -1,11 +1,34 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import { formatTimeAgo, formatDateTimeFull } from "./date"
+import { formatDateTimeFull } from "./date"
 
 const contentDir = "content"
 
-function getMdxFiles(categoryDir) {
+export interface PostMetadata {
+  title: string
+  publishedAt: string | Date
+  summary: string
+  image?: string
+  authors?: string
+  venue?: string
+  document?: string
+  website?: string
+  role?: string
+  degree?: string
+  company?: string
+  institution?: string
+  year?: string | number
+  publishedAtFormatted?: string
+}
+
+export interface Post {
+  metadata: PostMetadata
+  slug: string
+  content: string
+}
+
+function getMdxFiles(categoryDir: string) {
   const files = fs.readdirSync(categoryDir)
   return files.filter((filename) => {
     const fullPath = path.join(categoryDir, filename)
@@ -13,15 +36,14 @@ function getMdxFiles(categoryDir) {
   })
 }
 
-function generateSlugsFromCategory(category) {
+export function generateSlugsFromCategory(category: string) {
   const categoryDir = path.join(contentDir, category)
   return getMdxFiles(categoryDir).map((filename) => ({
     slug: filename.replace(".mdx", ""),
   }))
 }
 
-
-async function getContent({ category, slug }) {
+export async function getContent({ category, slug }: { category: string; slug: string }): Promise<Post> {
   const categoryDir = path.join(contentDir, category)
   const markdownFile = fs.readFileSync(
     path.join(categoryDir, slug + ".mdx"),
@@ -33,25 +55,26 @@ async function getContent({ category, slug }) {
     metadata: {
       ...frontMatter,
       publishedAtFormatted: formatDateTimeFull(frontMatter.publishedAt),
-    },
+    } as PostMetadata,
     slug,
     content: content,
   }
 }
 
-function getCategoryContent(category) {
+export function getCategoryContent(category: string): Post[] {
   const categoryDir = path.join(contentDir, category)
 
   const content = getMdxFiles(categoryDir).map((filename) => {
     const fileContent = fs.readFileSync(path.join(categoryDir, filename), "utf-8")
-    const { data: frontMatter } = matter(fileContent)
+    const { data: frontMatter, content: markdownContent } = matter(fileContent)
 
     return {
       metadata: {
         ...frontMatter,
         publishedAt: new Date(frontMatter.publishedAt),
-      },
+      } as PostMetadata,
       slug: filename.replace(".mdx", ""),
+      content: markdownContent
     }
   })
 
@@ -63,23 +86,12 @@ function getCategoryContent(category) {
       return timeB - timeA;
     }
 
-    // For resume items without publishedAt, try sorting by year
     if (a.metadata.year && b.metadata.year) {
-      const yearA = parseInt(a.metadata.year.toString().match(/\\d{4}/)?.[0] || '0', 10);
-      const yearB = parseInt(b.metadata.year.toString().match(/\\d{4}/)?.[0] || '0', 10);
+      const yearA = parseInt(a.metadata.year.toString().match(/\d{4}/)?.[0] || '0', 10);
+      const yearB = parseInt(b.metadata.year.toString().match(/\d{4}/)?.[0] || '0', 10);
       if (yearA !== yearB) return yearB - yearA;
     }
 
-    // Fallback to stable string sort by slug
     return a.slug.localeCompare(b.slug);
   })
-}
-
-
-
-
-export {
-  generateSlugsFromCategory,
-  getContent,
-  getCategoryContent,
 }

@@ -4,9 +4,13 @@ import React from 'react'
 import "mafs/core.css"
 import "mafs/font.css"
 
-import { Mafs, Coordinates, useMovablePoint, Vector, vec, Text, Plot, Theme } from "mafs"
+import { Mafs, Coordinates, useMovablePoint, Vector, vec, Text } from "mafs"
 
-function ArrowInSpace({ vector }) {
+interface ArrowInSpaceProps {
+  vector: string | [number, number]
+}
+
+function ArrowInSpace({ vector }: ArrowInSpaceProps) {
   const [x, y] = typeof vector === "string"
     ? vector.split(",").map(Number)
     : vector
@@ -26,8 +30,8 @@ function UnitVectorDemo() {
   })
   const jm = useMovablePoint([0, 2], { constrain: "vertical", color: "green" })
 
-  const i = [1, 0]
-  const j = [0, 1]
+  const i: vec.Vector2 = [1, 0]
+  const j: vec.Vector2 = [0, 1]
 
   const scaledI = vec.scale(i, im.x)
   const scaledJ = vec.scale(j, jm.y)
@@ -71,7 +75,7 @@ function UnitVectorDemo() {
         q={Math.round(jm.y)}
       </Text>
 
-      <Text x={resultant[0]} y={[resultant[1] + 0.25]} size={14}>
+      <Text x={resultant[0]} y={resultant[1] + 0.25} size={14}>
         {Math.round(im.x)}i + {Math.round(jm.y)}j
       </Text>
     </Mafs>
@@ -96,6 +100,5 @@ function Vector3D() {
     </Mafs>
   )
 }
-
 
 export { ArrowInSpace, UnitVectorDemo, Vector3D }

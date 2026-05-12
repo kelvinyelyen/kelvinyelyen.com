@@ -1,10 +1,10 @@
-const DATE_OPTIONS = { year: "numeric", month: "long", day: "numeric" }
+const DATE_OPTIONS: Intl.DateTimeFormatOptions = { year: "numeric", month: "long", day: "numeric" }
 
-export function formatTimeAgo(inputDate) {
+export function formatTimeAgo(inputDate: string | Date) {
   const date = new Date(inputDate)
   const currentDate = new Date()
 
-  const timeDifference = currentDate - date
+  const timeDifference = currentDate.getTime() - date.getTime()
   const secondsDifference = Math.floor(timeDifference / 1000)
   const minutesDifference = Math.floor(secondsDifference / 60)
   const hoursDifference = Math.floor(minutesDifference / 60)
@@ -26,11 +26,11 @@ export function formatTimeAgo(inputDate) {
   return `${Math.floor(daysDifference / 365)}yr ago`
 }
 
-export function formatDate(inputDate) {
+export function formatDate(inputDate: string | Date) {
   return new Date(inputDate).toLocaleDateString(undefined, DATE_OPTIONS)
 }
 
-export function formatDateTimeFull(inputDate) {
+export function formatDateTimeFull(inputDate: string | Date) {
   const formattedDate = new Date(inputDate).toLocaleDateString(undefined, DATE_OPTIONS)
   const timeAgo = formatTimeAgo(inputDate)
   return `${formattedDate} (${timeAgo})`

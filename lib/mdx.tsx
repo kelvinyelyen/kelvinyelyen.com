@@ -1,5 +1,5 @@
 import React from "react"
-import { MDXRemote } from "next-mdx-remote/rsc"
+import { MDXRemote, type MDXRemoteProps } from "next-mdx-remote/rsc"
 import * as MDXComponents from "@/components/mdx/mdx-components"
 import remarkGfm from "remark-gfm"
 import remarkMath from "remark-math"
@@ -18,7 +18,7 @@ const prettyCodeOptions = {
   keepBackground: false,
 }
 
-export function CustomMDX(props) {
+export function CustomMDX(props: MDXRemoteProps) {
   return (
     <MDXRemote
       {...props}

@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Suspense } from "react"
 import { STIX_Two_Text } from "next/font/google"
 import { ViewTransitions } from "next-view-transitions"
+import { Metadata } from "next"
 
 import { cn } from "@/lib/utils"
 import { GoogleAnalytics } from "@/components"
@@ -16,7 +17,7 @@ const stixTwoText = STIX_Two_Text({
   variable: "--font-stix",
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL("https://kelvinyelyen.com"),
   title: {
     default: "Kelvin Yelyen",
@@ -57,7 +58,7 @@ export const metadata = {
   },
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <ViewTransitions>
       <html
@@ -66,12 +67,14 @@ export default function RootLayout({ children }) {
         className={cn(stixTwoText.variable)}
       >
         <body className="flex flex-col min-h-screen">
-          <Suspense>
+          <Suspense fallback={null}>
             <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID} />
           </Suspense>
-          <Suspense>
-            <main className="flex-1" style={{ viewTransitionName: 'main' }}>{children}</main>
-          </Suspense>
+          <main className="flex-1" style={{ viewTransitionName: 'main' }}>
+            <Suspense fallback={null}>
+              {children}
+            </Suspense>
+          </main>
           <Analytics />
           <SpeedInsights />
         </body>

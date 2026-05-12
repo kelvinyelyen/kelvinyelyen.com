@@ -7,7 +7,11 @@ export async function generateStaticParams() {
   return generateSlugsFromCategory("journal")
 }
 
-export async function generateMetadata({ params }) {
+interface PageParams {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: PageParams) {
   const { slug } = await params
   const { metadata } = await getContent({ category: "journal", slug })
   const ogImage = `https://kelvinyelyen.com/og?title=${metadata.title}`
@@ -15,11 +19,11 @@ export async function generateMetadata({ params }) {
   return {
     title: metadata.title,
     description: metadata.summary,
-    publishedAt: metadata.publishedAtFormatted,
+    publishedAt: (metadata as any).publishedAtFormatted,
     openGraph: {
       title: metadata.title,
       description: metadata.summary,
-      publishedAt: metadata.publishedAtFormatted,
+      publishedAt: (metadata as any).publishedAtFormatted,
       url: `https://kelvinyelyen.com/blog/${slug}`,
       images: [{ url: ogImage }],
       type: "article",
@@ -33,7 +37,7 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export default async function Post({ params }) {
+export default async function Post({ params }: PageParams) {
   const { slug } = await params
   const post = await getContent({ category: "journal", slug })
   const { title, publishedAt, summary } = post.metadata
@@ -75,7 +79,6 @@ export default async function Post({ params }) {
       </header>
 
       <article className="prose prose-stone prose-quoteless dark:prose-invert max-w-none text-foreground">
-        {/* @ts-expect-error Server Component */}
         <CustomMDX source={post.content} />
       </article>
     </main>
