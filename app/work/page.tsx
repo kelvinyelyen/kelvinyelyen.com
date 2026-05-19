@@ -61,18 +61,43 @@ export default function Page() {
 
         <section>
           <h2 className="text-[25px] font-semibold mb-6">Experience</h2>
-          <ul className="space-y-4">
-            {experience.map(({ slug, metadata }) => (
-              <ResumeItem key={slug} item={metadata} />
-            ))}
-          </ul>
+          <div className="relative ml-3">
+            {/* Vertical line */}
+            <div className="absolute left-0 top-1.5 bottom-1.5 w-px bg-stone-200 dark:bg-stone-800" />
+
+            <ul className="space-y-5">
+              {experience.map(({ slug, metadata }) => (
+                <li key={slug} className="relative pl-6 flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-4">
+                  {/* Dot */}
+                  <div className="absolute left-0 top-[9px] -translate-x-1/2 w-[7px] h-[7px] rounded-full bg-stone-400 dark:bg-stone-600" />
+
+                  <div className="flex flex-wrap items-baseline gap-x-2">
+                    <a
+                      href={metadata.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2 decoration-[0.5px]"
+                    >
+                      {metadata.role || metadata.degree}
+                    </a>
+                    <span className="text-muted-foreground">
+                      {metadata.company || metadata.institution}
+                    </span>
+                  </div>
+                  <span className="text-muted-foreground text-[15px] whitespace-nowrap mt-1 sm:mt-0">
+                    {metadata.year}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         <section>
           <h2 className="text-[25px] font-semibold mb-6">Research</h2>
-          <div className="space-y-6">
+          <div className="space-y-4">
             {projects.map(({ slug, metadata }) => (
-              <div key={slug}>
+              <div key={slug} className="rounded-lg bg-stone-50 dark:bg-stone-900/50 px-5 py-4">
                 <div>
                   <a
                     href={metadata.document}
@@ -87,7 +112,7 @@ export default function Page() {
                     {highlightAuthor(metadata.authors || "")}
                   </span>
                 </div>
-                <div>{metadata.venue}</div>
+                <div className="text-muted-foreground">{metadata.venue}</div>
               </div>
             ))}
           </div>

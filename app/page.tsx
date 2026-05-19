@@ -33,16 +33,25 @@ export default function Home() {
       <section>
         <p className="mb-5 text-foreground">Some representative lines of work include:</p>
 
-        <div className="space-y-5 text-foreground">
-          <p>
+        <ul className="list-disc list-outside space-y-3 text-foreground pl-5">
+          <li>
             Examining whether{" "}
             <a href="https://docs.google.com/presentation/d/1AFLK94lhrYCVdoR3AWnjYlY4LEAuBvLxwoQsCaRJ92Y/edit" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">
               default mode network activity
             </a>{" "}
             can distinguish social from non-social video stimuli more accurately than
-            early visual areas (V1–V2), using linear decoding of BOLD signals.
-          </p>
-        </div>
+            early visual areas (V1–V2), using linear decoding of BOLD signals.{" "}
+            <span className="text-xs text-muted-foreground">[fMRI · decoding]</span>
+          </li>
+          <li>
+            An{"  "}
+            <a href="https://neural-dynamics-lab.vercel.app" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">
+              interactive simulator
+            </a>{" "}
+            exploring computational principles of neural dynamics, from single-neuron biophysics to population-level activity.{" "}
+            <span className="text-xs text-muted-foreground">[computational · modelling]</span>
+          </li>
+        </ul>
       </section>
 
       <section className="mt-8 flex flex-col gap-4 text-[15px]">
