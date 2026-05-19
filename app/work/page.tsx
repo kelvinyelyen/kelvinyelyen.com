@@ -97,13 +97,13 @@ export default function Page() {
           <h2 className="text-[25px] font-semibold mb-6">Research</h2>
           <div className="space-y-4">
             {projects.map(({ slug, metadata }) => (
-              <div key={slug} className="rounded-lg bg-stone-50 dark:bg-stone-900/50 px-5 py-4">
+              <div key={slug} className="rounded-lg bg-stone-50 dark:bg-secondary px-5 py-4">
                 <div>
                   <a
                     href={metadata.document}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline underline-offset-2 decoration-[0.5px]"
+                    className="text-foreground underline underline-offset-2 decoration-[0.5px]"
                   >
                     {metadata.title}
                   </a>
