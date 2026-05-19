@@ -40,16 +40,14 @@ export default function Home() {
               default mode network activity
             </a>{" "}
             can distinguish social from non-social video stimuli more accurately than
-            early visual areas (V1–V2), using linear decoding of BOLD signals.{" "}
-            <span className="text-xs text-muted-foreground">[fMRI · decoding]</span>
+            early visual areas (V1–V2), using linear decoding of BOLD signals.
           </li>
           <li>
             An{"  "}
             <a href="https://neural-dynamics-lab.vercel.app" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">
               interactive simulator
             </a>{" "}
-            exploring computational principles of neural dynamics, from single-neuron biophysics to population-level activity.{" "}
-            <span className="text-xs text-muted-foreground">[computational · modelling]</span>
+            exploring computational principles of neural dynamics, from single-neuron biophysics to population-level activity.
           </li>
         </ul>
       </section>
