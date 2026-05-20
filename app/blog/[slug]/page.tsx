@@ -70,9 +70,9 @@ export default async function Post({ params }: PageParams) {
       />
 
       <header className="mt-10 mb-10">
-        <h1 className="text-[22px] sm:text-[25px] font-semibold">{title}</h1>
+        <h1 className="text-[22px] sm:text-[25px]">{title}</h1>
         <div className="flex flex-col mt-4 sm:mt-6 gap-4 sm:gap-6">
-          <p className="font-semibold">{summary}</p>
+          <p className="">{summary}</p>
           <p className="text-foreground">{formatDate(publishedAt)}</p>
         </div>
         <hr className="mt-8 border-stone-200 dark:border-stone-800" />

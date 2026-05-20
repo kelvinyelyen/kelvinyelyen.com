@@ -209,8 +209,20 @@ main {
 .prose h2,
 .prose h3,
 .prose h4 {
-  @apply font-semibold tracking-tight !important;
+  @apply font-medium tracking-tight !important;
   color: var(--foreground) !important;
+}
+
+.prose h2 {
+  font-size: 1.35em !important;
+}
+
+.prose h3 {
+  font-size: 1.15em !important;
+}
+
+.prose h4 {
+  font-size: 1.0em !important;
 }
 
 .prose strong {
