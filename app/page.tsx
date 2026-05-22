@@ -44,11 +44,11 @@ export default function Home() {
             early visual areas (V1–V2), using linear decoding of BOLD signals.
           </li>
           <li>
-            An{"  "}
-            <a href="https://neural-dynamics-lab.vercel.app" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">
-              interactive simulator
+            An{" "}
+            <a href="https://ncd-lab.vercel.app" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">
+              interactive lab
             </a>{" "}
-            exploring computational principles of neural dynamics, from single-neuron biophysics to population-level activity.
+            exploring neural dynamics from first principles, from single-neuron biophysics to population-level activity.
           </li>
         </ul>
       </section>
