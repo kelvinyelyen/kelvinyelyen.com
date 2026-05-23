@@ -2,6 +2,7 @@ import { Link } from "next-view-transitions"
 import { SubpageNav } from "@/components/layout"
 
 export default function Home() {
+  const socialLink = "hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700"
   return (
     <main className="container my-12 px-5 sm:px-0">
       <SubpageNav />
@@ -14,7 +15,7 @@ export default function Home() {
               Academic City University
             </a>
             , with research interests at the intersection of artificial intelligence and neuroscience.
-            My work and ongoing study explores the bidirectional relationship between biological and artificial systems:
+            My research and ongoing study explore the bidirectional relationship between biological and artificial systems:
             examining how neural mechanisms can inform more adaptive machine learning architectures,
             and how computational models can deepen our understanding of the brain.
           </p>
@@ -54,13 +55,108 @@ export default function Home() {
       </section>
 
       <section className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px] text-muted-foreground">
-        <a href="https://github.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">Github</a>
-        <a href="https://x.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">X</a>
-        <a href="https://www.linkedin.com/in/kelvinyelyen/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">LinkedIn</a>
-        <a href="/books" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">Reading</a>
-        <a href="https://drive.google.com/drive/folders/1vSpuEMBHVt9m0rQqy02TLqi4-AqmBRk9?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">CV</a>
-        <a href="mailto:kelvinyelyen@gmail.com" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">kelvinyelyen [at] gmail [dot] com</a>
-      </section>
+
+  <a
+
+    href="https://github.com/kelvinyelyen"
+
+    target="_blank"
+
+    rel="noopener noreferrer"
+
+    aria-label="GitHub profile"
+
+    className={socialLink}
+
+  >
+
+    GitHub
+
+  </a>
+
+  <a
+
+    href="https://x.com/kelvinyelyen"
+
+    target="_blank"
+
+    rel="noopener noreferrer"
+
+    aria-label="X (Twitter) profile"
+
+    className={socialLink}
+
+  >
+
+    X
+
+  </a>
+
+  <a
+
+    href="https://www.linkedin.com/in/kelvinyelyen/"
+
+    target="_blank"
+
+    rel="noopener noreferrer"
+
+    aria-label="LinkedIn profile"
+
+    className={socialLink}
+
+  >
+
+    LinkedIn
+
+  </a>
+
+  <Link
+
+    href="/books"
+
+    aria-label="Reading page"
+
+    className={socialLink}
+
+  >
+
+    Reading
+
+  </Link>
+
+  <a
+
+    href="https://drive.google.com/drive/folders/1vSpuEMBHVt9m0rQqy02TLqi4-AqmBRk9?usp=sharing"
+
+    target="_blank"
+
+    rel="noopener noreferrer"
+
+    aria-label="Curriculum Vitae"
+
+    className={socialLink}
+
+  >
+
+    CV
+
+  </a>
+
+  <a
+
+    href="mailto:kelvinyelyen@gmail.com"
+
+    aria-label="Send email to Kelvin Yelyen"
+
+    className={socialLink}
+
+  >
+
+    kelvinyelyen [at] gmail [dot] com
+
+  </a>
+
+</section>
     </main>
   )
 }
