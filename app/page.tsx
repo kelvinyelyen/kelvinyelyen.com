@@ -57,6 +57,7 @@ export default function Home() {
         <a href="https://github.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">Github</a>
         <a href="https://x.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">X</a>
         <a href="https://www.linkedin.com/in/kelvinyelyen/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">LinkedIn</a>
+        <a href="/books" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">Reading</a>
         <a href="https://drive.google.com/drive/folders/1vSpuEMBHVt9m0rQqy02TLqi4-AqmBRk9?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">CV</a>
         <a href="mailto:kelvinyelyen@gmail.com" className="hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700">kelvinyelyen [at] gmail [dot] com</a>
       </section>
