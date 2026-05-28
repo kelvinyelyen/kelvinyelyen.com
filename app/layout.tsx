@@ -9,7 +9,7 @@ import { ViewTransitions } from "next-view-transitions"
 import { Metadata } from "next"
 
 import { cn } from "@/lib/utils"
-import { GoogleAnalytics } from "@/components"
+import { GoogleAnalytics, TransitionErrorHandler } from "@/components"
 
 const stixTwoText = STIX_Two_Text({
   subsets: ["latin"],
@@ -67,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className={cn(stixTwoText.variable)}
       >
         <body className="flex flex-col min-h-screen">
+          <TransitionErrorHandler />
           <Suspense fallback={null}>
             <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID} />
           </Suspense>

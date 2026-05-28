@@ -2,7 +2,7 @@ import { Link } from "next-view-transitions"
 import { SubpageNav } from "@/components/layout"
 
 export default function Home() {
-  const socialLink = "hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300 dark:hover:border-neutral-700"
+  const socialLink = "hover:text-foreground transition-colors pb-0.5 border-b border-transparent hover:border-neutral-300"
   return (
     <main className="container my-12 px-5 sm:px-0">
       <SubpageNav />
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
       </section>
 
-      <hr className="my-8 border-stone-200 dark:border-stone-800" />
+      <hr className="my-8 border-stone-200" />
 
       <section>
         <p className="mb-5 text-foreground">Some representative lines of work include:</p>

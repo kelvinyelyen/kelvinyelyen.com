@@ -13,7 +13,7 @@ export function SubpageNav() {
     const pathname = usePathname()
 
     return (
-        <nav className="text-[15px] flex flex-wrap gap-x-1 gap-y-0.5">
+        <nav className="flex flex-wrap gap-x-1 gap-y-0.5">
             {routes.map((route, i) => {
                 const isActive =
                     route.href === "/"

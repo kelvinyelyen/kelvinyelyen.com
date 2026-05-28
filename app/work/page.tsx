@@ -63,13 +63,13 @@ export default function Page() {
           <h2 className="text-[25px] font-semibold mb-6">Experience</h2>
           <div className="relative ml-3">
             {/* Vertical line */}
-            <div className="absolute left-0 top-1.5 bottom-1.5 w-px bg-stone-200 dark:bg-stone-800" />
+            <div className="absolute left-0 top-1.5 bottom-1.5 w-px bg-stone-200" />
 
             <ul className="space-y-5">
               {experience.map(({ slug, metadata }) => (
                 <li key={slug} className="relative pl-6 flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-4">
                   {/* Dot */}
-                  <div className="absolute left-0 top-[9px] -translate-x-1/2 w-[7px] h-[7px] rounded-full bg-stone-400 dark:bg-stone-600" />
+                  <div className="absolute left-0 top-[9px] -translate-x-1/2 w-[7px] h-[7px] rounded-full bg-stone-400" />
 
                   <div className="flex flex-wrap items-baseline gap-x-2">
                     <a
@@ -97,7 +97,7 @@ export default function Page() {
           <h2 className="text-[25px] font-semibold mb-6">Research</h2>
           <div className="space-y-4">
             {projects.map(({ slug, metadata }) => (
-              <div key={slug} className="rounded-lg bg-stone-50 dark:bg-secondary px-5 py-4">
+              <div key={slug} className="rounded-lg bg-stone-50 px-5 py-4">
                 <div>
                   <a
                     href={metadata.document}

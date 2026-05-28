@@ -61,33 +61,6 @@ main {
     --tahiti-foreground: 0 0% 20%;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: 0 0% 10%;
-      --foreground: 0 0% 90%;
-      --card: 0 0% 10%;
-      --card-foreground: 0 0% 90%;
-      --popover: 0 0% 10%;
-      --popover-foreground: 0 0% 90%;
-      --primary: 0 0% 98%;
-      --primary-foreground: 0 0% 70%;
-      --secondary: 0 0% 12.9%;
-      --secondary-foreground: 0 0% 30%;
-      --muted: 0 0% 17%;
-      --muted-foreground: 0 0% 63.9%;
-      --accent: 0 0% 14.9%;
-      --accent-foreground: 0 0% 98%;
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 0 0% 98%;
-      --border: 0 0% 18%;
-      --input: 0 0% 18%;
-      --ring: 0 0% 83.1%;
-
-      --tahiti: 0 0% 12.5%;
-      --tahiti-foreground: 0 0% 75%;
-    }
-  }
-
 
   * {
     @apply border-border;
@@ -95,14 +68,6 @@ main {
 
   body {
     @apply bg-background text-foreground;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      font-weight: 300;
-    }
   }
 }
 
@@ -117,14 +82,24 @@ main {
 }
 
 .prose {
+  font-family: var(--font-stix), "STIX Two Text", Georgia, serif;
   font-size: 17px;
   line-height: 26px;
+}
+
+.prose>* {
+  margin-top: 0 !important;
+  margin-bottom: 1.25em !important;
 }
 
 @media (max-width: 639px) {
   .prose {
     font-size: 15px;
     line-height: 24px;
+  }
+
+  .prose>* {
+    margin-bottom: 1.25em !important;
   }
 }
 
@@ -142,7 +117,7 @@ main {
 }
 
 .prose .anchor:after {
-  @apply text-neutral-400 dark:text-neutral-600;
+  @apply text-neutral-400;
   content: "#";
 }
 
@@ -153,26 +128,14 @@ main {
 .prose pre {
   @apply rounded-lg overflow-x-auto lg:px-5 border border-border/40;
   /* Shiki applies its own background via style attr, we just set a fallback */
-  background-color: var(--shiki-light-bg, #f6f8fa);
+  background-color: var(--shiki-light-bg, #272727);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  .prose pre {
-    background-color: hsl(0, 0%, 14%) !important;
-  }
-
-  .prose a {
-    color: var(--foreground) !important;
-  }
-
-  .prose thead,
-  .prose tbody tr {
-    border-color: hsl(0, 0%, 18%) !important;
-  }
-}
 
 .prose code {
   @apply px-1 py-0.5 rounded-lg;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
 }
 
 .prose pre code {
@@ -193,14 +156,9 @@ main {
 }
 
 .prose pre code span[data-line] span {
-  color: var(--shiki-light);
+  color: var(--shiki-dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  .prose pre code span[data-line] span {
-    color: var(--shiki-dark) !important;
-  }
-}
 
 .prose img {
   @apply m-0;

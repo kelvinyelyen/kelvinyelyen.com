@@ -75,10 +75,10 @@ export default async function Post({ params }: PageParams) {
           <p className="font-medium">{summary}</p>
           <p className="text-foreground">{formatDate(publishedAt)}</p>
         </div>
-        <hr className="mt-8 border-stone-200 dark:border-stone-800" />
+        <hr className="mt-8 border-stone-200" />
       </header>
 
-      <article className="prose prose-stone prose-quoteless dark:prose-invert max-w-none text-foreground">
+      <article className="prose prose-stone prose-quoteless max-w-none text-foreground relative">
         <CustomMDX source={post.content} />
       </article>
     </main>

@@ -1,4 +1,5 @@
-import React from "react"
+"use client"
+import React, { useState } from "react"
 import Link from "next/link"
 import Image, { ImageProps } from "next/image"
 import { TweetComponent } from "@/components/mdx/tweet/tweet"
@@ -74,7 +75,7 @@ export function RoundedImage(props: ImageProps) {
 
 export function Callout({ emoji, children }: { emoji: string; children: React.ReactNode }) {
   return (
-    <div className="px-4 py-3 border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm flex items-center text-neutral-900 dark:text-neutral-100 mb-8">
+    <div className="px-4 py-3 border border-neutral-200 bg-neutral-50 rounded p-1 text-sm flex items-center text-neutral-900 mb-8">
       <div className="flex items-center w-4 mr-4">{emoji}</div>
       <div className="w-full callout">{children}</div>
     </div>
@@ -91,12 +92,12 @@ function FeedbackCard({ title, items, type }: FeedbackCardProps) {
   const isPros = type === "pros"
   const Icon = isPros ? Icons.Check : Icons.Cross
   const containerClass = isPros
-    ? "border-emerald-200 dark:border-emerald-900 my-4"
-    : "border-red-200 dark:border-red-900 my-6"
+    ? "border-emerald-200 my-4"
+    : "border-red-200 my-6"
   const iconClass = isPros ? "text-emerald-500" : "text-red-500"
 
   return (
-    <div className={`border bg-neutral-50 dark:bg-neutral-900 rounded-lg p-6 w-full ${containerClass}`}>
+    <div className={`border bg-neutral-50 rounded-lg p-6 w-full ${containerClass}`}>
       <span className="font-semibold">{title}</span>
       <div className="mt-4">
         {items.map((item) => (
@@ -147,7 +148,44 @@ export function createHeading(level: number) {
 
 
 export function hr(props: React.HTMLAttributes<HTMLHRElement>) {
-  return <hr className="my-8 border-stone-200 dark:border-stone-800" {...props} />
+  return <hr className="my-8 border-stone-200" {...props} />
+}
+
+interface SidenoteProps {
+  number: string
+  text: string
+}
+
+export function Sidenote({ number, text }: SidenoteProps) {
+  return (
+    <span className="inline">
+      {/* The superscript indicator in the text */}
+      <span className="font-semibold text-foreground select-none px-0.5">
+        <sup>{number}</sup>
+      </span>
+
+      {/* Sidenote content:
+          Desktop (xl: >= 1280px): floated in the right margin, always visible, natural height.
+          Mobile (xl: < 1280px): block flow, rendered cleanly under the paragraph. */}
+      {/* Sidenote content:
+          Desktop (xl: >= 1280px): floated in the right margin, always visible, natural height.
+          Mobile (xl: < 1280px): hidden (since they all render at the bottom of the article). */}
+      <span className="hidden xl:block xl:float-right xl:clear-right xl:mr-[-340px] xl:w-[240px] text-[13px] leading-relaxed text-neutral-500 font-normal select-text normal-case">
+        <span className="font-semibold text-foreground mr-1"><sup>{number}</sup>:</span>
+        <span dangerouslySetInnerHTML={{ __html: text }} />
+      </span>
+    </span>
+  )
+}
+
+export function Footnotes({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="block xl:hidden mt-10 border-t border-stone-200 pt-6">
+      <div className="text-[14px] leading-relaxed text-neutral-500 font-normal select-text space-y-3">
+        {children}
+      </div>
+    </div>
+  )
 }
 
 export {
@@ -156,3 +194,4 @@ export {
   Vector3D,
   UnitVectorDemo
 }
+
