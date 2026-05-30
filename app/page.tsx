@@ -22,7 +22,7 @@ export default function Home() {
 
           <p>
             Prior to this, I worked as a freelance software engineer, designing and building
-            scalable full-stack web systems. I have a background in Computer Science from{" "}
+            scalable full-stack web systems, with a background in Computer Science from the{" "}
             <a href="https://uds.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">
               University for Development Studies
             </a>.
