@@ -35,8 +35,8 @@ export function SubpageNav() {
                                 href={route.href}
                                 className={
                                     route.href === "/"
-                                        ? "text-muted-foreground hover:text-foreground transition-colors font-semibold"
-                                        : "text-muted-foreground hover:text-foreground transition-colors"
+                                        ? "text-muted-foreground hover:text-foreground font-semibold"
+                                        : "text-muted-foreground hover:text-foreground"
                                 }
                             >
                                 {route.label}

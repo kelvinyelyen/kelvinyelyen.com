@@ -26,11 +26,11 @@ function ResumeItem({ item }: { item: PostMetadata }) {
           href={item.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600 transition-colors"
+          className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600"
         >
           {item.role || item.degree}
         </a>
-        <span className="text-muted-foreground"> {item.company || item.institution}
+        <span className="text-muted-foreground text-[15px]"> {item.company || item.institution}
         </span>
       </div>
       <span className="text-muted-foreground text-[15px] whitespace-nowrap mt-1 sm:mt-0">
@@ -78,7 +78,7 @@ export default function Page() {
                     href={metadata.document}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600 transition-colors"
+                    className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600"
                   >
                     {metadata.title}
                   </a>

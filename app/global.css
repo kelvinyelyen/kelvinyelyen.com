@@ -112,7 +112,7 @@ main {
 }
 
 .prose a {
-  @apply underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600 transition-colors duration-200;
+  @apply underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600;
 }
 
 .prose .anchor:after {
