@@ -112,8 +112,7 @@ main {
 }
 
 .prose a {
-  @apply underline underline-offset-2 decoration-[0.5px];
-  text-decoration-color: currentColor;
+  @apply underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600 transition-colors duration-200;
 }
 
 .prose .anchor:after {

@@ -22,7 +22,7 @@ export default function Page() {
             <span className="flex items-baseline gap-2">
               <Link
                 href={`/blog/${slug}`}
-                className="underline underline-offset-2 decoration-[0.5px]"
+                className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600 transition-colors"
               >
                 {metadata.title}
               </Link>

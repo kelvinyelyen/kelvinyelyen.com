@@ -26,7 +26,7 @@ function ResumeItem({ item }: { item: PostMetadata }) {
           href={item.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2 decoration-[0.5px]"
+          className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600 transition-colors"
         >
           {item.role || item.degree}
         </a>
@@ -61,58 +61,33 @@ export default function Page() {
 
         <section>
           <h2 className="text-[25px] font-semibold mb-6">Experience</h2>
-          <div className="relative ml-3">
-            {/* Vertical line */}
-            <div className="absolute left-0 top-1.5 bottom-1.5 w-px bg-stone-200" />
-
-            <ul className="space-y-5">
-              {experience.map(({ slug, metadata }) => (
-                <li key={slug} className="relative pl-6 flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-4">
-                  {/* Dot */}
-                  <div className="absolute left-0 top-[9px] -translate-x-1/2 w-[7px] h-[7px] rounded-full bg-stone-400" />
-
-                  <div className="flex flex-wrap items-baseline gap-x-2">
-                    <a
-                      href={metadata.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline underline-offset-2 decoration-[0.5px]"
-                    >
-                      {metadata.role || metadata.degree}
-                    </a>
-                    <span className="text-muted-foreground">
-                      {metadata.company || metadata.institution}
-                    </span>
-                  </div>
-                  <span className="text-muted-foreground text-[15px] whitespace-nowrap mt-1 sm:mt-0">
-                    {metadata.year}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="space-y-4">
+            {experience.map(({ slug, metadata }) => (
+              <ResumeItem key={slug} item={metadata} />
+            ))}
+          </ul>
         </section>
 
         <section>
           <h2 className="text-[25px] font-semibold mb-6">Research</h2>
-          <div className="space-y-4">
+          <div className="space-y-6">
             {projects.map(({ slug, metadata }) => (
-              <div key={slug} className="rounded-lg bg-stone-50 px-5 py-4">
+              <div key={slug} className="space-y-1">
                 <div>
                   <a
                     href={metadata.document}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground underline underline-offset-2 decoration-[0.5px]"
+                    className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600 transition-colors"
                   >
                     {metadata.title}
                   </a>
                   {" "}
-                  <span className="text-muted-foreground">
+                  <span className="text-muted-foreground text-[15px]">
                     {highlightAuthor(metadata.authors || "")}
                   </span>
                 </div>
-                <div className="text-muted-foreground">{metadata.venue}</div>
+                <div className="text-muted-foreground text-[15px]">{metadata.venue}</div>
               </div>
             ))}
           </div>

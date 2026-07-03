@@ -11,7 +11,7 @@ export default function Home() {
         <div className="space-y-5 text-foreground">
           <p>
             I am currently a Faculty Assistant at{" "}
-            <a href="https://acity.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">
+            <a href="https://acity.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600 transition-colors">
               Academic City University
             </a>
             , with research interests at the intersection of artificial intelligence and neuroscience.
@@ -23,22 +23,21 @@ export default function Home() {
           <p>
             Prior to this, I worked as a freelance software engineer, designing and building
             scalable full-stack web systems, with a background in Computer Science from the{" "}
-            <a href="https://uds.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">
+            <a href="https://uds.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600 transition-colors">
               University for Development Studies
             </a>.
           </p>
         </div>
       </section>
 
-      <hr className="my-8 border-stone-200" />
 
-      <section>
+      <section className="mt-12">
         <p className="mb-5 text-foreground">Some representative lines of work include:</p>
 
         <ul className="list-disc list-outside space-y-3 text-foreground pl-5">
           <li>
             Examining whether{" "}
-            <a href="https://docs.google.com/presentation/d/1AFLK94lhrYCVdoR3AWnjYlY4LEAuBvLxwoQsCaRJ92Y/edit" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">
+            <a href="https://docs.google.com/presentation/d/1AFLK94lhrYCVdoR3AWnjYlY4LEAuBvLxwoQsCaRJ92Y/edit" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600 transition-colors">
               default mode network activity
             </a>{" "}
             can distinguish social from non-social video stimuli more accurately than
@@ -46,7 +45,7 @@ export default function Home() {
           </li>
           <li>
             An{" "}
-            <a href="https://ncd-lab.vercel.app" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-[0.5px]">
+            <a href="https://ncd-lab.vercel.app" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600 transition-colors">
               interactive lab
             </a>{" "}
             exploring neural dynamics from first principles, from single-neuron biophysics to population-level activity.
