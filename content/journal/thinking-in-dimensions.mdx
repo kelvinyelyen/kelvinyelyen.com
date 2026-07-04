@@ -1,6 +1,7 @@
 ---
 title: "Thinking in Dimensions"
 publishedAt: "2024-06-21"
+updatedAt: "2026"
 summary: "Rediscovering linear algebra through physics, computation, and the way we process information."
 ---
 
@@ -20,9 +21,7 @@ The traditional explanation for vectors is basically *“anything with magnitude
 
 Vectors are often represented as arrows pointing in space, defined by their magnitude and direction. These vectors don’t just live in two-dimensional space, they live in all dimensions, representing quantities like velocity, force, and momentum.
 
-<div className="MafsView">
-    <ArrowInSpace vector="3, 2" />
-</div>
+<ArrowInSpace vector="3, 2" />
 
 For instance, imagine you are pushing a box across the floor. You apply a force $\mathbf{F}$ represented as a vector:
 
@@ -91,9 +90,7 @@ Vectors are essential when it comes to understanding space, whether it’s about
 
 For example, in 3D space, a vector like $[3, 4, 5]$ could represent a point that’s 3 units along the x-axis, 4 along the y-axis, and 5 along the z-axis.
 
-<div className="MafsView">
-    <Vector3D />
-</div>
+<Vector3D />
 
 Vectors also come into play when we need to change things around, like stretching or moving them. If you apply a scaling factor, say 2, to a vector $[1, 1]$, you get $[2, 2]$. This kind of transformation is used to resize or reshape objects, which happens a lot in graphics and animations.
 
@@ -169,6 +166,8 @@ $$
 
 This is scaling and adding, stretching one direction, stretching another, and seeing where you land.
 
+<NeuralCombination />
+
 A useful way to think about it: you don’t need a thousand different “movement instructions” to navigate a space. You need a few good ones, *independent* ones.
 
 ### Redundancy, dependence, and degrees of freedom
@@ -217,6 +216,8 @@ A neuron becomes a similarity detector:
 it asks how much the world matches what it’s tuned for.
 
 Recognition becomes geometry, projection onto an internal template.
+
+<DotProductDemo />
 
 
 

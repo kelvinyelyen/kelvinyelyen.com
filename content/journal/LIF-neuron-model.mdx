@@ -1,6 +1,7 @@
 ---
 title: "Iterating Toward Realism"
 publishedAt: "2025-09-24"
+updatedAt: "2026"
 summary: "Exploring how different mathematical inputs, deterministic, noisy, and Poisson, bring computational neurons closer to biology."
 ---
 
@@ -146,6 +147,12 @@ Using $\Delta t / \tau_m = 0.1$:
 | 8        | -56.457          | -57.075          | 1.270            | -60.317           | 0.992            | -64.460          | 0     |
 | 9        | -55.811          | -56.598          | 1.047            | -59.794           | 0.573            | -64.514          | 0     |
 | 10       | -55.230          | -56.391          | 0.800            | -59.741           | 1.440            | -64.563          | 0     |
+
+## Interactive Simulation
+
+Below is a live simulation of the Leaky Integrate-and-Fire neuron. You can adjust the parameters and input currents to observe how the membrane potential integrates, leaks, spikes, and resets in real time.
+
+<LIFSimulation />
 
 ## Pseudocode (implementation sketch)
 ```python

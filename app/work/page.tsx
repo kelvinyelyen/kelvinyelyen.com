@@ -51,8 +51,8 @@ export default function Page() {
 
       <div className="mt-10 space-y-14">
         <section>
-          <h2 className="text-[25px] font-semibold mb-6">Education</h2>
-          <ul className="space-y-4">
+          <h2 className="text-[25px] font-semibold mb-3">Education</h2>
+          <ul className="space-y-2 sm:space-y-1.5">
             {education.map(({ slug, metadata }) => (
               <ResumeItem key={slug} item={metadata} />
             ))}
@@ -60,8 +60,8 @@ export default function Page() {
         </section>
 
         <section>
-          <h2 className="text-[25px] font-semibold mb-6">Experience</h2>
-          <ul className="space-y-4">
+          <h2 className="text-[25px] font-semibold mb-3">Experience</h2>
+          <ul className="space-y-2 sm:space-y-1.5">
             {experience.map(({ slug, metadata }) => (
               <ResumeItem key={slug} item={metadata} />
             ))}
@@ -69,7 +69,7 @@ export default function Page() {
         </section>
 
         <section>
-          <h2 className="text-[25px] font-semibold mb-6">Research</h2>
+          <h2 className="text-[25px] font-semibold mb-3">Research</h2>
           <div className="space-y-6">
             {projects.map(({ slug, metadata }) => (
               <div key={slug} className="space-y-1">
@@ -87,7 +87,7 @@ export default function Page() {
                     {highlightAuthor(metadata.authors || "")}
                   </span>
                 </div>
-                <div className="text-muted-foreground text-[15px]">{metadata.venue}</div>
+                <div className="text-muted-foreground text-[15px] italic">{metadata.venue}</div>
               </div>
             ))}
           </div>

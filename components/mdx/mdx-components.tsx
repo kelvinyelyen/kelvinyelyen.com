@@ -8,8 +8,10 @@ import { Icons } from "@/components/icons"
 import {
   ArrowInSpace,
   Vector3D,
-  UnitVectorDemo
+  NeuralCombination,
+  DotProductDemo
 } from "@/components/mdx/vector"
+import { LIFSimulation } from "@/components/mdx/lif-simulation"
 
 interface TableData {
   headers: string[]
@@ -192,6 +194,8 @@ export {
   TweetComponent,
   ArrowInSpace,
   Vector3D,
-  UnitVectorDemo
+  NeuralCombination,
+  DotProductDemo,
+  LIFSimulation
 }
 

@@ -1,7 +1,22 @@
+import Link from "next/link"
 import { SubpageNav } from "@/components/layout"
 import { generateSlugsFromCategory, getContent } from "@/lib/content"
 import { formatDate } from "@/lib/date"
 import { CustomMDX } from "@/lib/mdx"
+
+function formatPublishDate(inputDate: string | Date) {
+  const date = new Date(inputDate)
+  return date.toLocaleDateString("en-US", { month: "long", year: "numeric" })
+}
+
+function formatUpdatedYear(updatedAt?: string) {
+  if (!updatedAt) return ""
+  const date = new Date(updatedAt)
+  if (!isNaN(date.getTime())) {
+    return date.getFullYear().toString()
+  }
+  return updatedAt
+}
 
 export async function generateStaticParams() {
   return generateSlugsFromCategory("journal")
@@ -40,7 +55,7 @@ export async function generateMetadata({ params }: PageParams) {
 export default async function Post({ params }: PageParams) {
   const { slug } = await params
   const post = await getContent({ category: "journal", slug })
-  const { title, publishedAt, summary } = post.metadata
+  const { title, publishedAt, summary, updatedAt } = post.metadata
 
   return (
     <main className="container my-12 px-5 sm:px-0">
@@ -70,10 +85,16 @@ export default async function Post({ params }: PageParams) {
       />
 
       <header className="mt-10 mb-10">
-        <h1 className="text-[22px] sm:text-[25px]">{title}</h1>
+        <h1 className="text-[22px] sm:text-[25px] font-semibold">{title}</h1>
         <div className="flex flex-col mt-4 sm:mt-6 gap-4 sm:gap-6">
           <p className="font-medium">{summary}</p>
-          <p className="text-foreground">{formatDate(publishedAt)}</p>
+          <p className="text-stone-500 font-sans text-[14px]">
+            <Link href="/blog" className="hover:text-stone-800 transition-colors no-underline">
+              {formatPublishDate(publishedAt)}
+              {updatedAt && ` (updated ${formatUpdatedYear(updatedAt)})`}
+              {" – Kelvin Yelyen"}
+            </Link>
+          </p>
         </div>
         <hr className="mt-8 border-stone-200" />
       </header>

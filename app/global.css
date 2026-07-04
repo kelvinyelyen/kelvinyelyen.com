@@ -25,8 +25,8 @@ body {
 
 @media (max-width: 639px) {
   body {
-    font-size: 15px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 25px;
   }
 }
 
@@ -94,8 +94,8 @@ main {
 
 @media (max-width: 639px) {
   .prose {
-    font-size: 15px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 25px;
   }
 
   .prose>* {
@@ -166,20 +166,26 @@ main {
 .prose h2,
 .prose h3,
 .prose h4 {
-  @apply font-medium tracking-tight !important;
+  @apply font-semibold tracking-tight !important;
   color: var(--foreground) !important;
 }
 
 .prose h2 {
-  font-size: 1.35em !important;
+  font-size: 1.18em !important;
+  margin-top: 1.8em !important;
+  margin-bottom: 0.5em !important;
 }
 
 .prose h3 {
-  font-size: 1.15em !important;
+  font-size: 1.06em !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.4em !important;
 }
 
 .prose h4 {
-  font-size: 1.0em !important;
+  font-size: 0.95em !important;
+  margin-top: 1.3em !important;
+  margin-bottom: 0.4em !important;
 }
 
 .prose strong {
@@ -249,4 +255,41 @@ input[type="email"] {
   --mafs-fg: #222;
   --mafs-line-color: #444;
   --grid-line-subdivision-color: #555;
+}
+
+/* Books List Custom Styles */
+.books-list ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.books-list li {
+  position: relative;
+  padding-left: 1.25rem !important;
+  margin-top: 0.4rem !important;
+  margin-bottom: 0.4rem !important;
+  transition: opacity 0.25s ease-in-out;
+  color: #52525b !important; /* text-zinc-600 */
+}
+
+.books-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #a1a1aa; /* text-zinc-400 */
+  opacity: 0.7;
+}
+
+/* Hover Focus Fade Effect (Disabled on touchscreens to prevent sticky hover bugs) */
+@media (hover: hover) {
+  .books-list ul:hover li {
+    opacity: 0.45;
+  }
+
+  .books-list ul li:hover {
+    opacity: 1 !important;
+    color: var(--foreground) !important;
+  }
 }

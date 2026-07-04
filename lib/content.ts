@@ -20,6 +20,7 @@ export interface PostMetadata {
   institution?: string
   year?: string | number
   publishedAtFormatted?: string
+  updatedAt?: string
 }
 
 export interface Post {
