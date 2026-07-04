@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 const routes = [
     { href: "/", label: "kelvinyelyen" },
     { href: "/work", label: "work" },
-    { href: "/blog", label: "notes" },
+    { href: "/notes", label: "notes" },
 ]
 
 export function SubpageNav() {

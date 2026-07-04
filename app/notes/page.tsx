@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 export default function Page() {
-  const posts = getCategoryContent("journal")
+  const posts = getCategoryContent("notes")
 
   // Group posts: archive posts from 2023 and prior
   const activePosts = posts.filter((post) => {
@@ -31,7 +31,7 @@ export default function Page() {
           <li key={slug} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-4">
             <span className="flex items-baseline gap-2">
               <Link
-                href={`/blog/${slug}`}
+                href={`/notes/${slug}`}
                 className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600"
               >
                 {metadata.title}
@@ -54,7 +54,7 @@ export default function Page() {
               <li key={slug} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-4">
                 <span className="flex items-baseline gap-2">
                   <Link
-                    href={`/blog/${slug}`}
+                    href={`/notes/${slug}`}
                     className="underline underline-offset-4 text-stone-500 decoration-stone-200 hover:text-stone-800 hover:decoration-stone-500 transition-colors"
                   >
                     {metadata.title}

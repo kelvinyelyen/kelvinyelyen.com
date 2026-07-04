@@ -19,7 +19,7 @@ function formatUpdatedYear(updatedAt?: string) {
 }
 
 export async function generateStaticParams() {
-  return generateSlugsFromCategory("journal")
+  return generateSlugsFromCategory("notes")
 }
 
 interface PageParams {
@@ -28,7 +28,7 @@ interface PageParams {
 
 export async function generateMetadata({ params }: PageParams) {
   const { slug } = await params
-  const { metadata } = await getContent({ category: "journal", slug })
+  const { metadata } = await getContent({ category: "notes", slug })
   const ogImage = `https://kelvinyelyen.com/og?title=${metadata.title}`
 
   return {
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageParams) {
       title: metadata.title,
       description: metadata.summary,
       publishedAt: (metadata as any).publishedAtFormatted,
-      url: `https://kelvinyelyen.com/blog/${slug}`,
+      url: `https://kelvinyelyen.com/notes/${slug}`,
       images: [{ url: ogImage }],
       type: "article",
     },
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: PageParams) {
 
 export default async function Post({ params }: PageParams) {
   const { slug } = await params
-  const post = await getContent({ category: "journal", slug })
+  const post = await getContent({ category: "notes", slug })
   const { title, publishedAt, summary, updatedAt } = post.metadata
 
   return (
@@ -75,7 +75,7 @@ export default async function Post({ params }: PageParams) {
             image: post.metadata.image
               ? `https://kelvinyelyen.com${post.metadata.image}`
               : `https://kelvinyelyen.com/og?title=${title}`,
-            url: `https://kelvinyelyen.com/blog/${post.slug}`,
+            url: `https://kelvinyelyen.com/notes/${post.slug}`,
             author: {
               "@type": "Person",
               name: "Kelvin Yelyen",
@@ -89,7 +89,7 @@ export default async function Post({ params }: PageParams) {
         <div className="flex flex-col mt-4 sm:mt-6 gap-4 sm:gap-6">
           <p className="font-medium">{summary}</p>
           <p className="text-stone-500 font-sans text-[14px]">
-            <Link href="/blog" className="hover:text-stone-800 transition-colors no-underline">
+            <Link href="/notes" className="hover:text-stone-800 transition-colors no-underline">
               {formatPublishDate(publishedAt)}
               {updatedAt && ` (updated ${formatUpdatedYear(updatedAt)})`}
               {" – Kelvin Yelyen"}

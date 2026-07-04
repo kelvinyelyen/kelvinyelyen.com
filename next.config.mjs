@@ -1,6 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  async redirects() {
+    return [
+      {
+        source: "/blog",
+        destination: "/notes",
+        permanent: true,
+      },
+      {
+        source: "/blog/:slug",
+        destination: "/notes/:slug",
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {
