@@ -10,19 +10,15 @@ export default function Home() {
       <section className="mt-10">
         <div className="space-y-5 text-foreground">
           <p>
-            I am currently a Faculty Assistant at{" "}
+            I am a Faculty Assistant at{" "}
             <a href="https://acity.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600">
               Academic City University
             </a>
-            , with research interests at the intersection of artificial intelligence and neuroscience.
-            My research and ongoing study explore the <em>bidirectional</em> relationship between biological and artificial systems:
-            examining how neural mechanisms can inform more adaptive machine learning architectures,
-            and how computational models can deepen our understanding of the brain.
+            , with research interests in NeuroAI, examining how neural mechanisms can inform machine learning architectures, and what computational models can actually tell us about how the brain works, not just describe it.
           </p>
 
           <p>
-            Prior to this, I worked as a freelance software engineer, designing and building
-            scalable full-stack web systems, with a background in Computer Science from the{" "}
+            Alongside this, I work as a Founding Engineer, guiding technical direction and delivery, having previously worked for several years as an independent software engineer building scalable full-stack systems. My background is in Computer Science from the{" "}
             <a href="https://uds.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600">
               University for Development Studies
             </a>.
