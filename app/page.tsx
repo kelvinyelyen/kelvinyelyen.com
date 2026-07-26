@@ -14,7 +14,7 @@ export default function Home() {
             <a href="https://acity.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600">
               Academic City University
             </a>
-            , with research interests in NeuroAI, pecifically neural decoding, bio-inspired architectures, and computational models of intelligence. I'm interested in what moves in both directions: what the brain can teach AI about learning and structure, and what computational tools can reveal about how the brain actually works.
+            , with research interests in NeuroAI, specifically neural decoding, bio-inspired architectures, and computational models of intelligence. I’m interested in what computational models actually reveal about how the brain works, and what neuroscience might change about how we design learning systems, not just inspire them. 
           </p>
 
           <p>
