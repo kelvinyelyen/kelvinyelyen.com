@@ -14,11 +14,11 @@ export default function Home() {
             <a href="https://acity.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600">
               Academic City University
             </a>
-            , with research interests in NeuroAI, examining how neural mechanisms can inform machine learning architectures, and what computational models can actually tell us about how the brain works, not just describe it.
+            , with research interests in NeuroAI, specifically neural decoding, bio-inspired architectures, and computational models of intelligence. I’m interested in what computational models actually reveal about how the brain works, and what neuroscience might change about how we design learning systems, not just inspire them. 
           </p>
 
           <p>
-            Alongside this, I work as a Founding Engineer, guiding technical direction and delivery, having previously worked for several years as an independent software engineer building scalable full-stack systems. My background is in Computer Science from the{" "}
+            I also work as a Founding Engineer, guiding technical direction and delivery, having previously worked for several years as an independent software engineer. My background is in Computer Science from the{" "}
             <a href="https://uds.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600">
               University for Development Studies
             </a>.
