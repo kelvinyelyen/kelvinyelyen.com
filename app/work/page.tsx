@@ -82,12 +82,20 @@ export default function Page() {
                   >
                     {metadata.title}
                   </a>
-                  {" "}
-                  <span className="text-muted-foreground text-[15px]">
-                    {highlightAuthor(metadata.authors || "")}
-                  </span>
+                  <div className="mt-0.5 leading-snug">
+                    {metadata.authors && (
+                      <span className="text-muted-foreground text-[15px]">
+                        {highlightAuthor(metadata.authors)}
+                        <span className="mx-1.5 text-stone-300 dark:text-stone-700">&bull;</span>
+                      </span>
+                    )}
+                    {metadata.affiliation && (
+                      <span className="text-[15px] font-medium tracking-wide text-stone-500">
+                        {metadata.affiliation}
+                      </span>
+                    )}
+                  </div>
                 </div>
-                <div className="text-muted-foreground text-[15px] italic">{metadata.venue}</div>
               </div>
             ))}
           </div>

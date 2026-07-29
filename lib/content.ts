@@ -11,7 +11,7 @@ export interface PostMetadata {
   summary: string
   image?: string
   authors?: string
-  venue?: string
+  affiliation?: string
   document?: string
   website?: string
   role?: string
@@ -19,6 +19,7 @@ export interface PostMetadata {
   company?: string
   institution?: string
   year?: string | number
+  date?: string | number
   publishedAtFormatted?: string
   updatedAt?: string
 }
@@ -87,9 +88,12 @@ export function getCategoryContent(category: string): Post[] {
       return timeB - timeA;
     }
 
-    if (a.metadata.year && b.metadata.year) {
-      const yearA = parseInt(a.metadata.year.toString().match(/\d{4}/)?.[0] || '0', 10);
-      const yearB = parseInt(b.metadata.year.toString().match(/\d{4}/)?.[0] || '0', 10);
+    const yearOrDateA = a.metadata.year || a.metadata.date;
+    const yearOrDateB = b.metadata.year || b.metadata.date;
+    
+    if (yearOrDateA || yearOrDateB) {
+      const yearA = yearOrDateA ? parseInt(yearOrDateA.toString().match(/\d{4}/)?.[0] || '0', 10) : 0;
+      const yearB = yearOrDateB ? parseInt(yearOrDateB.toString().match(/\d{4}/)?.[0] || '0', 10) : 0;
       if (yearA !== yearB) return yearB - yearA;
     }
 

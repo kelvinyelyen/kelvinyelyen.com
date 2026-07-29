@@ -46,9 +46,7 @@ export default function Page() {
 
       {archivedPosts.length > 0 && (
         <>
-          <h2 className="text-[11px] font-bold mt-12 mb-3 text-stone-400 font-mono uppercase tracking-widest">
-            Archive
-          </h2>
+          <h1 className="text-[25px] font-semibold mt-10 mb-3 text-stone-500">Archived</h1>
           <ul className="space-y-2 sm:space-y-1.5">
             {archivedPosts.map(({ slug, metadata }) => (
               <li key={slug} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-4">

@@ -31,6 +31,9 @@ export default function Home() {
 
         <ul className="list-disc list-outside space-y-3 text-foreground pl-5">
           <li>
+            Comparing how a <a href="https://drive.google.com/file/d/1nwvRdi7O-iloNKUqJyEQKu93o24GMDUt/view?usp=sharing" target="_blank" className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600">vanilla RNN, a Dale's law-constrained RNN, and a published spiking neural network</a> organize a context-dependent decision task internally, testing whether biological constraints change representational geometry and population dynamics, not just task performance.
+          </li>
+          <li>
             Examining whether{" "}
             <a href="https://docs.google.com/presentation/d/1AFLK94lhrYCVdoR3AWnjYlY4LEAuBvLxwoQsCaRJ92Y/edit" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600">
               default mode network activity
