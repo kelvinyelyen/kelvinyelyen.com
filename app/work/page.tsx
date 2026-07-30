@@ -13,7 +13,7 @@ function highlightAuthor(text: string) {
   const parts = text.split(new RegExp(`(${AUTHOR_NAME})`, "gi"))
   return parts.map((part, i) =>
     part.toLowerCase() === AUTHOR_NAME.toLowerCase()
-      ? <span key={i} className="text-foreground">{part}</span>
+      ? <span key={i} className="text-stone-700 dark:text-stone-700 font-semibold">{part}</span>
       : part
   )
 }
@@ -26,14 +26,14 @@ function ResumeItem({ item }: { item: PostMetadata }) {
           href={item.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600"
+          className="hover:underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600"
         >
           {item.role || item.degree}
         </a>
-        <span className="text-muted-foreground text-[15px]"> {item.company || item.institution}
+        <span className="text-stone-400 dark:text-stone-500 text-[14px]"> {item.company || item.institution}
         </span>
       </div>
-      <span className="text-muted-foreground text-[15px] whitespace-nowrap mt-1 sm:mt-0">
+      <span className="text-stone-400 dark:text-stone-500 text-[14px] whitespace-nowrap mt-1 sm:mt-0">
         {item.year}
       </span>
     </li>
@@ -70,7 +70,7 @@ export default function Page() {
 
         <section>
           <h2 className="text-[25px] font-semibold mb-3">Research</h2>
-          <div className="space-y-6">
+          <div className="space-y-12">
             {projects.map(({ slug, metadata }) => (
               <div key={slug} className="space-y-1">
                 <div>
@@ -78,19 +78,19 @@ export default function Page() {
                     href={metadata.document}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600"
+                    className="hover:underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600"
                   >
                     {metadata.title}
                   </a>
                   <div className="mt-0.5 leading-snug">
                     {metadata.authors && (
-                      <span className="text-muted-foreground text-[15px]">
+                      <span className="text-stone-400 dark:text-stone-500 text-[14px]">
                         {highlightAuthor(metadata.authors)}
                         <span className="mx-1.5 text-stone-300 dark:text-stone-700">&bull;</span>
                       </span>
                     )}
                     {metadata.affiliation && (
-                      <span className="text-[15px] font-medium tracking-wide text-stone-500">
+                      <span className="text-[14px] font-medium tracking-wide text-stone-400 dark:text-stone-500">
                         {metadata.affiliation}
                       </span>
                     )}
