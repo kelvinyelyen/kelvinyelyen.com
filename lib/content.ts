@@ -90,7 +90,7 @@ export function getCategoryContent(category: string): Post[] {
 
     const yearOrDateA = a.metadata.year || a.metadata.date;
     const yearOrDateB = b.metadata.year || b.metadata.date;
-    
+
     if (yearOrDateA || yearOrDateB) {
       const yearA = yearOrDateA ? parseInt(yearOrDateA.toString().match(/\d{4}/)?.[0] || '0', 10) : 0;
       const yearB = yearOrDateB ? parseInt(yearOrDateB.toString().match(/\d{4}/)?.[0] || '0', 10) : 0;

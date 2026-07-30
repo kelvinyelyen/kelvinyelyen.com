@@ -28,7 +28,7 @@ export default function Page() {
             <span className="flex items-baseline gap-2">
               <Link
                 href={`/notes/${slug}`}
-                className="underline underline-offset-4 decoration-stone-300 hover:decoration-stone-600"
+                className="underline underline-offset-4 decoration-1 decoration-stone-300 hover:decoration-stone-600"
               >
                 {metadata.title}
               </Link>
