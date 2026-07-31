@@ -25,7 +25,7 @@ body {
 
 @media (max-width: 639px) {
   body {
-    font-size: 14.5px;
+    font-size: 16px;
     line-height: 25px;
   }
 }
@@ -47,7 +47,7 @@ main {
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --muted-foreground: 0 0% 32%;
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
@@ -94,7 +94,7 @@ main {
 
 @media (max-width: 639px) {
   .prose {
-    font-size: 14.5px;
+    font-size: 16px;
     line-height: 25px;
   }
 
@@ -206,10 +206,11 @@ main {
 }
 
 @media (max-width: 639px) {
+
   .prose table,
   .prose th,
   .prose td {
-    font-size: 14.5px;
+    font-size: 16px;
     line-height: 25px;
   }
 }
@@ -271,7 +272,6 @@ input[type="email"] {
   padding-left: 1.25rem !important;
   margin-top: 0.4rem !important;
   margin-bottom: 0.4rem !important;
-  transition: opacity 0.25s ease-in-out;
   color: #52525b !important;
   /* text-zinc-600 */
 }
@@ -285,14 +285,46 @@ input[type="email"] {
   opacity: 0.7;
 }
 
-/* Hover Focus Fade Effect (Disabled on touchscreens to prevent sticky hover bugs) */
-@media (hover: hover) {
-  .books-list ul:hover li {
-    opacity: 0.45;
+/* View Transitions (shud.in style crossfade with blur) */
+@supports (view-transition-name: none) {
+  @media not (prefers-reduced-motion: reduce) {
+    ::view-transition-old(main) {
+      animation: 0.4s cubic-bezier(0.6, 0, 0.8, 1) forwards hide;
+    }
+    ::view-transition-new(main) {
+      opacity: 0;
+      animation: 0.6s 0.2s forwards appear;
+    }
+    
+    /* Exclude the nav from crossfade/blur and prevent double-rendering bold flicker */
+    ::view-transition-old(nav) {
+      display: none;
+    }
+    ::view-transition-new(nav) {
+      animation: none;
+      opacity: 1;
+    }
   }
+}
 
-  .books-list ul li:hover {
-    opacity: 1 !important;
-    color: var(--foreground) !important;
+@keyframes hide {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
   }
 }

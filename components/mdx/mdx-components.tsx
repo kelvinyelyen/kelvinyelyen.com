@@ -2,6 +2,7 @@
 import React, { useState } from "react"
 import Link from "next/link"
 import Image, { ImageProps } from "next/image"
+import dynamic from "next/dynamic"
 import { TweetComponent } from "@/components/mdx/tweet/tweet"
 
 import { Icons } from "@/components/icons"
@@ -11,7 +12,7 @@ import {
   NeuralCombination,
   DotProductDemo
 } from "@/components/mdx/vector"
-import { LIFSimulation } from "@/components/mdx/lif-simulation"
+const LIFSimulation = dynamic(() => import("@/components/mdx/lif-simulation").then(mod => mod.LIFSimulation))
 
 interface TableData {
   headers: string[]
@@ -73,6 +74,11 @@ export function CustomLink(props: React.AnchorHTMLAttributes<HTMLAnchorElement>)
 
 export function RoundedImage(props: ImageProps) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />
+}
+
+export function img(props: React.ImgHTMLAttributes<HTMLImageElement>) {
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img loading="lazy" className="rounded-lg" {...props} />
 }
 
 export function Callout({ emoji, children }: { emoji: string; children: React.ReactNode }) {

@@ -16,7 +16,7 @@ export async function GET(request) {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          backgroundImage: `url(https://kelvinyelyen.com/og-bg.png)`,
+          backgroundImage: `url(https://kelvinyelyen.com/og_bg.png)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

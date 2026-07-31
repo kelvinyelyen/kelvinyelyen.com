@@ -87,7 +87,7 @@ export default async function Post({ params }: PageParams) {
       <header className="mt-10 mb-10">
         <h1 className="text-[22px] sm:text-[25px] font-semibold">{title}</h1>
         <div className="flex flex-col mt-4 sm:mt-6 gap-4 sm:gap-6">
-          <p className="font-medium text-[14.5px] sm:text-[16px] leading-[25px] sm:leading-[26px]">{summary}</p>
+          <p className="font-medium">{summary}</p>
           <p className="text-stone-500 font-sans text-[14px]">
             <Link href="/notes" className="hover:text-stone-800 transition-colors no-underline">
               {formatPublishDate(publishedAt)}

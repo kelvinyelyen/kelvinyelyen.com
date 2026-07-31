@@ -9,23 +9,23 @@ export default function Home() {
       <SubpageNav />
 
       <section className="mt-10">
-        <div className="mb-6">
+        {/* <div className="mb-6">
           <Image
-            src="/minimal_profile.png"
+            src="/minimal_image.jpg"
             alt="Profile Minimal Art"
-            width={64}
-            height={64}
+            width={100}
+            height={100}
             className="rounded-full border border-stone-200/60"
             priority
           />
-        </div>
+        </div> */}
         <div className="space-y-5 text-foreground">
           <p>
             I am a Faculty Assistant at{" "}
             <a href="https://acity.edu.gh/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-1 decoration-stone-300 hover:decoration-stone-600">
               Academic City University
             </a>
-            , with research interests in NeuroAI, specifically neural decoding, bio-inspired architectures, and computational models of intelligence. I’m interested in what computational models actually reveal about how the brain works, and what neuroscience might change about how we design learning systems, not just inspire them.
+            , with research interests in NeuroAI, specifically neural decoding, bio-inspired architectures, computational models of intelligence, and advancing technology in Africa. I’m interested in what computational models actually reveal about how the brain works, and what neuroscience might change about how we design learning systems, not just inspire them.
           </p>
 
           <p>
@@ -62,7 +62,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-muted-foreground">
+      <section className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px] text-muted-foreground">
         <a href="https://github.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className={socialLink}>GitHub</a>
         <a href="https://x.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) profile" className={socialLink}>X</a>
         <a href="https://www.linkedin.com/in/kelvinyelyen/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className={socialLink}>LinkedIn</a>

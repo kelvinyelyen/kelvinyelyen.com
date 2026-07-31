@@ -37,20 +37,22 @@ function getTruncatedAuthors(text: string) {
 
 function ResumeItem({ item }: { item: PostMetadata }) {
   return (
-    <li className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-4">
-      <div className="flex flex-wrap items-baseline gap-x-2">
+    <li className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-y-1 sm:gap-y-0 sm:gap-x-4 sm:mb-2">
+      <div className="flex flex-wrap items-center sm:items-baseline gap-x-2">
         <a
           href={item.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline underline-offset-4 decoration-1 decoration-stone-300 hover:decoration-stone-600"
+          className="hover:underline underline-offset-4 decoration-1 decoration-stone-400 hover:decoration-stone-700"
         >
           {item.role || item.degree}
         </a>
-        <span className="text-stone-400 dark:text-stone-500 text-[14px]"> {item.company || item.institution}
+        <span className="text-stone-700 text-[14px]">
+          <span className="mr-1.5 text-stone-700">&bull;</span>
+          {item.company || item.institution}
         </span>
       </div>
-      <span className="text-stone-400 dark:text-stone-500 text-[14px] whitespace-nowrap mt-1 sm:mt-0">
+      <span className="text-stone-700 text-[14px] whitespace-nowrap self-start sm:self-auto">
         {item.year}
       </span>
     </li>
@@ -70,7 +72,7 @@ export default function Page() {
       <div className="mt-10 space-y-14">
         <section>
           <h2 className="text-[25px] font-semibold mb-3">Education</h2>
-          <ul className="space-y-2 sm:space-y-1.5">
+          <ul className="space-y-5 sm:space-y-1.5">
             {education.map(({ slug, metadata }) => (
               <ResumeItem key={slug} item={metadata} />
             ))}
@@ -79,7 +81,7 @@ export default function Page() {
 
         <section>
           <h2 className="text-[25px] font-semibold mb-3">Experience</h2>
-          <ul className="space-y-2 sm:space-y-1.5">
+          <ul className="space-y-5 sm:space-y-1.5">
             {experience.map(({ slug, metadata }) => (
               <ResumeItem key={slug} item={metadata} />
             ))}
@@ -88,7 +90,7 @@ export default function Page() {
 
         <section>
           <h2 className="text-[25px] font-semibold mb-3">Research</h2>
-          <ul className="list-disc list-outside space-y-5 pl-5">
+          <ul className="space-y-6">
             {research.map(({ slug, metadata }) => (
               <li key={slug} className="space-y-1">
                 <div>
@@ -96,24 +98,29 @@ export default function Page() {
                     href={metadata.document}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline underline-offset-4 decoration-1 decoration-stone-300 hover:decoration-stone-600"
+                    className="hover:underline underline-offset-4 decoration-1 decoration-stone-400 hover:decoration-stone-700 font-semibold"
                   >
                     {metadata.title}
                   </a>
                   <div className="mt-0.5 leading-snug">
                     {metadata.authors && (
-                      <span className="text-stone-400 dark:text-stone-500 text-[14px]">
+                      <span className="text-stone-700 text-[14px]">
                         <span className="sm:hidden">{highlightAuthor(getTruncatedAuthors(metadata.authors))}</span>
                         <span className="hidden sm:inline">{highlightAuthor(metadata.authors)}</span>
-                        <span className="mx-1.5 text-stone-300 dark:text-stone-700">&bull;</span>
+                        <span className="mx-1.5 text-stone-700">&bull;</span>
                       </span>
                     )}
                     {metadata.affiliation && (
-                      <span className="text-[14px] font-medium tracking-wide text-stone-400 dark:text-stone-500">
+                      <span className="text-[14px] font-medium tracking-wide text-stone-700">
                         {metadata.affiliation}
                       </span>
                     )}
                   </div>
+                  {metadata.summary && (
+                    <p className="mt-2 text-stone-700 text-[14px] leading-relaxed">
+                      {metadata.summary}
+                    </p>
+                  )}
                 </div>
               </li>
             ))}
@@ -122,7 +129,7 @@ export default function Page() {
 
         <section>
           <h2 className="text-[25px] font-semibold mb-3">Projects</h2>
-          <ul className="list-disc list-outside space-y-5 pl-5">
+          <ul className="space-y-6">
             {projects.map(({ slug, metadata }) => (
               <li key={slug} className="space-y-1">
                 <div>
@@ -130,24 +137,29 @@ export default function Page() {
                     href={metadata.document}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline underline-offset-4 decoration-1 decoration-stone-300 hover:decoration-stone-600"
+                    className="hover:underline underline-offset-4 decoration-1 decoration-stone-400 hover:decoration-stone-700 font-semibold"
                   >
                     {metadata.title}
                   </a>
                   <div className="mt-0.5 leading-snug">
                     {metadata.authors && (
-                      <span className="text-stone-400 dark:text-stone-500 text-[14px]">
+                      <span className="text-stone-700 text-[14px]">
                         <span className="sm:hidden">{highlightAuthor(getTruncatedAuthors(metadata.authors))}</span>
                         <span className="hidden sm:inline">{highlightAuthor(metadata.authors)}</span>
-                        <span className="mx-1.5 text-stone-300 dark:text-stone-700">&bull;</span>
+                        <span className="mx-1.5 text-stone-700">&bull;</span>
                       </span>
                     )}
                     {metadata.affiliation && (
-                      <span className="text-[14px] font-medium tracking-wide text-stone-400 dark:text-stone-500">
+                      <span className="text-[14px] font-medium tracking-wide text-stone-700">
                         {metadata.affiliation}
                       </span>
                     )}
                   </div>
+                  {metadata.summary && (
+                    <p className="mt-2 text-stone-700 text-[14px] leading-relaxed max-w-2xl">
+                      {metadata.summary}
+                    </p>
+                  )}
                 </div>
               </li>
             ))}
