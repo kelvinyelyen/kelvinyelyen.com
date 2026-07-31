@@ -29,7 +29,7 @@ interface PageParams {
 export async function generateMetadata({ params }: PageParams) {
   const { slug } = await params
   const { metadata } = await getContent({ category: "notes", slug })
-  const ogImage = `https://kelvinyelyen.com/og?title=${metadata.title}`
+  const ogImage = `https://kelvinyelyen.com/og_bg.png`
 
   return {
     title: metadata.title,
@@ -74,7 +74,7 @@ export default async function Post({ params }: PageParams) {
             description: summary,
             image: post.metadata.image
               ? `https://kelvinyelyen.com${post.metadata.image}`
-              : `https://kelvinyelyen.com/og?title=${title}`,
+              : `https://kelvinyelyen.com/og_bg.png`,
             url: `https://kelvinyelyen.com/notes/${post.slug}`,
             author: {
               "@type": "Person",

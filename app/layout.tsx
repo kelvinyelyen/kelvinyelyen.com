@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     description: "Software engineer and researcher. Focused on the intersection of artificial intelligence and computational neuroscience.",
     url: "https://kelvinyelyen.com",
     siteName: "Kelvin Yelyen",
+    images: [{ url: "https://kelvinyelyen.com/og_bg.png" }],
     locale: "en_GH",
     type: "website",
   },
@@ -48,6 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kelvin Yelyen",
     description: "Software engineer and researcher. Focused on the intersection of artificial intelligence and computational neuroscience.",
+    images: ["https://kelvinyelyen.com/og_bg.png"],
   },
   alternates: {
     types: {
