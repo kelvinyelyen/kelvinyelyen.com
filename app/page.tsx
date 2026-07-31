@@ -1,4 +1,5 @@
 import { Link } from "next-view-transitions"
+import Image from "next/image"
 import { SubpageNav } from "@/components/layout"
 
 export default function Home() {
@@ -8,6 +9,16 @@ export default function Home() {
       <SubpageNav />
 
       <section className="mt-10">
+        <div className="mb-6">
+          <Image
+            src="/minimal_profile.png"
+            alt="Profile Minimal Art"
+            width={64}
+            height={64}
+            className="rounded-full border border-stone-200/60"
+            priority
+          />
+        </div>
         <div className="space-y-5 text-foreground">
           <p>
             I am a Faculty Assistant at{" "}
@@ -51,7 +62,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px] text-muted-foreground">
+      <section className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-muted-foreground">
         <a href="https://github.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className={socialLink}>GitHub</a>
         <a href="https://x.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) profile" className={socialLink}>X</a>
         <a href="https://www.linkedin.com/in/kelvinyelyen/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className={socialLink}>LinkedIn</a>

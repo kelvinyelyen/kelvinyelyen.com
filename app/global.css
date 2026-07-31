@@ -19,13 +19,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 26px;
 }
 
 @media (max-width: 639px) {
   body {
-    font-size: 16px;
+    font-size: 14.5px;
     line-height: 25px;
   }
 }
@@ -83,7 +83,7 @@ main {
 
 .prose {
   font-family: var(--font-stix), "STIX Two Text", Georgia, serif;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 26px;
 }
 
@@ -94,7 +94,7 @@ main {
 
 @media (max-width: 639px) {
   .prose {
-    font-size: 16px;
+    font-size: 14.5px;
     line-height: 25px;
   }
 
@@ -201,19 +201,20 @@ main {
 .prose table,
 .prose th,
 .prose td {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 26px;
 }
 
 @media (max-width: 639px) {
-
   .prose table,
   .prose th,
   .prose td {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 14.5px;
+    line-height: 25px;
   }
 }
+
+
 
 .prose> :first-child {
   margin-top: 1.25em !important;
@@ -271,14 +272,16 @@ input[type="email"] {
   margin-top: 0.4rem !important;
   margin-bottom: 0.4rem !important;
   transition: opacity 0.25s ease-in-out;
-  color: #52525b !important; /* text-zinc-600 */
+  color: #52525b !important;
+  /* text-zinc-600 */
 }
 
 .books-list li::before {
   content: "•";
   position: absolute;
   left: 0;
-  color: #a1a1aa; /* text-zinc-400 */
+  color: #a1a1aa;
+  /* text-zinc-400 */
   opacity: 0.7;
 }
 
