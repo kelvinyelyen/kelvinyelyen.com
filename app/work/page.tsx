@@ -38,7 +38,7 @@ function getTruncatedAuthors(text: string) {
 function ResumeItem({ item }: { item: PostMetadata }) {
   return (
     <li className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-y-1 sm:gap-y-0 sm:gap-x-4 sm:mb-2">
-      <div className="flex flex-wrap items-center sm:items-baseline gap-x-2">
+      <div className="leading-snug">
         <a
           href={item.website}
           target="_blank"
@@ -48,7 +48,7 @@ function ResumeItem({ item }: { item: PostMetadata }) {
           {item.role || item.degree}
         </a>
         <span className="text-stone-700 text-[14px]">
-          <span className="mr-1.5 text-stone-700">&bull;</span>
+          <span className="mx-1.5 text-stone-700">&bull;</span>
           {item.company || item.institution}
         </span>
       </div>
