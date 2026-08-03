@@ -1,4 +1,3 @@
-const DATE_OPTIONS: Intl.DateTimeFormatOptions = { year: "numeric", month: "long", day: "numeric" }
 
 export function formatTimeAgo(inputDate: string | Date) {
   const date = new Date(inputDate)
@@ -27,11 +26,15 @@ export function formatTimeAgo(inputDate: string | Date) {
 }
 
 export function formatDate(inputDate: string | Date) {
-  return new Date(inputDate).toLocaleDateString(undefined, DATE_OPTIONS)
+  const date = new Date(inputDate)
+  const yyyy = date.getFullYear()
+  const mm = String(date.getMonth() + 1).padStart(2, '0')
+  const dd = String(date.getDate()).padStart(2, '0')
+  return `${yyyy}.${mm}.${dd}`
 }
 
 export function formatDateTimeFull(inputDate: string | Date) {
-  const formattedDate = new Date(inputDate).toLocaleDateString(undefined, DATE_OPTIONS)
+  const formattedDate = formatDate(inputDate)
   const timeAgo = formatTimeAgo(inputDate)
   return `${formattedDate} (${timeAgo})`
 }

@@ -37,7 +37,7 @@ function getTruncatedAuthors(text: string) {
 
 function ResumeItem({ item }: { item: PostMetadata }) {
   return (
-    <li className="flex justify-between items-baseline gap-x-4 mb-3">
+    <li className="flex justify-between items-baseline gap-x-4">
       <div className="leading-snug">
         <span className="font-medium text-foreground">
           {item.role || item.degree}
@@ -77,7 +77,7 @@ export default function Page() {
       <div className="mt-10 space-y-14">
         <section>
           <h2 className="text-[25px] font-semibold mb-3">Education</h2>
-          <ul className="space-y-5">
+          <ul className="space-y-4">
             {education.map(({ slug, metadata }) => (
               <ResumeItem key={slug} item={metadata} />
             ))}
@@ -86,7 +86,7 @@ export default function Page() {
 
         <section>
           <h2 className="text-[25px] font-semibold mb-3">Experience</h2>
-          <ul className="space-y-5">
+          <ul className="space-y-4">
             {experience.map(({ slug, metadata }) => (
               <ResumeItem key={slug} item={metadata} />
             ))}

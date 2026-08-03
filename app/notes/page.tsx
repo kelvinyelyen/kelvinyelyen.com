@@ -22,9 +22,9 @@ export default function Page() {
       <SubpageNav />
       <h1 className="text-[25px] font-semibold mt-10 mb-3">Notes</h1>
 
-      <ul className="space-y-2 sm:space-y-1.5">
+      <ul className="space-y-4">
         {activePosts.map(({ slug, metadata }) => (
-          <li key={slug} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-4">
+          <li key={slug} className="flex justify-between items-baseline gap-x-4">
             <span className="flex items-baseline gap-2">
               <Link
                 href={`/notes/${slug}`}
@@ -33,7 +33,7 @@ export default function Page() {
                 {metadata.title}
               </Link>
             </span>
-            <span className="text-muted-foreground text-[15px] whitespace-nowrap mt-1 sm:mt-0">
+            <span className="text-muted-foreground text-[15px] whitespace-nowrap shrink-0">
               {formatDate(metadata.publishedAt)}
             </span>
           </li>
