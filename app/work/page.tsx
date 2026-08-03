@@ -24,35 +24,40 @@ function getTruncatedAuthors(text: string) {
 
   const myIndex = authors.findIndex(a => a.toLowerCase().includes(AUTHOR_NAME.toLowerCase()));
 
-  if (myIndex === -1) return `${authors[0]} et al.`;
-  if (myIndex === 0) return `${authors[0]} et al.`;
+  if (myIndex === -1) return `${authors[0]} et\u00A0al.`;
+  if (myIndex === 0) return `${authors[0]} et\u00A0al.`;
 
   if (myIndex === 1) {
-    return `${authors[0]}, ${authors[1]}, et al.`;
+    return `${authors[0]}, ${authors[1]}, et\u00A0al.`;
   }
 
   const isLast = myIndex === authors.length - 1;
-  return `${authors[0]}, ..., ${authors[myIndex]}${isLast ? '' : ', et al.'}`;
+  return `${authors[0]}, ..., ${authors[myIndex]}${isLast ? '' : ', et\u00A0al.'}`;
 }
 
 function ResumeItem({ item }: { item: PostMetadata }) {
   return (
-    <li className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-y-1 sm:gap-y-0 sm:gap-x-4 sm:mb-2">
+    <li className="flex justify-between items-baseline gap-x-4 mb-3">
       <div className="leading-snug">
-        <a
-          href={item.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline underline-offset-4 decoration-1 decoration-stone-400 hover:decoration-stone-700"
-        >
+        <span className="font-medium text-foreground">
           {item.role || item.degree}
-        </a>
-        <span className="text-stone-700 text-[14px]">
-          <span className="mx-1.5 text-stone-700">&bull;</span>
-          {item.company || item.institution}
         </span>
+        {item.website ? (
+          <a
+            href={item.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-stone-600 text-[14px] mt-0.5 underline underline-offset-4 decoration-1 decoration-stone-300 hover:decoration-stone-600"
+          >
+            {item.company || item.institution}
+          </a>
+        ) : (
+          <span className="block text-stone-600 text-[14px] mt-0.5">
+            {item.company || item.institution}
+          </span>
+        )}
       </div>
-      <span className="text-stone-700 text-[14px] whitespace-nowrap self-start sm:self-auto">
+      <span className="text-stone-600 text-[14px] whitespace-nowrap shrink-0">
         {item.year}
       </span>
     </li>
@@ -72,7 +77,7 @@ export default function Page() {
       <div className="mt-10 space-y-14">
         <section>
           <h2 className="text-[25px] font-semibold mb-3">Education</h2>
-          <ul className="space-y-5 sm:space-y-1.5">
+          <ul className="space-y-5">
             {education.map(({ slug, metadata }) => (
               <ResumeItem key={slug} item={metadata} />
             ))}
@@ -81,7 +86,7 @@ export default function Page() {
 
         <section>
           <h2 className="text-[25px] font-semibold mb-3">Experience</h2>
-          <ul className="space-y-5 sm:space-y-1.5">
+          <ul className="space-y-5">
             {experience.map(({ slug, metadata }) => (
               <ResumeItem key={slug} item={metadata} />
             ))}
@@ -98,7 +103,7 @@ export default function Page() {
                     href={metadata.document}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline underline-offset-4 decoration-1 decoration-stone-400 hover:decoration-stone-700 font-semibold"
+                    className="underline underline-offset-4 decoration-1 decoration-stone-300 hover:decoration-stone-600 font-medium text-[15px]"
                   >
                     {metadata.title}
                   </a>
@@ -137,7 +142,7 @@ export default function Page() {
                     href={metadata.document}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline underline-offset-4 decoration-1 decoration-stone-400 hover:decoration-stone-700 font-semibold"
+                    className="underline underline-offset-4 decoration-1 decoration-stone-300 hover:decoration-stone-600 font-medium text-[15px]"
                   >
                     {metadata.title}
                   </a>
