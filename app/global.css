@@ -272,6 +272,7 @@ input[type="email"] {
   padding-left: 1.25rem !important;
   margin-top: 0.4rem !important;
   margin-bottom: 0.4rem !important;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   color: #52525b !important;
   /* text-zinc-600 */
 }
@@ -283,6 +284,18 @@ input[type="email"] {
   color: #a1a1aa;
   /* text-zinc-400 */
   opacity: 0.7;
+}
+
+/* Hover Focus Fade Effect (Disabled on touchscreens to prevent sticky hover bugs) */
+@media (hover: hover) {
+  .books-list ul:hover li {
+    opacity: 0.45;
+  }
+
+  .books-list ul li:hover {
+    opacity: 1 !important;
+    color: var(--foreground) !important;
+  }
 }
 
 /* View Transitions (shud.in style crossfade with blur) */

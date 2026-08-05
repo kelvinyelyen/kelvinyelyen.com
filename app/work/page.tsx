@@ -4,7 +4,7 @@ import { getCategoryContent, PostMetadata } from "@/lib/content"
 export const metadata = {
   title: "Research & Experience",
   description:
-    "Investigating the intersection of computational neuroscience and artificial intelligence through neural decoding and adaptive architectures.",
+    "Education, experience, research, and selected projects",
 }
 
 const AUTHOR_NAME = "Kelvin Yelyen"
@@ -33,6 +33,44 @@ function getTruncatedAuthors(text: string) {
 
   const isLast = myIndex === authors.length - 1;
   return `${authors[0]}, ..., ${authors[myIndex]}${isLast ? '' : ', et\u00A0al.'}`;
+}
+
+export const dynamic = "force-static"
+
+function PortfolioItem({ item }: { item: PostMetadata }) {
+  return (
+    <li className="space-y-1">
+      <div>
+        <a
+          href={item.document}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4 decoration-1 decoration-stone-300 hover:decoration-stone-600 font-medium text-[15px]"
+        >
+          {item.title}
+        </a>
+        <div className="mt-0.5 leading-snug">
+          {item.authors && (
+            <span className="text-stone-700 text-[14px]">
+              <span className="sm:hidden">{highlightAuthor(getTruncatedAuthors(item.authors))}</span>
+              <span className="hidden sm:inline">{highlightAuthor(item.authors)}</span>
+              <span className="mx-1.5 text-stone-700">&bull;</span>
+            </span>
+          )}
+          {item.affiliation && (
+            <span className="text-[14px] font-medium tracking-wide text-stone-700">
+              {item.affiliation}
+            </span>
+          )}
+        </div>
+        {item.summary && (
+          <p className="mt-2 text-stone-700 text-[14px] leading-relaxed max-w-2xl">
+            {item.summary}
+          </p>
+        )}
+      </div>
+    </li>
+  )
 }
 
 function ResumeItem({ item }: { item: PostMetadata }) {
@@ -64,7 +102,7 @@ function ResumeItem({ item }: { item: PostMetadata }) {
   )
 }
 
-export default function Page() {
+export default function WorkPage() {
   const research = getCategoryContent("resume/projects/research")
   const projects = getCategoryContent("resume/projects/personal")
   const experience = getCategoryContent("resume/experience")
@@ -95,78 +133,18 @@ export default function Page() {
 
         <section>
           <h2 className="text-[25px] font-semibold mb-3">Research</h2>
-          <ul className="space-y-6">
+          <ul className="space-y-4">
             {research.map(({ slug, metadata }) => (
-              <li key={slug} className="space-y-1">
-                <div>
-                  <a
-                    href={metadata.document}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline underline-offset-4 decoration-1 decoration-stone-300 hover:decoration-stone-600 font-medium text-[15px]"
-                  >
-                    {metadata.title}
-                  </a>
-                  <div className="mt-0.5 leading-snug">
-                    {metadata.authors && (
-                      <span className="text-stone-700 text-[14px]">
-                        <span className="sm:hidden">{highlightAuthor(getTruncatedAuthors(metadata.authors))}</span>
-                        <span className="hidden sm:inline">{highlightAuthor(metadata.authors)}</span>
-                        <span className="mx-1.5 text-stone-700">&bull;</span>
-                      </span>
-                    )}
-                    {metadata.affiliation && (
-                      <span className="text-[14px] font-medium tracking-wide text-stone-700">
-                        {metadata.affiliation}
-                      </span>
-                    )}
-                  </div>
-                  {metadata.summary && (
-                    <p className="mt-2 text-stone-700 text-[14px] leading-relaxed">
-                      {metadata.summary}
-                    </p>
-                  )}
-                </div>
-              </li>
+              <PortfolioItem key={slug} item={metadata} />
             ))}
           </ul>
         </section>
 
         <section>
           <h2 className="text-[25px] font-semibold mb-3">Projects</h2>
-          <ul className="space-y-6">
+          <ul className="space-y-4">
             {projects.map(({ slug, metadata }) => (
-              <li key={slug} className="space-y-1">
-                <div>
-                  <a
-                    href={metadata.document}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline underline-offset-4 decoration-1 decoration-stone-300 hover:decoration-stone-600 font-medium text-[15px]"
-                  >
-                    {metadata.title}
-                  </a>
-                  <div className="mt-0.5 leading-snug">
-                    {metadata.authors && (
-                      <span className="text-stone-700 text-[14px]">
-                        <span className="sm:hidden">{highlightAuthor(getTruncatedAuthors(metadata.authors))}</span>
-                        <span className="hidden sm:inline">{highlightAuthor(metadata.authors)}</span>
-                        <span className="mx-1.5 text-stone-700">&bull;</span>
-                      </span>
-                    )}
-                    {metadata.affiliation && (
-                      <span className="text-[14px] font-medium tracking-wide text-stone-700">
-                        {metadata.affiliation}
-                      </span>
-                    )}
-                  </div>
-                  {metadata.summary && (
-                    <p className="mt-2 text-stone-700 text-[14px] leading-relaxed max-w-2xl">
-                      {metadata.summary}
-                    </p>
-                  )}
-                </div>
-              </li>
+              <PortfolioItem key={slug} item={metadata} />
             ))}
           </ul>
         </section>

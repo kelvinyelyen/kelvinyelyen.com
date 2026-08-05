@@ -5,9 +5,11 @@ import { join } from "path"
 import matter from "gray-matter"
 
 export const metadata = {
-  title: "Books",
+  title: "Reading",
   description: "My reading list and book recommendations.",
 }
+
+export const dynamic = "force-static"
 
 export default function BooksPage() {
   const filePath = join(process.cwd(), "content/books.mdx")
@@ -16,7 +18,7 @@ export default function BooksPage() {
   return (
     <main className="container my-12 px-5 sm:px-0">
       <SubpageNav />
-      <h1 className="text-[25px] font-semibold mt-10 mb-3">Books</h1>
+      <h1 className="text-[25px] font-semibold mt-10 mb-3">Reading</h1>
       <div className="prose prose-stone prose-quoteless max-w-none text-foreground books-list [&_h3]:mt-6 [&_h3]:mb-2 [&_h4]:mt-3 [&_h4]:mb-1">
         <CustomMDX source={content} />
       </div>

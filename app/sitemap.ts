@@ -1,6 +1,6 @@
 import { getCategoryContent } from "@/lib/content"
 
-const URL = "https://kelvinyelyen.com"
+const URL = "https://www.kelvinyelyen.com"
 
 export default function sitemap() {
   const notes = getCategoryContent("notes")
@@ -10,7 +10,7 @@ export default function sitemap() {
     lastModified: post.metadata.publishedAt,
   }))
 
-  const routes = ["/", "/work", "/notes"].map((route) => ({
+  const routes = ["/", "/work", "/notes", "/books"].map((route) => ({
     url: `${URL}${route}`,
     lastModified: new Date().toISOString().split("T")[0],
   }))

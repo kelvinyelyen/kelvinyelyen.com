@@ -5,10 +5,12 @@ import { formatDate } from "@/lib/date"
 
 export const metadata = {
   title: "Notes",
-  description: "Technical notes and perspectives on computational neuroscience and artificial intelligence.",
+  description: "Technical notes and perspectives",
 }
 
-export default function Page() {
+export const dynamic = "force-static"
+
+export default function NotesPage() {
   const posts = getCategoryContent("notes")
 
   // Filter out archived posts from 2023 and prior

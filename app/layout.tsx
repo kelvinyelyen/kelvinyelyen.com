@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     default: "Kelvin Yelyen",
     template: "%s | Kelvin Yelyen",
   },
-  description: "Software engineer and researcher. Focused on the intersection of artificial intelligence and computational neuroscience.",
+  description: "Software engineer and researcher",
   authors: [{ name: "Kelvin Yelyen" }],
   openGraph: {
     title: "Kelvin Yelyen",
-    description: "Software engineer and researcher. Focused on the intersection of artificial intelligence and computational neuroscience.",
+    description: "Software engineer and researcher",
     url: "https://kelvinyelyen.com",
     siteName: "Kelvin Yelyen",
     images: [{ url: "https://kelvinyelyen.com/og_bg.png" }],
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kelvin Yelyen",
-    description: "Software engineer and researcher. Focused on the intersection of artificial intelligence and computational neuroscience.",
+    description: "Software engineer and researcher",
     images: ["https://kelvinyelyen.com/og_bg.png"],
   },
   alternates: {

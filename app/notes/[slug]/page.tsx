@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "next-view-transitions"
 import { SubpageNav } from "@/components/layout"
 import { generateSlugsFromCategory, getContent } from "@/lib/content"
 import { formatDate } from "@/lib/date"
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: PageParams) {
   }
 }
 
-export default async function Post({ params }: PageParams) {
+export default async function NotePage({ params }: PageParams) {
   const { slug } = await params
   const post = await getContent({ category: "notes", slug })
   const { title, publishedAt, summary, updatedAt } = post.metadata

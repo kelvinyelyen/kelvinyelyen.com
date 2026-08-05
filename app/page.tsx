@@ -1,6 +1,7 @@
 import { Link } from "next-view-transitions"
-import Image from "next/image"
 import { SubpageNav } from "@/components/layout"
+
+export const dynamic = "force-static"
 
 export default function Home() {
   const socialLink = "hover:text-foreground pb-0.5 border-b border-transparent hover:border-neutral-300"
@@ -9,16 +10,6 @@ export default function Home() {
       <SubpageNav />
 
       <section className="mt-10">
-        {/* <div className="mb-6">
-          <Image
-            src="/minimal_image.jpg"
-            alt="Profile Minimal Art"
-            width={100}
-            height={100}
-            className="rounded-full border border-stone-200/60"
-            priority
-          />
-        </div> */}
         <div className="space-y-5 text-foreground">
           <p>
             I am a Faculty Assistant at{" "}
@@ -66,7 +57,7 @@ export default function Home() {
         <a href="https://github.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className={socialLink}>GitHub</a>
         <a href="https://x.com/kelvinyelyen" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) profile" className={socialLink}>X</a>
         <a href="https://www.linkedin.com/in/kelvinyelyen/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className={socialLink}>LinkedIn</a>
-        <Link href="/books" aria-label="Reading page" className={socialLink}>Reading</Link>
+        <Link href="/reading" aria-label="Reading page" className={socialLink}>Reading</Link>
         <a href="https://drive.google.com/drive/folders/1vSpuEMBHVt9m0rQqy02TLqi4-AqmBRk9?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Curriculum Vitae" className={socialLink}>CV</a>
         <a href="mailto:kelvinyelyen@gmail.com" aria-label="Send email to Kelvin Yelyen" className={socialLink}>kelvinyelyen [at] gmail [dot] com</a>
       </section>
