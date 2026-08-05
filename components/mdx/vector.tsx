@@ -95,13 +95,22 @@ export function ArrowInSpace({ vector }: ArrowInSpaceProps) {
   }, [isDragging])
 
   return (
-    <div className="my-6 bg-stone-50 border border-stone-200 rounded-xl p-5 w-full mx-auto shadow-sm">
-      <div className="flex justify-between items-center text-xs text-stone-500 font-mono mb-2 px-1">
-        <span className="font-bold text-stone-700">VECTOR SPACE</span>
-        <span>v = [{val[0].toFixed(1)}, {val[1].toFixed(1)}]</span>
+    <div className="my-8 border border-gray-200 rounded-2xl p-6 sm:p-8 w-full mx-auto bg-white shadow-sm select-none">
+      
+      {/* Header */}
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+        <span className="text-[10px] sm:text-xs font-semibold text-gray-400 uppercase tracking-widest">
+          VECTOR SPACE
+        </span>
+        
+        <div className="flex items-center gap-2 text-xs font-medium">
+          <div className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full flex items-center gap-1">
+            v = <span className="font-bold">[{val[0].toFixed(1)}, {val[1].toFixed(1)}]</span>
+          </div>
+        </div>
       </div>
 
-      <div className="bg-white border border-stone-200 rounded-lg overflow-hidden relative h-[200px]">
+      <div className="w-full relative h-[200px]">
         <svg
           ref={svgRef}
           width="100%"
@@ -128,16 +137,16 @@ export function ArrowInSpace({ vector }: ArrowInSpaceProps) {
             y1={cy}
             x2={xPixel}
             y2={yPixel}
-            stroke="#0ea5e9"
-            strokeWidth="2.5"
+            stroke="#3b82f6" // blue-500
+            strokeWidth="3"
             markerEnd="url(#arrow-sky)"
           />
 
           <circle
             cx={xPixel}
             cy={yPixel}
-            r="7"
-            className="fill-sky-500 hover:fill-sky-600 active:fill-sky-700 stroke-white stroke-2 cursor-grab active:cursor-grabbing transition-colors duration-150"
+            r="8"
+            className="fill-blue-500 hover:fill-blue-600 active:fill-blue-700 stroke-white stroke-[3px] cursor-grab active:cursor-grabbing transition-colors duration-150 drop-shadow-sm"
             onMouseDown={() => setIsDragging(true)}
             onTouchStart={() => setIsDragging(true)}
           />
@@ -163,7 +172,7 @@ export function Vector3D() {
   const project = (vx: number, vy: number, vz: number) => {
     const xAngle = (150 * Math.PI) / 180
     const yAngle = (30 * Math.PI) / 180
-    
+
     const px = cx + vx * scale * Math.cos(xAngle) + vy * scale * Math.cos(yAngle)
     const py = cy - (vx * scale * Math.sin(xAngle) + vy * scale * Math.sin(yAngle) + vz * scale)
     return [px, py]
@@ -179,13 +188,19 @@ export function Vector3D() {
   const [xyValX, xyValY] = project(x, y, 0)
 
   return (
-    <div className="my-6 bg-stone-50 border border-stone-200 rounded-xl p-5 w-full mx-auto shadow-sm">
-      <div className="flex justify-between items-center text-xs text-stone-500 font-mono mb-2 px-1">
-        <span className="font-bold text-stone-700">3D VECTOR SPACE</span>
-        <span>v = [{x.toFixed(1)}, {y.toFixed(1)}, {z.toFixed(1)}]</span>
+    <div className="my-8 border border-gray-200 rounded-2xl p-6 sm:p-8 w-full mx-auto bg-white shadow-sm select-none">
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+        <span className="text-[10px] sm:text-xs font-semibold text-gray-400 uppercase tracking-widest">
+          3D VECTOR SPACE
+        </span>
+        <div className="flex items-center gap-2 text-xs font-medium">
+          <div className="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full flex items-center gap-1">
+            v = <span className="font-bold">[{x.toFixed(1)}, {y.toFixed(1)}, {z.toFixed(1)}]</span>
+          </div>
+        </div>
       </div>
 
-      <div className="bg-white border border-stone-200 rounded-lg overflow-hidden h-[200px]">
+      <div className="w-full relative h-[200px]">
         <svg width="100%" height="100%" viewBox={`0 0 ${width} ${height}`} className="select-none overflow-visible">
           <defs>
             <marker id="arrow-light" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -215,11 +230,11 @@ export function Vector3D() {
         </svg>
       </div>
 
-      <div className="grid grid-cols-3 gap-3 mt-3 px-1 text-xs text-stone-600">
+      <div className="grid grid-cols-3 gap-4 mt-8">
         <div>
-          <div className="flex justify-between font-mono mb-1">
+          <div className="flex justify-between text-[10px] font-medium text-gray-400 uppercase tracking-widest mb-2">
             <span>X axis</span>
-            <span className="font-bold">{x.toFixed(1)}</span>
+            <span className="text-gray-900">{x.toFixed(1)}</span>
           </div>
           <input
             type="range"
@@ -228,13 +243,13 @@ export function Vector3D() {
             step="0.1"
             value={x}
             onChange={(e) => setX(parseFloat(e.target.value))}
-            className="w-full accent-stone-600 h-1 bg-stone-200 rounded appearance-none cursor-pointer"
+            className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-500"
           />
         </div>
         <div>
-          <div className="flex justify-between font-mono mb-1">
+          <div className="flex justify-between text-[10px] font-medium text-gray-400 uppercase tracking-widest mb-2">
             <span>Y axis</span>
-            <span className="font-bold">{y.toFixed(1)}</span>
+            <span className="text-gray-900">{y.toFixed(1)}</span>
           </div>
           <input
             type="range"
@@ -243,13 +258,13 @@ export function Vector3D() {
             step="0.1"
             value={y}
             onChange={(e) => setY(parseFloat(e.target.value))}
-            className="w-full accent-stone-600 h-1 bg-stone-200 rounded appearance-none cursor-pointer"
+            className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-500"
           />
         </div>
         <div>
-          <div className="flex justify-between font-mono mb-1">
+          <div className="flex justify-between text-[10px] font-medium text-gray-400 uppercase tracking-widest mb-2">
             <span>Z axis</span>
-            <span className="font-bold">{z.toFixed(1)}</span>
+            <span className="text-gray-900">{z.toFixed(1)}</span>
           </div>
           <input
             type="range"
@@ -258,7 +273,7 @@ export function Vector3D() {
             step="0.1"
             value={z}
             onChange={(e) => setZ(parseFloat(e.target.value))}
-            className="w-full accent-stone-600 h-1 bg-stone-200 rounded appearance-none cursor-pointer"
+            className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-500"
           />
         </div>
       </div>
@@ -269,7 +284,7 @@ export function Vector3D() {
 export function DotProductDemo() {
   const [ax, setAx] = useState(3.0)
   const [ay, setAy] = useState(2.0)
-  
+
   const scale = 25
   const width = 400
   const height = 200
@@ -337,13 +352,19 @@ export function DotProductDemo() {
   }, [isDragging])
 
   return (
-    <div className="my-6 bg-stone-50 border border-stone-200 rounded-xl p-5 w-full mx-auto shadow-sm">
-      <div className="flex justify-between items-center text-xs text-stone-500 font-mono mb-2 px-1">
-        <span className="font-bold text-stone-700">DOT PRODUCT DETECTOR</span>
-        <span>a · b = {dotProduct.toFixed(1)}</span>
+    <div className="my-8 border border-gray-200 rounded-2xl p-6 sm:p-8 w-full mx-auto bg-white shadow-sm select-none">
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+        <span className="text-[10px] sm:text-xs font-semibold text-gray-400 uppercase tracking-widest">
+          DOT PRODUCT DETECTOR
+        </span>
+        <div className="flex items-center gap-2 text-xs font-medium">
+          <div className="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full flex items-center gap-1">
+            a · b = <span className="font-bold">{dotProduct.toFixed(1)}</span>
+          </div>
+        </div>
       </div>
 
-      <div className="bg-white border border-stone-200 rounded-lg overflow-hidden relative h-[200px]">
+      <div className="w-full relative h-[200px]">
         <svg
           ref={svgRef}
           width="100%"
@@ -485,7 +506,7 @@ export function NeuralCombination() {
           const progress = ((time / 1500) + delayOffset) % 1.0
           const px = node.x + progress * (zNode.x - node.x)
           const py = node.y + progress * (zNode.y - node.y)
-          
+
           pulses.push(
             <circle
               key={`pulse-${fromIdx}-${toIdx}-${i}`}
@@ -504,51 +525,25 @@ export function NeuralCombination() {
   }
 
   return (
-    <div className="my-6 bg-stone-50 border border-stone-200 rounded-xl p-5 w-full mx-auto shadow-sm select-none">
-      
-      {/* Header controls and statistics with rounded buttons */}
-      <div className="flex flex-wrap items-center justify-between gap-4 mb-4 border-b border-stone-200 pb-2 text-xs text-stone-500 font-mono">
-        <div className="flex items-center gap-3">
-          <span className="font-bold text-stone-800">STATE COMBINATION</span>
-          <span className="text-stone-300">/</span>
-          <span className="font-bold text-orange-500">a = {a.toFixed(2)}</span>
-          <span className="text-stone-300">/</span>
-          <span className="font-bold text-emerald-600">b = {b.toFixed(2)}</span>
-        </div>
-        
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setIsPaused(!isPaused)}
-            className="p-1 bg-white hover:bg-stone-100 border border-stone-200 rounded-md text-stone-600 hover:text-stone-800 transition-all outline-none focus:outline-none focus:ring-0 focus:ring-transparent focus-visible:outline-none shadow-sm"
-            title={isPaused ? "Play" : "Pause"}
-          >
-            {isPaused ? <Play size={11} fill="currentColor" /> : <Pause size={11} fill="currentColor" />}
-          </button>
-          <button
-            onClick={handleReset}
-            className="p-1 bg-white hover:bg-stone-100 border border-stone-200 rounded-md text-stone-600 hover:text-stone-800 transition-all outline-none focus:outline-none focus:ring-0 focus:ring-transparent focus-visible:outline-none shadow-sm"
-            title="Reset"
-          >
-            <RotateCcw size={11} />
-          </button>
-          <div className="flex bg-stone-100 border border-stone-200 rounded-md p-0.5 text-[10px] font-bold text-stone-500 ml-1 shadow-sm">
-            {([0.5, 1, 2] as const).map((s) => (
-              <button
-                key={s}
-                onClick={() => setSpeed(s)}
-                className={`px-1.5 py-0.5 rounded transition-all outline-none focus:outline-none focus:ring-0 focus:ring-transparent focus-visible:outline-none ${
-                  speed === s ? "bg-white text-stone-800 shadow-sm" : "hover:text-stone-800"
-                }`}
-              >
-                {s}x
-              </button>
-            ))}
+    <div className="my-8 border border-gray-200 rounded-2xl p-6 sm:p-8 w-full mx-auto bg-white shadow-sm select-none">
+
+      {/* Header */}
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+        <span className="text-[10px] sm:text-xs font-semibold text-gray-400 uppercase tracking-widest">
+          STATE COMBINATION
+        </span>
+        <div className="flex items-center gap-2 text-xs font-medium">
+          <div className="px-3 py-1 bg-orange-50 text-orange-600 rounded-full">
+            a = <span className="font-bold">{a.toFixed(2)}</span>
+          </div>
+          <div className="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full">
+            b = <span className="font-bold">{b.toFixed(2)}</span>
           </div>
         </div>
       </div>
 
       {/* Main Diagram Area */}
-      <div className="bg-white border border-stone-200 rounded-lg p-4 relative overflow-hidden h-[260px]">
+      <div className="w-full relative h-[260px]">
         <svg width="100%" height="100%" viewBox="0 0 400 260" className="overflow-visible">
           {xNodes.map((xNode, i) =>
             zNodes.map((zNode, j) => (
@@ -633,7 +628,7 @@ export function NeuralCombination() {
 
           {zNodes.map((node, idx) => {
             const zWeight = a * xPattern[idx] + b * yPattern[idx]
-            
+
             return (
               <g key={`z-node-${idx}`}>
                 <circle
@@ -664,8 +659,41 @@ export function NeuralCombination() {
         </svg>
       </div>
 
-      <div className="mt-3 text-center text-xs text-stone-500 font-medium italic">
-        {stepText}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-8">
+        <div className="text-sm text-gray-500 font-medium">
+          {stepText}
+        </div>
+
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setIsPaused(!isPaused)}
+            className="text-gray-500 hover:text-gray-700 transition-colors p-1"
+            title={isPaused ? "Play" : "Pause"}
+          >
+            {isPaused ? <Play size={16} fill="currentColor" /> : <Pause size={16} fill="currentColor" />}
+          </button>
+          <button
+            onClick={handleReset}
+            className="text-gray-400 hover:text-gray-600 transition-colors p-1 mr-2"
+            title="Reset"
+          >
+            <RotateCcw size={14} />
+          </button>
+          
+          <div className="flex bg-gray-100 rounded-full p-1 text-xs font-semibold text-gray-500">
+            {([0.5, 1, 2] as const).map((s) => (
+              <button
+                key={s}
+                onClick={() => setSpeed(s)}
+                className={`px-3 py-1 rounded-full transition-colors ${
+                  speed === s ? "bg-white text-gray-900 shadow-sm" : "hover:text-gray-700"
+                }`}
+              >
+                {s}x
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -54,7 +54,7 @@ export function LIFSimulation() {
     timeRef.current = 0
     spikeCountRef.current = 0
     spikeTimesRef.current = []
-    
+
     if (spikeCountTextRef.current) spikeCountTextRef.current.innerText = "0"
     if (firingRateTextRef.current) firingRateTextRef.current.innerText = "0.0"
   }
@@ -173,41 +173,151 @@ export function LIFSimulation() {
   }, [isPaused, inputType, meanCurrent, noiseSigma, poissonRate, synapticWeight, tauM, speed])
 
   return (
-    <div className="my-8 bg-stone-50 border border-stone-200 rounded-xl p-5 w-full mx-auto shadow-sm select-none">
-      
-      {/* Header controls and statistics with rounded buttons */}
-      <div className="flex flex-wrap items-center justify-between gap-4 mb-4 text-xs text-stone-500 font-mono">
-        <div className="flex items-center gap-3">
-          <span className="font-bold text-stone-800">LIF NEURON</span>
-          <span className="text-stone-300">/</span>
-          <span ref={currentVoltTextRef} className="font-bold text-stone-600 w-16">-65.0 mV</span>
-          <span className="text-stone-300">/</span>
-          <span>Spikes: <span ref={spikeCountTextRef} className="font-bold text-stone-700">0</span></span>
-          <span>Rate: <span ref={firingRateTextRef} className="font-bold text-stone-700">0.0</span> Hz</span>
-        </div>
+    <div className="my-8 border border-gray-200 rounded-2xl p-6 sm:p-8 w-full mx-auto bg-white shadow-sm select-none">
+
+      {/* Header */}
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+        <span className="text-[10px] sm:text-xs font-semibold text-gray-400 uppercase tracking-widest">
+          LIF NEURON
+        </span>
         
+        {/* Status Indicators as Pills */}
+        <div className="flex items-center gap-2 text-xs font-medium">
+          <div className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full flex items-center gap-1">
+            Voltage: <span ref={currentVoltTextRef} className="font-bold text-gray-900 w-12 text-right">-65.0</span> mV
+          </div>
+          <div className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full flex items-center gap-1">
+            Spikes: <span ref={spikeCountTextRef} className="font-bold text-rose-500">0</span>
+          </div>
+          <div className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full flex items-center gap-1">
+            Rate: <span ref={firingRateTextRef} className="font-bold text-rose-500">0.0</span> Hz
+          </div>
+        </div>
+      </div>
+
+      {/* Membrane Potential Waveform Plot */}
+      <div className="w-full h-[140px] relative overflow-visible">
+        <svg width="100%" height="100%" viewBox="0 0 600 140" preserveAspectRatio="none" className="overflow-visible">
+          {/* Threshold Line (-50mV) */}
+          <line x1="0" y1="35" x2="600" y2="35" stroke="#e5e7eb" strokeWidth="2" strokeDasharray="4,4" />
+          <text x="595" y="28" fill="#9ca3af" fontSize="10" fontWeight="500" textAnchor="end">Threshold (-50 mV)</text>
+          
+          {/* Resting Line (-65mV) */}
+          <line x1="0" y1="105" x2="600" y2="105" stroke="#f3f4f6" strokeWidth="2" />
+          <text x="595" y="118" fill="#9ca3af" fontSize="10" fontWeight="500" textAnchor="end">Resting (-65 mV)</text>
+
+          {/* Voltage Path */}
+          <path
+            ref={pathRef}
+            fill="none"
+            stroke="#fbbf24" // amber-400
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+
+      {/* Controls and Footer */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-10">
+        
+        {/* Left: Interactive Controls */}
+        <div className="flex flex-wrap gap-4 w-full sm:w-auto">
+          {/* Mode Selector Pill */}
+          <div className="relative">
+            <select
+              value={inputType}
+              onChange={(e) => setInputType(e.target.value as any)}
+              className="appearance-none bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-semibold px-4 py-2 pr-8 rounded-full focus:outline-none transition-colors cursor-pointer"
+            >
+              <option value="constant">Constant</option>
+              <option value="sinusoid">Sinusoidal</option>
+              <option value="noise">Noise</option>
+              <option value="poisson">Poisson</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            </div>
+          </div>
+
+          {/* Parameter Sliders */}
+          <div className="flex flex-col justify-center gap-1 min-w-[120px]">
+            {inputType !== "poisson" ? (
+              <>
+                <div className="flex justify-between text-[10px] font-medium text-gray-400 uppercase tracking-widest">
+                  <span>Current</span>
+                  <span>{meanCurrent.toFixed(1)} nA</span>
+                </div>
+                <input
+                  type="range"
+                  min="0.0"
+                  max="3.0"
+                  step="0.1"
+                  value={meanCurrent}
+                  onChange={(e) => setMeanCurrent(parseFloat(e.target.value))}
+                  className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-400"
+                />
+              </>
+            ) : (
+              <>
+                <div className="flex justify-between text-[10px] font-medium text-gray-400 uppercase tracking-widest">
+                  <span>Rate</span>
+                  <span>{poissonRate} Hz</span>
+                </div>
+                <input
+                  type="range"
+                  min="10"
+                  max="100"
+                  step="5"
+                  value={poissonRate}
+                  onChange={(e) => setPoissonRate(parseInt(e.target.value))}
+                  className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-400"
+                />
+              </>
+            )}
+          </div>
+          
+          <div className="flex flex-col justify-center gap-1 min-w-[120px]">
+             <div className="flex justify-between text-[10px] font-medium text-gray-400 uppercase tracking-widest">
+                <span>Tau (τ_m)</span>
+                <span>{tauM} ms</span>
+              </div>
+              <input
+                type="range"
+                min="5"
+                max="30"
+                step="1"
+                value={tauM}
+                onChange={(e) => setTauM(parseInt(e.target.value))}
+                className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-400"
+              />
+          </div>
+        </div>
+
+        {/* Right: Playback Controls */}
         <div className="flex items-center gap-2">
           <button
             onClick={() => setIsPaused(!isPaused)}
-            className="p-1 bg-white hover:bg-stone-100 border border-stone-200 rounded-md text-stone-600 hover:text-stone-800 transition-all outline-none focus:outline-none focus:ring-0 focus:ring-transparent focus-visible:outline-none shadow-sm"
+            className="text-gray-500 hover:text-gray-700 transition-colors p-1"
             title={isPaused ? "Play" : "Pause"}
           >
-            {isPaused ? <Play size={11} fill="currentColor" /> : <Pause size={11} fill="currentColor" />}
+            {isPaused ? <Play size={16} fill="currentColor" /> : <Pause size={16} fill="currentColor" />}
           </button>
           <button
             onClick={handleReset}
-            className="p-1 bg-white hover:bg-stone-100 border border-stone-200 rounded-md text-stone-600 hover:text-stone-800 transition-all outline-none focus:outline-none focus:ring-0 focus:ring-transparent focus-visible:outline-none shadow-sm"
+            className="text-gray-400 hover:text-gray-600 transition-colors p-1 mr-2"
             title="Reset"
           >
-            <RotateCcw size={11} />
+            <RotateCcw size={14} />
           </button>
-          <div className="flex bg-stone-100 border border-stone-200 rounded-md p-0.5 text-[10px] font-bold text-stone-500 ml-1 shadow-sm">
+          
+          <div className="flex bg-gray-100 rounded-full p-1 text-xs font-semibold text-gray-500">
             {([0.5, 1, 2] as const).map((s) => (
               <button
                 key={s}
                 onClick={() => setSpeed(s)}
-                className={`px-1.5 py-0.5 rounded transition-all outline-none focus:outline-none focus:ring-0 focus:ring-transparent focus-visible:outline-none ${
-                  speed === s ? "bg-white text-stone-800 shadow-sm" : "hover:text-stone-800"
+                className={`px-3 py-1 rounded-full transition-colors ${
+                  speed === s ? "bg-white text-gray-900 shadow-sm" : "hover:text-gray-700"
                 }`}
               >
                 {s}x
@@ -216,137 +326,6 @@ export function LIFSimulation() {
           </div>
         </div>
       </div>
-
-      {/* Membrane Potential Waveform Plot */}
-      <div className="bg-white border border-stone-200 rounded-lg p-2 h-[120px] relative overflow-hidden">
-        <svg width="100%" height="100%" viewBox="0 0 600 120" preserveAspectRatio="none" className="overflow-visible">
-          {/* Threshold Line (-50mV) */}
-          <line x1="0" y1="30" x2="600" y2="30" stroke="#f87171" strokeWidth="1" strokeDasharray="3,3" opacity="0.6" />
-          <text x="595" y="24" fill="#ef4444" fontSize="8" fontWeight="medium" textAnchor="end">Threshold (-50 mV)</text>
-          
-          {/* Resting Line (-65mV) */}
-          <line x1="0" y1="90" x2="600" y2="90" stroke="#94a3b8" strokeWidth="1" strokeDasharray="3,3" opacity="0.4" />
-          <text x="595" y="100" fill="#94a3b8" fontSize="8" fontWeight="medium" textAnchor="end">Resting (-65 mV)</text>
-
-          {/* Voltage Path */}
-          <path
-            ref={pathRef}
-            fill="none"
-            stroke="#0ea5e9" // sky-500
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </div>
-
-      {/* Grid Controls */}
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mt-5 text-xs text-stone-600">
-        
-        {/* Mode Selector */}
-        <div>
-          <label className="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-1.5">Input Mode</label>
-          <select
-            value={inputType}
-            onChange={(e) => setInputType(e.target.value as any)}
-            className="w-full bg-white border border-stone-200 rounded px-2 py-1 text-stone-700 focus:outline-none focus:ring-1 focus:ring-stone-400 font-medium"
-          >
-            <option value="constant">Constant</option>
-            <option value="sinusoid">Sinusoidal</option>
-            <option value="noise">Noise</option>
-            <option value="poisson">Poisson</option>
-          </select>
-        </div>
-
-        {/* Sliders depend on Input Mode */}
-        {inputType !== "poisson" ? (
-          <div>
-            <div className="flex justify-between font-mono mb-1">
-              <span>Current (I)</span>
-              <span className="font-bold">{meanCurrent.toFixed(2)} nA</span>
-            </div>
-            <input
-              type="range"
-              min="0.0"
-              max="3.0"
-              step="0.05"
-              value={meanCurrent}
-              onChange={(e) => setMeanCurrent(parseFloat(e.target.value))}
-              className="w-full accent-stone-600 h-1 bg-stone-200 rounded-lg appearance-none cursor-pointer"
-            />
-          </div>
-        ) : (
-          <>
-            <div>
-              <div className="flex justify-between font-mono mb-1">
-                <span>Rate (λ)</span>
-                <span className="font-bold">{poissonRate} Hz</span>
-              </div>
-              <input
-                type="range"
-                min="10"
-                max="100"
-                step="5"
-                value={poissonRate}
-                onChange={(e) => setPoissonRate(parseInt(e.target.value))}
-                className="w-full accent-stone-600 h-1 bg-stone-200 rounded-lg appearance-none cursor-pointer"
-              />
-            </div>
-            <div>
-              <div className="flex justify-between font-mono mb-1">
-                <span>Weight (w)</span>
-                <span className="font-bold">{synapticWeight.toFixed(2)} nA</span>
-              </div>
-              <input
-                type="range"
-                min="0.1"
-                max="2.0"
-                step="0.05"
-                value={synapticWeight}
-                onChange={(e) => setSynapticWeight(parseFloat(e.target.value))}
-                className="w-full accent-stone-600 h-1 bg-stone-200 rounded-lg appearance-none cursor-pointer"
-              />
-            </div>
-          </>
-        )}
-
-        {inputType === "noise" && (
-          <div>
-            <div className="flex justify-between font-mono mb-1">
-              <span>Noise (σ)</span>
-              <span className="font-bold">{noiseSigma.toFixed(2)} nA</span>
-            </div>
-            <input
-              type="range"
-              min="0.0"
-              max="2.0"
-              step="0.05"
-              value={noiseSigma}
-              onChange={(e) => setNoiseSigma(parseFloat(e.target.value))}
-              className="w-full accent-stone-600 h-1 bg-stone-200 rounded-lg appearance-none cursor-pointer"
-            />
-          </div>
-        )}
-
-        {/* This takes the remaining spot in the 4-column layout if needed, or slides over */}
-        <div className={inputType === "constant" || inputType === "sinusoid" ? "sm:col-start-4" : ""}>
-          <div className="flex justify-between font-mono mb-1">
-            <span>Time (τ_m)</span>
-            <span className="font-bold">{tauM} ms</span>
-          </div>
-          <input
-            type="range"
-            min="5"
-            max="30"
-            step="1"
-            value={tauM}
-            onChange={(e) => setTauM(parseInt(e.target.value))}
-            className="w-full accent-stone-600 h-1 bg-stone-200 rounded-lg appearance-none cursor-pointer"
-          />
-        </div>
-
-      </div>
-
     </div>
   )
 }

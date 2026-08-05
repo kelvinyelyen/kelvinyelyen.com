@@ -304,15 +304,17 @@ input[type="email"] {
     ::view-transition-old(main) {
       animation: 0.4s cubic-bezier(0.6, 0, 0.8, 1) forwards hide;
     }
+
     ::view-transition-new(main) {
       opacity: 0;
       animation: 0.6s 0.2s forwards appear;
     }
-    
+
     /* Exclude the nav from crossfade/blur and prevent double-rendering bold flicker */
     ::view-transition-old(nav) {
       display: none;
     }
+
     ::view-transition-new(nav) {
       animation: none;
       opacity: 1;
@@ -325,6 +327,7 @@ input[type="email"] {
     opacity: 1;
     filter: blur(0);
   }
+
   100% {
     opacity: 0;
     filter: blur(4px);
@@ -336,6 +339,7 @@ input[type="email"] {
     opacity: 0;
     filter: blur(4px);
   }
+
   100% {
     opacity: 1;
     filter: blur(0);
